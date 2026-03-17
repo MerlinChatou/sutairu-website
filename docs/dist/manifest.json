@@ -1,0 +1,33 @@
+{
+  "v1.0.0": [
+    "core/blockquote",
+    "core/border-radius",
+    "core/color-scheme",
+    "core/cursor",
+    "core/flex",
+    "core/font-size",
+    "core/font-weight",
+    "core/heading",
+    "core/margin",
+    "core/padding",
+    "core/sizing",
+    "core/table",
+    "core/text-alignment",
+    "core/text-color",
+    "core/text-opacity",
+    "core/text-shade",
+    "core/typography",
+    "core/white-space",
+    "extras/button",
+    "extras/code-highlight",
+    "extras/dotted",
+    "extras/extended-typography",
+    "extras/filter",
+    "extras/hatching",
+    "extras/loader",
+    "extras/modal",
+    "extras/rotate",
+    "extras/scale",
+    "extras/stripes"
+  ]
+}

@@ -1,0 +1,87 @@
+<h1 id="font-weight-utilities" class="h1">Font Weight Utilities</h1>
+<p>Utility classes for controlling <code>font-weight</code>.</p>
+<h2 id="base-usage" class="h2">Base usage</h2>
+<p>Apply a font weight directly on any element:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+  <div class="fw-thin">.fw-thin</div>
+  <div class="fw-extra-light">.fw-extra-light</div>
+  <div class="fw-light">.fw-light</div>
+  <div class="fw-normal">.fw-normal</div>
+  <div class="fw-medium">.fw-medium</div>
+  <div class="fw-semibold">.fw-semibold</div>
+  <div class="fw-bold">.fw-bold</div>
+  <div class="fw-extra-bold">.fw-extra-bold</div>
+  <div class="fw-black">.fw-black</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="fw-thin">.fw-thin&#x3C;/div>
+&#x3C;div class="fw-extra-light">.fw-extra-light&#x3C;/div>
+&#x3C;div class="fw-light">.fw-light&#x3C;/div>
+&#x3C;div class="fw-normal">.fw-normal&#x3C;/div>
+&#x3C;div class="fw-medium">.fw-medium&#x3C;/div>
+&#x3C;div class="fw-semibold">.fw-semibold&#x3C;/div>
+&#x3C;div class="fw-bold">.fw-bold&#x3C;/div>
+&#x3C;div class="fw-extra-bold">.fw-extra-bold&#x3C;/div>
+&#x3C;div class="fw-black">.fw-black&#x3C;/div>
+</code></pre>
+<hr>
+<h2 id="classes-details" class="h2">Classes details</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.fw-thin</code></td>
+<td>100</td>
+</tr>
+<tr>
+<td><code>.fw-extra-light</code></td>
+<td>200</td>
+</tr>
+<tr>
+<td><code>.fw-light</code></td>
+<td>300</td>
+</tr>
+<tr>
+<td><code>.fw-normal</code></td>
+<td>400 (default)</td>
+</tr>
+<tr>
+<td><code>.fw-medium</code></td>
+<td>500</td>
+</tr>
+<tr>
+<td><code>.fw-semibold</code></td>
+<td>600</td>
+</tr>
+<tr>
+<td><code>.fw-bold</code></td>
+<td>700</td>
+</tr>
+<tr>
+<td><code>.fw-extra-bold</code></td>
+<td>800</td>
+</tr>
+<tr>
+<td><code>.fw-black</code></td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="responsive-variants" class="h2">Responsive variants</h2>
+<p>Font weights can be overridden at specific breakpoints:</p>
+<div class="card p-3 w-fit">
+  <p class="md:fw-light lg:fw-black my-0">Responsive weight</p>
+</div>
+<pre><code class="language-html">&#x3C;p class="md:fw-light lg:fw-black">Responsive weight&#x3C;/p>
+</code></pre>
+<p><strong>Breakpoints</strong></p>
+<ul>
+<li><code>sm:</code> ≥ 576px</li>
+<li><code>md:</code> ≥ 768px</li>
+<li><code>lg:</code> ≥ 1024px</li>
+</ul>

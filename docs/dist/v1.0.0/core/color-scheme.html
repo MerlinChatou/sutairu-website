@@ -1,0 +1,47 @@
+<h1 id="color-scheme" class="h1">Color Scheme</h1>
+<p>Sutairu features native, semantic support for <strong>light</strong> and <strong>dark</strong> modes. Unlike traditional frameworks that require manual color overrides, Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.</p>
+<p>To control the color scheme globally, apply the <code>data-color-scheme</code> attribute to the <code>&#x3C;html></code> element:</p>
+<h3 id="default-light-mode" class="h3">Default (Light Mode)</h3>
+<p>If the attribute is omitted, Sutairu renders the standard light variants.</p>
+<pre><code class="language-html">&#x3C;html>
+</code></pre>
+<h3 id="dark-mode" class="h3">Dark Mode</h3>
+<p>To shift the framework into its dark-mode variant, explicitly set the attribute to <code>dark</code>.</p>
+<pre><code class="language-html">&#x3C;html data-color-scheme="dark">
+</code></pre>
+<h2 id="lightdark-utility-prefixes" class="h2">Light/Dark Utility Prefixes</h2>
+<p>Many utility classes support the <code>dark:</code> prefix to apply a style <strong>only in dark mode</strong>.</p>
+<div class="card w-fit ta-center ff-mono">
+  <div class="p-3 r-3 bg-red dark:bg-green text-white">Light => red / Dark => green</div>  
+</div>
+<pre><code class="language-html">&#x3C;!-- Container is red in light mode and green in dark mode -->
+&#x3C;div class="bg-red dark:bg-green">Light => red / Dark => green&#x3C;/div>
+</code></pre>
+<h2 id="design-philosophy-light-first" class="h2">Design Philosophy: Light-First</h2>
+<p>Sutairu is built on a <strong>deterministic, light-first architecture</strong>.</p>
+<ul>
+<li><strong>The Norm:</strong> Light mode serves as the baseline for all component structures and color scales.</li>
+<li><strong>The Exception:</strong> Dark mode is treated as an adaptive layer. When the <code>.dark</code> context is active, the framework dynamically remaps the underlying color variables to their dark-variant counterparts.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(None)</em></td>
+<td><strong>Light</strong></td>
+<td><strong>The Norm.</strong> The baseline state for all utilities.</td>
+</tr>
+<tr>
+<td><code>dark</code></td>
+<td><strong>Dark</strong></td>
+<td><strong>The Exception.</strong> Activates the adaptive dark-mode layer.</td>
+</tr>
+</tbody>
+</table>
+<p>To keep the core lightweight, Sutairu intentionally avoids localized theme overrides. Nested color schemes are not supported and may result in unpredictable rendering and CSS variable conflicts.</p>

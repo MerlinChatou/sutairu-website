@@ -1,0 +1,155 @@
+<h1 id="white-space-utilities" class="h1">White-Space Utilities</h1>
+<p>White-space utilities control how inline content handles spaces, tabs, and line breaks.</p>
+<p>They map directly to the CSS <code>white-space</code> property.</p>
+<h2 id="class-reference" class="h2">Class Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ws-normal</code></td>
+<td><code>white-space: normal;</code></td>
+<td>Default behavior. Collapses whitespace and wraps text when needed.</td>
+</tr>
+<tr>
+<td><code>ws-nowrap</code></td>
+<td><code>white-space: nowrap;</code></td>
+<td>Collapses whitespace but prevents line wrapping.</td>
+</tr>
+<tr>
+<td><code>ws-pre</code></td>
+<td><code>white-space: pre;</code></td>
+<td>Preserves whitespace and line breaks. No automatic wrapping.</td>
+</tr>
+<tr>
+<td><code>ws-pre-wrap</code></td>
+<td><code>white-space: pre-wrap;</code></td>
+<td>Preserves whitespace and line breaks while allowing wrapping.</td>
+</tr>
+<tr>
+<td><code>ws-pre-line</code></td>
+<td><code>white-space: pre-line;</code></td>
+<td>Collapses whitespace but preserves line breaks.</td>
+</tr>
+<tr>
+<td><code>ws-break</code></td>
+<td><code>white-space: break-spaces;</code></td>
+<td>Preserves whitespace and allows breaking at any point, including trailing spaces.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behavior-overview" class="h2">Behavior Overview</h2>
+<h3 id="normal" class="h3">Normal</h3>
+<ul>
+<li>Sequences of spaces are collapsed.</li>
+<li>Text wraps automatically.</li>
+<li>Line breaks in source are ignored.</li>
+</ul>
+<div class="card p-3">
+<span class="ws-normal">
+  This    text     will wrap normally.
+</span>
+</div>
+<pre><code class="language-html">&#x3C;p class="ws-normal">
+  This    text     will wrap normally.
+&#x3C;/p>
+</code></pre>
+<h3 id="nowrap" class="h3">Nowrap</h3>
+<ul>
+<li>Spaces collapse.</li>
+<li>Text never wraps.</li>
+<li>Useful for buttons, badges, short inline labels.</li>
+</ul>
+<div class="card p-3">
+<span class="ws-nowrap">
+  Single 
+    line 
+  only
+</span>
+</div>
+<pre><code class="language-html">&#x3C;span class="ws-nowrap">
+  Single 
+    line 
+  only
+&#x3C;/span>
+</code></pre>
+<hr>
+<h3 id="pre" class="h3">Pre</h3>
+<ul>
+<li>Preserves all spaces and line breaks.</li>
+<li>No automatic wrapping.</li>
+<li>Behaves like a <code>&#x3C;pre></code> element.</li>
+</ul>
+<div class="card p-3">
+<div class="ws-pre">
+Line 1
+    Indented line
+Line 3
+</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ws-pre">
+Line 1
+    Indented line
+Line 3
+&#x3C;/div>
+</code></pre>
+<hr>
+<h3 id="pre-wrap" class="h3">Pre-wrap</h3>
+<ul>
+<li>Preserves whitespace.</li>
+<li>Allows wrapping when needed.</li>
+<li>Ideal for formatted text blocks that must remain responsive.</li>
+</ul>
+<div class="card p-3">
+<div class="ws-pre-wrap">
+Line 1
+    Indented but responsive
+Line 3
+</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ws-pre-wrap">
+Line 1
+    Indented but responsive
+Line 3
+&#x3C;/div>
+</code></pre>
+<hr>
+<h3 id="pre-line" class="h3">Pre-line</h3>
+<ul>
+<li>Collapses consecutive spaces.</li>
+<li>Preserves line breaks.</li>
+<li>Good for user-generated content with intentional line breaks.</li>
+</ul>
+<div class="card p-3">
+<div class="ws-pre-line">
+Line 1
+<p>Line 3</p>
+</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ws-pre-line">
+Line 1
+
+Line 3
+&#x3C;/div>
+</code></pre>
+<hr>
+<h3 id="break" class="h3">Break</h3>
+<ul>
+<li>Preserves whitespace including trailing spaces.</li>
+<li>Allows wrapping at preserved spaces.</li>
+<li>Useful for code-like formatting with controlled wrapping.</li>
+</ul>
+<div class="card p-3">
+<div class="ws-break">
+Text     with     preserved     spacing
+</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ws-break">
+Text     with     preserved     spacing
+&#x3C;/div>
+</code></pre>

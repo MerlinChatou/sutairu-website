@@ -1,0 +1,466 @@
+<h1 id="flex-utilities" class="h1">Flex Utilities</h1>
+<p>The flex utilities provide low-level control over layout using the CSS Flexible Box Layout (Flexbox). They are designed to be composable: combine multiple utilities to build precise layouts without writing custom CSS.</p>
+<h2 id="display" class="h2">Display</h2>
+<p>Enable flex layout on an element.</p>
+<p><code>.d-flex</code> creates a flex container:</p>
+<div class="card p-3 w-fit ff-mono">
+  <div class="d-flex bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex">...&#x3C;/div>
+</code></pre>
+<p><code>.h-flex</code> is a shortcut for a horizontal flex container:</p>
+<div class="card p-3 w-fit ff-mono">
+  <div class="h-flex bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-flex">...&#x3C;/div>
+</code></pre>
+<p><code>.v-flex</code> is a shortcut for a vertical flex container:</p>
+<div class="card p-3 w-fit ff-mono">
+  <div class="v-flex bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="v-flex">...&#x3C;/div>
+</code></pre>
+<h2 id="flex-direction" class="h2">Flex direction</h2>
+<p>Flex direction (<code>fd-</code>) controls the main axis direction.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fd-row</code></td>
+<td><code>flex-direction: row</code></td>
+</tr>
+<tr>
+<td><code>fd-row-rev</code></td>
+<td><code>flex-direction: row-reverse</code></td>
+</tr>
+<tr>
+<td><code>fd-col</code></td>
+<td><code>flex-direction: column</code></td>
+</tr>
+<tr>
+<td><code>fd-col-rev</code></td>
+<td><code>flex-direction: column-reverse</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="card p-3 ff-mono w-fit">
+  <div class="d-flex fd-row-rev bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex fd-row-rev">
+  ...
+&#x3C;/div>
+</code></pre>
+<h2 id="gap-utilities" class="h2">Gap utilities</h2>
+<p>Gap utilities control spacing between child elements inside flex and grid containers. They provide consistent layout spacing without relying on margins.</p>
+<h3 id="global-gap" class="h3">Global gap</h3>
+<p><code>gap-*</code> Sets spacing between rows and columns simultaneously.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gap-0</code></td>
+<td><code>gap: 0</code></td>
+</tr>
+<tr>
+<td><code>gap-1</code></td>
+<td><code>gap: 0.25rem</code></td>
+</tr>
+<tr>
+<td><code>gap-2</code></td>
+<td><code>gap: 0.5rem</code></td>
+</tr>
+<tr>
+<td><code>gap-3</code></td>
+<td><code>gap: 1rem</code></td>
+</tr>
+<tr>
+<td><code>gap-4</code></td>
+<td><code>gap: 1.5rem</code></td>
+</tr>
+<tr>
+<td><code>gap-5</code></td>
+<td><code>gap: 3rem</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example" class="h4">Example</h4>
+<div class="card p-3 w-fit ff-mono">
+  <div class="h-flex bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-5 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex gap-4">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div>02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="directional-gaps" class="h3">Directional gaps</h3>
+<p><strong>Row gap (<code>gap-row-*</code>)</strong> controls vertical spacing between rows inside flex or grid containers. Useful for wrapped layouts or multi-row grids where you only want vertical separation.</p>
+<p><strong>Column gap (<code>gap-col-*</code>)</strong> controls horizontal spacing between columns or items. Use when you want horizontal spacing without affecting vertical gaps.</p>
+<h3 id="responsive-variants" class="h3">Responsive variants</h3>
+<p>Gap utilities support responsive prefixes:</p>
+<ul>
+<li><code>md:</code> — applies at ≥ 768px</li>
+<li><code>lg:</code> — applies at ≥ 1024px</li>
+</ul>
+<h2 id="flex-wrap" class="h2">Flex wrap</h2>
+<p>Flex wrap (<code>fw-</code>) Controls whether items wrap onto multiple lines.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fw-wrap</code></td>
+<td><code>flex-wrap: wrap</code></td>
+</tr>
+<tr>
+<td><code>fw-nowrap</code></td>
+<td><code>flex-wrap: nowrap</code></td>
+</tr>
+<tr>
+<td><code>fw-wrap-rev</code></td>
+<td><code>flex-wrap: wrap-reverse</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="card p-3 ff-mono w-fit">
+  <div class="d-flex w-6 fw-wrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex fw-wrap">
+  ...
+&#x3C;/div>
+</code></pre>
+<h2 id="alignment-utilities" class="h2">Alignment utilities</h2>
+<p>Alignment utilities control how flex (and grid) items are positioned along the main axis and cross axis. These utilities apply to flex containers, grid containers, or individual items depending on the property.</p>
+<h3 id="align-items" class="h3">Align items</h3>
+<p>Align items (<code>ai-*</code>) controls how items align along the <strong>cross axis</strong> inside a flex or grid container.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ai-start</code></td>
+<td><code>align-items: start</code></td>
+</tr>
+<tr>
+<td><code>ai-center</code></td>
+<td><code>align-items: center</code></td>
+</tr>
+<tr>
+<td><code>ai-end</code></td>
+<td><code>align-items: end</code></td>
+</tr>
+<tr>
+<td><code>ai-stretch</code></td>
+<td><code>align-items: stretch</code></td>
+</tr>
+<tr>
+<td><code>ai-baseline</code></td>
+<td><code>align-items: baseline</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1" class="h4">Example</h4>
+<div class="card p-3 ff-mono w-fit">
+  <div class="d-flex ai-center h-6 bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex ai-center">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div>02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="align-content" class="h3">Align content</h3>
+<p>Align content (<code>ac-*</code>) controls how multiple lines are distributed along the cross axis.</p>
+<p>⚠️ Only applies when:</p>
+<ul>
+<li>items wrap (<code>fw-wrap</code>)</li>
+<li>there are multiple lines.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ac-start</code></td>
+<td><code>align-content: start</code></td>
+</tr>
+<tr>
+<td><code>ac-center</code></td>
+<td><code>align-content: center</code></td>
+</tr>
+<tr>
+<td><code>ac-end</code></td>
+<td><code>align-content: end</code></td>
+</tr>
+<tr>
+<td><code>ac-between</code></td>
+<td><code>align-content: space-between</code></td>
+</tr>
+<tr>
+<td><code>ac-around</code></td>
+<td><code>align-content: space-around</code></td>
+</tr>
+<tr>
+<td><code>ac-stretch</code></td>
+<td><code>align-content: stretch</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-2" class="h4">Example</h4>
+<div class="card p-3 ff-mono w-fit">
+  <div class="h-flex h-6 w-6 fw-wrap ac-between bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-flex fw-wrap ac-between">
+  ...
+&#x3C;/div>
+</code></pre>
+<h3 id="justify-content" class="h3">Justify content</h3>
+<p>Justify content (<code>jc-*</code>) controls alignment along the <strong>main axis</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jc-start</code></td>
+<td><code>justify-content: start</code></td>
+</tr>
+<tr>
+<td><code>jc-center</code></td>
+<td><code>justify-content: center</code></td>
+</tr>
+<tr>
+<td><code>jc-end</code></td>
+<td><code>justify-content: end</code></td>
+</tr>
+<tr>
+<td><code>jc-between</code></td>
+<td><code>justify-content: space-between</code></td>
+</tr>
+<tr>
+<td><code>jc-around</code></td>
+<td><code>justify-content: space-around</code></td>
+</tr>
+<tr>
+<td><code>jc-evenly</code></td>
+<td><code>justify-content: space-evenly</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-3" class="h4">Example</h4>
+<div class="card p-3 w-fit ff-mono">
+  <div class="h-flex jc-evenly w-md bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-flex jc-evenly">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div>02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="align-self" class="h3">Align self</h3>
+<p>Align self (<code>as-*</code>) overrides the container’s <code>align-items</code> value for a single item.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>as-auto</code></td>
+<td><code>align-self: auto</code></td>
+</tr>
+<tr>
+<td><code>as-start</code></td>
+<td><code>align-self: flex-start</code></td>
+</tr>
+<tr>
+<td><code>as-center</code></td>
+<td><code>align-self: center</code></td>
+</tr>
+<tr>
+<td><code>as-end</code></td>
+<td><code>align-self: flex-end</code></td>
+</tr>
+<tr>
+<td><code>as-stretch</code></td>
+<td><code>align-self: stretch</code></td>
+</tr>
+<tr>
+<td><code>as-baseline</code></td>
+<td><code>align-self: baseline</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-4" class="h4">Example</h4>
+<div class="card p-3 w-fit ff-mono">
+  <div class="h-flex h-5 ai-center w-md bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="as-start bg-accent text-white r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-flex ai-center">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div class="as-start">02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="flex-grow" class="h2">Flex grow</h2>
+<p>Flex grow (<code>fg-</code>) controls how items grow to fill available space.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fg-0</code></td>
+<td><code>flex-grow: 0</code></td>
+</tr>
+<tr>
+<td><code>fg-1</code></td>
+<td><code>flex-grow: 1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="card p-3 ff-mono w-fit ta-center">
+  <div class="d-flex w-md fw-wrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
+    <div class="fg-1 bg-accent text-white r-2 p-2">02</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-flex">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div class="fg-1">02&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="flex-shrink" class="h2">Flex shrink</h2>
+<p>Flex shrink (<code>fsr-</code>) controls how items shrink when space is limited.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fsr-0</code></td>
+<td><code>flex-shrink: 0</code></td>
+</tr>
+<tr>
+<td><code>fsr-1</code></td>
+<td><code>flex-shrink: 1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="card p-3 ff-mono w-fit ta-center">
+  <div class="h-flex w-md fw-nowrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2 ov-hidden">
+    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">01</div>
+    <div class="fsr-1 bg-accent text-white r-2 p-2" style="width:250px">02</div>
+    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-flex w-md">
+  &#x3C;div class="fsr-0">01&#x3C;/div>
+  &#x3C;div class="fsr-1">02&#x3C;/div>
+  &#x3C;div class="fsr-0">03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="flex-shorthand" class="h2">Flex shorthand</h2>
+<p>Predefined combinations of grow, shrink, and basis.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flex-auto</code></td>
+<td><code>flex: 1 1 auto</code></td>
+</tr>
+<tr>
+<td><code>flex-init</code></td>
+<td><code>flex: 0 1 auto</code></td>
+</tr>
+<tr>
+<td><code>flex-none</code></td>
+<td><code>flex: none</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<pre><code class="language-html">&#x3C;div class="flex-auto">Flexible item&#x3C;/div>
+&#x3C;div class="flex-none">Fixed size&#x3C;/div>
+</code></pre>

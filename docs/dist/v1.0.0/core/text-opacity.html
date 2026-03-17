@@ -1,0 +1,90 @@
+<h1 id="text-opacity-modifier" class="h1">Text opacity modifier</h1>
+<p>Text opacity utilities control the opacity of a color using numeric steps. Opacity range from <strong>0</strong> (transparent) to <strong>100</strong> (full opaque).</p>
+<h2 id="opacity-scale" class="h2">Opacity scale</h2>
+<p>Use <code>text-opacity-&#x3C;number></code> to apply a specific opacity, from <code>0</code> to <code>100</code> (in steps of 10):</p>
+<pre><code class="language-css">.text-opacity-{0|10|20|…|100}
+</code></pre>
+<p>⚠️ <strong>Important:</strong> Opacity utilities adjust the alpha channel of the current text color.
+They must be combined with a text color utility (e.g., <code>text-accent</code>, <code>text-gray</code>) to define the base color.<br>
+Using <code>text-opacity-*</code> alone (<code>text-opacity-50</code>, <code>hover:text-opacity-70</code>, etc.) has no effect.</p>
+<div class="card p-2 w-fit ff-mono">
+  <div class="pb-1 text-accent text-opacity-0">.text-opacity-0</div>
+  <div class="pb-1 text-accent text-opacity-20">.text-opacity-20</div>
+  <div class="pb-1 text-accent text-opacity-50">.text-opacity-50</div>
+  <div class="pb-1 text-accent text-opacity-70">.text-opacity-70</div>
+  <div class="text-accent text-opacity-100">.text-opacity-100</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="text-accent text-opacity-0">.text-opacity-0&#x3C;/div>
+&#x3C;div class="text-accent text-opacity-20">.text-opacity-20&#x3C;/div>
+&#x3C;div class="text-accent text-opacity-50">.text-opacity-50&#x3C;/div>
+&#x3C;div class="text-accent text-opacity-70">.text-opacity-70&#x3C;/div>
+&#x3C;div class="text-accent text-opacity-100">.text-opacity-100&#x3C;/div>
+</code></pre>
+<h2 id="dark-mode-variant" class="h2">Dark mode variant</h2>
+<p>Override the opacity when dark mode is active using <code>dark:</code>.</p>
+<div class="card p-2 w-fit ff-mono">
+  <div class="text-body text-opacity-100 dark:text-opacity-50">Adaptive shade</div>
+</div>
+<pre><code class="language-html">&#x3C;p class="text-body text-opacity-100 dark:text-opacity-50">Adaptive shade&#x3C;/p>
+</code></pre>
+<ul>
+<li>Default utilities apply to light mode.</li>
+<li><code>dark:</code> replaces the shade in dark mode.</li>
+</ul>
+<h2 id="state-variants" class="h2">State variants</h2>
+<p>To enable interactive state variants, install the complementary package:</p>
+<pre><code class="language-bash">npm install @merlin-chatou/sutairu-extras
+</code></pre>
+<p>Import only the styles you need:</p>
+<pre><code class="language-css">@import "@merlin-chatou/sutairu-extras/text-opacity-hover/style";
+@import "@merlin-chatou/sutairu-extras/text-opacity-focus/style";
+@import "@merlin-chatou/sutairu-extras/text-opacity-focus-visible/style";
+@import "@merlin-chatou/sutairu-extras/text-opacity-active/style";
+@import "@merlin-chatou/sutairu-extras/text-opacity-disabled/style";
+</code></pre>
+<p>Text opacity can be combined with interactive state modifiers:</p>
+<ul>
+<li><code>hover:</code> — applies on hover</li>
+<li><code>focus:</code> — applies when focused</li>
+<li><code>focus-visible:</code> — applies when focus is visible (keyboard navigation)</li>
+<li><code>active:</code> — applies while active/pressed</li>
+<li><code>disabled:</code> — applies when disabled</li>
+</ul>
+<div class="card p-2 w-fit ff-mono">
+<button class="
+  bg-accent bg-opacity-0 bw-0 p-2
+  text-gray
+  text-opacity-40
+  hover:text-opacity-60
+  focus:text-opacity-80  
+  active:text-opacity-100
+  disabled:text-opacity-20
+  ">Interactive text
+</button>
+</div>
+<pre><code class="language-html">&#x3C;button class="
+  text-gray
+  text-opacity-40
+  hover:text-opacity-60
+  focus:text-opacity-80  
+  active:text-opacity-100
+  disabled:text-opacity-20">
+  Interactive text
+&#x3C;/button>
+</code></pre>
+<h2 id="notes" class="h2">Notes</h2>
+<ul>
+<li>Variants can be combined with theme modifiers:</li>
+</ul>
+<div class="card p-2 w-fit ff-mono">
+<button class="btn text-accent text-opacity-70 dark:text-opacity-80 hover:text-opacity-100 dark:hover:text-opacity-60">Combined variants</button>
+</div>
+<pre><code class="language-html">&#x3C;button class="btn 
+  text-accent 
+  text-opacity-70 
+  dark:text-opacity-80 
+  hover:text-opacity-100 
+  dark:hover:text-opacity-60">  
+  Combined variants
+&#x3C;/button>
+</code></pre>

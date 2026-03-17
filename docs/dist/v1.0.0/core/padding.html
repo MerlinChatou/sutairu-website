@@ -1,0 +1,78 @@
+<h1 id="paddings" class="h1">Paddings</h1>
+<p>Control element inner spacing using padding utility classes.<br>
+Values are based on the same spacing variables as margins and support responsive variants.</p>
+<h2 id="spacing-scale" class="h2">Spacing scale</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0.25rem</code></td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td><code>0.5rem</code></td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td><code>1rem</code></td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td><code>1.5rem</code></td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td><code>3rem</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-sides" class="h2">All sides</h2>
+<div class="card p-3 w-fit d-flex gap-2 fd-row ai-center fw-wrap ff-mono">
+  <div class="p-3 b-accent b-opacity-50 r-2 w-fit bg-stripes text-body bg-accent bg-200 fg-accent fg-opacity-20 bg-opacity-20">p-3</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="p-3">...&#x3C;/div>
+</code></pre>
+<h2 id="directional" class="h2">Directional</h2>
+<ul>
+<li>Top: <code>pt-&#x3C;n></code></li>
+<li>Right: <code>pr-&#x3C;n></code></li>
+<li>Bottom: <code>pb-&#x3C;n></code></li>
+<li>Left: <code>pl-&#x3C;n></code></li>
+</ul>
+<div class="card p-3 w-fit d-flex gap-2 fd-row ai-center fw-wrap ff-mono">
+  <div class="pt-2 pb-4 pl-3 b-accent b-opacity-50 r-2 w-fit bg-stripes text-body bg-accent bg-200 fg-accent fg-opacity-20 bg-opacity-20">pt-2 pb-4 pl-3</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pt-2 pb-4 pl-3">pt-2 pb-4 pl-3&#x3C;/div>
+</code></pre>
+<h2 id="axis-based" class="h2">Axis-based</h2>
+<ul>
+<li>Horizontal: <code>px-&#x3C;n></code></li>
+<li>Vertical: <code>py-&#x3C;n></code></li>
+</ul>
+<div class="card p-3 w-fit d-flex gap-2 fd-row ai-center fw-wrap ff-mono">
+  <div class="px-5 py-2 b-accent b-opacity-50 r-2 w-fit bg-stripes text-body bg-accent bg-200 fg-accent fg-opacity-20 bg-opacity-20">px-5 py-2</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="px-5 py-2">px-5 py-2&#x3C;/div>
+</code></pre>
+<h2 id="responsive-variants" class="h2">Responsive variants</h2>
+<p>Apply paddings at breakpoints:</p>
+<ul>
+<li><code>md:</code> ≥ 768px</li>
+<li><code>lg:</code> ≥ 1024px</li>
+</ul>
+<div class="card p-3 w-fit d-flex gap-2 fd-row ai-center fw-wrap ff-mono">
+  <div class="p-1 md:p-3 lg:p-5 b-accent b-opacity-50 r-2 w-fit bg-stripes text-body bg-accent bg-200 fg-accent fg-opacity-20 bg-opacity-20">p-1 md:p-3 lg:p-5</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="p-1 md:p-3 lg:p-5">p-1 md:p-3 lg:p-5&#x3C;/div>
+</code></pre>
+<p>All padding utilities use <code>!important</code> for predictable overrides.</p>
