@@ -315,13 +315,13 @@ Flex grow (`fg-`) controls how items grow to fill available space.
 
 | Class  | CSS            |
 | ------ | -------------- |
-| `fg-0` | `flex-grow: 0` |
-| `fg-1` | `flex-grow: 1` |
+| `grow-0` | `flex-grow: 0` |
+| `grow-1` | `flex-grow: 1` |
 
 Example:
 
 <div class="card p-3 ff-mono w-fit ta-center">
-  <div class="d-flex w-md fw-wrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+  <div class="d-flex w-md fw-wrap bg-hatching grow-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
     <div class="fg-1 bg-accent text-white r-2 p-2">02</div>
   </div>
@@ -339,28 +339,28 @@ Example:
 
 ## Flex shrink
 
-Flex shrink (`fsr-`) controls how items shrink when space is limited.
+Flex shrink (`shrink-`) controls how items shrink when space is limited.
 
 | Class   | CSS              |
 | ------- | ---------------- |
-| `fsr-0` | `flex-shrink: 0` |
-| `fsr-1` | `flex-shrink: 1` |
+| `shrink-0` | `flex-shrink: 0` |
+| `shrink-1` | `flex-shrink: 1` |
 
 Example:
 
 <div class="card p-3 ff-mono w-fit ta-center">
   <div class="h-flex w-md fw-nowrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2 ov-hidden">
-    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">01</div>
-    <div class="fsr-1 bg-accent text-white r-2 p-2" style="width:250px">02</div>
-    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">03</div>
+    <div class="shrink-0 bg-accent text-white r-2 p-2" style="width:250px">01</div>
+    <div class="shrink-1 bg-accent text-white r-2 p-2" style="width:250px">02</div>
+    <div class="shrink-0 bg-accent text-white r-2 p-2" style="width:250px">03</div>
   </div>
 </div>
 
 ```html
 <div class="h-flex w-md">
-  <div class="fsr-0">01</div>
-  <div class="fsr-1">02</div>
-  <div class="fsr-0">03</div>
+  <div class="shrink-0">01</div>
+  <div class="shrink-1">02</div>
+  <div class="shrink-0">03</div>
 </div>
 ```
 

@@ -1,5 +1,6 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
+  import { Masonry } from "@merlin-chatou/sutairu";
 
   // import "@merlin-chatou/sutairu-core";
   // import "@merlin-chatou/sutairu-themes";
@@ -106,6 +107,18 @@
   
   // Initialize documentation version from URL
   import BrowserInit from "$lib/components/BrowserInit.svelte";
+  import { onMount } from "svelte";
+  import { maximum } from "firebase/firestore/pipelines";
+  
+  let masonry = $state();
+
+  onMount(() => {
+    Masonry.init(masonry, {
+      targetWidth: 350,
+      columnMode: "max",
+      gap: 10
+    })
+  })
 </script>
 
 <BrowserInit />
@@ -117,12 +130,11 @@
     <h1 class="h1 d-inline my-0">Sutairu</h1>
   </div>
   <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
-    A lightweight utility-first CSS framework with built-in light and dark modes with optional utilities, components and multiple themes inspired by modern
-    design systems.
+    Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time.
   </p>
 
   
-  <div class="masonry-1 md:masonry-3 lg:masonry-4 xl:masonry-5 masonry-gap-3 px-2 pb-5">
+  <div bind:this={masonry} class="masonry px-2 pb-5">
     <ColorSchemeCard />
     <HeadingCard />
     <TypographyCard />
@@ -176,3 +188,10 @@
 
   <DocumentationModal />
 </div>
+<!--
+<style>
+  :global(.card) {
+    border: 1px black solid;
+  }
+</style>
+-->

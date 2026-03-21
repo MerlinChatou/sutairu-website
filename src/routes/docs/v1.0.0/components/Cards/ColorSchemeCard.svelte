@@ -31,11 +31,11 @@
     <div class="header" bind:this={header}><h4 class="h4">Color Scheme</h4></div>
 
     <div class="body p-0" bind:this={body}>
-      <div class="d-flex fd-row p-4 gap-4 w-full ff-mono text-center">
-        <div class="r-4 b-gray b-opacity-20 bw-1 fg-1 ov-hidden">
-          <div class="bg-gray bg-200 rb-0 p-2 bold b-gray b-opacity-20 bw-0 bb-1 text-black">light</div>
-          <div class="bg-white bg-100 p-2 bold d-flex fd-col gap-2">
-            <div class="bg-gray bg-100 r-4 h-16"></div>
+      <div class="flex-x p-4 gap-8 w-full ff-mono text-center">
+        <div class="r-4 b-1 b-gray/20 grow-1 ov-hidden">
+          <div class="bg-gray/20 rb-0 p-3 fw-bold b-gray/-20 bw-0 bb-1 text-black">light</div>
+          <div class="bg-white-250 p-2 bold d-flex fd-col gap-2">
+            <div class="bg-gray-100 r-4 h-16"></div>
             <button
               class="btn bg-accent r-4 h-12 text-accent hover:text-white"
               aria-label="Switch to light mode"
@@ -44,10 +44,10 @@
           </div>
         </div>
 
-        <div class="r-4 b-gray b-opacity-20 bw-1 fg-1 ov-hidden">
-          <div class="bg-black bg-600 rb-0 p-2 bold b-gray b-opacity-20 bw-0 bb-1 text-white">dark</div>
-          <div class="bg-gray bg-900 p-2 bold d-flex fd-col gap-2">
-            <div class="bg-gray bg-800 r-4 h-16"></div>
+        <div class="r-4 b-gray/20 b-1 grow-1 ov-hidden">
+          <div class="bg-black-900 rb-0 p-3 fw-bold b-1 b-gray/20 bw-0 bb-1 text-white">dark</div>
+          <div class="bg-gray-700 p-2 bold d-flex fd-col gap-2">
+            <div class="bg-gray-600 r-4 h-16"></div>
             <button
               class="btn bg-accent r-4 h-12 text-accent hover:text-white"
               aria-label="Switch to dark mode"

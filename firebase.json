@@ -2,18 +2,6 @@
   "apphosting": [
     {
       "backendId": "sutairu",
-      "rootDir": "/website",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "functions"
-      ],
-      "alwaysDeployFromSource": true
-    },
-    {
-      "backendId": "sutairu",
       "rootDir": "/",
       "ignore": [
         "node_modules",
