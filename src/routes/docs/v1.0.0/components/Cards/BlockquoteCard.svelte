@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="blockquote" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="blockquote" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Blockquote</h4></div>
   <div class="body p-4" bind:this={body}>
     <blockquote class="mt-0 mb-4">

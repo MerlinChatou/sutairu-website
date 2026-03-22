@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="border-shade-modifier" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="border-shade-modifier" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Border Shade Modifier</h4></div>
   <div class="body p-3 d-flex fd-col gap-2 ff-mono" bind:this={body}>
     <div class="w-full p-2 r-3 bg-subtle text-center bw-2rem b-accent-50">b-accent-50</div>

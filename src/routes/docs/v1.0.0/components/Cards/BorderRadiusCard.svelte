@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card" id="border-radius" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+  <div class="card opacity-0" id="border-radius" bind:this={cardEl}>
     <div class="header" bind:this={header}><h4 class="h4">Border Radius</h4></div>
     <div class="body p-3 d-flex fd-col gap-2 ff-mono fs-sm" bind:this={body}>
     <div class="w-full p-1 r-0 bg-subtle text-center b-accent">r-0</div>

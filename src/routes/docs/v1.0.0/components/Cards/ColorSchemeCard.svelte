@@ -27,7 +27,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card" id="color-scheme" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+  <div class="card opacity-0" id="color-scheme" bind:this={cardEl}>
     <div class="header" bind:this={header}><h4 class="h4">Color Scheme</h4></div>
 
     <div class="body p-0" bind:this={body}>

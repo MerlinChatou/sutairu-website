@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="text-color-on-hover" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="text-color-on-hover" bind:this={cardEl}>
   <div class="header d-flex jc-between ai-center" bind:this={header}>
     <h4 class="h4">Interactive Text</h4>
   </div>

@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-<div class="card" id="tables" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="tables" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Tables</h4></div>
   <div class="body" bind:this={body}>
     <table class="w-full">

@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="font-size" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="font-size" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Font Size</h4></div>
   <div class="body d-grid grid-cols-auto-fr gap-4 text-center ai-center" bind:this={body}>
 

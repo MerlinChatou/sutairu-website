@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="text-opacity" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="text-opacity" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Text Opacity</h4></div>
   <div class="body p-3 d-flex fd-col gap-3 ff-mono fw-black text-center" bind:this={body}>
     <div class="w-full r-2 text-accent text-opacity-0">.text-opacity-0</div>

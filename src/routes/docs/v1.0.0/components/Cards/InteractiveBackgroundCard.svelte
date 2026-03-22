@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="interactive-background" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="interactive-background" bind:this={cardEl}>
   <div class="header" bind:this={header}>
     <h4 class="h4">Interactive Background</h4>
   </div>

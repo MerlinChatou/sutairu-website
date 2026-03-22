@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="border-width" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="border-width" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Border Width</h4></div>
   <div class="body p-3 d-flex fd-col gap-2 ff-mono fs-sm" bind:this={body}>
     <div class="w-full p-1 r-2 bg-subtle text-center bw-0 b-accent">bw-0</div>

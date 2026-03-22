@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="semantic-backgrounds" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="semantic-backgrounds" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Semantic Backgrounds</h4></div>
   <div class="body p-3 d-flex fd-col gap-2" bind:this={body}>
     <div class="w-full ff-mono p-3 r-2 text-center bg-page">

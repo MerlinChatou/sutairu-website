@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="flex" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="flex" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Flex</h4></div>
   <div class="body p-3 d-flex fd-col gap-3 ff-mono text-white"  bind:this={body}>
     <div class="d-flex fd-row gap-1 bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 r-2">

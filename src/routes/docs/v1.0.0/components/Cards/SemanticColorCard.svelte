@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-<div class="card" id="semantic-text-colors" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="semantic-text-colors" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Semantic Text Colors</h4></div>
 
   <div class="body p-3 d-flex fd-col gap-3 ff-mono text-center" bind:this={body}>

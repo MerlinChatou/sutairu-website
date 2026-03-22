@@ -1,13 +1,13 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import { Masonry } from "@merlin-chatou/sutairu";
-
+  import { searchState } from "./state/search.svelte.js";
   // import "@merlin-chatou/sutairu-core";
   // import "@merlin-chatou/sutairu-themes";
   // import "@merlin-chatou/sutairu-extras";
 
   import "$lib/generated/sutairu.min.css";
-/*
+  /*
   import "@merlin-chatou/sutairu-extras/animation/style";
   // import "@merlin-chatou/sutairu-extras/b-interactive/style";
   // import "@merlin-chatou/sutairu-extras/bg-interactive/style";
@@ -104,27 +104,50 @@
 
   import DocumentationModal from "./components/DocumentationModal.svelte";
   import NoSearchResult from "./components/NoSearchResult.svelte";
-  
+
   // Initialize documentation version from URL
   import BrowserInit from "$lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
   import { maximum } from "firebase/firestore/pipelines";
-  
+
   let masonry = $state();
 
   onMount(() => {
     Masonry.init(masonry, {
       targetWidth: 350,
-      columnMode: "max",
-      gap: 10
-    })
-  })
+      mode: "max",
+      gap: 10,
+      onReflow: (params) => {
+        const items = Array.from(params.container.children);
+        items.forEach((item) => {
+          item.classList.remove("opacity-0");
+        });
+      },
+    });
+    $effect(() => {
+      const _ = searchState.queries;
+      console.log("arrange");
+      //setTimeout(() => {
+        Masonry.arrange(masonry, {
+          targetWidth: 350,
+          mode: "max",
+          gap: 10,
+          onReflow: (params) => {
+            const items = Array.from(params.container.children);
+            items.forEach((item) => {
+              item.classList.remove("opacity-0");
+            });
+          },
+        });
+      //}, 350);
+    });
+  });
 </script>
 
 <BrowserInit />
 <Navbar />
 
-<div class="px-1 tg-glow bg-dotted fg-black dark:fg-white fg-opacity-10 min-h-vh">
+<div class="px-1 tg-glow bg-dotted fg-black dark:fg-white min-h-100vh">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
     <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
     <h1 class="h1 d-inline my-0">Sutairu</h1>
@@ -133,7 +156,6 @@
     Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time.
   </p>
 
-  
   <div bind:this={masonry} class="masonry px-2 pb-5">
     <ColorSchemeCard />
     <HeadingCard />
@@ -188,10 +210,14 @@
 
   <DocumentationModal />
 </div>
-<!--
+
 <style>
-  :global(.card) {
-    border: 1px black solid;
+  :global(.modal) {
+    display: none;
+  }
+  :global(.masonry > *) {
+    transition:
+      transform 300ms ease,
+      opacity 300ms ease 300ms;
   }
 </style>
--->

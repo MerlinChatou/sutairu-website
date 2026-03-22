@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-<div class="card" id="background-shade-modifier" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="background-shade-modifier" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Background Shade Modifier</h4></div>
   <div class="body p-3 d-flex fd-col gap-2 text-white text-center ff-mono" bind:this={body}>
     <div class="w-full bg-50 hover:bg-100 p-2 r-2 bg-accent text-black">bg-50</div>

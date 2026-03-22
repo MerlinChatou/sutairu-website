@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="border-opacity" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="border-opacity" bind:this={cardEl}>
   <div class="header d-flex jc-between ai-center" bind:this={header}>
     <h4 class="h4">Border Opacity</h4>
     <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>

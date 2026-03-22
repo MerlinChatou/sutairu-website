@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="cursor" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="cursor" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Cursor</h4></div>
   <div class="body p-4 d-flex fd-col gap-2 ff-mono" bind:this={body}>
     <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-pointer">cur-pointer</button>

@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="card-with-image" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="card-with-image" bind:this={cardEl}>
   <img class="header bg-accent" src="/images/card-header.png" alt="Sutairu Logo"  bind:this={header}/>
   <div class="body" bind:this={body}>
     <div class="d-flex jc-between ai-center">

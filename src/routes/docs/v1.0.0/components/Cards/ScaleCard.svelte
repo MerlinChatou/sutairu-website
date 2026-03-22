@@ -29,7 +29,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card" id="scale" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+  <div class="card opacity-0" id="scale" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Scale</h4>
       <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>

@@ -76,7 +76,6 @@ p {
   /* If a variable is empty, the browser ignores that segment */
   filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
 }
-
 /* Import Inter & Indie Flower for default theme */
 
 
@@ -363,6 +362,10 @@ p {
   padding-inline: 0.25rem;
 }
 
+.min-h-100vh {
+  min-height: 100vh;
+}
+
 .d-flex {
   display: flex;
 }
@@ -412,7 +415,7 @@ p {
 }
 
 .h1 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h1);
   letter-spacing: var(--su-ls-h1);
@@ -456,7 +459,7 @@ p {
 }
 
 .h2 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h2);
   letter-spacing: var(--su-ls-h2);
@@ -464,7 +467,7 @@ p {
 }
 
 .h3 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h3);
   letter-spacing: var(--su-ls-h3);
@@ -673,7 +676,7 @@ p {
 }
 
 .h4 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h4);
   letter-spacing: var(--su-ls-h4);
@@ -809,7 +812,7 @@ p {
 }
 
 .h5 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h5);
   letter-spacing: var(--su-ls-h5);
@@ -817,7 +820,7 @@ p {
 }
 
 .h6 {
-  lineHeight: var(--su-lh-title);
+  line-height: var(--su-lh-title);
   color: var(--su-text-title);
   font-size: var(--su-fs-h6);
   letter-spacing: var(--su-ls-h6);
@@ -1121,6 +1124,10 @@ p {
   margin-block: 1.25rem;
 }
 
+.tr-transform {
+  transition: transform 150ms ease ;
+}
+
 .ws-normal {
   white-space: normal;
 }
@@ -1252,55 +1259,20 @@ p {
   display: inline-block;
 }
 
-.\-ls-xl {
-  letter-spacing: -0.25em;
-}
-
-.\-ls-lg {
-  letter-spacing: -0.1em;
-}
-
-.\-ls-sm {
-  letter-spacing: -0.025em;
-}
-
-.\-ls-xs {
-  letter-spacing: -0.01em;
-}
-
-.ls-xs {
-  letter-spacing: 0.01em;
-}
-
-.ls-sm {
-  letter-spacing: 0.025em;
-}
-
-.ls-md {
-  letter-spacing: 0.05em;
-}
-
-.ls-lg {
-  letter-spacing: 0.1em;
-}
-
-.ls-xl {
-  letter-spacing: 0.25em;
-}
-
-.group {
-  display: inline-flex;
-  vertical-align: middle;
-  position: relative;
-  clip-path: inset(0% round 0);
-}
-
-.p-10px {
-  padding: 10px;
+.p-6px {
+  padding: 6px;
 }
 
 .fw-900 {
   font-weight: 900;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.tr-transform-300 {
+  transition: transform 300ms ease ;
 }
 
 .align-cc {
@@ -1339,6 +1311,18 @@ p {
 
 .h-140px {
   height: 140px;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.tr-bg-500-linear {
+  transition: background-color 500ms linear ;
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .bg-yellow {
@@ -1455,10 +1439,6 @@ p {
 
 .r-6 {
   border-radius: 1.5rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .rb-0 {
@@ -1886,6 +1866,10 @@ p {
   
   .hover\:bg-accent:hover {
     background-color: var(--su-accent);
+  }
+  
+  .hover\:bg-blue:hover {
+    background-color: var(--su-blue);
   }
   
   .hover\:text-white:hover {

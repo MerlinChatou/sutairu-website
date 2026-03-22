@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card" id="margins" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+<div class="card opacity-0" id="margins" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Margins</h4></div>
   <div class="body d-flex fd-col gap-2 text-center ai-center text-white" bind:this={body}>
     <div class="r-2 w-fit">

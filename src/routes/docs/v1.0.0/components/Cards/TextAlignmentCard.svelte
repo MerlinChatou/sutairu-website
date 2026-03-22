@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card" id="text-alignment" transition:fade={{ duration: 250 }} bind:this={cardEl}>
+  <div class="card opacity-0" id="text-alignment" bind:this={cardEl}>
     <div class="header" bind:this={header}>
       <h4 class="h4">Text Alignment</h4>
     </div>
