@@ -42,7 +42,7 @@
     <div class="w-full bg-950 hover:bg-900 p-2 r-2 bg-accent">bg-950</div>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/background-shade">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/background-shade">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

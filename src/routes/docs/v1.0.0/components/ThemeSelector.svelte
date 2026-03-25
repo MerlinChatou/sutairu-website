@@ -38,7 +38,7 @@
   });
 </script>
 
-<button class="btn bg-page bw-1 b-gray-300 dark:b-gray-700 r-pill p-1px d-flex fd-row gap-1 ai-center text-center fs-xs" on:click={() => change()}>
+<button class="btn btn-secondary r-pill p-1px gap-1 fs-xs" on:click={() => change()}>
   <i class="fa-solid fa-palette d-block fs-sm d-none md:d-block"></i>
 
   <span class="d-none md:d-block mr-1">{theme}</span>

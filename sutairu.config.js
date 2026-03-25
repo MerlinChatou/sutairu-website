@@ -13,7 +13,7 @@ const allPossibleBgClasses = colors.flatMap((color) => {
 
 export default {
   watch: "./src, ./static",
-  //watch: "/home/philippe/projects/merlin-chatou/sutairu/website/src/routes/docs/v1.0.0/__tests__/core/palette/",
+  //watch: "./src/routes/docs/v1.0.0/playground",
   themes: "default,swiss,adjuvio",
   output: "./src/lib/generated/sutairu.css",
   ext: "html,svelte",

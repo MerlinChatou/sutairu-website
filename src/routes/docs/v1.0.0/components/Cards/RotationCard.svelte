@@ -42,7 +42,7 @@
       <img class="mx-auto w-6 transform rotate-135 hover:rotate-0 bg-accent r-3 tr-transform tr-400" src="/images/rustine.png" alt="Rustine" />
     </div>
     <div class="footer text-right">
-      <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="extras/rotate">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/rotate">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

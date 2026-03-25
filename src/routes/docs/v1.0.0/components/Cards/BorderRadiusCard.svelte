@@ -40,7 +40,7 @@
     <div class="w-full p-1 r-4 rb-0 bg-subtle text-center b-accent v-flex jc-center">r-4 rb-0</div>    
     </div>
     <div class="footer text-right">
-      <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-radius">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-radius">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

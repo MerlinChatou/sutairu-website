@@ -52,7 +52,7 @@ Pellentesque eleifend nisl metus, nec venenatis sapien efficitur vitae.
       </div>
     </div>
     <div class="footer text-right ws-normal">
-      <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/white-space">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/white-space">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

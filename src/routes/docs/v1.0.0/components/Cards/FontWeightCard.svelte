@@ -56,7 +56,7 @@
     <div class="fw-black">Black</div>
   </div>
     <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/font-weight">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/font-weight">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

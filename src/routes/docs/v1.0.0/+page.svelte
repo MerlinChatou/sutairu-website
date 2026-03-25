@@ -2,56 +2,8 @@
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
-  // import "@merlin-chatou/sutairu-core";
-  // import "@merlin-chatou/sutairu-themes";
-  // import "@merlin-chatou/sutairu-extras";
-
   import "$lib/generated/sutairu.min.css";
-  /*
-  import "@merlin-chatou/sutairu-extras/animation/style";
-  // import "@merlin-chatou/sutairu-extras/b-interactive/style";
-  // import "@merlin-chatou/sutairu-extras/bg-interactive/style";
-  import "@merlin-chatou/sutairu-extras/card/style";
-  // import "@merlin-chatou/sutairu-extras/dotted/style";
-  // import "@merlin-chatou/sutairu-extras/font-size-fluid/style";
-  // import "@merlin-chatou/sutairu-extras/hatching/style";
-  // import "@merlin-chatou/sutairu-extras/height-px/style";
-  // import "@merlin-chatou/sutairu-extras/height-relative/style";
-  import "@merlin-chatou/sutairu-extras/input-group/style";
-  import "@merlin-chatou/sutairu-extras/loader/style";
-  import "@merlin-chatou/sutairu-extras/masonry/style";
-  // import "@merlin-chatou/sutairu-extras/min-width-semantic/style";
-  // import "@merlin-chatou/sutairu-extras/max-width-semantic/style";
-  // import "@merlin-chatou/sutairu-extras/min-height-semantic/style";
-  // import "@merlin-chatou/sutairu-extras/max-height-semantic/style";
-  import "@merlin-chatou/sutairu-extras/modal/style";
-  // import "@merlin-chatou/sutairu-extras/stripe/style";
-  import "@merlin-chatou/sutairu-extras/target-indicator/style";
-  // import "@merlin-chatou/sutairu-extras/text-interactive/style";
-  // import "@merlin-chatou/sutairu-extras/transform/style";
-  import "@merlin-chatou/sutairu-extras/transition/style";
-  // import "@merlin-chatou/sutairu-extras/width-px/style";
-  // import "@merlin-chatou/sutairu-extras/width-relative/style";
   
-
-  
-
-  import "@merlin-chatou/sutairu-extras/fg-base/style";
-
-  import "@merlin-chatou/sutairu-extras/fg-shade-base/style";
-  import "@merlin-chatou/sutairu-extras/fg-shade-hover/style";
-  import "@merlin-chatou/sutairu-extras/fg-shade-focus/style";
-  import "@merlin-chatou/sutairu-extras/fg-shade-focus-visible/style";
-  import "@merlin-chatou/sutairu-extras/fg-shade-active/style";
-  import "@merlin-chatou/sutairu-extras/fg-shade-disabled/style";
-
-  import "@merlin-chatou/sutairu-extras/fg-opacity-base/style";
-  import "@merlin-chatou/sutairu-extras/fg-opacity-hover/style";
-  import "@merlin-chatou/sutairu-extras/fg-opacity-focus/style";
-  import "@merlin-chatou/sutairu-extras/fg-opacity-focus-visible/style";
-  import "@merlin-chatou/sutairu-extras/fg-opacity-active/style";
-  import "@merlin-chatou/sutairu-extras/fg-opacity-disabled/style";
-*/
   import Navbar from "./components/Navbar.svelte";
 
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
@@ -115,7 +67,7 @@
   onMount(() => {
     Masonry.init(masonry, {
       targetWidth: 350,
-      mode: "max",
+      mode: "closest",
       gap: 10,
       onReflow: (params) => {
         const items = Array.from(params.container.children);
@@ -130,7 +82,7 @@
       //setTimeout(() => {
         Masonry.arrange(masonry, {
           targetWidth: 350,
-          mode: "max",
+          mode: "closest",
           gap: 10,
           onReflow: (params) => {
             const items = Array.from(params.container.children);

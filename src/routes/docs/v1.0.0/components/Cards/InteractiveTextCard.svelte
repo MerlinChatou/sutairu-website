@@ -42,7 +42,7 @@
     <button class="btn w-full p-2 r-2 text-center border bg-opacity-0 text-accent active:text-350">.active:text-350</button>
     <button class="btn w-full p-2 r-2 text-center border disabled:bg-opacity-10 disabled:border  disabled:text-accent disabled:text-opacity-40" disabled>.disabled:text-opacity-40</button>
   </div>  <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-color">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-color">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

@@ -29,10 +29,10 @@
   <div class="header d-flex jc-between ai-center" bind:this={header}>
     <h4 class="h4">Buttons</h4>
   </div>
-  <div class="body p-4 d-grid grid-cols-2 gap-3 ff-mono" bind:this={body}>
-    <button class="btn bg-yellow">bg-yellow</button>
-    <button class="btn bg-yellow btn-outline">bg-yellow</button>
-    <button class="btn bg-orange">bg-orange</button>
+  <div class="body p-4 flex-y gap-3 ff-mono" bind:this={body}>
+    <button class="btn btn-primary">btn-primary</button>
+    <button class="btn btn-secondary">btn-secondary</button>
+    <button class="btn btn-success">btn-success</button>
     <button class="btn bg-orange btn-outline">bg-orange</button>
     <button class="btn bg-red">bg-red</button>
     <button class="btn bg-red btn-outline">bg-red</button>
@@ -58,7 +58,7 @@
     <button class="btn btn-link td-underline">btn-link</button>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="extras/button">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/button">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

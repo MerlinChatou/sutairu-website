@@ -36,7 +36,7 @@
     <div class="w-full p-1 text-center b-accent bg-subtle bw-0 by-3">by-3</div>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-width">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-width">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

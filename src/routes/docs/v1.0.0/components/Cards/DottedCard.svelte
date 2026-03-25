@@ -44,7 +44,7 @@
     <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-black fg-300 dark:fg-600 fg-black ">.bg-dotted.fg-black</div>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="extras/dotted">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/dotted">&lt;code&gt;</button>
   </div>
 </div>
 

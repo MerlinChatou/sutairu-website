@@ -42,7 +42,7 @@
     <div class="w-full p-2 r-3 text-center bw-2rem b-black">.b-black</div>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-color">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-color">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

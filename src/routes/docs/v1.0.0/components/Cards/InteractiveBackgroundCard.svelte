@@ -41,7 +41,7 @@
     <button class="btn w-full p-2 r-2 text-center border bg-accent bg-accent disabled:bg-300" disabled>.disabled:bg-300</button>
   </div>
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/background">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/background">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

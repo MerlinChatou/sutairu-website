@@ -41,7 +41,7 @@
   </div>
 
   <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="extras/card">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/card">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

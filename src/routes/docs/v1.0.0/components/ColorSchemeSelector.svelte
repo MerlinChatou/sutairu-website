@@ -25,10 +25,10 @@
 </script>
 
 <span
-  class="bg-gray bg-200 dark:bg-gray dark:bg-700 p-1 r-pill w-fit h-fit fs-sm d-flex fd-row gap-1"
+  class="bg-gray-200 dark:bg-gray-700 p-1 r-pill w-fit h-fit fs-sm d-flex fd-row gap-1"
 >
   <button
-    class="btn bg-accent bw-0 r-pill p-1 md:px-2 fs-xs d-flex fd-row gap-1 jc-center ai-center text-center"    
+    class="btn btn-primary r-pill p-1 md:px-2 fs-xs d-flex fd-row gap-1 jc-center ai-center text-center"    
     class:active={(currentColorScheme == 'light')}     
     onclick={() => colorScheme.setUserChoice("light")}
   >
@@ -37,7 +37,7 @@
   </button>
 
   <button
-    class="btn bg-accent bw-0 r-pill p-1 md:px-2 fs-xs d-flex gap-1 fd-row ai-center"
+    class="btn btn-primary r-pill p-1 md:px-2 fs-xs d-flex gap-1 fd-row ai-center"
     class:active={(currentColorScheme == 'light dark')}
     onclick={() => colorScheme.setUserChoice("light dark")}
   >
@@ -46,7 +46,7 @@
   </button>
 
   <button
-    class="btn bg-accent bw-0 r-pill p-1 md:px-2 fs-xs d-flex gap-1 fd-row ai-center"
+    class="btn btn-primary r-pill p-1 md:px-2 fs-xs d-flex gap-1 fd-row ai-center"
     class:active={(currentColorScheme == 'dark')}
     onclick={() => colorScheme.setUserChoice("dark")}
   >

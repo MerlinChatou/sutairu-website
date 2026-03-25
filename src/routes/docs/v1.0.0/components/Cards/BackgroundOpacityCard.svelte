@@ -41,6 +41,6 @@
       <div class="w-full p-2 r-2 text-center bg-accent bg-opacity-100">bg-opacity-100</div>
     </div>
       <div class="footer text-right">
-    <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/background-opacity">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/background-opacity">&lt;code&gt;</button>
   </div>
   </div>{/if}

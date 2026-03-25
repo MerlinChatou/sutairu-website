@@ -42,7 +42,7 @@
       <div class="w-full r-2 text-accent text-950">.text-950</div>
     </div>
     <div class="footer text-right">
-      <button class="btn bg-accent ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-shade">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-shade">&lt;code&gt;</button>
     </div>
   </div>
 {/if}
