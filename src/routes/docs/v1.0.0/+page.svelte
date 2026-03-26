@@ -14,8 +14,7 @@
   import BorderColorShadeCard from "./components/Cards/BorderColorShadeCard.svelte";
   import BorderOpacityCard from "./components/Cards/BorderOpacityCard.svelte";
   import BorderRadiusCard from "./components/Cards/BorderRadiusCard.svelte";
-  import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";
-  import ButtonSemanticCard from "./components/Cards/ButtonSemanticCard.svelte";
+  import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";  
   import ButtonColorCard from "./components/Cards/ButtonCard.svelte";
   import ButtonDisabledCard from "./components/Cards/ButtonDisabledCard.svelte";
   import CardWithHeaderCard from "./components/Cards/CardWithHeaderCard.svelte";
@@ -127,7 +126,6 @@
     <FontSizeCard />
     <FontWeightCard />
     <WhiteSpaceCard />
-    <ButtonSemanticCard />
     <ButtonColorCard />
     <ButtonDisabledCard />
     <FormCard />

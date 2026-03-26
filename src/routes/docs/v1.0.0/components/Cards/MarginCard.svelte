@@ -31,19 +31,19 @@
     <div class="r-2 w-fit">
       <div class="m-0 bg-accent p-1 w-fit h-fit b-accent b-opacity-50 r-1">m-0</div>
     </div>
-    <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
       <div class="m-1 bg-accent p-1 w-fit r-1">m-1</div>
     </div>
-    <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
       <div class="m-2 bg-accent p-1 w-fit r-1">m-2</div>
     </div>
-    <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
       <div class="m-3 bg-accent p-1 r-1">m-3</div>
     </div>
-    <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
       <div class="m-4 bg-accent p-1 r-1">m-4</div>
     </div>
-    <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
       <div class="m-5 bg-accent p-1 r-1">m-5</div>
     </div>
   </div>

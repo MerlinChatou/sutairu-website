@@ -31,17 +31,17 @@
     <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
   </div>
   <div class="body p-3 d-flex fd-col gap-2 ff-mono" bind:this={body}>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-yellow fg-300 dark:fg-800 fg-yellow">.bg-hatching.fg-yellow</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-orange fg-300 dark:fg-800 fg-orange">.bg-hatching.fg-orange</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-red fg-300 dark:fg-800 fg-red">.bg-hatching.fg-red</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-pink fg-300 dark:fg-800 fg-pink">.bg-hatching.fg-pink</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-purple fg-300 dark:fg-800 fg-purple">.bg-hatching.fg-purple</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-blue fg-300 dark:fg-800 fg-blue">.bg-hatching.fg-blue</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-cyan fg-300 dark:fg-800 fg-cyan">.bg-hatching.fg-cyan</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-green fg-300 dark:fg-800 fg-green">.bg-hatching.fg-green</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-white fg-300 dark:fg-800 fg-white">.bg-hatching.fg-white</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-gray fg-200 dark:fg-800 fg-gray">.bg-hatching.fg-gray</div>
-    <div class="w-full p-2 r-2 text-center bg-hatching b-opacity-50 b-black fg-300 dark:fg-600 fg-black">.bg-hatching.fg-black</div>
+    <div class="w-full p-2 r-2 text-center hatching-yellow-300/80 b-1 b-yellow/30">.bg-hatching.fg-yellow</div>
+    <div class="w-full p-2 r-2 text-center hatching-orange-300/80 b-1 b-orange/30">.bg-hatching.fg-orange</div>
+    <div class="w-full p-2 r-2 text-center hatching-red-300/80 b-1 b-red/30">.bg-hatching.fg-red</div>
+    <div class="w-full p-2 r-2 text-center hatching-pink-300/80 b-1 b-pink/30">.bg-hatching.fg-pink</div>
+    <div class="w-full p-2 r-2 text-center hatching-purple-300/80 b-1 b-purple/30">.bg-hatching.fg-purple</div>
+    <div class="w-full p-2 r-2 text-center hatching-blue-300/80 b-1 b-blue/30">.bg-hatching.fg-blue</div>
+    <div class="w-full p-2 r-2 text-center hatching-cyan-300/80 b-1 b-cyan/30">.bg-hatching.fg-cyan</div>
+    <div class="w-full p-2 r-2 text-center hatching-green-300/80 b-1 b-green/30">.bg-hatching.fg-green</div>
+    <div class="w-full p-2 r-2 text-center hatching-white-300/80 b-1 b-white/30">.bg-hatching.fg-white</div>
+    <div class="w-full p-2 r-2 text-center hatching-gray-300/80 b-1 b-gray/30">.bg-hatching.fg-gray</div>
+    <div class="w-full p-2 r-2 text-center hatching-black-300/80 b-1 b-black/30">.bg-hatching.fg-black</div>
   </div>
   <div class="footer text-right">
     <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/hatching">&lt;code&gt;</button>

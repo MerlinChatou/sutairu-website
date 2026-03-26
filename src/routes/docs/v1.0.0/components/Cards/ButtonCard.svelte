@@ -33,27 +33,12 @@
     <button class="btn btn-primary">btn-primary</button>
     <button class="btn btn-secondary">btn-secondary</button>
     <button class="btn btn-success">btn-success</button>
-    <button class="btn bg-orange btn-outline">bg-orange</button>
-    <button class="btn bg-red">bg-red</button>
-    <button class="btn bg-red btn-outline">bg-red</button>
-    <button class="btn bg-pink">bg-pink</button>
-    <button class="btn bg-pink btn-outline">bg-pink</button>
-    <button class="btn bg-purple">bg-purple</button>
-    <button class="btn bg-purple btn-outline">bg-purple</button>
-    <button class="btn bg-blue">bg-blue</button>
-    <button class="btn bg-blue btn-outline">bg-blue</button>
-    <button class="btn bg-cyan">bg-cyan</button>
-    <button class="btn bg-cyan btn-outline">bg-cyan</button>
-    <button class="btn bg-green">bg-green</button>
-    <button class="btn bg-green btn-outline">bg-green</button>
-    <button class="btn bg-white">bg-white</button>
-    <button class="btn bg-white btn-outline">bg-white</button>
-    <button class="btn bg-gray">bg-gray</button>
-    <button class="btn bg-gray btn-outline">bg-gray</button>
-    <button class="btn bg-black">bg-black</button>
-    <button class="btn bg-black btn-outline">bg-black</button>
-    <button class="btn bg-accent">bg-accent</button>
-    <button class="btn bg-accent btn-outline">bg-accent</button>
+    <button class="btn btn-danger">btn-danger</button>
+    <button class="btn btn-warning">btn-warning</button>
+    <button class="btn btn-info">btn-info</button>
+    <button class="btn btn-neutral">btn-neutral</button>
+    <button class="btn btn-dark">btn-dark</button>
+    
     <button class="btn btn-link">btn-link</button>
     <button class="btn btn-link td-underline">btn-link</button>
   </div>
