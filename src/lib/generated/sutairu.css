@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* Define the order upfront (Weakest to Strongest) */
-@layer reset, components;
+@layer reset, base, components, utilities;
 
 @layer reset {
   *,
@@ -59,54 +59,56 @@
   }
 }
 
-:root {
-  --su-z-behind: -1;
-  --su-z-base: 0;
-  --su-z-raised: 0;
-  --su-z-dropdown: 100;
-  --su-z-sticky: 200;
-  --su-z-overlay: 300;
-  --su-z-modal: 1000;
-  --su-z-popover: 2000;
-  --su-z-tooltip: 3000;
-  --su-z-toast: 4000;
-  --su-z-auto: auto;
-  /* The Master Pipeline Trigger */
-}
+@layer base {
+  :root {
+    --su-z-behind: -1;
+    --su-z-base: 0;
+    --su-z-raised: 0;
+    --su-z-dropdown: 100;
+    --su-z-sticky: 200;
+    --su-z-overlay: 300;
+    --su-z-modal: 1000;
+    --su-z-popover: 2000;
+    --su-z-tooltip: 3000;
+    --su-z-toast: 4000;
+    --su-z-auto: auto;
+    /* The Master Pipeline Trigger */
+  }
 
-a {
-  color: var(--su-link-color);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-a:hover {
-  color: var(--su-link-color-hover);
-  /* Inverted hover effect for high impact */
-  text-decoration: underline;
-}
-:where(
-  [class*="blur-"],
-  [class*="grayscale-"],
-  [class*="contrast-"],
-  [class*="brightness-"],
-  [class*="invert-"],
-  [class*="saturate-"],
-  [class*="sepia-"],
-  [class*="hue-rotate-"]
-) {
-  /* Initialize variables to 'initial' or empty so they don't break the string */
-  --su-blur: ;
-  --su-brightness: ;
-  --su-contrast: ;
-  --su-grayscale: ;
-  --su-invert: ;
-  --su-saturate: ;
-  --su-sepia: ;
-  --su-hue-rotate: ;
+  a {
+    color: var(--su-link-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    color: var(--su-link-color-hover);
+    /* Inverted hover effect for high impact */
+    text-decoration: underline;
+  }
+  :where(
+    [class*="blur-"],
+    [class*="grayscale-"],
+    [class*="contrast-"],
+    [class*="brightness-"],
+    [class*="invert-"],
+    [class*="saturate-"],
+    [class*="sepia-"],
+    [class*="hue-rotate-"]
+  ) {
+    /* Initialize variables to 'initial' or empty so they don't break the string */
+    --su-blur: ;
+    --su-brightness: ;
+    --su-contrast: ;
+    --su-grayscale: ;
+    --su-invert: ;
+    --su-saturate: ;
+    --su-sepia: ;
+    --su-hue-rotate: ;
 
-  /* The combined filter property */
-  /* If a variable is empty, the browser ignores that segment */
-  filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
+    /* The combined filter property */
+    /* If a variable is empty, the browser ignores that segment */
+    filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
+  }
 }
 
 /* Import Inter & Indie Flower for default theme */
@@ -1308,6 +1310,11 @@ a:hover {
   --su-modal-footer-bg-color: var(--su-container);
   --su-modal-border-color: var(--su-border);
   --su-modal-border-radius: 0.75rem;
+  --su-modal-backdrop-color: #0000008f;
+}
+
+[data-color-scheme="dark"] {
+  --su-modal-backdrop-color: #000000af;
 }
 
 @keyframes su-modal-animation-default {
@@ -1337,7 +1344,19 @@ a:hover {
   --su-modal-closing-duration: 200ms;
   --su-modal-animation: su-modal-animation-swiss;
   --su-modal-backdrop-animation: su-modal-backdrop-animation-swiss;
+
+  --su-modal-header-bg-color: var(--su-container);
+  --su-modal-body-bg-color: var(--su-container);
+  --su-modal-footer-bg-color: var(--su-container);
+  --su-modal-border-color: var(--su-border);
+  --su-modal-border-radius: 0.75rem;
+  --su-modal-backdrop-color: #0000008f;
 }
+
+[data-theme="swiss"][data-color-scheme="dark"]  {
+  --su-modal-backdrop-color: #000000af;
+}
+
 
 @keyframes su-modal-animation-swiss {
   from {
@@ -1366,6 +1385,17 @@ a:hover {
   --su-modal-closing-duration: 200ms;
   --su-modal-animation: su-modal-animation-adjuvio;
   --su-modal-backdrop-animation: su-modal-backdrop-animation-adjuvio;
+
+  --su-modal-header-bg-color: var(--su-container);
+  --su-modal-body-bg-color: var(--su-container);
+  --su-modal-footer-bg-color: var(--su-container);
+  --su-modal-border-color: var(--su-border);
+  --su-modal-border-radius: 0.75rem;
+  --su-modal-backdrop-color: #0000008f;
+}
+
+[data-theme="adjuvio"][data-color-scheme="dark"]  {
+  --su-modal-backdrop-color: #000000af;
 }
 
 @keyframes su-modal-animation-adjuvio {
@@ -1511,7 +1541,7 @@ body.modal-open {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: var(--su-modal-backdrop);
+  background-color: var(--su-modal-backdrop-color);
   opacity: 1;
   backdrop-filter: blur(0.375rem);
   pointer-events: auto;
@@ -2035,6 +2065,7 @@ body.modal-open {
 
 }
 
+@layer utilities {
 .px-1 {
   padding-inline: 0.25rem;
 }
@@ -3108,6 +3139,116 @@ body.modal-open {
   background-color: color-mix(in oklch, var(--su-gray), #000 20%);
 }
 
+.dotted-yellow-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-yellow\/50 {
+  border-color: oklch(from var(--su-yellow) l c h / 0.5);
+}
+
+.dotted-orange-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-orange\/50 {
+  border-color: oklch(from var(--su-orange) l c h / 0.5);
+}
+
+.dotted-red-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-red\/50 {
+  border-color: oklch(from var(--su-red) l c h / 0.5);
+}
+
+.dotted-pink-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-pink\/50 {
+  border-color: oklch(from var(--su-pink) l c h / 0.5);
+}
+
+.dotted-purple-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-purple\/50 {
+  border-color: oklch(from var(--su-purple) l c h / 0.5);
+}
+
+.dotted-blue-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-blue\/50 {
+  border-color: oklch(from var(--su-blue) l c h / 0.5);
+}
+
+.dotted-cyan-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-cyan\/50 {
+  border-color: oklch(from var(--su-cyan) l c h / 0.5);
+}
+
+.dotted-green-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-green\/50 {
+  border-color: oklch(from var(--su-green) l c h / 0.5);
+}
+
+.dotted-white-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-white\/50 {
+  border-color: oklch(from var(--su-white) l c h / 0.5);
+}
+
+.dotted-gray-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-gray\/50 {
+  border-color: oklch(from var(--su-gray) l c h / 0.5);
+}
+
+.dotted-black-300 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-black\/50 {
+  border-color: oklch(from var(--su-black) l c h / 0.5);
+}
+
 .brightness-150 {
   --su-brightness: brightness(1.5);
 }
@@ -3320,6 +3461,14 @@ body.modal-open {
   border-color: oklch(from var(--su-black) l c h / 0.3);
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.w-4px {
+  width: 4px;
+}
+
 .b-accent\/30 {
   border-color: oklch(from var(--su-accent) l c h / 0.3);
 }
@@ -3334,14 +3483,6 @@ body.modal-open {
           transparent 0,
           transparent 50%
         );
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.w-4px {
-  width: 4px;
 }
 
 .p-0 {
@@ -3491,6 +3632,148 @@ body.modal-open {
   height: 100%;
 }
 
+.stripes-yellow-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-yellow), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-yellow-200 {
+  background-color: color-mix(in oklch, var(--su-yellow), #fff 60%);
+}
+
+.stripes-orange-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-orange), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-orange-200 {
+  background-color: color-mix(in oklch, var(--su-orange), #fff 60%);
+}
+
+.stripes-red-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-red), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-red-200 {
+  background-color: color-mix(in oklch, var(--su-red), #fff 60%);
+}
+
+.stripes-pink-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-pink), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-pink-200 {
+  background-color: color-mix(in oklch, var(--su-pink), #fff 60%);
+}
+
+.stripes-purple-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-purple), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-purple-200 {
+  background-color: color-mix(in oklch, var(--su-purple), #fff 60%);
+}
+
+.stripes-blue-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-blue), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.stripes-cyan-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-cyan), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-cyan-200 {
+  background-color: color-mix(in oklch, var(--su-cyan), #fff 60%);
+}
+
+.stripes-green-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-green), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.stripes-white-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-white), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-white-200 {
+  background-color: color-mix(in oklch, var(--su-white), #fff 60%);
+}
+
+.stripes-gray-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-gray), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.stripes-black-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-black), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-black-200 {
+  background-color: color-mix(in oklch, var(--su-black), #fff 60%);
+}
+
 .ov-x-auto {
   overflow-x: auto;
 }
@@ -3518,6 +3801,226 @@ body.modal-open {
   
   &.dark\:bg-blue {
     background-color: var(--su-blue);
+  }
+  
+  &.dark\:dotted-yellow-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-orange-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-red-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-pink-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-purple-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-blue-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-cyan-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-green-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-white-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-gray-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:dotted-black-300 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
+  }
+  
+  &.dark\:stripes-yellow-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-yellow), #000 60%) 0,
+                    color-mix(in oklch, var(--su-yellow), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-yellow-900 {
+    background-color: color-mix(in oklch, var(--su-yellow), #000 80%);
+  }
+  
+  &.dark\:stripes-orange-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-orange), #000 60%) 0,
+                    color-mix(in oklch, var(--su-orange), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-orange-900 {
+    background-color: color-mix(in oklch, var(--su-orange), #000 80%);
+  }
+  
+  &.dark\:stripes-red-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-red), #000 60%) 0,
+                    color-mix(in oklch, var(--su-red), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-red-900 {
+    background-color: color-mix(in oklch, var(--su-red), #000 80%);
+  }
+  
+  &.dark\:stripes-pink-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-pink), #000 60%) 0,
+                    color-mix(in oklch, var(--su-pink), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-pink-900 {
+    background-color: color-mix(in oklch, var(--su-pink), #000 80%);
+  }
+  
+  &.dark\:stripes-purple-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-purple), #000 60%) 0,
+                    color-mix(in oklch, var(--su-purple), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-purple-900 {
+    background-color: color-mix(in oklch, var(--su-purple), #000 80%);
+  }
+  
+  &.dark\:stripes-blue-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-blue), #000 60%) 0,
+                    color-mix(in oklch, var(--su-blue), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-blue-900 {
+    background-color: color-mix(in oklch, var(--su-blue), #000 80%);
+  }
+  
+  &.dark\:stripes-cyan-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-cyan), #000 60%) 0,
+                    color-mix(in oklch, var(--su-cyan), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-cyan-900 {
+    background-color: color-mix(in oklch, var(--su-cyan), #000 80%);
+  }
+  
+  &.dark\:stripes-green-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-green), #000 60%) 0,
+                    color-mix(in oklch, var(--su-green), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-green-900 {
+    background-color: color-mix(in oklch, var(--su-green), #000 80%);
+  }
+  
+  &.dark\:stripes-white-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-white), #000 60%) 0,
+                    color-mix(in oklch, var(--su-white), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-white-900 {
+    background-color: color-mix(in oklch, var(--su-white), #000 80%);
+  }
+  
+  &.dark\:stripes-gray-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-gray), #000 60%) 0,
+                    color-mix(in oklch, var(--su-gray), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-gray-900 {
+    background-color: color-mix(in oklch, var(--su-gray), #000 80%);
+  }
+  
+  &.dark\:stripes-black-800 {
+    background-image: repeating-linear-gradient(
+                    var(--su-pattern-angle, 135deg),
+                    color-mix(in oklch, var(--su-black), #000 60%) 0,
+                    color-mix(in oklch, var(--su-black), #000 60%) var(--su-pattern-w, 10px),
+                    transparent calc(var(--su-pattern-w, 10px) + 1px),
+                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                  );
+  }
+  
+  &.dark\:bg-black-900 {
+    background-color: color-mix(in oklch, var(--su-black), #000 80%);
   }
   
   &.dark\:text-body {
@@ -3728,30 +4231,32 @@ body.modal-open {
     color: var(--su-purple);
   }
   
-  .active\:text-accent:active {
-    color: var(--su-accent);
-  }
-  
   .active\:bg-accent:active {
     background-color: var(--su-accent);
   }
-
-  .focus\:text-accent:focus {
+  
+  .active\:text-accent:active {
     color: var(--su-accent);
   }
-  
+
   .focus\:bg-accent:focus {
     background-color: var(--su-accent);
   }
-
-  .disabled\:text-accent:is(:disabled, [aria-disabled="true"]) {
+  
+  .focus\:text-accent:focus {
     color: var(--su-accent);
   }
-  
+
   .disabled\:bg-gray:is(:disabled, [aria-disabled="true"]) {
     background-color: var(--su-gray);
+  }
+  
+  .disabled\:text-accent:is(:disabled, [aria-disabled="true"]) {
+    color: var(--su-accent);
   }
 
   .focus-visible\:text-accent:focus-visible {
     color: var(--su-accent);
   }
+
+}

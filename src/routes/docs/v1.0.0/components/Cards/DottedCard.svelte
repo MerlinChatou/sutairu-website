@@ -31,17 +31,17 @@
     <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
   </div>
   <div class="body p-3 d-flex fd-col gap-2 ff-mono" bind:this={body}>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-yellow fg-300 dark:fg-800 fg-yellow ">.bg-dotted.fg-yellow</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-orange fg-300 dark:fg-800 fg-orange ">.bg-dotted.fg-orange</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-red fg-300 dark:fg-800 fg-red ">.bg-dotted.fg-red</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-pink fg-300 dark:fg-800 fg-pink ">.bg-dotted.fg-pink</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-purple fg-300 dark:fg-800 fg-purple ">.bg-dotted.fg-purple</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-blue fg-300 dark:fg-800 fg-blue ">.bg-dotted.fg-blue</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-cyan fg-300 dark:fg-800 fg-cyan ">.bg-dotted.fg-cyan</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-green fg-300 dark:fg-800 fg-green ">.bg-dotted.fg-green</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-white fg-300 dark:fg-800 fg-white ">.bg-dotted.fg-white</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-gray fg-200 dark:fg-800 fg-gray ">.bg-dotted.fg-gray</div>
-    <div class="w-full p-2 r-2 text-center bg-dotted b-opacity-50 b-black fg-300 dark:fg-600 fg-black ">.bg-dotted.fg-black</div>
+    <div class="w-full p-2 r-2 text-center dotted-yellow-300 dark:dotted-yellow-300 b-1 b-yellow/50 ">.bg-dotted.fg-yellow</div>
+    <div class="w-full p-2 r-2 text-center dotted-orange-300 dark:dotted-orange-300 b-1 b-orange/50 ">.bg-dotted.fg-orange</div>
+    <div class="w-full p-2 r-2 text-center dotted-red-300 dark:dotted-red-300 b-1 b-red/50 ">.bg-dotted.fg-red</div>
+    <div class="w-full p-2 r-2 text-center dotted-pink-300 dark:dotted-pink-300 b-1 b-pink/50 ">.bg-dotted.fg-pink</div>
+    <div class="w-full p-2 r-2 text-center dotted-purple-300 dark:dotted-purple-300 b-1 b-purple/50 ">.bg-dotted.fg-purple</div>
+    <div class="w-full p-2 r-2 text-center dotted-blue-300 dark:dotted-blue-300 b-1 b-blue/50 ">.bg-dotted.fg-blue</div>
+    <div class="w-full p-2 r-2 text-center dotted-cyan-300 dark:dotted-cyan-300 b-1 b-cyan/50 ">.bg-dotted.fg-cyan</div>
+    <div class="w-full p-2 r-2 text-center dotted-green-300 dark:dotted-green-300 b-1 b-green/50 ">.bg-dotted.fg-green</div>
+    <div class="w-full p-2 r-2 text-center dotted-white-300 dark:dotted-white-300 b-1 b-white/50 ">.bg-dotted.fg-white</div>
+    <div class="w-full p-2 r-2 text-center dotted-gray-300 dark:dotted-gray-300 b-1 b-gray/50 ">.bg-dotted.fg-gray</div>
+    <div class="w-full p-2 r-2 text-center dotted-black-300 dark:dotted-black-300 b-1 b-black/50 ">.bg-dotted.fg-black</div>
   </div>
   <div class="footer text-right">
     <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/dotted">&lt;code&gt;</button>
