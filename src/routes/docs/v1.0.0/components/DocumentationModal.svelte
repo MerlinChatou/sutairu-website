@@ -1,7 +1,7 @@
 <script>
   import { docsVersion } from "$lib/stores/docs";
   import { onMount } from "svelte";
-  // import Scroll from "@merlin-chatou/sutairu-extras/scroll";
+  import { Scroll } from "@merlin-chatou/sutairu/utils";
 
   import hljs from "highlight.js";
 
@@ -113,7 +113,7 @@
       <div id="documentation-modal-content" class:d-none={isFailing || isLoading} bind:this={bodyContentEl}>{@html bodyContent}</div>
     </div>
     <div class="footer text-right">
-      <button class="btn bg-gray" data-close-modal>Close</button>
+      <button class="btn btn-neutral" data-close-modal>Close</button>
     </div>
   </div>
 </div>

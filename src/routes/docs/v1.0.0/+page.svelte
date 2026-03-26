@@ -1,9 +1,9 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
-  import { Masonry } from "@merlin-chatou/sutairu";
+  import { Masonry, Modal } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
   import "$lib/generated/sutairu.min.css";
-  
+
   import Navbar from "./components/Navbar.svelte";
 
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
@@ -57,14 +57,25 @@
   import DocumentationModal from "./components/DocumentationModal.svelte";
   import NoSearchResult from "./components/NoSearchResult.svelte";
 
+  import ModalBasicExample from "./components/DemoModals/ModalBasicExample.svelte";
+  import ModalNoAnimation from "./components/DemoModals/ModalNoAnimation.svelte";
+  import ModalNoBackdropBlur from "./components/DemoModals/ModalNoBacdropBlur.svelte";
+  import ModalCentered from "./components/DemoModals/ModalCentered.svelte";
+  import ModalLongContent from "./components/DemoModals/ModalLongContent.svelte";
+  import ModalLongContentPageScroll from "./components/DemoModals/ModalLongContentPageScroll.svelte";
+  import ModalToggle1 from "./components/DemoModals/ModalToggle1.svelte";
+  import ModalToggle2 from "./components/DemoModals/ModalToggle2.svelte";
+  import ModalFixWidth from "./components/DemoModals/Modal-fix-width.svelte";
+  import ModalFullWidth from "./components/DemoModals/ModalFullWidth.svelte";
+
   // Initialize documentation version from URL
   import BrowserInit from "$lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
-  import { maximum } from "firebase/firestore/pipelines";
 
   let masonry = $state();
 
   onMount(() => {
+    //Modal.init();
     Masonry.init(masonry, {
       targetWidth: 350,
       mode: "closest",
@@ -79,19 +90,17 @@
     $effect(() => {
       const _ = searchState.queries;
       console.log("arrange");
-      //setTimeout(() => {
-        Masonry.arrange(masonry, {
-          targetWidth: 350,
-          mode: "closest",
-          gap: 10,
-          onReflow: (params) => {
-            const items = Array.from(params.container.children);
-            items.forEach((item) => {
-              item.classList.remove("opacity-0");
-            });
-          },
-        });
-      //}, 350);
+      Masonry.arrange(masonry, {
+        targetWidth: 350,
+        mode: "closest",
+        gap: 10,
+        onReflow: (params) => {
+          const items = Array.from(params.container.children);
+          items.forEach((item) => {
+            item.classList.remove("opacity-0");
+          });
+        },
+      });
     });
   });
 </script>
@@ -161,12 +170,19 @@
   <NoSearchResult />
 
   <DocumentationModal />
+  <ModalBasicExample />
+  <ModalNoAnimation />
+  <ModalNoBackdropBlur />
+  <ModalCentered />
+  <ModalLongContent />
+  <ModalLongContentPageScroll />
+  <ModalToggle1 />
+  <ModalToggle2 />
+  <ModalFixWidth />
+  <ModalFullWidth />
 </div>
 
 <style>
-  :global(.modal) {
-    display: none;
-  }
   :global(.masonry > *) {
     transition:
       transform 300ms ease,

@@ -2,7 +2,7 @@
   <div class="modal-scroll">
     <div class="modal-content">
       <div class="header">
-        <h4 class="mt-0">Long content</h4>
+        <h3 class="h3 mt-0">Long content</h3>
         <button type="button" class="btn-close" data-close-modal aria-label="Close"></button>
       </div>
       <div class="body fs-2xl fw-bold ff-handwritten">
@@ -38,8 +38,8 @@
         <p>I will not talk in class <span class="d-none md:d-inline"> I will not talk in class</span></p>
       </div>
       <div class="footer text-right">
-        <button class="btn bg-accent" data-open-modal="documentation-modal" data-documentation="extras/modal">Documentation</button>
-        <button class="btn bg-gray" data-close-modal>Close</button>
+        <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="extras/modal">Documentation</button>
+        <button class="btn btn-neutral" data-close-modal>Close</button>
       </div>
     </div>
   </div>
