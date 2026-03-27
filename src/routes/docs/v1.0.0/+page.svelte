@@ -9,6 +9,7 @@
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
   import BackgroundOpacityCard from "./components/Cards/BackgroundOpacityCard.svelte";
   import BackgroundShadeScaleCard from "./components/Cards/BackgroundColorShadeCard.svelte";
+  import BadgeCard from "./components/Cards/BadgeCard.svelte";
   import BlockquoteCard from "./components/Cards/BlockquoteCard.svelte";
   import BorderColorCard from "./components/Cards/BorderColorCard.svelte";
   import BorderColorShadeCard from "./components/Cards/BorderColorShadeCard.svelte";
@@ -82,7 +83,7 @@
       onReflow: (params) => {
         const items = Array.from(params.container.children);
         items.forEach((item) => {
-          item.classList.remove("opacity-0");
+          item.classList.remove("opacity-0");          
         });
       },
     });
@@ -117,6 +118,7 @@
   </p>
 
   <div bind:this={masonry} class="masonry px-2 pb-5">
+
     <ColorSchemeCard />
     <HeadingCard />
     <TypographyCard />
@@ -148,14 +150,15 @@
     <BorderWidthCard />
     <BorderRadiusCard />
     <PerSideBorderWidthCard />
-    <CursorCard />
+    <CursorCard />    
     <FlexCard />
+    <RotationCard />
+    <ScaleCard />    
     <ExtendedTypographyCard />
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
     <ModalCard />
-    <RotationCard />
-    <ScaleCard />
+    <BadgeCard />
     <CodeHighlightCard />
     <LoaderCard />
     <FilterCard />

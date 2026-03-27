@@ -381,18 +381,18 @@
 </thead>
 <tbody>
 <tr>
-<td><code>fg-0</code></td>
+<td><code>grow-0</code></td>
 <td><code>flex-grow: 0</code></td>
 </tr>
 <tr>
-<td><code>fg-1</code></td>
+<td><code>grow-1</code></td>
 <td><code>flex-grow: 1</code></td>
 </tr>
 </tbody>
 </table>
 <p>Example:</p>
 <div class="card p-3 ff-mono w-fit ta-center">
-  <div class="d-flex w-md fw-wrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
+  <div class="d-flex w-md fw-wrap bg-hatching grow-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
     <div class="fg-1 bg-accent text-white r-2 p-2">02</div>
   </div>
@@ -403,7 +403,7 @@
 &#x3C;/div>
 </code></pre>
 <h2 id="flex-shrink" class="h2">Flex shrink</h2>
-<p>Flex shrink (<code>fsr-</code>) controls how items shrink when space is limited.</p>
+<p>Flex shrink (<code>shrink-</code>) controls how items shrink when space is limited.</p>
 <table>
 <thead>
 <tr>
@@ -413,11 +413,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>fsr-0</code></td>
+<td><code>shrink-0</code></td>
 <td><code>flex-shrink: 0</code></td>
 </tr>
 <tr>
-<td><code>fsr-1</code></td>
+<td><code>shrink-1</code></td>
 <td><code>flex-shrink: 1</code></td>
 </tr>
 </tbody>
@@ -425,15 +425,15 @@
 <p>Example:</p>
 <div class="card p-3 ff-mono w-fit ta-center">
   <div class="h-flex w-md fw-nowrap bg-hatching fg-gray fg-opacity-20 b-gray b-opacity-20 gap-2 r-2 ov-hidden">
-    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">01</div>
-    <div class="fsr-1 bg-accent text-white r-2 p-2" style="width:250px">02</div>
-    <div class="fsr-0 bg-accent text-white r-2 p-2" style="width:250px">03</div>
+    <div class="shrink-0 bg-accent text-white r-2 p-2" style="width:250px">01</div>
+    <div class="shrink-1 bg-accent text-white r-2 p-2" style="width:250px">02</div>
+    <div class="shrink-0 bg-accent text-white r-2 p-2" style="width:250px">03</div>
   </div>
 </div>
 <pre><code class="language-html">&#x3C;div class="h-flex w-md">
-  &#x3C;div class="fsr-0">01&#x3C;/div>
-  &#x3C;div class="fsr-1">02&#x3C;/div>
-  &#x3C;div class="fsr-0">03&#x3C;/div>
+  &#x3C;div class="shrink-0">01&#x3C;/div>
+  &#x3C;div class="shrink-1">02&#x3C;/div>
+  &#x3C;div class="shrink-0">03&#x3C;/div>
 &#x3C;/div>
 </code></pre>
 <h2 id="flex-shorthand" class="h2">Flex shorthand</h2>

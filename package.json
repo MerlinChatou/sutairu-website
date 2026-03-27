@@ -8,7 +8,9 @@
     "npm": ">=11.6.0"
   },
   "scripts": {
-    "dev": "vite dev",
+    "dev:docs": "node docs/build-docs.js --watch",
+    "dev:site": "vite dev",
+    "dev": "concurrently \"npm:dev:docs\" \"npm:dev:site\"",
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
@@ -19,6 +21,7 @@
     "@sveltejs/adapter-auto": "^7.0.0",
     "@sveltejs/kit": "^2.49.2",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "concurrently": "^9.2.1",
     "markdown-it": "^14.1.0",
     "mdsvex": "^0.12.6",
     "remark": "^15.0.1",

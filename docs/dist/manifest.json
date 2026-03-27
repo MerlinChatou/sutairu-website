@@ -1,5 +1,6 @@
 {
   "v1.0.0": [
+    "components/badge",
     "core/blockquote",
     "core/border-radius",
     "core/color-scheme",
