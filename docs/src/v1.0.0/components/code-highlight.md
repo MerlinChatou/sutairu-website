@@ -26,7 +26,7 @@ hljs.highlightAll();
 
 ## Sutairu Theme Colors
 
-**Sutairu** includes custom highlight.js colors that match its themes. When the Sutairu engine detects any class like `language-*` (e.g. `language-js`, `language-css`),, it automatically adds syntax highlighting styles to your CSS. This applies custom colors consistent with your Sutairu theme.
+**Sutairu** includes custom highlight.js colors that match its themes. When the Sutairu engine detects any class like `language-*` (e.g. `language-js`, `language-css`), it automatically adds syntax highlighting styles to your CSS. This applies custom colors consistent with your Sutairu theme.
 
 ## Example
 

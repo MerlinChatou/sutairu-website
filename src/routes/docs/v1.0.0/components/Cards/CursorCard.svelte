@@ -28,19 +28,19 @@
 <div class="card opacity-0" id="cursor" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Cursor</h4></div>
   <div class="body p-4 d-flex fd-col gap-2 ff-mono" bind:this={body}>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-pointer">cur-pointer</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-wait">cur-wait</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-text">cur-text</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-help">cur-help</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-crosshair">cur-crosshair</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-not-allowed">cur-not-allowed</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-zoom-in">cur-zoom-in</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-zoom-out">cur-zoom-out</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-grab">cur-grab</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-grabbing">cur-grabbing</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-progress">cur-progress</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-default">cur-default</button>
-    <button class="w-full p-2 r-3 text-center bg-subtle b-accent cur-auto">cur-auto</button>
+    <div class="bg-subtle p-3 r-2 text-center cur-pointer">cur-pointer</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-wait">cur-wait</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-text">cur-text</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-help">cur-help</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-crosshair">cur-crosshair</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-not-allowed">cur-not-allowed</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-zoom-in">cur-zoom-in</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-zoom-out">cur-zoom-out</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-grab">cur-grab</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-grabbing">cur-grabbing</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-progress">cur-progress</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-default">cur-default</div>
+    <div class="bg-subtle p-3 r-2 text-center cur-auto">cur-auto</div>
   </div>
   <div class="footer text-right">
     <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/cursor">&lt;code&gt;</button>
