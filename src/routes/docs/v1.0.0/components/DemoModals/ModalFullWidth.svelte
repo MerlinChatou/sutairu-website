@@ -7,7 +7,7 @@
     <div class="body text-center">This is a full width modal</div>
     <div class="footer text-right">
       <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="extras/modal">Documentation</button>
-      <button class="btn btn-success" data-close-modal>Close</button>
+      <button class="btn btn-neutral" data-close-modal>Close</button>
     </div>
   </div>
 </div>

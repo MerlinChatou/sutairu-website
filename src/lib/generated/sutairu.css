@@ -2593,6 +2593,56 @@ body.modal-open {
   padding: 1rem;
 }
 
+.btn-close {
+  appearance: button;
+  display: inline-block;
+  padding: 0.75rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--su-btn-radius);
+  border-width: var(--su-btn-border-width);
+  position: relative;
+  background-color: transparent;;
+  border-color: transparent;;
+  --su-btn-close-color: var(--su-gray);
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-close::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close:hover::before {
+  --su-btn-close-color: color-mix(var(--su-gray), #000 20%);
+}
+
+.btn-close:hover::after {
+  --su-btn-close-color: color-mix(var(--su-gray), #000 20%);
+}
+
+.btn-close:focus-visible {
+  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);
+  outline-offset: 1px;
+}
+
 .modal-scroll {
   position: fixed;
   inset: 0;
@@ -3147,6 +3197,206 @@ body.modal-open {
 
 .hljs-emphasis {
   color: var(--hljs-emphasis);
+}
+
+.btn-close-accent {
+  appearance: button;
+  display: inline-block;
+  padding: 0.75rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--su-btn-radius);
+  border-width: var(--su-btn-border-width);
+  position: relative;
+  background-color: transparent;;
+  border-color: transparent;;
+  --su-btn-close-color: var(--su-accent);
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-close-accent::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close-accent::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close-accent:hover::before {
+  --su-btn-close-color: color-mix(var(--su-accent), #000 20%);
+}
+
+.btn-close-accent:hover::after {
+  --su-btn-close-color: color-mix(var(--su-accent), #000 20%);
+}
+
+.btn-close-accent:focus-visible {
+  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);
+  outline-offset: 1px;
+}
+
+.btn-close-yellow {
+  appearance: button;
+  display: inline-block;
+  padding: 0.75rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--su-btn-radius);
+  border-width: var(--su-btn-border-width);
+  position: relative;
+  background-color: transparent;;
+  border-color: transparent;;
+  --su-btn-close-color: var(--su-yellow);
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-close-yellow::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close-yellow::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close-yellow:hover::before {
+  --su-btn-close-color: color-mix(var(--su-yellow), #000 20%);
+}
+
+.btn-close-yellow:hover::after {
+  --su-btn-close-color: color-mix(var(--su-yellow), #000 20%);
+}
+
+.btn-close-yellow:focus-visible {
+  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);
+  outline-offset: 1px;
+}
+
+.btn-close-red {
+  appearance: button;
+  display: inline-block;
+  padding: 0.75rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--su-btn-radius);
+  border-width: var(--su-btn-border-width);
+  position: relative;
+  background-color: transparent;;
+  border-color: transparent;;
+  --su-btn-close-color: var(--su-red);
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-close-red::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close-red::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close-red:hover::before {
+  --su-btn-close-color: color-mix(var(--su-red), #000 20%);
+}
+
+.btn-close-red:hover::after {
+  --su-btn-close-color: color-mix(var(--su-red), #000 20%);
+}
+
+.btn-close-red:focus-visible {
+  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);
+  outline-offset: 1px;
+}
+
+.btn-close-green {
+  appearance: button;
+  display: inline-block;
+  padding: 0.75rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--su-btn-radius);
+  border-width: var(--su-btn-border-width);
+  position: relative;
+  background-color: transparent;;
+  border-color: transparent;;
+  --su-btn-close-color: var(--su-green);
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-close-green::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close-green::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: " ";
+  height: 1.5em;
+  width: 3px;
+  background-color: var(--su-btn-close-color);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close-green:hover::before {
+  --su-btn-close-color: color-mix(var(--su-green), #000 20%);
+}
+
+.btn-close-green:hover::after {
+  --su-btn-close-color: color-mix(var(--su-green), #000 20%);
+}
+
+.btn-close-green:focus-visible {
+  outline: 4px solid oklch(from var(--su-btn-close-color) l c h / 30%);
+  outline-offset: 1px;
 }
 
 
@@ -5286,8 +5536,8 @@ body.modal-open {
     --su-blur: blur(8px);
   }
   
-  .hover\:bg-gray:hover {
-    background-color: var(--su-gray);
+  .hover\:bg-gray\/10:hover {
+    background-color: oklch(from var(--su-gray) l c h / 0.1);
   }
   
   .hover\:bg-accent:hover {
@@ -5335,8 +5585,12 @@ body.modal-open {
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
   
-  .hover\:bg-green:hover {
-    background-color: var(--su-green);
+  .hover\:bg-gray\/20:hover {
+    background-color: oklch(from var(--su-gray) l c h / 0.2);
+  }
+  
+  .hover\:bg-green\/20:hover {
+    background-color: oklch(from var(--su-green) l c h / 0.2);
   }
 
   .active\:text-purple:active {

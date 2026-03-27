@@ -89,7 +89,7 @@
         <div class="h2 m-0" class:d-none={!isFailing}><i class="fa-solid fa-circle-exclamation"></i> Something wrong occured</div>
         <h1 class="h1 m-0" class:d-none={isLoading || isFailing}>{docTitle}</h1>
       </div>
-      <button type="button" class="btn-close hover:bg-gray bg-opacity-10" data-close-modal aria-label="Close"></button>
+      <button type="button" class="btn-close hover:bg-gray/10" data-close-modal aria-label="Close"></button>
     </div>
     <div class="body py-4">
       <div id="documentation-modal-loader" class="v-flex gap-3" class:d-none={!isLoading}>
