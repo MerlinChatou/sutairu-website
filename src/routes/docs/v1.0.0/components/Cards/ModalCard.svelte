@@ -35,7 +35,6 @@
   <div class="card opacity-0" id="modals" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Modals</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
     </div>
     <div class="body p-4 d-flex fd-col gap-3" bind:this={body}>
       <button class="btn btn-secondary" data-open-modal="modal-basic-example">Launch demo modal</button>
