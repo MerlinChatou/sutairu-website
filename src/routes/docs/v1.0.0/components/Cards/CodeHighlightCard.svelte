@@ -23,13 +23,13 @@ p { color: green }`;
   Dark mode
 </div>`;
 
-  const pyCode = escapeHtml(`# Python
+  const pyCode = `# Python
 adj = ["green", "big"]
 fruits = ["apple", "banana"]
 
 for x in adj:
   for y in fruits:
-    print(x, y)`);
+    print(x, y)`;
 
   function highlightAll() {
     if (!body) return;
@@ -78,7 +78,6 @@ for x in adj:
   <div class="card opacity-0" id="code" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Code Highlight</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
     </div>
     <div class="body" bind:this={body}>
       <pre><code class="language-js rounded-2 w-full my-0" data-code={jsCode}></code></pre>
@@ -87,7 +86,7 @@ for x in adj:
       <pre><code class="language-python rounded w-full mb-0" data-code={ pyCode}></code></pre>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/code-highlight">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/code-highlight">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

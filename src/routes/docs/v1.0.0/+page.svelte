@@ -89,7 +89,6 @@
     });
     $effect(() => {
       const _ = searchState.queries;
-      console.log("arrange");
       Masonry.arrange(masonry, {
         targetWidth: 350,
         mode: "closest",

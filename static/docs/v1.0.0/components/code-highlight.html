@@ -1,0 +1,22 @@
+<h1 id="code-highlighting" class="h1">Code Highlighting</h1>
+<h2 id="highlightjs" class="h2">Highlight.js</h2>
+<p><strong>Sutairu</strong> uses <a href="https://highlightjs.org/">highlight.js</a> to provide syntax highlighting in code blocks.</p>
+<ul>
+<li><strong>highlight.js</strong> parses and applies syntax tokens</li>
+<li><strong>Sutairu</strong> provides the color theme via generated CSS</li>
+</ul>
+<p>To get started, install highlight.js:</p>
+<pre><code class="language-bash">npm install highlight.js
+</code></pre>
+<p>Then import it in your JavaScript file:</p>
+<pre><code class="language-js">import hljs from 'highlight.js';
+</code></pre>
+<p>Finally, initialize highlighting:</p>
+<pre><code class="language-js">hljs.highlightAll();
+</code></pre>
+<h2 id="sutairu-theme-colors" class="h2">Sutairu Theme Colors</h2>
+<p><strong>Sutairu</strong> includes custom highlight.js colors that match its themes. When the Sutairu engine detects any class like <code>language-*</code> (e.g. <code>language-js</code>, <code>language-css</code>),, it automatically adds syntax highlighting styles to your CSS. This applies custom colors consistent with your Sutairu theme.</p>
+<h2 id="example" class="h2">Example</h2>
+<pre><code class="language-js">const hello = "world";</code></pre>
+<pre><code class="language-html">&#x3C;pre>&#x3C;code class="language-js">const hello = "world";&#x3C;/code>&#x3C;/pre>
+</code></pre>
