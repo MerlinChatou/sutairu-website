@@ -1430,6 +1430,35 @@
   position: absolute;
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.25rem;
+}
+
+.badge-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+}
+
 .card {
   border-radius: var(--su-card-border-radius);
   border-width: 1px;
@@ -1490,6 +1519,13 @@
 .card > .footer {
   padding: var(--su-card-footer-padding);
   background-color: var(--su-card-footer-bg-color);
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
 }
 
 .modal {
@@ -1807,35 +1843,6 @@ body.modal-open {
   cursor: not-allowed;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  padding-inline: 0.5rem;
-  padding-block: 0.125rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1;
-  border-radius: 0.25rem;
-}
-
-.badge-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  padding-inline: 0.5rem;
-  padding-block: 0.125rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1;
-  border-radius: 0.25rem;
-  background-color: transparent;
-  border-width: 1px;
-  border-style: solid;
-}
-
 .btn-info {
   background-color: var(--su-btn-info-bg);
   border-color: var(--su-btn-info-border);
@@ -1885,13 +1892,6 @@ body.modal-open {
   color: var(--su-btn-info-text-disabled);
   outline: var(--su-btn-info-outline-disabled);
   cursor: not-allowed;
-}
-
-.badge-dot {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
 }
 
 .btn-success {
@@ -2202,12 +2202,109 @@ body.modal-open {
   font-weight: var(--su-fw-h2);
 }
 
-.p-3 {
-  padding: 0.75rem;
+.bg-yellow {
+  background-color: var(--su-yellow);
+}
+
+.text-black {
+  color: var(--su-black);
+}
+
+.bg-orange {
+  background-color: var(--su-orange);
+}
+
+.text-white {
+  color: var(--su-white);
+}
+
+.bg-red {
+  background-color: var(--su-red);
+}
+
+.bg-pink {
+  background-color: var(--su-pink);
+}
+
+.bg-purple {
+  background-color: var(--su-purple);
+}
+
+.bg-blue {
+  background-color: var(--su-blue);
+}
+
+.bg-cyan {
+  background-color: var(--su-cyan);
+}
+
+.bg-green {
+  background-color: var(--su-green);
+}
+
+.bg-white {
+  background-color: var(--su-white);
+}
+
+.bg-gray {
+  background-color: var(--su-gray);
+}
+
+.bg-black {
+  background-color: var(--su-black);
+}
+
+.r-pill {
+  border-radius: 9999px;
+}
+
+.text-blue {
+  color: var(--su-blue);
+}
+
+.b-blue {
+  border-color: var(--su-blue);
 }
 
 .w-fit {
   width: fit-content;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.mv-x-120\% {
+  --su-tr-x: 120%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .td-none {
@@ -2323,14 +2420,6 @@ body.modal-open {
   color: var(--su-red);
 }
 
-.bg-red {
-  background-color: var(--su-red);
-}
-
-.bg-green {
-  background-color: var(--su-green);
-}
-
 .w-48px {
   width: 48px;
 }
@@ -2391,10 +2480,6 @@ body.modal-open {
   padding: 0.5rem;
 }
 
-.text-white {
-  color: var(--su-white);
-}
-
 .m-4 {
   margin: 1rem;
 }
@@ -2409,10 +2494,6 @@ body.modal-open {
 
 .px-5 {
   padding-inline: 1.25rem;
-}
-
-.r-pill {
-  border-radius: 9999px;
 }
 
 .bg-subtle {
@@ -2778,10 +2859,6 @@ body.modal-open {
   color: var(--su-purple);
 }
 
-.text-blue {
-  color: var(--su-blue);
-}
-
 .text-cyan {
   color: var(--su-cyan);
 }
@@ -2790,20 +2867,12 @@ body.modal-open {
   color: var(--su-gray);
 }
 
-.text-black {
-  color: var(--su-black);
-}
-
 .text-title {
   color: var(--su-title);
 }
 
 .text-accent {
   color: var(--su-accent);
-}
-
-.bg-white {
-  background-color: var(--su-white);
 }
 
 .pb-1 {
@@ -2860,10 +2929,6 @@ body.modal-open {
 
 .pos-sticky {
   position: sticky;
-}
-
-.top-0 {
-  top: 0;
 }
 
 .z-sticky {
@@ -2976,70 +3041,13 @@ body.modal-open {
   height: 140px;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .flex-y {
   display: flex;
   flex-direction: column;
 }
 
-.bg-orange {
-  background-color: var(--su-orange);
-}
-
-.bg-pink {
-  background-color: var(--su-pink);
-}
-
-.b-blue {
-  border-color: var(--su-blue);
-}
-
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.pos-rel {
-  position: relative;
-}
-
-.pos-abs {
-  position: absolute;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.mv-x-120\% {
-  --su-tr-x: 120%;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.bg-yellow {
-  background-color: var(--su-yellow);
-}
-
-.bg-purple {
-  background-color: var(--su-purple);
-}
-
-.bg-blue {
-  background-color: var(--su-blue);
-}
-
-.bg-cyan {
-  background-color: var(--su-cyan);
-}
-
-.bg-gray {
-  background-color: var(--su-gray);
-}
-
-.bg-black {
-  background-color: var(--su-black);
 }
 
 .mb-0 {
