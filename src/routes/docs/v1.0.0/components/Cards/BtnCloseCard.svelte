@@ -28,8 +28,8 @@
 {#if isVisible}
   <div class="card opacity-0" id="ui-animation" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">UI Animations</h4>
-      <div hidden>button</div>
+      <h4 class="h4">Close Button</h4>
+      <div hidden>button btn btn-close cross</div>
     </div>
     <div class="body p-3 d-flex fd-col gap-2" bind:this={body}>
       <div class="d-flex jc-center gap-2">

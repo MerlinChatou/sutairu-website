@@ -1,5 +1,5 @@
 <h1 id="color-scheme" class="h1">Color Scheme</h1>
-<p>Sutairu features native, semantic support for <strong>light</strong> and <strong>dark</strong> modes. Unlike traditional frameworks that require manual color overrides, Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.</p>
+<p>Sutairu features semantic support for <strong>light</strong> and <strong>dark</strong> modes. Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.</p>
 <p>To control the color scheme globally, apply the <code>data-color-scheme</code> attribute to the <code>&#x3C;html></code> element:</p>
 <h3 id="default-light-mode" class="h3">Default (Light Mode)</h3>
 <p>If the attribute is omitted, Sutairu renders the standard light variants.</p>
@@ -10,12 +10,12 @@
 <pre><code class="language-html">&#x3C;html data-color-scheme="dark">
 </code></pre>
 <h2 id="lightdark-utility-prefixes" class="h2">Light/Dark Utility Prefixes</h2>
-<p>Many utility classes support the <code>dark:</code> prefix to apply a style <strong>only in dark mode</strong>.</p>
+<p>Many classes support the <code>dark:</code> prefix to apply a style <strong>only in dark mode</strong>.</p>
 <div class="card w-fit ta-center ff-mono">
-  <div class="p-3 r-3 bg-red dark:bg-green text-white">Light => red / Dark => green</div>  
+  <div class="p-3 r-2 bg-red dark:bg-green text-white">Light = red / Dark = green</div>  
 </div>
 <pre><code class="language-html">&#x3C;!-- Container is red in light mode and green in dark mode -->
-&#x3C;div class="bg-red dark:bg-green">Light => red / Dark => green&#x3C;/div>
+&#x3C;div class="bg-red dark:bg-green">Light = red / Dark = green&#x3C;/div>
 </code></pre>
 <h2 id="design-philosophy-light-first" class="h2">Design Philosophy: Light-First</h2>
 <p>Sutairu is built on a <strong>deterministic, light-first architecture</strong>.</p>

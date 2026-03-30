@@ -1,6 +1,6 @@
 # Color Scheme
 
-Sutairu features native, semantic support for **light** and **dark** modes. Unlike traditional frameworks that require manual color overrides, Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.
+Sutairu features semantic support for **light** and **dark** modes. Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.
 
 To control the color scheme globally, apply the `data-color-scheme` attribute to the `<html>` element:
 
@@ -23,17 +23,17 @@ To shift the framework into its dark-mode variant, explicitly set the attribute 
 
 ## Light/Dark Utility Prefixes
 
-Many utility classes support the `dark:` prefix to apply a style **only in dark mode**.
+Many classes support the `dark:` prefix to apply a style **only in dark mode**.
 
 <div class="card w-fit ta-center ff-mono">
-  <div class="p-3 r-3 bg-red dark:bg-green text-white">Light => red / Dark => green</div>  
+  <div class="p-3 r-2 bg-red dark:bg-green text-white">Light = red / Dark = green</div>  
 </div>
 
 
 
 ```html
 <!-- Container is red in light mode and green in dark mode -->
-<div class="bg-red dark:bg-green">Light => red / Dark => green</div>
+<div class="bg-red dark:bg-green">Light = red / Dark = green</div>
 ```
 
 

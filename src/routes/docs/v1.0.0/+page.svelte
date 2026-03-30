@@ -49,8 +49,9 @@
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
   import TextColorShadeCard from "./components/Cards/TextColorShadeCard.svelte";
   import TextOpacityCard from "./components/Cards/TextOpacityCard.svelte";
+  import ThemesCard from "./components/Cards/ThemesCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
-  import UiAnimation from "./components/Cards/UiAnimation.svelte";
+  import BtnCloseCard from "./components/Cards/BtnCloseCard.svelte";
   import SizingCard from "./components/Cards/SizingCard.svelte";
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
@@ -119,6 +120,7 @@
   <div bind:this={masonry} class="masonry px-2 pb-5">
 
     <ColorSchemeCard />
+    <ThemesCard/>
     <HeadingCard />
     <TypographyCard />
     <BlockquoteCard />
@@ -164,7 +166,7 @@
     <HatchingCard />
     <DottedCard />
     <StripesCard />
-    <UiAnimation />
+    <BtnCloseCard />
   </div>
 
   <NoSearchResult />
