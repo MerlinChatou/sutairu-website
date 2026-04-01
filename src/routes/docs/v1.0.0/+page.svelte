@@ -23,6 +23,7 @@
   import CodeHighlightCard from "./components/Cards/CodeHighlightCard.svelte";
   import ColorSchemeCard from "./components/Cards/ColorSchemeCard.svelte";
   import CursorCard from "./components/Cards/CursorCard.svelte";
+  import PatternCard from "./components/Cards/PatternCard.svelte";
   import DottedCard from "./components/Cards/DottedCard.svelte";
   import ExtendedTypographyCard from "./components/Cards/ExtendedTypographyCard.svelte";
   import FilterCard from "./components/Cards/FilterCard.svelte";
@@ -108,7 +109,7 @@
 <BrowserInit />
 <Navbar />
 
-<div class="px-1 tg-glow bg-dotted fg-black dark:fg-white min-h-100vh">
+<div class="px-1 tg-glow bg-dotted fg-black dark:fg-white min-h-100vh bg-dotted">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
     <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
     <h1 class="h1 d-inline my-0">Sutairu</h1>
@@ -163,6 +164,7 @@
     <CodeHighlightCard />
     <LoaderCard />
     <FilterCard />
+    <PatternCard />
     <HatchingCard />
     <DottedCard />
     <StripesCard />

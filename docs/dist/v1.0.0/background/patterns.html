@@ -1,0 +1,59 @@
+<h1 id="background-patterns" class="h1">Background Patterns</h1>
+<p>Sutairu provides a set of utility classes for applying decorative background patterns like stripes, dots, and hatching directly to your elements. These utilities are designed to be composable, allowing you to control color, angle, spacing, and stroke width.</p>
+<p>This library provides a set of utility classes for applying decorative background patterns like <strong>stripes</strong>, <strong>dots</strong>, and <strong>hatching</strong> directly to your elements. These utilities are designed to be composable, allowing you to control color, angle, spacing, and stroke width.</p>
+<h2 id="stripes" class="h2">Stripes</h2>
+<p>The stripes utility creates a repeating diagonal background.</p>
+<p><strong>Usage:</strong> Apply <code>.stripes-{color}</code> along with a background color.</p>
+<p>The pattern utilities support the full range of your color palette, including shades and transparency. You can fine-tune the visual weight of a pattern by using the standard <code>{color}-{shade}/{opacity}</code> syntax.</p>
+<p>Example:</p>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-yellow-300 bg-yellow-200">.stripes-yellow-300</div>
+<pre><code class="language-html">&#x3C;div class="stripes-yellow-300 bg-yellow-200">.stripes-yellow-300&#x3C;/div>
+</code></pre>
+<h3 id="modifiers" class="h3">Modifiers</h3>
+<p>Customize the visual behavior of your background patterns with modifiers that allow you to adjust the orientation, spacing, and stroke thickness to fit your design requirements.</p>
+<ul>
+<li>Use <code>.pattern-angle-{angle}</code> to change the orientation.</li>
+<li>Use <code>.pattern-period-{size}</code> to control the interval or frequency of the pattern repetition.</li>
+<li>Use <code>.pattern-width-{size}</code> to adjust the thickness of the lines.</li>
+</ul>
+<p>Using aliases allows you to compose complex backgrounds with minimal code:</p>
+<ul>
+<li><strong>Rotated Stripes:</strong> Instead of <code>.pattern-angle-90deg</code>, use <strong><code>.pa-90deg</code></strong>.</li>
+<li><strong>Dense Dots:</strong> Instead of <code>.pattern-period-4px</code>, use <strong><code>.pp-4px</code></strong>.</li>
+<li><strong>Bold Hatching:</strong> Instead of <code>.pattern-width-5px</code>, use <strong><code>.pw-5px</code></strong>.</li>
+</ul>
+<h3 id="examples" class="h3">Examples</h3>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-orange/50 bg-orange/50">.stripes-orange/50</div>
+<pre><code class="language-html">&#x3C;div class="stripes-orange/50 bg-orange/50">.stripes-orange/50&#x3C;/div>
+</code></pre>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pa-20deg">.pattern-angle-20deg</div>
+<pre><code class="language-html">&#x3C;div class="stripes-accent-300 bg-accent-200 pattern-angle-20deg">.pattern-angle-20deg&#x3C;/div>
+</code></pre>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px">.pattern-period-60px</div>
+<pre><code class="language-html">&#x3C;div class="stripes-accent-300 bg-accent-200 pattern-period-60px">.pattern-period-60px&#x3C;/div>
+</code></pre>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px pattern-width-40px">.pattern-width-40px</div>
+<pre><code class="language-html">&#x3C;div class="stripes-accent-300 bg-accent-200 pattern-period-60px pattern-width-40px">.pattern-width-40px&#x3C;/div>
+</code></pre>
+<h2 id="dots" class="h2">Dots</h2>
+<p>The dots utility applies a repeating radial point pattern.</p>
+<ul>
+<li><strong>Usage:</strong> Apply <code>.dotted-{color}</code>.</li>
+<li><strong>Customization:</strong> Use <code>.pp-{size}</code> to control the density.</li>
+</ul>
+<h3 id="example" class="h3">Example</h3>
+<div class="my-2 w-fit p-3 px-8 r-2 dotted-pink/50 b-1 b-pink/50">.dotted-pink</div>
+<pre><code class="language-html">&#x3C;div class="dotted-pink/50 b-1 b-pink/50">.dotted-pink&#x3C;/div>
+</code></pre>
+<h2 id="hatching" class="h2">Hatching</h2>
+<p>The hatching utility creates a dense, fine-lined shaded effect when stripes can't support thin lines.</p>
+<ul>
+<li><strong>Usage:</strong> Apply <code>.hatching-{color}</code>.</li>
+<li>Use <code>.pa-{angle}</code> to adjust the orientation (only multiples of 45 degrees)</li>
+<li>Use <code>.pattern-period-{size}</code> to control the interval or frequency of the pattern repetition.</li>
+<li>Use <code>.pattern-width-{size}</code> to adjust the thickness of the lines.</li>
+</ul>
+<h3 id="example-1" class="h3">Example</h3>
+<div class="my-2 w-fit p-3 px-8 r-2 hatching-purple-300/40 b-1 b-purple-300/40">.hatching-purple</div>
+<pre><code class="language-html">&#x3C;div class="w-full p-3 r-2 hatching-purple-300/40 b-1 b-purple-300/40">.hatching-purple&#x3C;/div>
+</code></pre>

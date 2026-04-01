@@ -27,7 +27,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-1" id="themes" bind:this={cardEl}>
+  <div class="card opacity-0" id="themes" bind:this={cardEl}>
     <div class="header" bind:this={header}><h4 class="h4">Themes</h4></div>
 
     <div class="body flex-y gap-2" bind:this={body}>

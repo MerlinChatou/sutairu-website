@@ -16,19 +16,18 @@
     currentColorScheme = colorScheme.get().current;
   }
 
-  
   function handleEnter() {
     currentTheme = document.documentElement.getAttribute("data-theme");
     document.documentElement.setAttribute("data-theme", theme);
-	}
+  }
 
-	function handleLeave() {
-		document.documentElement.setAttribute("data-theme", currentTheme);
-	}
+  function handleLeave() {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+  }
 </script>
 
 <button
-  class="btn btn-secondary d-flex jc-between h-fit w-100%"
+  class="btn btn-secondary d-flex jc-between h-fit w-100% tt-capitalize"
   data-color-scheme={currentColorScheme}
   data-theme={theme}
   onmouseenter={handleEnter}
