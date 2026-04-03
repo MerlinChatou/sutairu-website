@@ -92,8 +92,8 @@ The hatching utility creates a dense, fine-lined shaded effect when stripes can'
 
 * **Usage:** Apply `.hatching-{color}`.
 * Use `.pa-{angle}` to adjust the orientation (only multiples of 45 degrees)
-* Use `.pattern-period-{size}` to control the interval or frequency of the pattern repetition.
-* Use `.pattern-width-{size}` to adjust the thickness of the lines.
+* Use `.pp-{size}` to control the interval or frequency of the pattern repetition.
+* Use `.pw-{size}` to adjust the thickness of the lines.
 
 
 ### Example

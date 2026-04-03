@@ -24,14 +24,12 @@
   import ColorSchemeCard from "./components/Cards/ColorSchemeCard.svelte";
   import CursorCard from "./components/Cards/CursorCard.svelte";
   import PatternCard from "./components/Cards/PatternCard.svelte";
-  import DottedCard from "./components/Cards/DottedCard.svelte";
   import ExtendedTypographyCard from "./components/Cards/ExtendedTypographyCard.svelte";
   import FilterCard from "./components/Cards/FilterCard.svelte";
   import FlexCard from "./components/Cards/FlexCard.svelte";
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
-  import FormCard from "./components/Cards/FormCard.svelte";
-  import HatchingCard from "./components/Cards/HatchingCard.svelte";
+  import FormCard from "./components/Cards/FormCard.svelte";  
   import HeadingCard from "./components/Cards/HeadingCard.svelte";
   import InteractiveBackgroundCard from "./components/Cards/InteractiveBackgroundCard.svelte";
   import InteractiveTextCard from "./components/Cards/InteractiveTextCard.svelte";
@@ -44,7 +42,6 @@
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
   import SemanticColorsCard from "./components/Cards/SemanticColorCard.svelte";
-  import StripesCard from "./components/Cards/StripesCard.svelte";
   import TableCard from "./components/Cards/TableCard.svelte";
   import TextAlignmentCard from "./components/Cards/TextAlignmentCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
@@ -165,9 +162,6 @@
     <LoaderCard />
     <FilterCard />
     <PatternCard />
-    <HatchingCard />
-    <DottedCard />
-    <StripesCard />
     <BtnCloseCard />
   </div>
 

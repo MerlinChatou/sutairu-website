@@ -56,3 +56,20 @@ Sutairu is built on a **deterministic, light-first architecture**.
 
 To keep the core lightweight, Sutairu intentionally avoids localized theme overrides. Nested color schemes are not supported and may result in unpredictable rendering and CSS variable conflicts.
 
+
+
+
+## User Preferences
+
+
+Use [@merlin-chatou/color-scheme](https://www.npmjs.com/settings/merlin-chatou/packages) to control and persist the color scheme in your app.
+
+```bash
+npm i @merlin-chatou/color-scheme
+```
+
+Use [@merlin-chatou/system-color-scheme](https://www.npmjs.com/package/@merlin-chatou/system-color-scheme) to detect the user's OS/browser preference.
+
+```bash
+npm i @merlin-chatou/system-color-scheme
+```

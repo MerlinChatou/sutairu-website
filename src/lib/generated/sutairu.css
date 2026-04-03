@@ -101,6 +101,37 @@
     text-decoration: underline;
   }
 
+  table {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    overflow-x: auto;
+    background-color: inherit;
+  }
+
+  table * {
+    margin: 0;
+  }
+
+  td {
+    background-color: inherit;
+  }
+
+  table thead tr th,
+  table tbody tr td,
+  table tbody tr th,
+  table tr th,
+  table tr td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--su-border);
+    text-align: inherit;
+    background-color: inherit;
+  }
+
+  th {
+    color: var(--title);
+  }
+
   :not(pre) > code {
     font-family: var(--su-ff-mono);
     font-size-adjust: var(--su-fs-adjust-mono);
@@ -136,7 +167,6 @@
     width: fit-content;
     border-radius: 0.5rem;
   }
-
 
   :where(
     [class*="blur-"],
@@ -3615,6 +3645,36 @@ body.modal-open {
   padding-bottom: 1.25rem;
 }
 
+.my-2 {
+  margin-block: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-8 {
+  padding-inline: 2rem;
+}
+
+.r-2 {
+  border-radius: 0.5rem;
+}
+
+.stripes-yellow-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-yellow), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-yellow-200 {
+  background-color: color-mix(in oklch, var(--su-yellow), #fff 60%);
+}
+
 .h3 {
   line-height: var(--su-lh-title);
   color: var(--su-title);
@@ -3623,12 +3683,86 @@ body.modal-open {
   font-weight: var(--su-fw-h3);
 }
 
-.b-red {
-  border-color: var(--su-red);
+.stripes-orange\/50 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  oklch(from var(--su-orange) l c h / 0.5) 0,
+                  oklch(from var(--su-orange) l c h / 0.5) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
 }
 
-.p-3 {
-  padding: 0.75rem;
+.bg-orange\/50 {
+  background-color: oklch(from var(--su-orange) l c h / 0.5);
+}
+
+.stripes-accent-300 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  color-mix(in oklch, var(--su-accent), #fff 40%) 0,
+                  color-mix(in oklch, var(--su-accent), #fff 40%) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-accent-200 {
+  background-color: color-mix(in oklch, var(--su-accent), #fff 60%);
+}
+
+.pa-20deg {
+  --su-pattern-angle: 20deg;
+}
+
+.pattern-angle-20deg {
+  --su-pattern-angle: 20deg;
+}
+
+.pattern-period-60px {
+  --su-pattern-p: 60px;
+}
+
+.pattern-width-40px {
+  --su-pattern-w: 40px;
+}
+
+.dotted-pink\/50 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(oklch(from var(--su-pink) l c h / 0.5) var(--su-pattern-w, 1px), transparent 0);
+}
+
+.b-1 {
+  border-width: 1px;
+}
+
+.b-pink\/50 {
+  border-color: oklch(from var(--su-pink) l c h / 0.5);
+}
+
+.hatching-purple-300\/40 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: repeating-linear-gradient(
+        var(--su-pattern-angle, 135deg),
+          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4) 0,
+          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4) var(--su-pattern-w, 1px),
+          transparent 0,
+          transparent 50%
+        );
+}
+
+.b-purple-300\/40 {
+  border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.b-red {
+  border-color: var(--su-red);
 }
 
 .px-5 {
@@ -3684,10 +3818,6 @@ body.modal-open {
 .ff-mono {
   font-family: var(--su-ff-mono);
   font-size-adjust: var(--su-fs-adjust-mono);
-}
-
-.r-2 {
-  border-radius: 0.5rem;
 }
 
 .b-gray {
@@ -3946,10 +4076,6 @@ body.modal-open {
   margin-left: 0.75rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .my-3 {
   margin-block: 0.75rem;
 }
@@ -4038,10 +4164,6 @@ body.modal-open {
   width: 25rem;
 }
 
-.my-2 {
-  margin-block: 0.5rem;
-}
-
 .text-yellow {
   color: var(--su-yellow);
 }
@@ -4080,6 +4202,19 @@ body.modal-open {
 
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.td-none {
+  text-decoration: none;
+}
+
+.ff-handwritten {
+  font-family: var(--su-ff-handwritten);
+  font-size-adjust: var(--su-fs-adjust-handwritten);
+}
+
+.tt-capitalize {
+  text-transform: capitalize;
 }
 
 .grayscale-50 {
@@ -4132,19 +4267,6 @@ body.modal-open {
 
 .blur-2 {
   --su-blur: blur(2px);
-}
-
-.td-none {
-  text-decoration: none;
-}
-
-.ff-handwritten {
-  font-family: var(--su-ff-handwritten);
-  font-size-adjust: var(--su-fs-adjust-handwritten);
-}
-
-.tt-capitalize {
-  text-transform: capitalize;
 }
 
 .mt-4 {
@@ -4223,26 +4345,6 @@ body.modal-open {
   display: none;
 }
 
-.w-xl {
-  width: 64rem;
-}
-
-.py-4 {
-  padding-block: 1rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.my-4 {
-  margin-block: 1rem;
-}
-
-.text-right {
-  text-align: right;
-}
-
 .pos-sticky {
   position: sticky;
 }
@@ -4275,8 +4377,24 @@ body.modal-open {
   font-size: 2rem;
 }
 
-.b-1 {
-  border-width: 1px;
+.w-xl {
+  width: 64rem;
+}
+
+.py-4 {
+  padding-block: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.my-4 {
+  margin-block: 1rem;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .br-0 {
@@ -4366,10 +4484,6 @@ body.modal-open {
   margin-left: 0.5rem;
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
 .b-yellow {
   border-color: var(--su-yellow);
 }
@@ -4392,6 +4506,10 @@ body.modal-open {
 
 .b-black {
   border-color: var(--su-black);
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .b-accent-50 {
@@ -4520,116 +4638,6 @@ body.modal-open {
   background-color: color-mix(in oklch, var(--su-gray), #000 20%);
 }
 
-.dotted-yellow-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-yellow\/50 {
-  border-color: oklch(from var(--su-yellow) l c h / 0.5);
-}
-
-.dotted-orange-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-orange\/50 {
-  border-color: oklch(from var(--su-orange) l c h / 0.5);
-}
-
-.dotted-red-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-red\/50 {
-  border-color: oklch(from var(--su-red) l c h / 0.5);
-}
-
-.dotted-pink-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-pink\/50 {
-  border-color: oklch(from var(--su-pink) l c h / 0.5);
-}
-
-.dotted-purple-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-purple\/50 {
-  border-color: oklch(from var(--su-purple) l c h / 0.5);
-}
-
-.dotted-blue-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-blue\/50 {
-  border-color: oklch(from var(--su-blue) l c h / 0.5);
-}
-
-.dotted-cyan-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-cyan\/50 {
-  border-color: oklch(from var(--su-cyan) l c h / 0.5);
-}
-
-.dotted-green-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-green\/50 {
-  border-color: oklch(from var(--su-green) l c h / 0.5);
-}
-
-.dotted-white-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-white\/50 {
-  border-color: oklch(from var(--su-white) l c h / 0.5);
-}
-
-.dotted-gray-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-gray\/50 {
-  border-color: oklch(from var(--su-gray) l c h / 0.5);
-}
-
-.dotted-black-300 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.b-black\/50 {
-  border-color: oklch(from var(--su-black) l c h / 0.5);
-}
-
 .brightness-150 {
   --su-brightness: brightness(1.5);
 }
@@ -4664,182 +4672,6 @@ body.modal-open {
 
 .jc-start {
   justify-content: start;
-}
-
-.hatching-yellow-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-yellow), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-yellow), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-yellow\/30 {
-  border-color: oklch(from var(--su-yellow) l c h / 0.3);
-}
-
-.hatching-orange-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-orange), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-orange), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-orange\/30 {
-  border-color: oklch(from var(--su-orange) l c h / 0.3);
-}
-
-.hatching-red-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-red), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-red), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-red\/30 {
-  border-color: oklch(from var(--su-red) l c h / 0.3);
-}
-
-.hatching-pink-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-pink), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-pink), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-pink\/30 {
-  border-color: oklch(from var(--su-pink) l c h / 0.3);
-}
-
-.hatching-purple-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-purple\/30 {
-  border-color: oklch(from var(--su-purple) l c h / 0.3);
-}
-
-.hatching-blue-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-blue), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-blue), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-blue\/30 {
-  border-color: oklch(from var(--su-blue) l c h / 0.3);
-}
-
-.hatching-cyan-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-cyan), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-cyan), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-cyan\/30 {
-  border-color: oklch(from var(--su-cyan) l c h / 0.3);
-}
-
-.hatching-green-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-green), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-green), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-green\/30 {
-  border-color: oklch(from var(--su-green) l c h / 0.3);
-}
-
-.hatching-white-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-white), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-white), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-white\/30 {
-  border-color: oklch(from var(--su-white) l c h / 0.3);
-}
-
-.hatching-gray-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-gray), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-gray), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-gray\/30 {
-  border-color: oklch(from var(--su-gray) l c h / 0.3);
-}
-
-.hatching-black-300\/80 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-black), #fff 40%) l c h / 0.8) 0,
-          oklch(from color-mix(in oklch, var(--su-black), #fff 40%) l c h / 0.8) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-black\/30 {
-  border-color: oklch(from var(--su-black) l c h / 0.3);
 }
 
 .grid-cols-4 {
@@ -4888,52 +4720,8 @@ body.modal-open {
   background-color: oklch(from color-mix(in oklch, var(--su-accent), #fff 60%) l c h / 0.2);
 }
 
-.opacity-1 {
-  opacity: 1;
-}
-
-.stripes-accent-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-accent), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-accent), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-accent-200 {
-  background-color: color-mix(in oklch, var(--su-accent), #fff 60%);
-}
-
-.pa-20deg {
-  --su-pattern-angle: 20deg;
-}
-
-.dotted-pink\/50 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(oklch(from var(--su-pink) l c h / 0.5) var(--su-pattern-w, 1px), transparent 0);
-}
-
 .pp-5px {
   --su-pattern-p: 5px;
-}
-
-.hatching-purple-300\/40 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4) 0,
-          oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.b-purple-300\/40 {
-  border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4);
 }
 
 .pw-3px {
@@ -5065,150 +4853,16 @@ body.modal-open {
   height: 100%;
 }
 
-.stripes-yellow-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-yellow), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-yellow-200 {
-  background-color: color-mix(in oklch, var(--su-yellow), #fff 60%);
-}
-
-.stripes-orange-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-orange), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-orange-200 {
-  background-color: color-mix(in oklch, var(--su-orange), #fff 60%);
-}
-
-.stripes-red-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-red), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-red-200 {
-  background-color: color-mix(in oklch, var(--su-red), #fff 60%);
-}
-
-.stripes-pink-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-pink), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-pink-200 {
-  background-color: color-mix(in oklch, var(--su-pink), #fff 60%);
-}
-
-.stripes-purple-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-purple), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-purple-200 {
-  background-color: color-mix(in oklch, var(--su-purple), #fff 60%);
-}
-
-.stripes-blue-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-blue), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.stripes-cyan-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-cyan), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-cyan-200 {
-  background-color: color-mix(in oklch, var(--su-cyan), #fff 60%);
-}
-
-.stripes-green-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-green), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.stripes-white-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-white), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-white-200 {
-  background-color: color-mix(in oklch, var(--su-white), #fff 60%);
-}
-
-.stripes-gray-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-gray), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.stripes-black-300 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  color-mix(in oklch, var(--su-black), #fff 40%) 0,
-                  color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-black-200 {
-  background-color: color-mix(in oklch, var(--su-black), #fff 60%);
-}
-
 .ov-x-auto {
   overflow-x: auto;
+}
+
+.bg-accent-100 {
+  background-color: color-mix(in oklch, var(--su-accent), #fff 80%);
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .text-left {
@@ -5239,36 +4893,6 @@ body.modal-open {
   background-color: var(--su-body);
 }
 
-.px-8 {
-  padding-inline: 2rem;
-}
-
-.stripes-orange\/50 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  oklch(from var(--su-orange) l c h / 0.5) 0,
-                  oklch(from var(--su-orange) l c h / 0.5) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-orange\/50 {
-  background-color: oklch(from var(--su-orange) l c h / 0.5);
-}
-
-.pattern-angle-20deg {
-  --su-pattern-angle: 20deg;
-}
-
-.pattern-period-60px {
-  --su-pattern-p: 60px;
-}
-
-.pattern-width-40px {
-  --su-pattern-w: 40px;
-}
-
 :is([data-color-scheme="dark"] *) {
   &.dark\:bg-green {
     background-color: var(--su-green);
@@ -5280,72 +4904,6 @@ body.modal-open {
   
   &.dark\:bg-gray-700 {
     background-color: color-mix(in oklch, var(--su-gray), #000 40%);
-  }
-  
-  &.dark\:dotted-yellow-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-yellow), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-orange-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-orange), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-red-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-red), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-pink-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-pink), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-purple-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-purple), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-blue-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-blue), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-cyan-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-cyan), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-green-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-green), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-white-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-gray-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-gray), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
-  &.dark\:dotted-black-300 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 40%) var(--su-pattern-w, 1px), transparent 0);
   }
   
   &.dark\:stripes-accent-700 {
@@ -5362,158 +4920,8 @@ body.modal-open {
     background-color: color-mix(in oklch, var(--su-accent), #000 30%);
   }
   
-  &.dark\:stripes-yellow-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-yellow), #000 60%) 0,
-                    color-mix(in oklch, var(--su-yellow), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-yellow-900 {
-    background-color: color-mix(in oklch, var(--su-yellow), #000 80%);
-  }
-  
-  &.dark\:stripes-orange-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-orange), #000 60%) 0,
-                    color-mix(in oklch, var(--su-orange), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-orange-900 {
-    background-color: color-mix(in oklch, var(--su-orange), #000 80%);
-  }
-  
-  &.dark\:stripes-red-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-red), #000 60%) 0,
-                    color-mix(in oklch, var(--su-red), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-red-900 {
-    background-color: color-mix(in oklch, var(--su-red), #000 80%);
-  }
-  
-  &.dark\:stripes-pink-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-pink), #000 60%) 0,
-                    color-mix(in oklch, var(--su-pink), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-pink-900 {
-    background-color: color-mix(in oklch, var(--su-pink), #000 80%);
-  }
-  
-  &.dark\:stripes-purple-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-purple), #000 60%) 0,
-                    color-mix(in oklch, var(--su-purple), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-purple-900 {
-    background-color: color-mix(in oklch, var(--su-purple), #000 80%);
-  }
-  
-  &.dark\:stripes-blue-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-blue), #000 60%) 0,
-                    color-mix(in oklch, var(--su-blue), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-blue-900 {
-    background-color: color-mix(in oklch, var(--su-blue), #000 80%);
-  }
-  
-  &.dark\:stripes-cyan-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-cyan), #000 60%) 0,
-                    color-mix(in oklch, var(--su-cyan), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-cyan-900 {
-    background-color: color-mix(in oklch, var(--su-cyan), #000 80%);
-  }
-  
-  &.dark\:stripes-green-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-green), #000 60%) 0,
-                    color-mix(in oklch, var(--su-green), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-green-900 {
-    background-color: color-mix(in oklch, var(--su-green), #000 80%);
-  }
-  
-  &.dark\:stripes-white-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-white), #000 60%) 0,
-                    color-mix(in oklch, var(--su-white), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-white-900 {
-    background-color: color-mix(in oklch, var(--su-white), #000 80%);
-  }
-  
-  &.dark\:stripes-gray-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-gray), #000 60%) 0,
-                    color-mix(in oklch, var(--su-gray), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-gray-900 {
-    background-color: color-mix(in oklch, var(--su-gray), #000 80%);
-  }
-  
-  &.dark\:stripes-black-800 {
-    background-image: repeating-linear-gradient(
-                    var(--su-pattern-angle, 135deg),
-                    color-mix(in oklch, var(--su-black), #000 60%) 0,
-                    color-mix(in oklch, var(--su-black), #000 60%) var(--su-pattern-w, 10px),
-                    transparent calc(var(--su-pattern-w, 10px) + 1px),
-                    transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                  );
-  }
-  
-  &.dark\:bg-black-900 {
-    background-color: color-mix(in oklch, var(--su-black), #000 80%);
+  &.dark\:bg-accent-900 {
+    background-color: color-mix(in oklch, var(--su-accent), #000 80%);
   }
   
   &.dark\:text-body {
@@ -5663,12 +5071,12 @@ body.modal-open {
     color: var(--su-accent);
   }
   
-  .hover\:blur-8:hover {
-    --su-blur: blur(8px);
-  }
-  
   .hover\:td-none:hover {
     text-decoration: none;
+  }
+  
+  .hover\:blur-8:hover {
+    --su-blur: blur(8px);
   }
   
   .hover\:bg-gray\/10:hover {
@@ -5758,6 +5166,18 @@ body.modal-open {
 
   .focus-visible\:text-accent:focus-visible {
     color: var(--su-accent);
+  }
+
+  .odd\:bg-accent > :nth-child(odd) {
+    background-color: var(--su-accent);
+  }
+  
+  .odd\:bg-accent\/10 > :nth-child(odd) {
+    background-color: oklch(from var(--su-accent) l c h / 0.1);
+  }
+
+  .even\:bg-red > :nth-child(even) {
+    background-color: var(--su-red);
   }
 
 }

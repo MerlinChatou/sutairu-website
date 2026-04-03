@@ -29,7 +29,7 @@
 <div class="card opacity-0" id="tables" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Tables</h4></div>
   <div class="body" bind:this={body}>
-    <table class="w-full">
+    <table class="table w-full">
       <thead>
         <tr>
           <th>#</th>
@@ -49,15 +49,15 @@
     </table>
 
     <div class="ov-x-auto mb-4">
-      <table class="bg-accent bg-100 dark:bg-900 text-black dark:text-body mb-0">
+      <table class="table bg-accent-100 dark:bg-accent-900 text-black dark:text-body mb-0">
         <thead>
           <tr>
             <th>#</th>
-            <th class="tw-nowrap">Col 1</th>
-            <th class="tw-nowrap">Col 2</th>
-            <th class="tw-nowrap">Col 3</th>
-            <th class="tw-nowrap">Col 4</th>
-            <th class="tw-nowrap">Col 5</th>
+            <th class="text-nowrap">Col 1</th>
+            <th class="text-nowrap">Col 2</th>
+            <th class="text-nowrap">Col 3</th>
+            <th class="text-nowrap">Col 4</th>
+            <th class="text-nowrap">Col 5</th>
           </tr>
         </thead>
         <tbody>
@@ -81,14 +81,14 @@
       </table>
     </div>
 
-    <table class="w-full text-center text-body">
+    <table class="table w-full text-center text-body">
       <thead>
         <tr>
           <th>#</th>
           <th>Striped</th>
         </tr>
       </thead>
-      <tbody class="striped">
+      <tbody class="odd:bg-accent/10">
         <tr>
           <th>1</th>
           <td>Odd</td>
