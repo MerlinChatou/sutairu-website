@@ -6,6 +6,7 @@
 
   // Check searchState.queries because mutating a Set does not trigger reactivity.
   $effect(() => {
+    console.log( searchState.visibleCards)
     isVisible = searchState.queries.length !==0 && searchState.visibleCards.size === 0;
   });
   
