@@ -1,0 +1,146 @@
+<h1 id="loaders" class="h1">Loaders</h1>
+<p>The framework provides different loader styles, each animated with CSS. They can be customized with size, color, scaling, and animation utilities.</p>
+<h2 id="circular-spinner" class="h2">Circular Spinner</h2>
+<p><code>.loader</code> creates a <strong>circular spinner</strong> that rotates a bordered ring.</p>
+<ul>
+<li>Use <code>.text-&#x3C;color></code> to set the primary stroke color.</li>
+<li>Use <code>.b-&#x3C;color></code> to set the background stroke color.</li>
+</ul>
+<h3 id="examples" class="h3">Examples</h3>
+<div class="h-flex ai-center gap-3 mt-4 mb-2">
+<span class="loader ps-center"></span>
+<span class="loader text-orange ps-center"></span>
+<span class="loader text-yellow b-green ps-center"></span>
+<span class="loader text-green b-transparent ps-center"></span>
+<span class="loader text-transparent b-cyan ps-center"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader">&#x3C;/span>
+&#x3C;span class="loader text-orange">&#x3C;/span>
+&#x3C;span class="loader text-yellow border-green">&#x3C;/span>
+&#x3C;span class="loader text-green b-transparent">&#x3C;/span>
+&#x3C;span class="loader text-transparent b-cyan">&#x3C;/span>
+</code></pre>
+<h2 id="clipped-border-spinner" class="h2">Clipped Border Spinner</h2>
+<p><code>.loader-clip</code> creates a <strong>clipped border spinner</strong> that animates as a rotating arc.</p>
+<ul>
+<li>Use <code>.color-*</code> to change the spinner color.</li>
+</ul>
+<h3 id="examples-1" class="h3">Examples</h3>
+<div class="h-flex gap-3 mt-4 mb-2">
+<span class="loader-clip"></span>
+<span class="loader-clip text-red"></span>
+<span class="loader-clip text-green anim-dur-2000"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-clip">&#x3C;/span>
+&#x3C;span class="loader-clip text-red">&#x3C;/span>
+&#x3C;span class="loader-clip text-green anim-dur-2000">&#x3C;/span>
+</code></pre>
+<h2 id="pulsing-loader" class="h2">Pulsing Loader</h2>
+<p><code>.loader-grow</code> creates a <strong>pulsing loader</strong> that expands and fades in/out.</p>
+<ul>
+<li>Use <code>.bg-*</code> to set the fill color.</li>
+</ul>
+<h3 id="examples-2" class="h3">Examples</h3>
+<div class="h-flex gap-3 mt-4 mb-2">
+<span class="loader-grow"></span>
+<span class="loader-grow bg-red"></span>
+<span class="loader-grow bg-green anim-dur-2000"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-grow">&#x3C;/span>
+&#x3C;span class="loader-grow bg-red">&#x3C;/span>
+&#x3C;span class="loader-grow bg-green anim-dur-2000">&#x3C;/span>
+</code></pre>
+<h2 id="fading-dots" class="h2">Fading Dots</h2>
+<p><code>.loader-dots-fade</code> creates three <strong>fading dots</strong> that appear and disappear sequentially.</p>
+<ul>
+<li>Use <code>.color-*</code> to change the dots color.</li>
+</ul>
+<h3 id="examples-3" class="h3">Examples</h3>
+<div class="d-flex gap-3 mt-4 mb-2">
+<div class="w-48px h-48px d-grid"><span class="loader-dots-fade ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-fade text-red ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-fade text-green anim-dur-2000 ps-center"></span></div>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-dots-fade">&#x3C;/span>
+&#x3C;span class="loader-dots-fade text-red">&#x3C;/span>
+&#x3C;span class="loader-dots-fade text-green anim-dur-2000">&#x3C;/span>
+</code></pre>
+<h2 id="rotating-dots" class="h2">Rotating Dots</h2>
+<p><code>.loader-dots-spin</code> creates three <strong>rotating dots</strong> arranged in a circular path.</p>
+<ul>
+<li>Use <code>.color-*</code> to change the dots color.</li>
+</ul>
+<h3 id="examples-4" class="h3">Examples</h3>
+<div class="h-flex gap-3 mt-4 mb-2">
+<div class="w-48px h-48px d-grid"><span class="loader-dots-spin ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-spin text-red  ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-spin text-green anim-dur-2000 ps-center"></span></div>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-dots-spin">&#x3C;/span>
+&#x3C;span class="loader-dots-spin text-red">&#x3C;/span>
+&#x3C;span class="loader-dots-spin text-green anim-dur-2000">&#x3C;/span>
+</code></pre>
+<h2 id="comet-style-loader" class="h2">Comet-Style Loader</h2>
+<p><code>.loader-comet</code>creates a <strong>comet-style loader</strong> where dots rotate with a trailing fade effect.</p>
+<ul>
+<li>Use <code>.color-*</code> to change the dots color.</li>
+</ul>
+<h3 id="examples-5" class="h3">Examples</h3>
+<div class="h-flex gap-3 mt-4 mb-2">
+<div class="w-48px h-48px d-grid"><span class="loader-comet ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-comet text-red  ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-comet text-green anim-dur-2000 ps-center"></span></div>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-comet">&#x3C;/span>
+&#x3C;span class="loader-comet text-red">&#x3C;/span>
+&#x3C;span class="loader-comet text-green anim-dur-2000">&#x3C;/span>
+</code></pre>
+<h2 id="skeleton-style-loader" class="h2">Skeleton-Style Loader</h2>
+<p><code>.loader-skeleton</code> creates a <strong>shimmering placeholder</strong> effect, often used to indicate that content is loading in a specific layout.</p>
+<ul>
+<li>Use <code>.h-*</code> and <code>.w-*</code> to define the dimensions of the skeleton (height is mandatory).</li>
+<li>Use <code>.bg-*</code> to set the background color.</li>
+<li>Use <code>.fg-*</code> to set the shimer color.</li>
+</ul>
+<h3 id="examples-6" class="h3">Examples</h3>
+<div class="v-flex gap-3 max-w-md mt-4 mb-2">
+<span class="loader-skeleton h-16px r-3"></span>
+<span class="loader-skeleton h-16px r-3 bg-green fg-blue"></span>
+<span class="loader-skeleton h-32px w-1/2  r-3 anim-dur-1000"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-skeleton h-16px">&#x3C;/span>
+&#x3C;span class="loader-skeleton h-16px bg-green fg-blue">&#x3C;/span>
+&#x3C;span class="loader-skeleton h-32px w-1/2 anim-dur-1000">&#x3C;/span>
+</code></pre>
+<h2 id="sizing" class="h2">Sizing</h2>
+<p>There are several ways to size the loaders. The most flexible option is to use the utility class <code>.scale-[ratio]</code>.</p>
+<div class="h-flex gap-4 mt-4 mb-2">
+<div class="w-48px h-48px d-grid"><span class="loader scale-50 ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-clip scale-75 ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-grow ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-fade scale-110 ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-dots-spin scale-120 ps-center"></span></div>
+<div class="w-48px h-48px d-grid"><span class="loader-comet scale-150 ps-center"></span></div>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader scale-50">&#x3C;/span>
+&#x3C;span class="loader-clip scale-75">&#x3C;/span>
+&#x3C;span class="loader-grow">&#x3C;/span>
+&#x3C;span class="loader-dots-fade scale-110">&#x3C;/span>
+&#x3C;span class="loader-dots-spin scale-120">&#x3C;/span>
+&#x3C;span class="loader-comet scale-150">&#x3C;/span>
+</code></pre>
+<p>For <code>.loader-dots-fade</code>, <code>.loader-dots-spin</code> and <code>.loader-comet</code>, dots are generated with <code>box-shadow</code>.</p>
+<ul>
+<li>The <strong>dot size</strong> depends on the element’s height.</li>
+<li>The <strong>loader’s overall size</strong> is relative to the element’s font size.</li>
+</ul>
+<p>You can adjust both independently to fine-tune the effect:</p>
+<div class="h-flex gap-3 mt-4">
+<div class="w-64px h-64px d-grid"><span class="loader-dots-fade fs-xs ps-center"></span></div>
+<div class="w-64px h-64px d-grid"><span class="loader-dots-spin h-16px ps-center"></span></div>
+<div class="w-64px h-64px d-grid"><span class="loader-comet fs-5xl h-4px ps-center"></span></div>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-dots-fade fs-xs">&#x3C;/span>
+&#x3C;span class="loader-dots-spin h-16px">&#x3C;/span>
+&#x3C;span class="loader-comet fs-5xl h-4px">&#x3C;/span>
+</code></pre>

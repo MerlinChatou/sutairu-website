@@ -1,0 +1,104 @@
+<h1 id="tables" class="h1">Tables</h1>
+<p>Sutairu provides minimal default styling for tables through the <code>core</code> layer. Styles are designed to remain lightweight, inherit theme variables, and avoid opinionated layout constraints.</p>
+<div class="card w-fit p-3">
+<table class="w-full m-0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Columns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>John</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Smith</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-html">&#x3C;table class="w-full">
+  &#x3C;thead>
+    &#x3C;tr>
+      &#x3C;th>#&#x3C;/th>
+      &#x3C;th>Columns&#x3C;/th>
+    &#x3C;/tr>
+  &#x3C;/thead>
+  &#x3C;tbody>
+    &#x3C;tr>
+      &#x3C;th>1&#x3C;/th>
+      &#x3C;td>John&#x3C;/td>
+    &#x3C;/tr>
+    &#x3C;tr>
+      &#x3C;th>2&#x3C;/th>
+      &#x3C;td>Smith&#x3C;/td>
+    &#x3C;/tr>
+  &#x3C;/tbody>
+&#x3C;/table>
+</code></pre>
+<h2 id="striped-tables" class="h2">Striped tables</h2>
+<p>Add <code>.striped</code> to <code>&#x3C;tbody></code> to enable alternating row backgrounds.</p>
+<pre><code class="language-html">&#x3C;tbody class="striped">&#x3C;/tbody>
+</code></pre>
+<p>Behavior:</p>
+<ul>
+<li>
+<p>Odd rows:</p>
+<ul>
+<li>user defined background color <code>bg-&#x3C;color></code></li>
+<li>fallback: accent-based translucent color <code>bg-accent</code> + <code>bg-opacity-10</code></li>
+</ul>
+</li>
+<li>
+<p>Even rows:</p>
+<ul>
+<li>user defined foreground color <code>fg-&#x3C;color></code></li>
+<li>fallback: <code>transparent</code></li>
+</ul>
+</li>
+</ul>
+<p>All nested elements reset background to avoid cascade conflicts.</p>
+<div class="card w-fit p-3">
+  <table class="w-100 ta-center m-0">
+    <thead class="bg-green">
+      <tr>
+        <th>#</th>
+        <th>Striped</th>
+      </tr>
+    </thead>
+    <tbody class="striped bg-green bg-opacity-20 fg-purple text-body">
+      <tr>
+        <th>1</th>
+        <td>Odd</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Even</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Odd</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>Even</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>Odd</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<pre><code class="language-html">&#x3C;table>
+  &#x3C;thead class="bg-green">
+    
+  &#x3C;/thead>
+  &#x3C;tbody class="striped bg-green bg-opacity-20 fg-purple text-body">
+
+  &#x3C;/tbody>
+&#x3C;/table>    
+</code></pre>

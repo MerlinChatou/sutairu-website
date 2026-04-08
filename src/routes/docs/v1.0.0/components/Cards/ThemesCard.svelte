@@ -37,7 +37,7 @@
     </div>
 
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono tt-capitalize" data-open-modal="documentation-modal" data-documentation="core/color-scheme">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono tt-capitalize" data-open-modal="documentation-modal" data-documentation="core/themes">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

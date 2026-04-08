@@ -27,7 +27,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-1" id="extended-typography" bind:this={cardEl}>
+  <div class="card opacity-0" id="extended-typography" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Stack</h4>
     </div>

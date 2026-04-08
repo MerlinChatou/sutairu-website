@@ -1,0 +1,109 @@
+<h1 id="margins" class="h1">Margins</h1>
+<p>Control element spacing using margin utility classes.<br>
+Values are based on shared spacing variables and support responsive variants.</p>
+<h2 id="spacing-scale" class="h2">Spacing scale</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0.25rem</code></td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td><code>0.5rem</code></td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td><code>1rem</code></td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td><code>1.5rem</code></td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td><code>3rem</code></td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td><code>auto</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-sides" class="h2">All sides</h2>
+<ul>
+<li><code>m-&#x3C;n></code></li>
+<li><code>m-auto</code></li>
+</ul>
+<div class="card w-fit p-3 d-flex gap-3 fd-row ai-center fw-wrap ff-mono text-white">
+  <div class="r-2 w-fit">
+    <div class="m-0 bg-accent p-2 t w-fit h-fit b-accent b-opacity-30 r-1">m-0</div>
+  </div>
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-1 bg-accent p-2 w-fit r-1">m-1</div>
+  </div>  
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-2 bg-accent p-2 w-fit r-1">m-2</div>
+  </div>
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-3 bg-accent p-2 r-1">m-3</div>
+  </div>
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-4 bg-accent p-2 r-1">m-4</div>
+  </div>    
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-5 bg-accent p-2 r-1">m-5</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="m-3">...&#x3C;/div>
+</code></pre>
+<h2 id="directional" class="h2">Directional</h2>
+<ul>
+<li>Top: <code>mt-&#x3C;n></code></li>
+<li>Right: <code>mr-&#x3C;n></code></li>
+<li>Bottom: <code>mb-&#x3C;n></code></li>
+<li>Left: <code>ml-&#x3C;n></code></li>
+</ul>
+<div class="card w-fit p-3 d-flex gap-2 fd-row ai-center fw-wrap ff-mono text-white">
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="mt-2 mb-4 ml-3 bg-accent p-2 r-1">mt-2 mb-4 ml-3</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="mt-2 mb-4 ml-3">mt-2 mb-4 ml-3&#x3C;/div>
+</code></pre>
+<h2 id="axis-based" class="h2">Axis-based</h2>
+<ul>
+<li>Horizontal: <code>mx-&#x3C;n></code> / <code>mx-auto</code></li>
+<li>Vertical: <code>my-&#x3C;n></code> / <code>my-auto</code></li>
+</ul>
+<div class="card p-3 d-flex gap-2 fd-row ai-center fw-wrap ff-mono text-white">
+  <div class="r-2 w-full b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="mx-auto my-3 w-fit bg-accent p-2 r-1">mx-auto my-3</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="mx-auto my-3">mx-auto my-3&#x3C;/div>
+</code></pre>
+<h2 id="responsive-variants" class="h2">Responsive variants</h2>
+<p>Apply margins at breakpoints:</p>
+<ul>
+<li><code>md:</code> ≥ 768px</li>
+<li><code>lg:</code> ≥ 1024px</li>
+</ul>
+<div class="card p-3 w-fit d-flex gap-2 fd-row ai-center fw-wrap ff-mono text-white">
+  <div class="r-2 w-fit b-accent b-opacity-30 bg-hatching fg-accent fg-opacity-30">
+    <div class="m-1 md:m-3 lg:m-5 w-fit bg-accent p-2 r-1">m-1 md:m-3 lg:m-5</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="m-1 md:m-3 lg:m-5">m-1 md:m-3 lg:m-5&#x3C;/div>
+</code></pre>
+<p>All utilities use <code>!important</code> to ensure predictable overrides.</p>

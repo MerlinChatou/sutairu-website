@@ -1,0 +1,35 @@
+<h1 id="striped-background" class="h1">Striped Background</h1>
+<p>Adds a configurable striped background pattern.</p>
+<h2 id="installation" class="h2">Installation</h2>
+<pre><code class="language-sh">npm install @merlin-chatou/sutairu-extras
+</code></pre>
+<p>Import the stylesheet in your CSS:</p>
+<pre><code class="language-css">@import "@merlin-chatou/sutairu-extras/stripe/style";
+</code></pre>
+<h2 id="usage" class="h2">Usage</h2>
+<p>Add <code>.bg-stripes</code> to enable the striped background.</p>
+<div class="card p-3 w-fit">
+  <div class="bg-stripes w-fit p-3">
+    Content
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-stripes">
+  Content
+&#x3C;/div>
+</code></pre>
+<h2 id="colors" class="h2">Colors</h2>
+<ul>
+<li><strong>Background color</strong>: <code>bg-&#x3C;color></code> optionally with <code>bg-&#x3C;number></code></li>
+<li><strong>Stripe (foreground) color</strong>: <code>fg-&#x3C;color></code> optionally with <code>fg-&#x3C;number></code></li>
+<li><strong>Global opacity</strong>: <code>bg-opacity-&#x3C;number></code></li>
+</ul>
+<div class="card p-3 w-fit">
+  <div class="bg-stripes bg-accent bg-600 fg-black fg-700 bg-opacity-50 w-fit p-3 text-white">
+    Striped background
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-stripes bg-red bg-600 fg-black fg-700 bg-opacity-50">
+  Striped background
+&#x3C;/div>
+</code></pre>
+<p>Colors automatically adapt to the active theme and color scheme.</p>

@@ -1,0 +1,67 @@
+<h1 id="themes" class="h1">Themes</h1>
+<p>Sutairu comes with a collection of curated themes, each defining a unique visual identity through distinct color palettes, typography scales, and UI spacing.</p>
+<h2 id="available-themes" class="h2">Available Themes</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Theme</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>sutairu</code></td>
+<td align="left">The default balanced look: modern, neutral, and highly legible.</td>
+</tr>
+<tr>
+<td align="left"><code>swiss</code></td>
+<td align="left">High-contrast, bold typography, and a grid-focused aesthetic inspired by International Typographic Style.</td>
+</tr>
+<tr>
+<td align="left"><code>adjuvio</code></td>
+<td align="left">A softer, professional palette designed for complex dashboard interfaces and readability.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration" class="h2">Configuration</h2>
+<p>By default, <code>Sutairu</code> only loads the core sutairu theme to keep your CSS bundle size minimal. To enable additional themes, you must register them in your configuration or via the CLI.</p>
+<h3 id="cli-option" class="h3">CLI option</h3>
+<p>Pass a comma-separated list to the <code>-t</code> flag:</p>
+<pre><code class="language-bash">sutairu -t "sutairu,swiss,adjuvio"
+</code></pre>
+<h3 id="configuration-file" class="h3">Configuration file</h3>
+<p>You can provide themes as a comma-separated string:</p>
+<pre><code class="language-js">// sutairu.config.js
+
+export default {
+  // ...
+  themes: "sutairu,swiss,adjuvio",
+  // ...
+};
+</code></pre>
+<h2 id="set-the-theme" class="h2">Set the theme</h2>
+<p>Sutairu uses the <code>data-theme</code> attribute on the <code>&#x3C;html></code> element to toggle between registered themes.</p>
+<pre><code class="language-html">&#x3C;html data-theme="swiss">&#x3C;/html>
+</code></pre>
+<h3 id="default-behavior" class="h3">Default Behavior</h3>
+<p>If the <code>data-theme</code> attribute is missing or contains an unregistered theme name, Sutairu automatically falls back to the default sutairu theme.</p>
+<h3 id="instant-switching" class="h3">Instant Switching</h3>
+<p>Because Sutairu themes are composed entirely of CSS Variables, switching themes is nearly instantaneous. There are no expensive JavaScript re-renders or layout shifts; the browser simply updates the variable values globally.</p>
+<h2 id="custom-themes" class="h2">Custom Themes</h2>
+<p>If the built-in themes don't fit your project, you can create a fully custom theme by defining your own CSS variable map.</p>
+<h3 id="creating-a-theme" class="h3">Creating a Theme</h3>
+<p>The fastest way to start is to use the default theme as a template:</p>
+<ol>
+<li>Copy the default theme folder from the Sutairu repository: <code>/src/themes/sutairu</code>.</li>
+<li>Rename the folder and the primary selectors to your new theme name.</li>
+<li>Customize the CSS variables (colors, scales, shadows) to match your design.</li>
+</ol>
+<h3 id="loading-custom-themes" class="h3">Loading Custom Themes</h3>
+<p>Once your CSS file is ready, ensure it is imported into your main entry point after the core Sutairu styles:</p>
+<pre><code class="language-css">/* main.css */
+@import "/styles/sutairu.css";
+@import "/styles/my-custom-theme.css";
+</code></pre>
+<p>You can then activate it just like a built-in theme:</p>
+<pre><code class="language-html">&#x3C;html data-theme="my-custom-theme">
+</code></pre>

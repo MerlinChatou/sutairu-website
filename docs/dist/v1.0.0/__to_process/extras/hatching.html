@@ -1,0 +1,35 @@
+<h1 id="haching-background" class="h1">Haching Background</h1>
+<p>Adds a configurable hatching background pattern.</p>
+<h2 id="installation" class="h2">Installation</h2>
+<pre><code class="language-sh">npm install @merlin-chatou/sutairu-extras
+</code></pre>
+<p>Import the stylesheet in your CSS:</p>
+<pre><code class="language-css">@import "@merlin-chatou/sutairu-extras/hatching/style";
+</code></pre>
+<h2 id="usage" class="h2">Usage</h2>
+<p>Add <code>.bg-hatching</code> to enable the hatching background.</p>
+<div class="card p-3 w-fit">
+  <div class="bg-hatching w-fit p-3">
+    Content
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-hatching">
+  Content
+&#x3C;/div>
+</code></pre>
+<h2 id="colors" class="h2">Colors</h2>
+<ul>
+<li><strong>Background color</strong>: <code>bg-&#x3C;color></code> optionally with <code>bg-&#x3C;number></code></li>
+<li><strong>Hatching (foreground) color</strong>: <code>fg-&#x3C;color></code> optionally with <code>fg-&#x3C;number></code></li>
+<li><strong>Global opacity</strong>: <code>bg-opacity-&#x3C;number></code></li>
+</ul>
+<div class="card p-3 w-fit">
+  <div class="bg-hatching fg-accent fg-400 bg-opacity-50 w-fit p-3">
+    Hatching background
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-hatching fg-accent fg-400 bg-opacity-50">
+  Hatching background
+&#x3C;/div>
+</code></pre>
+<p>Colors automatically adapt to the active theme and color scheme.</p>
