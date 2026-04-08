@@ -4,7 +4,7 @@ Sutairu features semantic support for **light** and **dark** modes. Sutairu’s 
 
 To control the color scheme globally, apply the `data-color-scheme` attribute to the `<html>` element:
 
-### Default (Light Mode)
+## Default (Light Mode)
 
 If the attribute is omitted, Sutairu renders the standard light variants.
 
@@ -12,7 +12,7 @@ If the attribute is omitted, Sutairu renders the standard light variants.
 <html>
 ```
 
-### Dark Mode
+## Dark Mode
 
 To shift the framework into its dark-mode variant, explicitly set the attribute to `dark`.
 
@@ -45,18 +45,13 @@ Sutairu is built on a **deterministic, light-first architecture**.
 * **The Norm:** Light mode serves as the baseline for all component structures and color scales.
 * **The Exception:** Dark mode is treated as an adaptive layer. When the `.dark` context is active, the framework dynamically remaps the underlying color variables to their dark-variant counterparts.
 
-
-
 | Value | Mode | Description |
 | --- | --- | --- |
 | *(None)* | **Light** | **The Norm.** The baseline state for all utilities. |
 | `dark` | **Dark** | **The Exception.** Activates the adaptive dark-mode layer. |
 
 
-
 To keep the core lightweight, Sutairu intentionally avoids localized theme overrides. Nested color schemes are not supported and may result in unpredictable rendering and CSS variable conflicts.
-
-
 
 
 ## User Preferences

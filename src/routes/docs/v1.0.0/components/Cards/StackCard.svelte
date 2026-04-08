@@ -27,28 +27,19 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-0" id="extended-typography" bind:this={cardEl}>
+  <div class="card opacity-1" id="extended-typography" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Extended Typography</h4>
+      <h4 class="h4">Stack</h4>
     </div>
 
-    <div class="body d-flex fd-col gap-4 p-4 ai-center" bind:this={body}>
-      <div class="td-line">Strikethrough</div>
-      <div class="hover:td-line">Strikethrough on hover</div>
-      <div class="td-underline">Underline</div>
-      <div class="hover:td-underline">Underline on hover</div>
-      <div><a class="td-none" href="/">No decoration</a></div>
-      <div><a class="td-underline hover:td-none" href="/">No decoration on hover</a></div>
-      <ins>Inserted</ins>
-      <del>Deleted</del>
-      <div class="ff-handwritten">Handwritten</div>
-      <div class="tt-lower">LOWERCASE TEXT</div>
-      <div class="tt-capitalize">capitalize text</div>
-      <div class="tt-upper">uppercase text</div>
+    <div class="body p-0 stack overflow-hidden" bind:this={body}>
+      <img src="/images/vertical-landscape.jpg" class="w-full h-full object-cover ar-1" alt="Mountains" />
+      <div class="stripes-accent/60 w-full h-full"></div>
+      <div class="text-white fs-2.5rem fw-900">Stacked Items</div>
     </div>
 
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/extended-typography">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="layout/stack">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

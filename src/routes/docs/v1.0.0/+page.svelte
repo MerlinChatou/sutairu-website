@@ -42,6 +42,7 @@
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
   import SemanticColorsCard from "./components/Cards/SemanticColorCard.svelte";
+  import StackCard from "./components/Cards/StackCard.svelte";
   import TableCard from "./components/Cards/TableCard.svelte";
   import TextAlignmentCard from "./components/Cards/TextAlignmentCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
@@ -151,6 +152,7 @@
     <PerSideBorderWidthCard />
     <CursorCard />    
     <FlexCard />
+    <StackCard />
     <RotationCard />
     <ScaleCard />    
     <ExtendedTypographyCard />
