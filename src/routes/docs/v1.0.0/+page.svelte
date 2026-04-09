@@ -30,6 +30,7 @@
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
   import FormCard from "./components/Cards/FormCard.svelte";  
+  import GridCard from "./components/Cards/GridCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";
   import InteractiveBackgroundCard from "./components/Cards/InteractiveBackgroundCard.svelte";
   import InteractiveTextCard from "./components/Cards/InteractiveTextCard.svelte";
@@ -152,6 +153,7 @@
     <PerSideBorderWidthCard />
     <CursorCard />    
     <FlexCard />
+    <GridCard />
     <StackCard />
     <RotationCard />
     <ScaleCard />    
