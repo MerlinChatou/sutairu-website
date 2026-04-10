@@ -49,7 +49,7 @@
     </table>
 
     <div class="ov-x-auto mb-4">
-      <table class="table bg-accent-100 dark:bg-accent-900 text-black dark:text-body mb-0">
+      <table class="table bg-accent/5 text-black dark:text-body mb-0">
         <thead>
           <tr>
             <th>#</th>
@@ -88,7 +88,7 @@
           <th>Striped</th>
         </tr>
       </thead>
-      <tbody class="odd:bg-accent/10">
+      <tbody class="odd:bg-accent/5">
         <tr>
           <th>1</th>
           <td>Odd</td>

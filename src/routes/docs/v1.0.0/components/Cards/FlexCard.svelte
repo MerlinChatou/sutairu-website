@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card opacity-1" id="flex" bind:this={cardEl}>
+<div class="card opacity-0" id="flex" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Flex</h4></div>
   <div class="body p-3 d-flex fd-col gap-3 ff-mono text-white"  bind:this={body}>
     <div class="d-flex fd-row gap-1 hatching-gray/20 b-1 b-gray/20 r-2">
