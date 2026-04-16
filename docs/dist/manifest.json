@@ -35,14 +35,6 @@
     "layout/flex",
     "layout/grid",
     "layout/stack",
-    "layout/grid",
-    "typography/heading",
-    "typography/heading",
-    "typography/heading",
-    "typography/heading",
-    "typography/heading",
-    "typography/heading",
-    "typography/heading",
     "typography/heading"
   ]
 }

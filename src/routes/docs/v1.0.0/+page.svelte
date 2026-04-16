@@ -24,7 +24,6 @@
   import ColorSchemeCard from "./components/Cards/ColorSchemeCard.svelte";
   import CursorCard from "./components/Cards/CursorCard.svelte";
   import PatternCard from "./components/Cards/PatternCard.svelte";
-  import ExtendedTypographyCard from "./components/Cards/ExtendedTypographyCard.svelte";
   import FilterCard from "./components/Cards/FilterCard.svelte";
   import FlexCard from "./components/Cards/FlexCard.svelte";
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
@@ -157,7 +156,6 @@
     <StackCard />
     <RotationCard />
     <ScaleCard />    
-    <ExtendedTypographyCard />
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
     <ModalCard />
