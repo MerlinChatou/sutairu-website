@@ -25,7 +25,7 @@
   });
 </script>
 {#if isVisible}
-<div class="card opacity-1" id="typography" bind:this={cardEl}>
+<div class="card opacity-0" id="typography" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Typography</h4></div>
 
   <div class="body d-flex fd-col gap-0 p-4 ai-center" bind:this={body}>
@@ -34,13 +34,16 @@
     <hr class="w-full" />
     <div class="d-flex fd-col gap-4 ai-center m-0">
       <abbr title="Abbreviation">Abbr.</abbr>
-      <div class="fw-bold">Bold</div>
+      <div class="bold">Bold</div>
       <div class="italic">Italic</div>
-      <div class="td-s">Strikethrough</div>
+      <div class="td-o">Overlined</div>
+      <div class="td-s">Strikethrough</div>      
       <div class="td-u">Underlined</div>
+      
       <div><a href="/">This is a Link</a></div>
       <small>Small</small>
       <div class="ff-mono">Monospace</div>
+      <mark>Highlighted</mark>
       <code>Inline Code</code>
       <div><kbd>Ctrl</kbd> + <kbd>F</kbd></div>
       <div>Text <sub>Sub</sub></div>
@@ -55,7 +58,7 @@
   </div>
 
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/typography">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="typography/typography">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

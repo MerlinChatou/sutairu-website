@@ -101,6 +101,12 @@
     text-decoration: underline;
   }
 
+  abbr {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    cursor: help;
+  }
+
   table {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -137,22 +143,25 @@
     font-size-adjust: var(--su-fs-adjust-mono);
     padding: 1px 6px;
     background-color: var(--su-kbd-bg);
+    color: var(--su-kbd-text);
     display: inline;
     border-radius: 4px;
     border-color: var(--su-kbd-border);
     box-shadow: var(--su-kbd-shadow);
   }
 
-  .del,
   del {
     color: var(--su-red);
-    text-decoration: strikethrough;
+    text-decoration: line-through;
   }
 
-  .ins,
   ins {
     color: var(--su-green);
     text-decoration: none;
+  }
+
+  mark {
+    background-color: var(--su-highlight);
   }
 
   :not(pre) > code {
@@ -215,6 +224,7 @@
     /* If a variable is empty, the browser ignores that segment */
     filter: var(--su-blur) var(--su-brightness) var(--su-contrast) var(--su-grayscale) var(--su-invert) var(--su-saturate) var(--su-sepia) var(--su-hue-rotate);
   }
+
 }
 
 /* Import Inter & Indie Flower for default theme */
@@ -245,6 +255,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-blue);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
 
   /* Scroll bar */
   --su-sb-track-color: var(--su-container);
@@ -309,6 +320,7 @@
   --su-page: oklch(from var(--su-accent) 20% 0.03 h);
   --su-container: oklch(from var(--su-accent) 23% 0.03 h);
   --su-subtle: oklch(from var(--su-accent) 30% 0.02 h);
+  --su-kbd-text: var(--su-black);
 }
 
 /* Import Inter & Indie Flower */
@@ -330,6 +342,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-red);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 45% 0.01 h);
@@ -401,6 +414,8 @@
   --su-page: oklch(from var(--su-accent) 18% 0.003 h);
   --su-container: oklch(from var(--su-accent) 23% 0.003 h);
   --su-subtle: oklch(from var(--su-accent) 30% 0.003 h);
+  
+  --su-kbd-text: var(--su-black);
 }
 
 /* Import Inter & Indie Flower for default theme */
@@ -422,6 +437,7 @@
 
   /* Accent color, here blue reported from the palette */
   --su-accent: var(--su-blue);
+  --su-highlight: oklch(from var(--su-yellow)  98% c h);
 
   /* Semantic text */
   --su-body: oklch(from var(--su-accent) 60% 0.01 h);
@@ -493,6 +509,7 @@
   --su-page: oklch(from var(--su-black) 16% c h);
   --su-container: oklch(from var(--su-black) 22% c h);
   --su-subtle: oklch(from var(--su-black) 26% c h);
+  --su-kbd-text: var(--su-black);
 }
 
 :root {
@@ -3996,6 +4013,26 @@ body.modal-open {
   padding-bottom: 0.25rem;
 }
 
+.ws-normal {
+  white-space: normal;
+}
+
+.ws-nowrap {
+  white-space: nowrap;
+}
+
+.ws-pre {
+  white-space: pre;
+}
+
+.ws-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.ws-pre-line {
+  white-space: pre-line;
+}
+
 .bg-yellow {
   background-color: var(--su-yellow);
 }
@@ -4310,6 +4347,31 @@ body.modal-open {
   height: 100%;
 }
 
+.td-o {
+  text-decoration-line: overline;
+}
+
+.ff-handwritten {
+  font-family: var(--su-ff-handwritten);
+  font-size-adjust: var(--su-fs-adjust-handwritten);
+}
+
+.tt-upper {
+  text-transform: uppercase;
+}
+
+.tt-lower {
+  text-transform: lowercase;
+}
+
+.tt-capitalize {
+  text-transform: capitalize;
+}
+
+.tt-normal {
+  text-transform: none;
+}
+
 .px-1 {
   padding-inline: 0.25rem;
 }
@@ -4354,45 +4416,8 @@ body.modal-open {
   padding-bottom: 1.25rem;
 }
 
-.ws-normal {
-  white-space: normal;
-}
-
-.ws-nowrap {
-  white-space: nowrap;
-}
-
-.ws-pre {
-  white-space: pre;
-}
-
-.ws-pre-wrap {
-  white-space: pre-wrap;
-}
-
-.ws-pre-line {
-  white-space: pre-line;
-}
-
 .td-none {
   text-decoration: none;
-}
-
-.ff-handwritten {
-  font-family: var(--su-ff-handwritten);
-  font-size-adjust: var(--su-fs-adjust-handwritten);
-}
-
-.tt-upper {
-  text-transform: upper;
-}
-
-.tt-lower {
-  text-transform: lower;
-}
-
-.tt-capitalize {
-  text-transform: capitalize;
 }
 
 .grayscale-50 {
@@ -4495,68 +4520,8 @@ body.modal-open {
   transition: transform 150ms ease ;
 }
 
-.p-6px {
-  padding: 6px;
-}
-
-.fw-900 {
-  font-weight: 900;
-}
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.tr-transform-300 {
-  transition: transform 300ms ease ;
-}
-
-.h-120px {
-  height: 120px;
-}
-
-.bg-green-200 {
-  background-color: color-mix(in oklch, var(--su-green), #fff 60%);
-}
-
-.h-240px {
-  height: 240px;
-}
-
 .bg-gray-200 {
   background-color: color-mix(in oklch, var(--su-gray), #fff 60%);
-}
-
-.h-300px {
-  height: 300px;
-}
-
-.bg-blue-200 {
-  background-color: color-mix(in oklch, var(--su-blue), #fff 60%);
-}
-
-.h-100px {
-  height: 100px;
-}
-
-.h-140px {
-  height: 140px;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
-.h-250px {
-  height: 250px;
-}
-
-.object-cover {
-  object-fit: cover;
-}
-
-.bg-black\/50 {
-  background-color: oklch(from var(--su-black) l c h / 0.5);
 }
 
 .d-none {
@@ -4641,6 +4606,87 @@ body.modal-open {
 
 .d-inline-block {
   display: inline-block;
+}
+
+.p-6px {
+  padding: 6px;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.tr-transform-300 {
+  transition: transform 300ms ease ;
+}
+
+.h-120px {
+  height: 120px;
+}
+
+.bg-green-200 {
+  background-color: color-mix(in oklch, var(--su-green), #fff 60%);
+}
+
+.h-240px {
+  height: 240px;
+}
+
+.h-300px {
+  height: 300px;
+}
+
+.bg-blue-200 {
+  background-color: color-mix(in oklch, var(--su-blue), #fff 60%);
+}
+
+.h-100px {
+  height: 100px;
+}
+
+.h-140px {
+  height: 140px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.td-abbr {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
+.td-l {
+  text-decoration-line: line-through;
+}
+
+.td-u {
+  text-decoration-line: underline;
+}
+
+.td-del {
+  color: var(--su-red);
+  text-decoration: line-through;
+}
+
+.td-ins {
+  color: var(--su-green);
+  text-decoration: none;
+}
+
+.highlight {
+  background-color: var(--su-highlight);
+  color: marktext;
 }
 
 .ml-2 {
@@ -4762,10 +4808,6 @@ body.modal-open {
 
 .bg-white-250 {
   background-color: color-mix(in oklch, var(--su-white), #fff 50%);
-}
-
-.bold {
-  font-weight: 700;
 }
 
 .bg-gray-100 {
@@ -5036,6 +5078,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+.object-cover {
+  object-fit: cover;
+}
+
 .fs-2\.5rem {
   font-size: 2.5rem;
 }
@@ -5056,24 +5102,12 @@ body.modal-open {
   text-align: left;
 }
 
-.opacity-1 {
-  opacity: 1;
-}
-
 .gap-0 {
   gap: 0;
 }
 
-.italic {
-  font-style: italic;
-}
-
 .td-s {
   text-decoration-line: line-through;
-}
-
-.td-u {
-  text-decoration-line: underline;
 }
 
 .w-100\% {

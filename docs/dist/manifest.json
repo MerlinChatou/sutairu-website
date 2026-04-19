@@ -25,7 +25,6 @@
     "__to_process/text-color",
     "__to_process/text-opacity",
     "__to_process/text-shade",
-    "__to_process/typography",
     "__to_process/white-space",
     "background/patterns",
     "components/badge",
@@ -35,6 +34,23 @@
     "layout/flex",
     "layout/grid",
     "layout/stack",
-    "typography/heading"
+    "typography/heading",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography",
+    "typography/typography"
   ]
 }
