@@ -6,7 +6,6 @@
     "__to_process/extras/button",
     "__to_process/extras/code-highlight",
     "__to_process/extras/dotted",
-    "__to_process/extras/extended-typography",
     "__to_process/extras/filter",
     "__to_process/extras/hatching",
     "__to_process/extras/loader",
@@ -36,21 +35,8 @@
     "layout/stack",
     "typography/heading",
     "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography",
-    "typography/typography"
+    "typography/blockquote",
+    "typography/blockquote",
+    "typography/blockquote"
   ]
 }
