@@ -6,6 +6,7 @@
 
   import Navbar from "./components/Navbar.svelte";
 
+  import AlignmentCard from "./components/Cards/AlignmentCard.svelte";
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
   import BackgroundOpacityCard from "./components/Cards/BackgroundOpacityCard.svelte";
   import BackgroundShadeScaleCard from "./components/Cards/BackgroundColorShadeCard.svelte";
@@ -43,8 +44,7 @@
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
   import SemanticColorsCard from "./components/Cards/SemanticColorCard.svelte";
   import StackCard from "./components/Cards/StackCard.svelte";
-  import TableCard from "./components/Cards/TableCard.svelte";
-  import TextAlignmentCard from "./components/Cards/TextAlignmentCard.svelte";
+  import TableCard from "./components/Cards/TableCard.svelte";  
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
   import TextColorShadeCard from "./components/Cards/TextColorShadeCard.svelte";
   import TextOpacityCard from "./components/Cards/TextOpacityCard.svelte";
@@ -124,7 +124,7 @@
     <TypographyCard />
     <BlockquoteCard />
     <TableCard />
-    <TextAlignmentCard />
+    <AlignmentCard />
     <FontSizeCard />
     <FontWeightCard />
     <WhiteSpaceCard />

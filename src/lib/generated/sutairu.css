@@ -5117,10 +5117,6 @@ body.modal-open {
   text-wrap: nowrap;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .gap-0 {
   gap: 0;
 }
@@ -5147,6 +5143,38 @@ body.modal-open {
 
 .bg-body {
   background-color: var(--su-body);
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.bg-accent\/20 {
+  background-color: oklch(from var(--su-accent) l c h / 0.2);
+}
+
+.align-top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.bg-subtle\/50 {
+  background-color: oklch(from var(--su-subtle) l c h / 0.5);
+}
+
+.align-br {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 :is([data-color-scheme="dark"] *) {

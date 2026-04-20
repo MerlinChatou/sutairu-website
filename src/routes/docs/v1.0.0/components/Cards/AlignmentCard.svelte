@@ -28,36 +28,46 @@
 {#if isVisible}
   <div class="card opacity-0" id="text-alignment" bind:this={cardEl}>
     <div class="header" bind:this={header}>
-      <h4 class="h4">Text Alignment</h4>
+      <h4 class="h4">Alignment</h4>
     </div>
     <div class="body" bind:this={body}>
-      <code>text-left</code>
+      <code>.text-left</code>
       <p class="text-left pt-3 px-5 fs-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend nisl metus, nec venenatis sapien efficitur vitae.
       </p>
     </div>
     <div class="body">
-      <code>text-center</code>
+      <code>.text-center</code>
       <p class="text-center pt-3 px-5 fs-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend nisl metus, nec venenatis sapien efficitur vitae.
       </p>
     </div>
 
     <div class="body">
-      <code>text-right</code>
+      <code>.text-right</code>
       <p class="text-right pt-3 px-5 fs-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend nisl metus, nec venenatis sapien efficitur vitae.
       </p>
     </div>
 
     <div class="body">
-      <code>ta-justify</code>
-      <p class="ta-justify pt-3 px-5 fs-sm">
+      <code>.text-justify</code>
+      <p class="text-justify pt-3 px-5 fs-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend nisl metus, nec venenatis sapien efficitur vitae.
       </p>
     </div>
+    <div class="body">
+      <div class="bg-subtle/50 h-24 align-cc r-2">
+        <code>.align-cc</code>
+      </div>
+    </div>
+        <div class="body">
+      <div class="bg-subtle/50 h-24 align-br r-2">
+        <code>.align-br</code>
+      </div>
+    </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-alignment">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="layout/alignment">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

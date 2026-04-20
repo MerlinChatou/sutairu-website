@@ -1,0 +1,123 @@
+<h1 id="alignments" class="h1">Alignments</h1>
+<h2 id="text-alignement" class="h2">Text Alignement</h2>
+<p>Sutairu provides a straightforward set of utilities to control the horizontal alignment of your text.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.text-left</code></td>
+<td align="left">Aligns text to the <strong>left</strong> side of the container.</td>
+</tr>
+<tr>
+<td align="left"><code>.text-right</code></td>
+<td align="left">Aligns text to the <strong>right</strong> side of the container.</td>
+</tr>
+<tr>
+<td align="left"><code>.text-center</code></td>
+<td align="left">Centers text horizontally.</td>
+</tr>
+<tr>
+<td align="left"><code>.text-justify</code></td>
+<td align="left">Stretches the lines so that each line has equal width.</td>
+</tr>
+<tr>
+<td align="left"><code>.text-start</code></td>
+<td align="left">Aligns text to the start (Left in LTR, Right in RTL).</td>
+</tr>
+<tr>
+<td align="left"><code>.text-end</code></td>
+<td align="left">Aligns text to the end (Right in LTR, Left in RTL).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example" class="h3">Example</h3>
+<div class="card">
+<p class="text-center">This text will be centered.</p>
+<p class="text-right">This text will be right-aligned.</p>
+</div>
+<pre><code class="language-html">&#x3C;p class="text-center">This text will be centered.&#x3C;/p>
+&#x3C;p class="text-right">This text will be right-aligned.&#x3C;/p>
+</code></pre>
+<h2 id="positional-alignment-utilities" class="h2">Positional Alignment Utilities</h2>
+<p>Beyond simple text alignment, Sutairu includes <strong>Positional Alignment</strong> utilities. These classes are typically used on container elements (like <code>flex</code> or <code>grid</code> parents) to quickly position child elements along both the vertical and horizontal axes.</p>
+<p>You can use full descriptive names or high-speed aliases to control layout positioning.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Full Class</th>
+<th align="left">Alias</th>
+<th align="left">Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.align-top-left</code></td>
+<td align="left"><strong><code>.align-tl</code></strong></td>
+<td align="left">Top Left</td>
+</tr>
+<tr>
+<td align="left"><code>.align-top-center</code></td>
+<td align="left"><strong><code>.align-tc</code></strong></td>
+<td align="left">Top Center</td>
+</tr>
+<tr>
+<td align="left"><code>.align-top-right</code></td>
+<td align="left"><strong><code>.align-tr</code></strong></td>
+<td align="left">Top Right</td>
+</tr>
+<tr>
+<td align="left"><code>.align-center-left</code></td>
+<td align="left"><strong><code>.align-cl</code></strong></td>
+<td align="left">Middle Left</td>
+</tr>
+<tr>
+<td align="left"><code>.align-center-center</code></td>
+<td align="left"><strong><code>.align-cc</code></strong></td>
+<td align="left">Absolute Center (Dead Center)</td>
+</tr>
+<tr>
+<td align="left"><code>.align-center-right</code></td>
+<td align="left"><strong><code>.align-cr</code></strong></td>
+<td align="left">Middle Right</td>
+</tr>
+<tr>
+<td align="left"><code>.align-bottom-left</code></td>
+<td align="left"><strong><code>.align-bl</code></strong></td>
+<td align="left">Bottom Left</td>
+</tr>
+<tr>
+<td align="left"><code>.align-bottom-center</code></td>
+<td align="left"><strong><code>.align-bc</code></strong></td>
+<td align="left">Bottom Center</td>
+</tr>
+<tr>
+<td align="left"><code>.align-bottom-right</code></td>
+<td align="left"><strong><code>.align-br</code></strong></td>
+<td align="left">Bottom Right</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage-with-stack-or-flex" class="h3">Usage with Stack or Flex</h3>
+<p>These utilities are extremely powerful when combined with the <code>.stack</code> component or <code>.flex</code> layouts to position overlays or badges.</p>
+<h3 id="examples" class="h3">Examples</h3>
+<p>Centering content in a hero section</p>
+<div class="card h-40 align-cc">
+  <div class="p-4 bg-accent/20 r-2 shadow">I am dead centered</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-40 align-cc">
+  &#x3C;div>I am dead centered&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<p>Positioning top right</p>
+<div class="card h-40 align-top-right">
+  <div class="p-4 bg-accent/20 r-2 shadow">Top  Right</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="h-40 align-top-right">
+  &#x3C;div>Top Right&#x3C;/div>
+&#x3C;/div>
+</code></pre>
