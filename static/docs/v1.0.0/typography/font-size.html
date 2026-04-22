@@ -1,0 +1,138 @@
+<h1 id="font-size-utilities" class="h1">Font Size Utilities</h1>
+<p>Utility classes for controlling font size.</p>
+<h2 id="semantic-sizing" class="h2">Semantic Sizing</h2>
+<p>Apply a font size directly on any element:</p>
+<div class="card mb-3 w-fit d-flex fd-col p-3 gap-3">
+  <div class="fs-xs">.fs-xs</div>
+  <div class="fs-sm">.fs-sm</div>
+  <div class="fs-md">.fs-md</div>
+  <div class="fs-lg">.fs-lg</div>
+  <div class="fs-xl">.fs-xl</div>
+  <div class="fs-2xl">.fs-2xl</div>
+  <div class="fs-3xl">.fs-3xl</div>
+  <div class="fs-4xl">.fs-4xl</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="fs-xs">.fs-xs&#x3C;/div>
+&#x3C;div class="fs-sm">.fs-sm&#x3C;/div>
+&#x3C;div class="fs-md">.fs-md&#x3C;/div>
+&#x3C;div class="fs-lg">.fs-lg&#x3C;/div>
+&#x3C;div class="fs-xl">.fs-xl&#x3C;/div>
+&#x3C;div class="fs-2xl">.fs-2xl&#x3C;/div>
+&#x3C;div class="fs-3xl">.fs-3xl&#x3C;/div>
+&#x3C;div class="fs-4xl">.fs-4xl&#x3C;/div>
+</code></pre>
+<h2 id="classes-details" class="h2">Classes details</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Size</th>
+<th>Pixels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.fs-xs</code></td>
+<td>0.75rem</td>
+<td>12px</td>
+</tr>
+<tr>
+<td><code>.fs-sm</code></td>
+<td>0.875rem</td>
+<td>14px</td>
+</tr>
+<tr>
+<td><code>.fs-md</code></td>
+<td>1rem</td>
+<td>16px (default)</td>
+</tr>
+<tr>
+<td><code>.fs-lg</code></td>
+<td>1.125rem</td>
+<td>18px</td>
+</tr>
+<tr>
+<td><code>.fs-xl</code></td>
+<td>1.25rem</td>
+<td>20px</td>
+</tr>
+<tr>
+<td><code>.fs-2xl</code></td>
+<td>1.5rem</td>
+<td>24px</td>
+</tr>
+<tr>
+<td><code>.fs-3xl</code></td>
+<td>1.875rem</td>
+<td>30px</td>
+</tr>
+<tr>
+<td><code>.fs-4xl</code></td>
+<td>2.25rem</td>
+<td>36px</td>
+</tr>
+</tbody>
+</table>
+<h2 id="literal--custom-sizing" class="h2">Literal &#x26; Custom Sizing</h2>
+<p>For cases where the semantic scale isn't enough, Sutairu provides utilities for literal pixel values, rem units, viewport units, and even fractional calculations.</p>
+<h3 id="numeric-scale-rem-based" class="h3">Numeric Scale (Rem-based)</h3>
+<p>Sutairu includes a numeric scale where each unit typically represents <code>0.25rem</code> (4px by default).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">CSS Value</th>
+<th align="left">Result (at 16px base)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.fs-4</code></td>
+<td align="left"><code>font-size: 1rem;</code></td>
+<td align="left">16px</td>
+</tr>
+<tr>
+<td align="left"><code>.fs-8</code></td>
+<td align="left"><code>font-size: 2rem;</code></td>
+<td align="left">32px</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arbitrary-units" class="h3">Arbitrary Units</h3>
+<p>You can define exact sizes using pixels, rems, or viewport units directly in the class name for one-off requirements.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">CSS Value</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.fs-16px</code></td>
+<td align="left"><code>font-size: 16px;</code></td>
+<td align="left">Exact pixel control</td>
+</tr>
+<tr>
+<td align="left"><code>.fs-2rem</code></td>
+<td align="left"><code>font-size: 2rem;</code></td>
+<td align="left">Scalable root-based sizing</td>
+</tr>
+<tr>
+<td align="left"><code>.fs-1.5vh</code></td>
+<td align="left"><code>font-size: 1.5vh;</code></td>
+<td align="left">Fluid sizing based on viewport height</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-preview" class="h3">Example Preview</h3>
+<div class="card d-flex fd-col gap-2 p-3">
+  <div class="fs-10px">.fs-10px (Fixed)</div>
+  <div class="fs-4">.fs-4 (1rem)</div>
+  <div class="fs-2.5rem">.fs-2.5rem (Large)</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="fs-10px">.fs-10px (Fixed)&#x3C;/div>
+&#x3C;div class="fs-4">.fs-4 (1rem)&#x3C;/div>
+&#x3C;div class="fs-2.5rem">.fs-2.5rem (Large)&#x3C;/div>
+</code></pre>

@@ -55,7 +55,7 @@
 
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/font-size">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="typography/font-size">&lt;code&gt;</button>
   </div>
 </div>
 {/if}
