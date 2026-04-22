@@ -56,6 +56,7 @@ Sutairu includes a numeric scale where each unit typically represents `0.25rem` 
 | :--- | :--- | :--- |
 | `.fs-4` | `font-size: 1rem;` | 16px |
 | `.fs-8` | `font-size: 2rem;` | 32px |
+| `.fs-15/2` | `font-size: 1.875rem;` | 30px |
 
 ### Arbitrary Units
 
@@ -66,11 +67,21 @@ You can define exact sizes using pixels, rems, or viewport units directly in the
 | `.fs-16px` | `font-size: 16px;` | Exact pixel control |
 | `.fs-2rem` | `font-size: 2rem;` | Scalable root-based sizing |
 | `.fs-1.5vh` | `font-size: 1.5vh;` | Fluid sizing based on viewport height |
+| `.fs-100/6vw` | `font-size: 16.667vw;` | Fluid scaling based on viewport width proportions |
 
 
-### Example Preview
+### Fractional Sizing
 
-<div class="card d-flex fd-col gap-2 p-3">
+When you need precise typographic ratios, you can use fractional syntax. This is particularly useful for matching mathematical design grids.
+
+  * **Example:** `.fs-5/3rem`
+  * **CSS:** `font-size: calc(5/3 * 1rem);` (\~26.6px)
+
+
+
+### Examples
+
+<div class="card w-fit d-flex fd-col gap-2 p-3">
   <div class="fs-10px">.fs-10px (Fixed)</div>
   <div class="fs-4">.fs-4 (1rem)</div>
   <div class="fs-2.5rem">.fs-2.5rem (Large)</div>
@@ -80,4 +91,48 @@ You can define exact sizes using pixels, rems, or viewport units directly in the
 <div class="fs-10px">.fs-10px (Fixed)</div>
 <div class="fs-4">.fs-4 (1rem)</div>
 <div class="fs-2.5rem">.fs-2.5rem (Large)</div>
+```
+
+
+## Fluid Font Size Utility
+
+The `fs-fluid` utility provides **responsive typography** that scales linearly between a minimum and maximum viewport width. This eliminates the need for multiple media queries by using the CSS `clamp()` function.
+
+
+### Basic Syntax
+
+```css
+fs-fluid-[min]-[max][unit]
+```
+
+* **`min`**: The font size at the minimum viewport width (360px).
+* **`max`**: The font size at the maximum viewport width (1200px).
+* **`unit`**: Optional. Supports `rem` (default) and `px`.
+
+
+### How it Works
+
+The utility calculates a **linear scale** (the "slope") between two defined points. As the browser window resizes, the font size adjusts smoothly until it hits the defined boundaries.
+
+### Usage Examples
+
+| Utility | CSS Output (Approximate) | Description |
+| :--- | :--- | :--- |
+| `fs-fluid-1-2` | `clamp(16px, 12.86px + 0.87vmin, 32px)` | Scales from 1rem to 2rem. |
+| `fs-fluid-16-32px` | `clamp(16px, 9.14px + 1.90vmin, 32px)` | Scales from 16px to 32px. |
+| `!fs-fluid-2-4` | `font-size: clamp(...) !important;` | Forces importance on the fluid utility. |
+| `fs-fluid-1/2-1` | `clamp(8px, 4.57px + 0.95vmin, 16px)` | Supports fractions 0.5rem to 1rem. |
+
+
+
+### Examples
+
+<div class="card w-fit d-flex fd-col gap-2 p-3">
+  <div class="fs-fluid-1-2">.fs-fluid-1-2</div>
+  <div class="fs-fluid-16-64px">.fs-fluid-16-64px</div>
+</div>
+
+```html
+<div class="fs-fluid-1-2">.fs-fluid-1-2</div>
+<div class="fs-fluid-16-64px">.fs-fluid-16-64px</div>
 ```

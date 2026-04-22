@@ -96,6 +96,11 @@
 <td align="left"><code>font-size: 2rem;</code></td>
 <td align="left">32px</td>
 </tr>
+<tr>
+<td align="left"><code>.fs-15/2</code></td>
+<td align="left"><code>font-size: 1.875rem;</code></td>
+<td align="left">30px</td>
+</tr>
 </tbody>
 </table>
 <h3 id="arbitrary-units" class="h3">Arbitrary Units</h3>
@@ -124,10 +129,21 @@
 <td align="left"><code>font-size: 1.5vh;</code></td>
 <td align="left">Fluid sizing based on viewport height</td>
 </tr>
+<tr>
+<td align="left"><code>.fs-100/6vw</code></td>
+<td align="left"><code>font-size: 16.667vw;</code></td>
+<td align="left">Fluid scaling based on viewport width proportions</td>
+</tr>
 </tbody>
 </table>
-<h3 id="example-preview" class="h3">Example Preview</h3>
-<div class="card d-flex fd-col gap-2 p-3">
+<h3 id="fractional-sizing" class="h3">Fractional Sizing</h3>
+<p>When you need precise typographic ratios, you can use fractional syntax. This is particularly useful for matching mathematical design grids.</p>
+<ul>
+<li><strong>Example:</strong> <code>.fs-5/3rem</code></li>
+<li><strong>CSS:</strong> <code>font-size: calc(5/3 * 1rem);</code> (~26.6px)</li>
+</ul>
+<h3 id="examples" class="h3">Examples</h3>
+<div class="card w-fit d-flex fd-col gap-2 p-3">
   <div class="fs-10px">.fs-10px (Fixed)</div>
   <div class="fs-4">.fs-4 (1rem)</div>
   <div class="fs-2.5rem">.fs-2.5rem (Large)</div>
@@ -135,4 +151,56 @@
 <pre><code class="language-html">&#x3C;div class="fs-10px">.fs-10px (Fixed)&#x3C;/div>
 &#x3C;div class="fs-4">.fs-4 (1rem)&#x3C;/div>
 &#x3C;div class="fs-2.5rem">.fs-2.5rem (Large)&#x3C;/div>
+</code></pre>
+<h2 id="fluid-font-size-utility" class="h2">Fluid Font Size Utility</h2>
+<p>The <code>fs-fluid</code> utility provides <strong>responsive typography</strong> that scales linearly between a minimum and maximum viewport width. This eliminates the need for multiple media queries by using the CSS <code>clamp()</code> function.</p>
+<h3 id="basic-syntax" class="h3">Basic Syntax</h3>
+<pre><code class="language-css">fs-fluid-[min]-[max][unit]
+</code></pre>
+<ul>
+<li><strong><code>min</code></strong>: The font size at the minimum viewport width (360px).</li>
+<li><strong><code>max</code></strong>: The font size at the maximum viewport width (1200px).</li>
+<li><strong><code>unit</code></strong>: Optional. Supports <code>rem</code> (default) and <code>px</code>.</li>
+</ul>
+<h3 id="how-it-works" class="h3">How it Works</h3>
+<p>The utility calculates a <strong>linear scale</strong> (the "slope") between two defined points. As the browser window resizes, the font size adjusts smoothly until it hits the defined boundaries.</p>
+<h3 id="usage-examples" class="h3">Usage Examples</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Utility</th>
+<th align="left">CSS Output (Approximate)</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>fs-fluid-1-2</code></td>
+<td align="left"><code>clamp(16px, 12.86px + 0.87vmin, 32px)</code></td>
+<td align="left">Scales from 1rem to 2rem.</td>
+</tr>
+<tr>
+<td align="left"><code>fs-fluid-16-32px</code></td>
+<td align="left"><code>clamp(16px, 9.14px + 1.90vmin, 32px)</code></td>
+<td align="left">Scales from 16px to 32px.</td>
+</tr>
+<tr>
+<td align="left"><code>!fs-fluid-2-4</code></td>
+<td align="left"><code>font-size: clamp(...) !important;</code></td>
+<td align="left">Forces importance on the fluid utility.</td>
+</tr>
+<tr>
+<td align="left"><code>fs-fluid-1/2-1</code></td>
+<td align="left"><code>clamp(8px, 4.57px + 0.95vmin, 16px)</code></td>
+<td align="left">Supports fractions 0.5rem to 1rem.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples-1" class="h3">Examples</h3>
+<div class="card w-fit d-flex fd-col gap-2 p-3">
+  <div class="fs-fluid-1-2">.fs-fluid-1-2</div>
+  <div class="fs-fluid-16-64px">.fs-fluid-16-64px</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="fs-fluid-1-2">.fs-fluid-1-2&#x3C;/div>
+&#x3C;div class="fs-fluid-16-64px">.fs-fluid-16-64px&#x3C;/div>
 </code></pre>
