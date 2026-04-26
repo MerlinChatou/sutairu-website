@@ -122,11 +122,11 @@
     <ThemesCard/>
     <HeadingCard />
     <TypographyCard />
-    <FontSizeCard />
-    <FontWeightCard />
+    <FontSizeCard />    
+    <FontWeightCard />    
     <BlockquoteCard />
-    <TableCard />
-    <AlignmentCard />
+    <TableCard />    
+    <AlignmentCard />    
     
     <WhiteSpaceCard />
     <ButtonColorCard />

@@ -1,0 +1,104 @@
+<h1 id="font-weight" class="h1">Font Weight</h1>
+<p>Sutairu provides a comprehensive set of utilities to control the weight (thickness) of your typography.</p>
+<h2 id="semantic-weights" class="h2">Semantic Weights</h2>
+<p>Use these classes for standard design requirements. They map to the most common font-weight values used in modern web typography.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">CSS Value</th>
+<th align="left">Weight Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.fw-thin</code></td>
+<td align="left"><code>100</code></td>
+<td align="left">Thin / Hairline</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-extralight</code></td>
+<td align="left"><code>200</code></td>
+<td align="left">Extra Light</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-light</code></td>
+<td align="left"><code>300</code></td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-normal</code></td>
+<td align="left"><code>400</code></td>
+<td align="left">Normal / Regular</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-medium</code></td>
+<td align="left"><code>500</code></td>
+<td align="left">Medium</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-semibold</code></td>
+<td align="left"><code>600</code></td>
+<td align="left">Semi Bold</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-bold</code></td>
+<td align="left"><code>700</code></td>
+<td align="left">Bold</td>
+</tr>
+<tr>
+<td align="left"><strong><code>.bold</code></strong></td>
+<td align="left"><code>700</code></td>
+<td align="left"><strong>Alias for Bold</strong></td>
+</tr>
+<tr>
+<td align="left"><code>.fw-extrabold</code></td>
+<td align="left"><code>800</code></td>
+<td align="left">Extra Bold</td>
+</tr>
+<tr>
+<td align="left"><code>.fw-black</code></td>
+<td align="left"><code>900</code></td>
+<td align="left">Black / Heavy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example" class="h3">Example</h3>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+  <div class="fw-thin">.fw-thin</div>
+  <div class="fw-extralight">.fw-extra-light</div>
+  <div class="fw-light">.fw-light</div>
+  <div class="fw-normal">.fw-normal</div>
+  <div class="fw-medium">.fw-medium</div>
+  <div class="fw-semibold">.fw-semibold</div>
+  <div class="fw-bold">.fw-bold</div>
+  <div class="fw-extrabold">.fw-extra-bold</div>
+  <div class="fw-black">.fw-black</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="fw-thin">.fw-thin&#x3C;/div>
+&#x3C;div class="fw-extralight">.fw-extra-light&#x3C;/div>
+&#x3C;div class="fw-light">.fw-light&#x3C;/div>
+&#x3C;div class="fw-normal">.fw-normal&#x3C;/div>
+&#x3C;div class="fw-medium">.fw-medium&#x3C;/div>
+&#x3C;div class="fw-semibold">.fw-semibold&#x3C;/div>
+&#x3C;div class="fw-bold">.fw-bold&#x3C;/div>
+&#x3C;div class="fw-extrabold">.fw-extra-bold&#x3C;/div>
+&#x3C;div class="fw-black">.fw-black&#x3C;/div>
+</code></pre>
+<h2 id="numeric--variable-weights" class="h2">Numeric &#x26; Variable Weights</h2>
+<p>For projects using <strong>Variable Fonts</strong> or specific brand requirements that fall between standard weights (e.g., <code>450</code> or <code>750</code>), you can use the numeric utility pattern.</p>
+<ul>
+<li><strong>Pattern:</strong> <code>.fw-{number}</code></li>
+<li><strong>Example:</strong> <code>.fw-450</code>, <code>.fw-750</code>, <code>.fw-900</code></li>
+</ul>
+<h3 id="example-1" class="h3">Example</h3>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<p class="fw-light">Lightweight body text.</p>
+<p class="fw-550">Specifically weighted medium-bold text.</p>
+</div>
+<pre><code class="language-html">&#x3C;p class="fw-light">Lightweight body text.&#x3C;/p>
+&#x3C;p class="fw-550">Specifically weighted medium-bold text.&#x3C;/p>
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Ensure your chosen font family supports the weight you are applying. If a font does not have a <code>600</code> weight, the browser will typically fall back to the nearest available weight (usually <code>700</code>).</p>
+</blockquote>

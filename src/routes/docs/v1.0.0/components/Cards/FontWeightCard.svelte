@@ -27,12 +27,12 @@
 {#if isVisible}
 <div class="card opacity-0" id="font-weight" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Font Weight</h4></div>
-  <div class="body d-grid grid-cols-auto-fr gap-4 text-center ai-center" bind:this={body}>
+  <div class="body d-grid grid-cols-2 gap-4 text-center ai-center" bind:this={body}>
     <div><code>fw-thin</code></div>
     <div class="fw-thin">Thin</div>
 
-    <div><code>fw-extra-light</code></div>
-    <div class="fw-extra-light">Extra-light</div>
+    <div><code>fw-extralight</code></div>
+    <div class="fw-extralight">Extra-light</div>
 
     <div><code>fw-light</code></div>
     <div class="fw-light">Light</div>
@@ -49,14 +49,14 @@
     <div><code>fw-bold</code></div>
     <div class="fw-bold">Bold</div>
 
-    <div><code>fw-extra-bold</code></div>
-    <div class="fw-extra-bold">Extra-bold</div>
+    <div><code>fw-extrabold</code></div>
+    <div class="fw-extrabold">Extra-bold</div>
 
     <div><code>fw-black</code></div>
     <div class="fw-black">Black</div>
   </div>
     <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/font-weight">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="typography/font-weight">&lt;code&gt;</button>
   </div>
 </div>
 {/if}
