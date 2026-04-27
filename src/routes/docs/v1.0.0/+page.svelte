@@ -16,7 +16,7 @@
   import BorderColorShadeCard from "./components/Cards/BorderColorShadeCard.svelte";
   import BorderOpacityCard from "./components/Cards/BorderOpacityCard.svelte";
   import BorderRadiusCard from "./components/Cards/BorderRadiusCard.svelte";
-  import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";  
+  import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";
   import ButtonColorCard from "./components/Cards/ButtonCard.svelte";
   import ButtonDisabledCard from "./components/Cards/ButtonDisabledCard.svelte";
   import CardWithHeaderCard from "./components/Cards/CardWithHeaderCard.svelte";
@@ -29,7 +29,7 @@
   import FlexCard from "./components/Cards/FlexCard.svelte";
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
-  import FormCard from "./components/Cards/FormCard.svelte";  
+  import FormCard from "./components/Cards/FormCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";
   import InteractiveBackgroundCard from "./components/Cards/InteractiveBackgroundCard.svelte";
@@ -44,7 +44,7 @@
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
   import SemanticColorsCard from "./components/Cards/SemanticColorCard.svelte";
   import StackCard from "./components/Cards/StackCard.svelte";
-  import TableCard from "./components/Cards/TableCard.svelte";  
+  import TableCard from "./components/Cards/TableCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
   import TextColorShadeCard from "./components/Cards/TextColorShadeCard.svelte";
   import TextOpacityCard from "./components/Cards/TextOpacityCard.svelte";
@@ -83,7 +83,7 @@
       onReflow: (params) => {
         const items = Array.from(params.container.children);
         items.forEach((item) => {
-          item.classList.remove("opacity-0");          
+          item.classList.remove("opacity-0");
         });
       },
     });
@@ -117,18 +117,17 @@
   </p>
 
   <div bind:this={masonry} class="masonry px-2 pb-5">
-
     <ColorSchemeCard />
-    <ThemesCard/>
+    <ThemesCard />
     <HeadingCard />
     <TypographyCard />
-    <FontSizeCard />    
-    <FontWeightCard />    
+    <FontSizeCard />
+    <FontWeightCard />
     <BlockquoteCard />
-    <TableCard />    
-    <AlignmentCard />    
-    
+    <TableCard />
+    <AlignmentCard />
     <WhiteSpaceCard />
+    
     <ButtonColorCard />
     <ButtonDisabledCard />
     <FormCard />
@@ -151,12 +150,12 @@
     <BorderWidthCard />
     <BorderRadiusCard />
     <PerSideBorderWidthCard />
-    <CursorCard />    
+    <CursorCard />
     <FlexCard />
     <GridCard />
     <StackCard />
     <RotationCard />
-    <ScaleCard />    
+    <ScaleCard />
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
     <ModalCard />

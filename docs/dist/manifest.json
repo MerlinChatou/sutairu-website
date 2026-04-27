@@ -36,20 +36,9 @@
     "layout/stack",
     "typography/blockquote",
     "typography/font-size",
+    "typography/font-weight",
     "typography/heading",
     "typography/typography",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight",
-    "typography/font-weight"
+    "typography/white-space"
   ]
 }
