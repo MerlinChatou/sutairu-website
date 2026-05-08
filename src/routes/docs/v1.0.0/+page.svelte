@@ -125,9 +125,9 @@
     <BlockquoteCard />
     <TableCard />
     <AlignmentCard />
-    <WhiteSpaceCard />
-
+    <WhiteSpaceCard />    
     <ButtonColorCard />
+    
     <FormCard />
     <TextColorsCard />
     <TextColorShadeCard />
