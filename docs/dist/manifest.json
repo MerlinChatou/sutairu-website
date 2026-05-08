@@ -50,6 +50,17 @@
     "components/button",
     "components/button",
     "components/button",
-    "components/button"
+    "components/button",
+    "core/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color",
+    "typography/text-color"
   ]
 }

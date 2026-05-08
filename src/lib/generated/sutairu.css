@@ -5268,6 +5268,18 @@ body.modal-open {
   text-wrap: nowrap;
 }
 
+.py-1 {
+  padding-block: 0.25rem;
+}
+
+.text-accent-350 {
+  color: color-mix(in oklch, var(--su-accent), #fff 30%);
+}
+
+.text-accent-350\/50 {
+  color: oklch(from color-mix(in oklch, var(--su-accent), #fff 30%) l c h / 0.5);
+}
+
 .gap-0 {
   gap: 0;
 }
@@ -5294,6 +5306,22 @@ body.modal-open {
 
 .bg-body {
   background-color: var(--su-body);
+}
+
+.text-orange-300 {
+  color: color-mix(in oklch, var(--su-orange), #fff 40%);
+}
+
+.text-orange-700 {
+  color: color-mix(in oklch, var(--su-orange), #000 40%);
+}
+
+.text-green\/50 {
+  color: oklch(from var(--su-green) l c h / 0.5);
+}
+
+.text-green-400\/50 {
+  color: oklch(from color-mix(in oklch, var(--su-green), #fff 20%) l c h / 0.5);
 }
 
 :is([data-color-scheme="dark"] *) {
@@ -5325,6 +5353,14 @@ body.modal-open {
   
   &.dark\:text-body {
     color: var(--su-body);
+  }
+  
+  &.dark\:bg-black\/0 {
+    background-color: oklch(from var(--su-black) l c h / 0);
+  }
+  
+  &.dark\:bg-white {
+    background-color: var(--su-white);
   }
   
   &.dark\:bg-page-400 {

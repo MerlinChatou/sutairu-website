@@ -126,10 +126,9 @@
     <TableCard />
     <AlignmentCard />
     <WhiteSpaceCard />    
-    <ButtonColorCard />
-    
-    <FormCard />
     <TextColorsCard />
+
+    
     <TextColorShadeCard />
     <TextOpacityCard />
     <SemanticColorsCard />
@@ -137,6 +136,8 @@
     <MarginCard />
     <PaddingCard />
     <SizingCard />
+    <ButtonColorCard />
+    <FormCard />
     <SemanticBackgroundCard />
     <BackgroundColorCard />
     <BackgroundShadeScaleCard />

@@ -1,0 +1,127 @@
+<h1 id="text-color" class="h1">Text Color</h1>
+<p>Control text color using utility classes. Colors automatically adapt to the active theme and color scheme.</p>
+<h2 id="available-colors" class="h2">Available colors</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text-yellow</code></td>
+<td><span class="text-yellow">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-orange</code></td>
+<td><span class="text-orange">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-pink</code></td>
+<td><span class="text-pink">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-purple</code></td>
+<td><span class="text-purple">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-blue</code></td>
+<td><span class="text-blue">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-cyan</code></td>
+<td><span class="text-cyan">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-green</code></td>
+<td><span class="text-green">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-white</code></td>
+<td><span class="text-white">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-gray</code></td>
+<td><span class="text-gray">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-black</code></td>
+<td><span class="text-black">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-title</code></td>
+<td><span class="text-title">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-body</code></td>
+<td><span class="text-body">Sample text</span></td>
+</tr>
+<tr>
+<td><code>.text-accent</code></td>
+<td><span class="text-accent">Sample text</span></td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+  <div class="text-orange">Orange text</div>
+  <div class="text-title">Title text</div>
+  <div class="text-accent">Accent text</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="text-orange">Orange text&#x3C;/div>
+&#x3C;div class="text-title">Title text&#x3C;/div>
+&#x3C;div class="text-accent">Accent text&#x3C;/div>
+</code></pre>
+<h2 id="theme-variants" class="h2">Theme variants</h2>
+<p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
+<ul>
+<li><code>dark:</code> — apply styles only in dark mode</li>
+</ul>
+<pre><code class="language-html">&#x3C;p class="text-gray dark:text-white">
+  Adaptive color
+&#x3C;/p>
+</code></pre>
+<p><strong>How it works</strong></p>
+<ul>
+<li>Default classes apply to light mode.</li>
+<li><code>dark:</code> variants override styles when the dark theme is enabled.</li>
+</ul>
+<h2 id="advanced-color-control" class="h2">Advanced Color Control</h2>
+<p>Sutairu supports a granular color system using the <code>text-&#x3C;color>-&#x3C;shade>/&#x3C;opacity></code> pattern. This allows for precise typographic hierarchies without leaving your HTML.</p>
+<h3 id="shades-and-opacity" class="h3">Shades and Opacity</h3>
+<p>You can append a numeric shade (usually <strong>0–1000</strong>) and an opacity percentage (<strong>0–100</strong>) to any base color.</p>
+<table>
+<thead>
+<tr>
+<th>Class Pattern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text-blue-600</code></td>
+<td>Applies a specific "600" weight of blue from the theme palette.</td>
+</tr>
+<tr>
+<td><code>.text-red/50</code></td>
+<td>Applies the base red color at <strong>50% opacity</strong>.</td>
+</tr>
+<tr>
+<td><code>.text-green-400/20</code></td>
+<td>Applies the "400" green shade at <strong>20% opacity</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<p>Here are some example of advanced text colors:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+  <div class="text-orange-300">text-orange-300</div>
+  <div class="text-orange-700">text-orange-700</div>
+  <div class="text-green/50">text-green/50</div>
+  <div class="text-green-400/50">text-green-400/50</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="text-orange-300">text-orange-300&#x3C;/div>
+&#x3C;div class="text-orange-700">text-orange-700&#x3C;/div>
+&#x3C;div class="text-green/50">text-green/50&#x3C;/div>
+&#x3C;div class="text-green-400/50">text-green-400/50&#x3C;/div>
+</code></pre>

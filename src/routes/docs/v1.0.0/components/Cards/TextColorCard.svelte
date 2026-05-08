@@ -28,20 +28,24 @@
 {#if isVisible}
 <div class="card opacity-0" id="text-colors" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Text Colors</h4></div>
-  <div class="body p-3 d-flex fd-col gap-3 ff-mono text-center" bind:this={body}>
-    <div class="w-full r-2 text-yellow">text-yellow</div>
-    <div class="w-full r-2 text-orange">text-orange</div>
-    <div class="w-full r-2 text-pink">text-pink</div>
-    <div class="w-full r-2 text-purple">text-purple</div>
-    <div class="w-full r-2 text-blue">text-blue</div>
-    <div class="w-full r-2 text-cyan">text-cyan</div>
-    <div class="w-full r-2 text-green">text-green</div>
-    <div class="w-full r-2 text-white">text-white</div>
-    <div class="w-full r-2 text-gray">text-gray</div>
-    <div class="w-full r-2 text-black">text-black</div>
+  <div class="body p-3 d-flex fd-col gap-1 ff-mono text-center" bind:this={body}>
+    <div class="w-full py-1 r-2 text-yellow">text-yellow</div>
+    <div class="w-full py-1 r-2 text-orange">text-orange</div>
+    <div class="w-full py-1 r-2 text-red">text-red</div>
+    <div class="w-full py-1 r-2 text-pink">text-pink</div>    
+    <div class="w-full py-1 r-2 text-purple">text-purple</div>
+    <div class="w-full py-1 r-2 text-blue">text-blue</div>
+    <div class="w-full py-1 r-2 text-cyan">text-cyan</div>
+    <div class="w-full py-1 r-2 text-green">text-green</div>
+    <div class="w-full py-1 r-2 text-white bg-black dark:bg-black/0">text-white</div>
+    <div class="w-full py-1 r-2 text-gray">text-gray</div>
+    <div class="w-full py-1 r-2 text-black dark:bg-white">text-black</div>
+    <div class="w-full py-1 r-2 text-accent">text-accent</div>
+    <div class="w-full py-1 r-2 text-accent-350">text-accent-350</div>
+    <div class="w-full py-1 r-2 text-accent-350/50">text-accent-350/50</div>
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/text-color">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="typography/text-color">&lt;code&gt;</button>
   </div>
 </div>
 {/if}
