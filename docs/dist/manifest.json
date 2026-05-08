@@ -23,7 +23,6 @@
     "__to_process/text-color",
     "__to_process/text-opacity",
     "__to_process/text-shade",
-    "__to_process/white-space",
     "background/patterns",
     "components/badge",
     "components/code-highlight",
@@ -39,6 +38,17 @@
     "typography/font-weight",
     "typography/heading",
     "typography/typography",
-    "typography/white-space"
+    "typography/white-space",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button",
+    "components/button"
   ]
 }

@@ -40,10 +40,11 @@
     <button class="btn btn-dark">btn-dark</button>
     
     <button class="btn btn-link">btn-link</button>
-    <button class="btn btn-link td-underline">btn-link</button>
+    <button class="btn btn-link td-u">btn-link</button>
+    <button class="btn btn-link" disabled>btn-link</button>
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/button">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/button">&lt;code&gt;</button>
   </div>
 </div>
 {/if}
