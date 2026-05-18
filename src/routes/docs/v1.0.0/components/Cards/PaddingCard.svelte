@@ -37,7 +37,7 @@
     <div class="p-5 b-1 b-accent/50 r-2 w-fit stripes-accent/20 text-body bg-accent-200/20">p-5</div>
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/padding">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="spacing/padding">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

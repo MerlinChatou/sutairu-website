@@ -1,0 +1,154 @@
+<h1 id="padding-utilities" class="h1">Padding Utilities</h1>
+<p>Sutairu features a highly flexible dynamic padding system that mirrors the margin engine. It supports the standard proportional numeric scale, decimal adjustments, fractional spacing, and arbitrary CSS units—all while using logical properties to ensure native support for multi-directional layouts (RTL/LTR).</p>
+<p>Unlike margins, padding handles internal spacing, meaning it does not support <code>auto</code> values or negative dimensions.</p>
+<h2 id="direction-prefixes" class="h2">Direction Prefixes</h2>
+<p>Sutairu uses a consistent prefix system to isolate specific interior directions:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Target Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td><code>padding</code></td>
+<td>All internal sides</td>
+</tr>
+<tr>
+<td><code>pt</code> / <code>pb</code></td>
+<td><code>padding-top</code> / <code>padding-bottom</code></td>
+<td>Top or Bottom interior</td>
+</tr>
+<tr>
+<td><code>pl</code> / <code>pr</code></td>
+<td><code>padding-left</code> / <code>padding-right</code></td>
+<td>Physical Left or Right interior</td>
+</tr>
+<tr>
+<td><code>px</code></td>
+<td><code>padding-inline</code></td>
+<td>Both Left and Right interiors</td>
+</tr>
+<tr>
+<td><code>py</code></td>
+<td><code>padding-block</code></td>
+<td>Both Top and Bottom interiors</td>
+</tr>
+<tr>
+<td><strong><code>ps</code></strong></td>
+<td><code>padding-inline-start</code></td>
+<td><strong>Logical Start</strong> (Left in LTR, Right in RTL)</td>
+</tr>
+<tr>
+<td><strong><code>pe</code></strong></td>
+<td><code>padding-inline-end</code></td>
+<td><strong>Logical End</strong> (Right in LTR, Left in RTL)</td>
+</tr>
+</tbody>
+</table>
+<div class="p-5 b-1 b-accent/50 r-2 w-fit stripes-accent/20 text-body bg-accent-200/20">p-5</div>
+<pre><code class="language-html">&#x3C;div class="p-5">p-5&#x3C;/div>
+</code></pre>
+<h2 id="reset-and-proportional-scale" class="h2">Reset and Proportional Scale</h2>
+<p>The numeric scale is root-relative (<code>rem</code>). By default, <strong>1 unit = 0.25rem (4px)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Rem Value</th>
+<th>Pixel Equivalent (16px base)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.p-0</code></td>
+<td><code>0rem</code></td>
+<td>0px (Clears all padding)</td>
+</tr>
+<tr>
+<td><code>.p-1</code></td>
+<td><code>0.25rem</code></td>
+<td>4px</td>
+</tr>
+<tr>
+<td><code>.p-2</code></td>
+<td><code>0.5rem</code></td>
+<td>8px</td>
+</tr>
+<tr>
+<td><code>.p-4</code></td>
+<td><code>1rem</code></td>
+<td>16px</td>
+</tr>
+<tr>
+<td><code>.p-12</code></td>
+<td><code>3rem</code></td>
+<td>48px</td>
+</tr>
+<tr>
+<td><code>.p-2.5</code></td>
+<td><code>0.625rem</code></td>
+<td>10px (Supports decimals)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Create a evenly padded content card -->
+&#x3C;div class="p-4 bg-white">
+  &#x3C;p>Content inside card.&#x3C;/p>
+&#x3C;/div>
+
+&#x3C;!-- Add asymmetrical breathing room: 32px top/bottom, 16px left/right -->
+&#x3C;section class="py-8 px-4">
+  &#x3C;h2>Section Heading&#x3C;/h2>
+&#x3C;/section>
+</code></pre>
+<h2 id="fractional-padding" class="h2">Fractional Padding</h2>
+<p>When building component structures like compact buttons or complex table cells, you can use fractional syntax to get spaces tighter than the default <code>0.25rem</code> step.</p>
+<ul>
+<li><strong>Fractional Scale:</strong> <code>.py-1/2</code> -> <code>padding-block: 0.125rem;</code> (0.5 * *0.25rem)</li>
+<li><strong>Micro Spacing:</strong> <code>.px-1/4</code> -> <code>padding-inline: 0.063rem;</code> (0.25 * 0.25rem)</li>
+</ul>
+<pre><code class="language-html">&#x3C;!-- High-density table cell styling -->
+&#x3C;td class="py-1/2 px-2">Table Data&#x3C;/td>
+</code></pre>
+<h2 id="arbitrary-units-literal-sizing" class="h2">Arbitrary Units (Literal Sizing)</h2>
+<p>For rigid layouts, custom designs, or viewport-responsive elements, you can append the literal CSS unit directly into the utility string. This drops the default framework multiplier.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Generated CSS</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.pt-20px</code></td>
+<td><code>padding-top: 20px;</code></td>
+<td>Exact pixel target</td>
+</tr>
+<tr>
+<td><code>.pb-3rem</code></td>
+<td><code>padding-bottom: 3rem;</code></td>
+<td>Explicit root-relative element height</td>
+</tr>
+<tr>
+<td><code>.px-10vw</code></td>
+<td><code>padding-inline: 10vw;</code></td>
+<td>Ultra-wide liquid layout gutters</td>
+</tr>
+<tr>
+<td><code>.pt-100/3vw</code></td>
+<td><code>padding-top: 33.333vw;</code></td>
+<td>Fluid fractional canvas block</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Full-width hero section with responsive viewport-percentage padding -->
+&#x3C;div class="py-10vh px-5vw bg-accent">
+  &#x3C;h1>Fluid Hero Screen&#x3C;/h1>
+&#x3C;/div>
+</code></pre>

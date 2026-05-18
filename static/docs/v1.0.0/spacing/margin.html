@@ -1,0 +1,179 @@
+<h1 id="margin-utilities" class="h1">Margin Utilities</h1>
+<p>Sutairu features a highly flexible dynamic margin system. It supports automatic margins, a standard proportional numeric scale, negative values, fractional offsets, and arbitrary CSS units—all while remaining fully compatible with logical properties for modern, multi-directional layouts (RTL/LTR).</p>
+<h2 id="direction-prefixes" class="h2">Direction Prefixes</h2>
+<p>Sutairu uses an intuitive mapping system to target specific sides or directions:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Target Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>m</code></td>
+<td><code>margin</code></td>
+<td>All sides</td>
+</tr>
+<tr>
+<td><code>mt</code> / <code>mb</code></td>
+<td><code>margin-top</code> / <code>margin-bottom</code></td>
+<td>Top or Bottom</td>
+</tr>
+<tr>
+<td><code>ml</code> / <code>mr</code></td>
+<td><code>margin-left</code> / <code>margin-right</code></td>
+<td>Physical Left or Right</td>
+</tr>
+<tr>
+<td><code>mx</code></td>
+<td><code>margin-inline</code></td>
+<td>Both Left and Right</td>
+</tr>
+<tr>
+<td><code>my</code></td>
+<td><code>margin-block</code></td>
+<td>Both Top and Bottom</td>
+</tr>
+<tr>
+<td><strong><code>ms</code></strong></td>
+<td><code>margin-inline-start</code></td>
+<td><strong>Logical Start</strong> (Left in LTR, Right in RTL)</td>
+</tr>
+<tr>
+<td><strong><code>me</code></strong></td>
+<td><code>margin-inline-end</code></td>
+<td><strong>Logical End</strong> (Right in LTR, Left in RTL)</td>
+</tr>
+</tbody>
+</table>
+<div class="r-2 w-fit b-1 b-accent/30 hatching-accent/30">
+  <div class="m-4 bg-accent p-1 r-1">m-4</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="m-4">m-4&#x3C;/div>
+</code></pre>
+<h2 id="auto-and-reset-margins" class="h2">Auto and Reset Margins</h2>
+<p>Perfect for centering blocks or pushing items apart within flex and grid layouts.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.m-auto</code></td>
+<td><code>margin: auto;</code></td>
+</tr>
+<tr>
+<td><code>.mx-auto</code></td>
+<td><code>margin-inline: auto;</code> (Centers a block horizontally)</td>
+</tr>
+<tr>
+<td><code>.ms-auto</code></td>
+<td><code>margin-inline-start: auto;</code> (Pushes element to the end)</td>
+</tr>
+<tr>
+<td><code>.m-0</code></td>
+<td><code>margin: 0;</code> (Clears all margins)</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Available for all direction prefixes: <code>mt-auto</code>, <code>mb-0</code>, etc.)</em></p>
+<h2 id="standard-proportional-scale" class="h2">Standard Proportional Scale</h2>
+<p>The numeric scale is root-relative (<code>rem</code>). By default, <strong>1 unit = 0.25rem (4px)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Rem Value</th>
+<th>Pixel Equivalent (16px base)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.m-1</code></td>
+<td><code>0.25rem</code></td>
+<td>4px</td>
+</tr>
+<tr>
+<td><code>.m-2</code></td>
+<td><code>0.5rem</code></td>
+<td>8px</td>
+</tr>
+<tr>
+<td><code>.m-4</code></td>
+<td><code>1rem</code></td>
+<td>16px</td>
+</tr>
+<tr>
+<td><code>.m-12</code></td>
+<td><code>3rem</code></td>
+<td>48px</td>
+</tr>
+<tr>
+<td><code>.m-2.5</code></td>
+<td><code>0.625rem</code></td>
+<td>10px (Supports decimals)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Add 16px margin to the bottom -->
+&#x3C;div class="mb-4">Item 1&#x3C;/div>
+
+&#x3C;!-- Center a container horizontally with standard padding -->
+&#x3C;div class="mx-auto w-half">Centered Content&#x3C;/div>
+</code></pre>
+<h2 id="negative-and-fractional-margins" class="h2">Negative and Fractional Margins</h2>
+<p>Need to intentionally overlap elements or map offsets to fractional grids? prepend a <code>-</code> for negative values, or use a <code>/</code> for fractions.</p>
+<ul>
+<li><strong>Negative Margin:</strong> <code>.-mt-4</code> -> <code>margin-top: -1rem;</code></li>
+<li><strong>Fractional Scale:</strong> <code>.mx-1/2</code> -> <code>margin-inline: 0.125rem;</code> (0.5 * 0.25rem)</li>
+<li><strong>Negative Fraction:</strong> <code>.-mb-3/4</code> ->  <code>margin-bottom: -0.188rem;</code></li>
+</ul>
+<pre><code class="language-html">&#x3C;!-- Pull a hero image up into a header header block -->
+&#x3C;img class="-mt-12 src="..." />
+</code></pre>
+<h2 id="arbitrary-units-literal-sizing" class="h2">Arbitrary Units (Literal Sizing)</h2>
+<p>If your layout requires exact physical constraints or viewport-fluid scaling, append the literal CSS unit directly to the class name. This breaks out of the standard <code>0.25rem</code> multiplier system.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Generated CSS</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mt-16px</code></td>
+<td><code>margin-top: 16px;</code></td>
+<td>Exact pixel matching</td>
+</tr>
+<tr>
+<td><code>.mb-2rem</code></td>
+<td><code>margin-bottom: 2rem;</code></td>
+<td>Root-relative layout sizing</td>
+</tr>
+<tr>
+<td><code>.mx-5vw</code></td>
+<td><code>margin-inline: 5vw;</code></td>
+<td>Dynamic fluid spacing</td>
+</tr>
+<tr>
+<td><code>.-ml-10px</code></td>
+<td><code>margin-left: -10px;</code></td>
+<td>Literal negative adjustments</td>
+</tr>
+<tr>
+<td><code>.mt-1/3vh</code></td>
+<td><code>margin-top: 0.333vh;</code></td>
+<td>Fractional viewport offsets</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Add a responsive gutter that scales with viewport width -->
+&#x3C;div class="mx-5vw">Fluid Margins&#x3C;/div>
+</code></pre>

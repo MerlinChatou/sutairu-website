@@ -32,7 +32,6 @@
   import GridCard from "./components/Cards/GridCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";
   import InteractiveBackgroundCard from "./components/Cards/InteractiveBackgroundCard.svelte";
-  import InteractiveTextCard from "./components/Cards/InteractiveTextCard.svelte";
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
   import MarginCard from "./components/Cards/MarginCard.svelte";
   import ModalCard from "./components/Cards/ModalCard.svelte";
@@ -41,12 +40,9 @@
   import RotationCard from "./components/Cards/RotationCard.svelte";
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
-  import SemanticColorsCard from "./components/Cards/SemanticColorCard.svelte";
   import StackCard from "./components/Cards/StackCard.svelte";
   import TableCard from "./components/Cards/TableCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
-  import TextColorShadeCard from "./components/Cards/TextColorShadeCard.svelte";
-  import TextOpacityCard from "./components/Cards/TextOpacityCard.svelte";
   import ThemesCard from "./components/Cards/ThemesCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
   import BtnCloseCard from "./components/Cards/BtnCloseCard.svelte";
@@ -128,11 +124,8 @@
     <WhiteSpaceCard />    
     <TextColorsCard />
 
-    
-    <TextColorShadeCard />
-    <TextOpacityCard />
-    <SemanticColorsCard />
-    <InteractiveTextCard />
+
+
     <MarginCard />
     <PaddingCard />
     <SizingCard />
