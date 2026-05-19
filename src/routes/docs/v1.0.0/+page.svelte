@@ -123,13 +123,11 @@
     <AlignmentCard />
     <WhiteSpaceCard />    
     <TextColorsCard />
-
-
-
     <MarginCard />
-    <PaddingCard />
-    <SizingCard />
+    <PaddingCard />    
+    <SizingCard />    
     <ButtonColorCard />
+    
     <FormCard />
     <SemanticBackgroundCard />
     <BackgroundColorCard />

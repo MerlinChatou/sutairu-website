@@ -1,0 +1,194 @@
+<h1 id="sizing-utilities" class="h1">Sizing Utilities</h1>
+<p>Sutairu features a fully integrated layout engine to control <code>width</code> and <code>height</code>, along with their <code>min</code>/<code>max</code> constraints. The system combines a fixed semantic scale, a step-based spacing scale, layout percentages (fractions), explicit unit overrides, and a bracket-based escape hatch for complex CSS calculations.</p>
+<h2 id="property-prefixes" class="h2">Property Prefixes</h2>
+<p>Sutairu uses descriptive prefixes to handle sizing parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Target Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>w</code> / <code>h</code></td>
+<td><code>width</code> / <code>height</code></td>
+</tr>
+<tr>
+<td><code>min-w</code> / <code>min-h</code></td>
+<td><code>min-width</code> / <code>min-height</code></td>
+</tr>
+<tr>
+<td><code>max-w</code> / <code>max-h</code></td>
+<td><code>max-width</code> / <code>max-height</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="semantic-scale" class="h2">Semantic Scale</h2>
+<p>These semantic keywords allow you to build fluid layouts, constrain readable line lengths, or stretch items relative to the viewport boundaries.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*-auto</code></td>
+<td><code>auto</code></td>
+<td>Browser default sizing behavior</td>
+</tr>
+<tr>
+<td><code>*-full</code></td>
+<td><code>100%</code></td>
+<td>Stretches to fill parent container</td>
+</tr>
+<tr>
+<td><code>*-screen</code></td>
+<td><code>100vw</code> / <code>100vh</code></td>
+<td>Viewport-bound scaling (<code>w-</code> uses <code>vw</code>, <code>h-</code> uses <code>vh</code>)</td>
+</tr>
+<tr>
+<td><code>*-screen-w</code></td>
+<td><code>100vw</code></td>
+<td>Forces viewport width</td>
+</tr>
+<tr>
+<td><code>*-screen-h</code></td>
+<td><code>100vh</code></td>
+<td>Forces viewport height</td>
+</tr>
+<tr>
+<td><code>*-min</code></td>
+<td><code>min-content</code></td>
+<td>Shrinks element to match smallest inner item</td>
+</tr>
+<tr>
+<td><code>*-max</code></td>
+<td><code>max-content</code></td>
+<td>Expands element to fit longest inner string/item</td>
+</tr>
+<tr>
+<td><code>*-fit</code></td>
+<td><code>fit-content</code></td>
+<td>Uses available space, capping at max-content</td>
+</tr>
+<tr>
+<td><strong><code>max-w-prose</code></strong></td>
+<td><code>65ch</code></td>
+<td><strong>Optimized reading constraint</strong> (~65 characters wide)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Main page container with constrained readability width -->
+&#x3C;article class="max-w-prose mx-auto">
+  &#x3C;h1>Readable Article Heading&#x3C;/h1>
+&#x3C;/article>
+
+&#x3C;!-- Full-screen splash section -->
+&#x3C;section class="w-screen h-screen bg-neutral">
+  &#x3C;div>Splash Content&#x3C;/div>
+&#x3C;/section>
+</code></pre>
+<h2 id="standard-steps--fractions" class="h2">Standard Steps &#x26; Fractions</h2>
+<p>Sutairu splits its core numeric sizing utilities into two logical processing models based on layout context: <strong>Steps</strong> (for spacing) and <strong>Fractions</strong> (for grid distributions).</p>
+<h3 id="proportional-steps-rem-based" class="h3">Proportional Steps (Rem-based)</h3>
+<p>When passing a simple decimal or integer without a fraction or unit, it evaluates against the standard scale where <strong>1 unit = 0.25rem (4px)</strong>.</p>
+<ul>
+<li><code>.w-4</code> -> <code>width: 1rem;</code> (16px)</li>
+<li><code>.h-64</code> -> <code>height: 16rem;</code> (256px)</li>
+</ul>
+<h3 id="layout-fractions-percentage-based" class="h3">Layout Fractions (Percentage-based)</h3>
+<p>When a forward slash <code>/</code> is present, Sutairu computes it as a fluid percentage out of 100.</p>
+<ul>
+<li><code>.w-1/2</code> -> <code>width: 50%;</code></li>
+<li><code>.w-3/4</code> -> <code>width: 75%;</code></li>
+<li><code>.min-h-1/3</code> -> <code>min-height: 33.333%;</code></li>
+</ul>
+<pre><code class="language-html">&#x3C;!-- Classic two-column layout distribution -->
+&#x3C;div class="d-flex">
+  &#x3C;main class="w-3/4">75% Main Layout&#x3C;/main>
+  &#x3C;aside class="w-1/4">25% Sidebar&#x3C;/aside>
+&#x3C;/div>
+</code></pre>
+<h2 id="sizing-constants-breakpoint-envelopes" class="h2">Sizing Constants (Breakpoint Envelopes)</h2>
+<p>Sutairu bundles fixed rem boundaries useful for building responsive card widths, floating panels, or viewport step constraints.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS Equivalent Value</th>
+<th>Layout Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*-0</code></td>
+<td><code>0px</code></td>
+<td>Total reset</td>
+</tr>
+<tr>
+<td><code>*-xs</code></td>
+<td><code>20rem</code> (320px)</td>
+<td>Mobile boundaries / Small widgets</td>
+</tr>
+<tr>
+<td><code>*-sm</code></td>
+<td><code>32rem</code> (512px)</td>
+<td>Compact layout structures</td>
+</tr>
+<tr>
+<td><code>*-md</code></td>
+<td><code>36rem</code> (576px)</td>
+<td>Standard content cards</td>
+</tr>
+<tr>
+<td><code>*-lg</code></td>
+<td><code>48rem</code> (768px)</td>
+<td>Tablet width targets</td>
+</tr>
+<tr>
+<td><code>*-xl</code></td>
+<td><code>64rem</code> (1024px)</td>
+<td>Desktop layout wrappers</td>
+</tr>
+<tr>
+<td><code>*-2xl</code></td>
+<td><code>72rem</code> (1152px)</td>
+<td>Wide display envelopes</td>
+</tr>
+<tr>
+<td><code>*-3xl</code></td>
+<td><code>80rem</code> (1280px)</td>
+<td>Ultra-wide content tracks</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;!-- Card layout constrained to standard container bounds -->
+&#x3C;div class="max-w-md p-4 bg-white shadow">
+  &#x3C;h3>Card Layout Component&#x3C;/h3>
+&#x3C;/div>
+</code></pre>
+<h2 id="literal-units--arbitrary-escape-hatches" class="h2">Literal Units &#x26; Arbitrary Escape Hatches</h2>
+<p>When exact layout restrictions are needed, Sutairu offers two literal syntax escape hatches.</p>
+<h3 id="explicit-units" class="h3">Explicit Units</h3>
+<p>Append the targeted CSS measurement unit directly to the end of your size definition:</p>
+<ul>
+<li><code>.w-16px</code> -> <code>width: 16px;</code></li>
+<li><code>.h-1/2rem</code> -> <code>height: 0.5rem;</code></li>
+<li><code>.max-w-100%</code> -> <code>max-width: 100%;</code></li>
+<li><code>.min-h-50vh</code> -> <code>min-height: 50vh;</code></li>
+</ul>
+<h3 id="bracket-notation" class="h3">Bracket Notation</h3>
+<p>For absolute control over arbitrary calculations, variable evaluation, or complex math layout functions, wrap your value inside square brackets (<code>[...]</code>). Use underscores <code>_</code> to represent spaces in complex rules:</p>
+<ul>
+<li><code>.w-[150px]</code> -> <code>width: 150px;</code></li>
+<li><code>.max-h-[calc(100vh-2rem)]</code> -> <code>max-height: calc(100vh - 2rem);</code></li>
+</ul>
+<pre><code class="language-html">&#x3C;!-- Dynamic window banner minus tracking headers -->
+&#x3C;div class="h-[calc(100vh-60px)] bg-accent">
+  Dynamic App Workspace
+&#x3C;/div>
+</code></pre>
