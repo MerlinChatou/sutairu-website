@@ -6,31 +6,25 @@ Control background color using utility classes. Colors automatically adapt to th
 
 | Class | Example |
 | --- | --- |
-| `.bg-yellow` | <span class="bg-yellow px-2">Sample block</span> |
-| `.bg-orange` | <span class="bg-orange px-2">Sample block</span> |
-| `.bg-red` | <span class="bg-red px-2">Sample block</span> |
-| `.bg-pink` | <span class="bg-pink px-2">Sample block</span> |
-| `.bg-purple` | <span class="bg-purple px-2">Sample block</span> |
-| `.bg-blue` | <span class="bg-blue px-2">Sample block</span> |
-| `.bg-cyan` | <span class="bg-cyan px-2">Sample block</span> |
-| `.bg-green` | <span class="bg-green px-2">Sample block</span> |
-| `.bg-white` | <span class="bg-white px-2">Sample block</span> |
-| `.bg-gray` | <span class="bg-gray px-2">Sample block</span> |
-| `.bg-black` | <span class="bg-black px-2">Sample block</span> |
-| `.bg-accent` | <span class="bg-accent px-2">Sample block</span> |
-| `.bg-container` | <span class="bg-container px-2">Sample block</span> |
-| `.bg-page` | <span class="bg-page px-2">Sample block</span> |
-| `.bg-subtle` | <span class="bg-subtle px-2">Sample block</span> |
-| `.bg-body` | <span class="bg-body px-2">Sample block</span> |
-| `.bg-title` | <span class="bg-title px-2">Sample block</span> |
-| `.bg-transparent` | <span class="bg-transparent px-2">Sample block</span> |
+| `.bg-yellow` | <span class="bg-yellow px-2 r-2">Sample block</span> |
+| `.bg-orange` | <span class="bg-orange px-2 r-2">Sample block</span> |
+| `.bg-red` | <span class="bg-red px-2 r-2">Sample block</span> |
+| `.bg-pink` | <span class="bg-pink px-2 r-2">Sample block</span> |
+| `.bg-purple` | <span class="bg-purple px-2 r-2">Sample block</span> |
+| `.bg-blue` | <span class="bg-blue px-2 r-2">Sample block</span> |
+| `.bg-cyan` | <span class="bg-cyan px-2 r-2">Sample block</span> |
+| `.bg-green` | <span class="bg-green px-2 r-2">Sample block</span> |
+| `.bg-white` | <span class="bg-white px-2 r-2">Sample block</span> |
+| `.bg-gray` | <span class="bg-gray px-2 r-2">Sample block</span> |
+| `.bg-black` | <span class="bg-black px-2 r-2">Sample block</span> |
+| `.bg-accent` | <span class="bg-accent px-2 r-2">Sample block</span> |
+| `.bg-container` | <span class="bg-container px-2 r-2">Sample block</span> |
+| `.bg-page` | <span class="bg-page px-2 r-2">Sample block</span> |
+| `.bg-subtle` | <span class="bg-subtle px-2 r-2">Sample block</span> |
+| `.bg-body` | <span class="bg-body px-2 r-2">Sample block</span> |
+| `.bg-title` | <span class="bg-title px-2 r-2">Sample block</span> |
+| `.bg-transparent` | <span class="bg-transparent px-2 r-2">Sample block</span> |
 
-
-<div class="card w-fit d-flex fd-col p-3 gap-2">
-<div class="bg-orange p-2 r-2">Orange background</div>
-<div class="bg-subtle p-2 r-2">Subtle background</div>
-<div class="bg-accent p-2 r-2">Accent background</div>
-</div>
 
 
 ```html

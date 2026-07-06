@@ -1,0 +1,280 @@
+<h1 id="variant-modifiers-prefixes" class="h1">Variant Modifiers (Prefixes)</h1>
+<p>Sutairu relies on a robust engine of <strong>prefix modifiers</strong> to handle state changes, responsive layout breakpoints, device orientations, and DOM structure styling. By prepending a variant prefix followed by a colon (<code>:</code>) to any utility class, you can control exactly when and where that style applies.</p>
+<pre><code class="language-html">&#x3C;div class="bg-gray-100 hover:bg-gray-200 lg:w-200px">...&#x3C;/div>
+</code></pre>
+<h2 id="responsive-breakpoints" class="h2">Responsive Breakpoints</h2>
+<p>These prefixes implement a <strong>mobile-first</strong> responsive design strategy. Base classes apply to the smallest viewports, while breakpoint modifiers override styles at specific minimum screen widths (<code>min-width</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Breakpoint Equivalent</th>
+<th>Typical Target Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sm:</code></td>
+<td><code>@media (min-width: 40rem)</code></td>
+<td>Large Smartphones / Foldables</td>
+</tr>
+<tr>
+<td><code>md:</code></td>
+<td><code>@media (min-width: 48rem)</code></td>
+<td>Tablets</td>
+</tr>
+<tr>
+<td><code>lg:</code></td>
+<td><code>@media (min-width: 64rem)</code></td>
+<td>Laptops / Smaller Desktops</td>
+</tr>
+<tr>
+<td><code>xl:</code></td>
+<td><code>@media (min-width: 80rem)</code></td>
+<td>Large Desktops</td>
+</tr>
+<tr>
+<td><code>xxl:</code></td>
+<td><code>@media (min-width: 96rem)</code></td>
+<td>Ultra-Wide Displays</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;div class="w-full md:w-1/2 lg:w-1/3">
+  Content Container
+&#x3C;/div>
+</code></pre>
+<h2 id="interactive--element-states" class="h2">Interactive &#x26; Element States</h2>
+<p>These modifiers tap directly into native CSS pseudo-classes to style dynamic interactions, form focus management, and accessibility rings.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Pseudo-class</th>
+<th>Trigger Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hover:</code></td>
+<td><code>:hover</code></td>
+<td>User positions a pointer over an element.</td>
+</tr>
+<tr>
+<td><code>active:</code></td>
+<td><code>:active</code></td>
+<td>Element is actively being pressed/clicked by the user.</td>
+</tr>
+<tr>
+<td><code>focus:</code></td>
+<td><code>:focus</code></td>
+<td>Element gains focus via pointer click or keyboard navigation.</td>
+</tr>
+<tr>
+<td><code>focus-visible:</code></td>
+<td><code>:focus-visible</code></td>
+<td>Element gains focus <strong>only</strong> via keyboard navigation (highly recommended for accessibility rings).</td>
+</tr>
+<tr>
+<td><code>disabled:</code></td>
+<td><code>:disabled</code></td>
+<td>Applied when a form control or button has its <code>disabled</code> attribute set.</td>
+</tr>
+<tr>
+<td><code>selected:</code></td>
+<td><code>.selected</code></td>
+<td>Custom state modifier indicating a persistent choice (e.g., active tabs/toggles).</td>
+</tr>
+<tr>
+<td><code>placeholder:</code></td>
+<td><code>::placeholder</code></td>
+<td>Targets the temporary hint text inside <code>&#x3C;input></code> or <code>&#x3C;textarea></code> tags.</td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<button class="btn bg-blue text-white hover:bg-red-600">Hover me</button>
+<input class="b-1 b-gray r-1 placeholder:text-red-300" placeholder="Your email..." />
+</div>
+<pre><code class="language-html">&#x3C;button class="btn bg-blue hover:bg-red-600">Hover me&#x3C;/button>
+&#x3C;input class="placeholder:text-red-300" placeholder="Your email..." />
+</code></pre>
+<h2 id="behavioral-layout-groups" class="h2">Behavioral Layout Groups</h2>
+<p>Sutairu allows you to style an element based on the interaction state of its <strong>parent container</strong>. To achieve this, mark the parent container with the <code>.group</code> utility class, then apply these modifiers to the inner child nodes.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Trigger Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>group-hover:</code></td>
+<td>Styles the child element when <em>any</em> part of the parent <code>.group</code> is hovered.</td>
+</tr>
+<tr>
+<td><code>group-selected:</code></td>
+<td>Styles the child element when the parent container has the <code>.selected</code> class active.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;div class="group p-4 b-1 b-gray hover:bg-neutral">
+  &#x3C;h3 class="text-title group-hover:text-accent">Card Heading&#x3C;/h3>
+  &#x3C;p class="text-gray-400">Hovering anywhere over the card wrapper flips the header color.&#x3C;/p>
+&#x3C;/div>
+</code></pre>
+<h2 id="media--hardware-orientation" class="h2">Media &#x26; Hardware Orientation</h2>
+<p>These modifiers let you alter your interface presentation to best match user hardware positioning guidelines.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Media Query</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>portrait:</code></td>
+<td><code>@media (orientation: portrait)</code></td>
+<td>Viewport width is less than or equal to its height (e.g., vertical phones).</td>
+</tr>
+<tr>
+<td><code>landscape:</code></td>
+<td><code>@media (orientation: landscape)</code></td>
+<td>Viewport width is greater than its height (e.g., desktop view, turned tablets).</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&#x3C;div class="d-flex fd-col landscape:fd-row">
+  &#x3C;aside>Sidebar / Top bar&#x3C;/aside>
+  &#x3C;main>Main Context&#x3C;/main>
+&#x3C;/div>
+</code></pre>
+<h2 id="structural-dom-pseudo-classes" class="h2">Structural DOM Pseudo-classes</h2>
+<p>Sutairu offers two ways to handle list loops, tables, and repeating UI nodes without polluting your database loop with conditional logic. You can use <strong>Self-Targeting Modifiers</strong> directly on child nodes, or <strong>Parent-Driven Modifiers</strong> on the wrapper element.</p>
+<h3 id="self-targeting-modifiers" class="h3">Self-Targeting Modifiers</h3>
+<p>Apply these prefixes directly to individual items inside a loop. They target the element based on its own position relative to its siblings.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Combined Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is-first:</code></td>
+<td><code>:first-child</code></td>
+<td>Targets the element only if it is the absolute first sibling.</td>
+</tr>
+<tr>
+<td><code>is-last:</code></td>
+<td><code>:last-child</code></td>
+<td>Targets the element only if it is the absolute last sibling.</td>
+</tr>
+<tr>
+<td><code>is-odd:</code></td>
+<td><code>:nth-child(odd)</code></td>
+<td>Targets the element if its index is odd (1, 3, 5, etc.).</td>
+</tr>
+<tr>
+<td><code>is-even:</code></td>
+<td><code>:nth-child(even)</code></td>
+<td>Targets the element if its index is even (2, 4, 6, etc.).</td>
+</tr>
+</tbody>
+</table>
+<div class="flex-x gap-1 w-fit">
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 1</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 2</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 3</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 4</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 5</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 6</div>
+  <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 7</div>
+</div>
+<pre><code class="language-html">
+&#x3C;div class="flex-x">
+  &#x3C;div class="is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 1&#x3C;/div>
+  &#x3C;div class="is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 2&#x3C;/div>
+  &#x3C;div class="is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 3&#x3C;/div>
+  ...
+&#x3C;/div>
+</code></pre>
+<h3 id="parent-driven-modifiers" class="h3">Parent-Driven Modifiers</h3>
+<p>Apply these prefixes to a <strong>parent container</strong>. They automatically trickle down to target immediate child elements layout-wide. This is the cleanest approach when you don't want to repeat utility strings on every loop iteration.</p>
+<p>Apply these prefixes directly to individual items inside a loop. They target the element based on its own position relative to its siblings.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>CSS Pseudo-class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first:</code></td>
+<td><code>> :first-child</code></td>
+<td>Automatically styles the absolute first child inside this container.</td>
+</tr>
+<tr>
+<td><code>last:</code></td>
+<td><code>> :last-child</code></td>
+<td>Automatically styles the absolute last child inside this container.</td>
+</tr>
+<tr>
+<td><code>odd:</code></td>
+<td><code>> :nth-child(odd)</code></td>
+<td>Automatically styles all odd-indexed children (1, 3, 5...).</td>
+</tr>
+<tr>
+<td><code>even:</code></td>
+<td><code>> :nth-child(even)</code></td>
+<td>Automatically styles all even-indexed children (2, 4, 6...).</td>
+</tr>
+</tbody>
+</table>
+<div class="flex-x gap-1 w-fit odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
+  <div class="p-2 r-2">Item 1</div>
+  <div class="p-2 r-2">Item 2</div>
+  <div class="p-2 r-2">Item 3</div>
+  <div class="p-2 r-2">Item 4</div>
+  <div class="p-2 r-2">Item 5</div>
+  <div class="p-2 r-2">Item 6</div>
+  <div class="p-2 r-2">Item 7</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="flex-x odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+  ...
+&#x3C;/div>
+</code></pre>
+<h2 id="6-theme-settings" class="h2">6. Theme Settings</h2>
+<p>Handle accessibility considerations or user configuration choices cleanly via global theme flags.</p>
+<p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Target Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dark:</code></td>
+<td>Triggers alternative style arrays when the system or application context has enabled its global dark mode profile.</td>
+</tr>
+</tbody>
+</table>
+<div class="b-1 b-gray p-2 r-2 w-fit bg-white text-black dark:bg-black dark:text-white">
+  Adaptive Sheet Content
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-white text-black dark:bg-black dark:text-white">
+  Adaptive Sheet Content
+&#x3C;/div>
+</code></pre>

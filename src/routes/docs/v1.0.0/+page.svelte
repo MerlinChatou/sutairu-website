@@ -8,8 +8,6 @@
 
   import AlignmentCard from "./components/Cards/AlignmentCard.svelte";
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
-  import BackgroundOpacityCard from "./components/Cards/BackgroundOpacityCard.svelte";
-  import BackgroundShadeScaleCard from "./components/Cards/BackgroundColorShadeCard.svelte";
   import BadgeCard from "./components/Cards/BadgeCard.svelte";
   import BlockquoteCard from "./components/Cards/BlockquoteCard.svelte";
   import BorderColorCard from "./components/Cards/BorderColorCard.svelte";
@@ -45,6 +43,7 @@
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
   import ThemesCard from "./components/Cards/ThemesCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
+  import VariantModifierCard from "./components/Cards/VariantModifierCard.svelte";
   import BtnCloseCard from "./components/Cards/BtnCloseCard.svelte";
   import SizingCard from "./components/Cards/SizingCard.svelte";
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
@@ -102,7 +101,7 @@
 <BrowserInit />
 <Navbar />
 
-<div class="px-1 tg-glow bg-dotted fg-black dark:fg-white min-h-100vh bg-dotted">
+<div class="px-1 tg-glow dotted-black-75 dark:dotted-white-850 min-h-100vh">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
     <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
     <h1 class="h1 d-inline my-0">Sutairu</h1>
@@ -114,6 +113,7 @@
   <div bind:this={masonry} class="masonry px-2 pb-5">
     <ColorSchemeCard />
     <ThemesCard />
+    <VariantModifierCard />
     <HeadingCard />
     <TypographyCard />
     <FontSizeCard />
@@ -124,15 +124,14 @@
     <WhiteSpaceCard />    
     <TextColorsCard />
     <BackgroundColorCard />
+    <SemanticBackgroundCard />
     <MarginCard />
     <PaddingCard />    
     <SizingCard />    
     <ButtonColorCard />
     
     <FormCard />
-    <SemanticBackgroundCard />    
-    <BackgroundShadeScaleCard />
-    <BackgroundOpacityCard />
+    
     <InteractiveBackgroundCard />
     <BorderColorCard />
     <BorderColorShadeCard />

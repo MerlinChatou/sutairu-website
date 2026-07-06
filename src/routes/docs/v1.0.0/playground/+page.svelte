@@ -3,6 +3,9 @@
   import "$lib/generated/sutairu.min.css";
 </script>
 
+
+
+
 <div class="container p-4 flex-y gap-2">
   <b>Bold</b>
   <div class="bold">Bold</div>
