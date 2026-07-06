@@ -1,0 +1,149 @@
+<h1 id="background-color" class="h1">Background Color</h1>
+<p>Control background color using utility classes. Colors automatically adapt to the active theme and color scheme.</p>
+<h2 id="available-colors" class="h2">Available colors</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.bg-yellow</code></td>
+<td><span class="bg-yellow px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-orange</code></td>
+<td><span class="bg-orange px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-red</code></td>
+<td><span class="bg-red px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-pink</code></td>
+<td><span class="bg-pink px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-purple</code></td>
+<td><span class="bg-purple px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-blue</code></td>
+<td><span class="bg-blue px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-cyan</code></td>
+<td><span class="bg-cyan px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-green</code></td>
+<td><span class="bg-green px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-white</code></td>
+<td><span class="bg-white px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-gray</code></td>
+<td><span class="bg-gray px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-black</code></td>
+<td><span class="bg-black px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-accent</code></td>
+<td><span class="bg-accent px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-container</code></td>
+<td><span class="bg-container px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-page</code></td>
+<td><span class="bg-page px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-subtle</code></td>
+<td><span class="bg-subtle px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-body</code></td>
+<td><span class="bg-body px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-title</code></td>
+<td><span class="bg-title px-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.bg-transparent</code></td>
+<td><span class="bg-transparent px-2">Sample block</span></td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<div class="bg-orange p-2 r-2">Orange background</div>
+<div class="bg-subtle p-2 r-2">Subtle background</div>
+<div class="bg-accent p-2 r-2">Accent background</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-orange">Orange background&#x3C;/div>
+&#x3C;div class="bg-title">Title background&#x3C;/div>
+&#x3C;div class="bg-accent">Accent background&#x3C;/div>
+</code></pre>
+<h2 id="theme-variants" class="h2">Theme variants</h2>
+<p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
+<ul>
+<li><code>dark:</code> — apply styles only in dark mode</li>
+</ul>
+<pre><code class="language-html">&#x3C;div class="bg-gray dark:bg-black">
+  Adaptive background color
+&#x3C;/div>
+
+</code></pre>
+<p><strong>How it works</strong></p>
+<ul>
+<li>Default classes apply to light mode.</li>
+<li><code>dark:</code> variants override styles when the dark theme is enabled.</li>
+</ul>
+<hr>
+<h2 id="advanced-color-control" class="h2">Advanced Color Control</h2>
+<p>Sutairu supports a granular color system using the <code>bg-&#x3C;color>-&#x3C;shade>/&#x3C;opacity></code> pattern. This allows for complex surfaces, card backing depths, and modern design layers straight from your HTML markup.</p>
+<h3 id="shades-and-opacity" class="h3">Shades and Opacity</h3>
+<p>You can append a numeric shade (usually <strong>0–1000</strong>) and an opacity percentage (<strong>0–100</strong>) to any base background color.</p>
+<table>
+<thead>
+<tr>
+<th>Class Pattern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.bg-blue-600</code></td>
+<td>Applies a specific "600" weight of blue from the theme palette.</td>
+</tr>
+<tr>
+<td><code>.bg-red/50</code></td>
+<td>Applies the base red color at <strong>50% opacity</strong>.</td>
+</tr>
+<tr>
+<td><code>.bg-green-400/20</code></td>
+<td>Applies the "400" green shade at <strong>20% opacity</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<p>Here are some examples of advanced background colors:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2 stripes-gray-150 dark:stripes-gray-700">
+<div class="bg-red-400 p-2 r-2">bg-red-400</div>
+<div class="bg-red-600 p-2 r-2">bg-red-600</div>
+<div class="bg-green/50 p-2 r-2">bg-green/50</div>
+<div class="bg-green-700/50 p-2 r-2">bg-green-700/50</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-red-400">bg-red-400&#x3C;/div>
+&#x3C;div class="bg-red-600">bg-red-600&#x3C;/div>
+&#x3C;div class="bg-green/50">bg-green/50&#x3C;/div>
+&#x3C;div class="bg-green-700/50">bg-green-700/50&#x3C;/div>
+</code></pre>

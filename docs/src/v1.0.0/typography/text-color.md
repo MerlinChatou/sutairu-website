@@ -8,6 +8,7 @@ Control text color using utility classes. Colors automatically adapt to the acti
 |------|---------|
 | `.text-yellow` | <span class="text-yellow">Sample text</span> |
 | `.text-orange` | <span class="text-orange">Sample text</span> |
+| `.text-red` | <span class="text-red">Sample text</span> |
 | `.text-pink` | <span class="text-pink">Sample text</span> |
 | `.text-purple` | <span class="text-purple">Sample text</span> |
 | `.text-blue` | <span class="text-blue">Sample text</span> |

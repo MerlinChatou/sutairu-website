@@ -123,14 +123,14 @@
     <AlignmentCard />
     <WhiteSpaceCard />    
     <TextColorsCard />
+    <BackgroundColorCard />
     <MarginCard />
     <PaddingCard />    
     <SizingCard />    
     <ButtonColorCard />
     
     <FormCard />
-    <SemanticBackgroundCard />
-    <BackgroundColorCard />
+    <SemanticBackgroundCard />    
     <BackgroundShadeScaleCard />
     <BackgroundOpacityCard />
     <InteractiveBackgroundCard />
