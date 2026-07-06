@@ -28,8 +28,7 @@
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
   import FormCard from "./components/Cards/FormCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
-  import HeadingCard from "./components/Cards/HeadingCard.svelte";
-  import InteractiveBackgroundCard from "./components/Cards/InteractiveBackgroundCard.svelte";
+  import HeadingCard from "./components/Cards/HeadingCard.svelte";  
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
   import MarginCard from "./components/Cards/MarginCard.svelte";
   import ModalCard from "./components/Cards/ModalCard.svelte";
@@ -132,7 +131,6 @@
     
     <FormCard />
     
-    <InteractiveBackgroundCard />
     <BorderColorCard />
     <BorderColorShadeCard />
     <BorderOpacityCard />

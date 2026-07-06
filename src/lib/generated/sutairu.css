@@ -5584,18 +5584,6 @@ body.modal-open {
   .active\:text-purple:active {
     color: var(--su-purple);
   }
-  
-  .active\:bg-accent:active {
-    background-color: var(--su-accent);
-  }
-
-  .focus\:bg-accent:focus {
-    background-color: var(--su-accent);
-  }
-
-  .disabled\:bg-gray:is(:disabled, [aria-disabled="true"]) {
-    background-color: var(--su-gray);
-  }
 
   .odd\:bg-accent\/5 > :nth-child(odd) {
     background-color: oklch(from var(--su-accent) l c h / 0.05);

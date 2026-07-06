@@ -28,7 +28,7 @@
 <div class="card opacity-0" id="variant-modifier" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Variant Modifier</h4></div>
 
-  <div class="body d-flex fd-col gap-1 p-4 text-center ff-mono" bind:this={body}>
+  <div class="body d-flex fd-col gap-2 p-4 text-center ff-mono" bind:this={body}>
     <div class="p-2 r-2 bg-gray sm:bg-red text-white">sm:bg-red</div>
     <div class="p-2 r-2 bg-gray md:bg-red text-white">md:bg-red</div>
     <div class="p-2 r-2 bg-gray lg:bg-red text-white">lg:bg-red</div>
