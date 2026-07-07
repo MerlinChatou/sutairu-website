@@ -1,0 +1,139 @@
+<h1 id="border-color" class="h1">Border Color</h1>
+<p>Control the border color of elements using utility classes. Like background colors, border colors automatically adapt to the active theme and color scheme.</p>
+<h2 id="available-colors" class="h2">Available colors</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.b-yellow</code></td>
+<td><span class="b-1 b-yellow px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-orange</code></td>
+<td><span class="b-1 b-orange px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-red</code></td>
+<td><span class="b-1 b-red px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-pink</code></td>
+<td><span class="b-1 b-pink px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-purple</code></td>
+<td><span class="b-1 b-purple px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-blue</code></td>
+<td><span class="b-1 b-blue px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-cyan</code></td>
+<td><span class="b-1 b-cyan px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-green</code></td>
+<td><span class="b-1 b-green px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-white</code></td>
+<td><span class="b-1 b-white px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-gray</code></td>
+<td><span class="b-1 b-gray px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-black</code></td>
+<td><span class="b-1 b-black px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-accent</code></td>
+<td><span class="b-1 b-accent px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-container</code></td>
+<td><span class="b-1 b-container px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-page</code></td>
+<td><span class="b-1 b-page px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.b-subtle</code></td>
+<td><span class="b-1 b-subtle px-2 r-2">Sample block</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Make sure your element has a defined border width (e.g., <code>.b-1</code> or <code>.border</code>) for the border color utility to be visible.</p>
+</blockquote>
+<div class="card w-fit d-flex fd-col p-2 gap-2">
+<div class="p-2 r-2 b-1 b-orange">Orange border</div>
+<div class="p-2 r-2 b-1 b-subtle">Subtle border</div>
+<div class="p-2 r-2 b-1 b-accent">Accent border</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="b-1 b-orange">Orange border&#x3C;/div>
+&#x3C;div class="b-1 b-subtle">Title border&#x3C;/div>
+&#x3C;div class="b-1 b-accent">Accent border&#x3C;/div>
+</code></pre>
+<h2 id="theme-variants" class="h2">Theme variants</h2>
+<p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
+<ul>
+<li><code>dark:</code> — apply styles only in dark mode</li>
+</ul>
+<pre><code class="language-html">&#x3C;div class="b-1 b-gray dark:b-black">
+  Adaptive border color
+&#x3C;/div>
+
+</code></pre>
+<p><strong>How it works</strong></p>
+<ul>
+<li>Default classes apply to light mode.</li>
+<li><code>dark:</code> variants override styles when the dark theme is enabled.</li>
+</ul>
+<h2 id="advanced-border-color-control" class="h2">Advanced Border Color Control</h2>
+<p>Sutairu supports a granular color system using the <code>b-&#x3C;color>-&#x3C;shade>/&#x3C;opacity></code> pattern. This allows for fine-tuned UI dividers, card outlines, and interactive focus states straight from your HTML markup.</p>
+<h3 id="shades-and-opacity" class="h3">Shades and Opacity</h3>
+<p>You can append a numeric shade (usually <strong>0–1000</strong>) and an opacity percentage (<strong>0–100</strong>) to any base border color.</p>
+<table>
+<thead>
+<tr>
+<th>Class Pattern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.b-blue-600</code></td>
+<td>Applies a specific "600" weight of blue from the theme palette.</td>
+</tr>
+<tr>
+<td><code>.b-red/50</code></td>
+<td>Applies the base red color at <strong>50% opacity</strong>.</td>
+</tr>
+<tr>
+<td><code>.b-green-400/20</code></td>
+<td>Applies the "400" green shade at <strong>20% opacity</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<p>Here are some examples of advanced border colors:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<div class="b-1 b-red-400 p-2 r-2">b-red-400</div>
+<div class="b-1 b-red-600 p-2 r-2">b-red-600</div>
+<div class="b-1 b-green/50 p-2 r-2">b-green/50</div>
+<div class="b-1 b-green-700/50 p-2 r-2">b-green-700/50</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="b-1 b-red-400">b-red-400&#x3C;/div>
+&#x3C;div class="b-1 b-red-600">b-red-600&#x3C;/div>
+&#x3C;div class="b-1 b-green/50">b-green/50&#x3C;/div>
+&#x3C;div class="b-1 b-green-700/50">b-green-700/50&#x3C;/div>
+</code></pre>

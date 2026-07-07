@@ -26,10 +26,15 @@ Control background color using utility classes. Colors automatically adapt to th
 | `.bg-transparent` | <span class="bg-transparent px-2 r-2">Sample block</span> |
 
 
+<div class="card w-fit d-flex fd-col p-2 gap-2">
+<div class="p-2 r-2 bg-orange">Orange background</div>
+<div class="p-2 r-2 bg-subtle">Title background</div>
+<div class="p-2 r-2 bg-accent">Accent background</div>
+</div>
 
 ```html
 <div class="bg-orange">Orange background</div>
-<div class="bg-title">Title background</div>
+<div class="bg-subtle">Title background</div>
 <div class="bg-accent">Accent background</div>
 ```
 
