@@ -28,14 +28,17 @@
 <div class="card opacity-0" id="border-width" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Border Width</h4></div>
   <div class="body p-3 d-flex fd-col gap-2 ff-mono fs-sm" bind:this={body}>
-    <div class="w-full p-1 r-2 bg-subtle text-center bw-0 b-accent">bw-0</div>
-    <div class="w-full p-1 r-2 bg-subtle text-center bw-1 b-accent">bw-1</div>
-    <div class="w-full p-1 r-2 bg-subtle text-center bw-2rem b-accent">bw-2rem</div>
-    <div class="w-full p-1 r-2 bg-subtle text-center bw-3rem b-accent">bw-3rem</div>
-    <div class="w-full p-1 r-2 bg-subtle text-center bw-4rem b-accent">bw-4</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-0 b-accent">bw-0</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-1 b-accent">bw-1</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent">bw-2</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-3 b-accent">bw-3</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-3px b-accent">bw-3px</div>
+    <div class="w-full p-2 r-4 bg-subtle text-center b-0.5em b-accent">bw-0.5rem</div>
+    <div class="w-full p-2 r-4 bg-subtle text-center b-1/2em b-accent">bw-1/2em</div>
+    
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/border-width">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="border/border-width">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

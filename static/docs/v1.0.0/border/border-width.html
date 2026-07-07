@@ -1,0 +1,136 @@
+<h1 id="border-width" class="h1">Border Width</h1>
+<p>Utilities for controlling the border width of elements, supporting physical sides, logical properties, and various unit scales.</p>
+<h2 id="core-rules" class="h2">Core Rules</h2>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declarations</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>border</code></td>
+<td><code>border-width: 1px;</code></td>
+<td>Sets a uniform 1px border.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dynamic-patterns" class="h2">Dynamic Patterns</h2>
+<p>The system dynamically resolves border widths using two primary patterns: <strong>Pixel-scaled (default)</strong> and <strong>Unit-explicit</strong>.</p>
+<h3 id="pixel-scaled-utilities" class="h3">Pixel-Scaled Utilities</h3>
+<p>When no unit is provided, the number acts on a <strong>1:1 pixel scale</strong>. It supports integers, decimals, and fraction strings (rounded up to 3 decimal places).</p>
+<ul>
+<li><strong>Syntax:</strong> <code>{type}-{value}</code></li>
+<li><strong>Examples:</strong> <code>b-1</code>, <code>bt-2.5</code>, <code>bx-1/2</code></li>
+</ul>
+<div class="card w-fit d-flex fd-row p-3 gap-2">
+<div class="b-1 b-accent p-2 r-2">b-1</div>
+<div class="b-2 b-accent p-2 r-2">b-2</div>
+<div class="b-5/2 b-accent p-2 r-2">b-5/2</div>
+<div class="b-3 b-accent p-2 r-2">b-3</div>
+<div class="b-4.5 b-accent p-2 r-2">b-4.5</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="b-1">b-1&#x3C;/div>
+&#x3C;div class="b-2">b-2&#x3C;/div>
+&#x3C;div class="b-5/2">b-5/2&#x3C;/div>
+&#x3C;div class="b-3">b-3&#x3C;/div>
+&#x3C;div class="b-4.5">b-4.5&#x3C;/div>
+</code></pre>
+<h3 id="unit-explicit-utilities" class="h3">Unit-Explicit Utilities</h3>
+<p>When a specific CSS length unit is provided, the engine skips pixel scaling and applies the exact value.</p>
+<ul>
+<li><strong>Syntax:</strong> <code>{type}-{value}{unit}</code></li>
+<li><strong>Examples:</strong> <code>b-2rem</code>, <code>by-4em</code>, <code>bs-10vw</code></li>
+<li><strong>Supported Units:</strong> <code>px</code>, <code>rem</code>, <code>em</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>vi</code>, <code>vb</code>, <code>ch</code>, <code>ex</code>, <code>cqw</code>, <code>cqh</code>, <code>cqi</code>, <code>qb</code>, <code>cqmin</code>, <code>cqmax</code></li>
+</ul>
+<div class="card w-fit d-flex fd-row p-3 gap-2">
+<div class="b-2px b-accent p-2 r-2">b-2px</div>
+<div class="b-0.1rem b-accent p-2 r-2">b-0.1rem</div>
+<div class="b-1/2vmin b-accent p-2 r-2">b-1/2vmin</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="b-2px">b-2px&#x3C;/div>
+&#x3C;div class="b-0.1rem">b-0.1rem&#x3C;/div>
+&#x3C;div class="b-1/2vmin">b-1/2vmin&#x3C;/div>
+</code></pre>
+<h2 id="target-reference-map" class="h2">Target Reference Map</h2>
+<p>Use the prefixes below to target specific sides or axes. This handles both traditional physical boundaries and modern logical properties for bidirectional layouts.</p>
+<h3 id="physical-targets" class="h3">Physical Targets</h3>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Targets</th>
+<th>Maps to CSS Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>b</code></td>
+<td>All Sides</td>
+<td><code>border-width</code></td>
+</tr>
+<tr>
+<td><code>bt</code></td>
+<td>Top</td>
+<td><code>border-top-width</code></td>
+</tr>
+<tr>
+<td><code>bb</code></td>
+<td>Bottom</td>
+<td><code>border-bottom-width</code></td>
+</tr>
+<tr>
+<td><code>bl</code></td>
+<td>Left</td>
+<td><code>border-left-width</code></td>
+</tr>
+<tr>
+<td><code>br</code></td>
+<td>Right</td>
+<td><code>border-right-width</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical--axis-targets" class="h3">Logical &#x26; Axis Targets</h3>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Targets</th>
+<th>Maps to CSS Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bx</code></td>
+<td>Inline Axis (Left + Right)</td>
+<td><code>border-inline-width</code></td>
+</tr>
+<tr>
+<td><code>by</code></td>
+<td>Block Axis (Top + Bottom)</td>
+<td><code>border-block-width</code></td>
+</tr>
+<tr>
+<td><code>bs</code></td>
+<td>Inline Start (Left in LTR)</td>
+<td><code>border-inline-start-width</code> *</td>
+</tr>
+<tr>
+<td><code>be</code></td>
+<td>Inline End (Right in LTR)</td>
+<td><code>border-inline-end-width</code> *</td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit d-flex fd-row p-3 gap-4">
+<div class="bg-subtle bs-2 b-accent p-2">bs-2</div>
+<div class="bg-subtle bt-2 br-2 b-accent p-2">bt-2 br-2</div>
+<div class="bg-subtle bx-2 b-accent p-2">bx-2</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bs-2">bs-2&#x3C;/div>
+&#x3C;div class="bt-2 br-2">bt-2 br-2&#x3C;/div>
+&#x3C;div class="bx-2">bx-2&#x3C;/div>
+</code></pre>

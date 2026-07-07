@@ -10,9 +10,7 @@
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
   import BadgeCard from "./components/Cards/BadgeCard.svelte";
   import BlockquoteCard from "./components/Cards/BlockquoteCard.svelte";
-  import BorderColorCard from "./components/Cards/BorderColorCard.svelte";
-  import BorderColorShadeCard from "./components/Cards/BorderColorShadeCard.svelte";
-  import BorderOpacityCard from "./components/Cards/BorderOpacityCard.svelte";
+  import BorderColorCard from "./components/Cards/BorderColorCard.svelte";  
   import BorderRadiusCard from "./components/Cards/BorderRadiusCard.svelte";
   import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";
   import ButtonColorCard from "./components/Cards/ButtonCard.svelte";  
@@ -124,6 +122,9 @@
     <TextColorsCard />
     <BackgroundColorCard />
     <SemanticBackgroundCard />
+    <BorderColorCard />
+    <BorderWidthCard />
+    <PerSideBorderWidthCard />
     <MarginCard />
     <PaddingCard />    
     <SizingCard />    
@@ -131,12 +132,10 @@
     
     <FormCard />
     
-    <BorderColorCard />
-    <BorderColorShadeCard />
-    <BorderOpacityCard />
-    <BorderWidthCard />
+    
+    
     <BorderRadiusCard />
-    <PerSideBorderWidthCard />
+    
     <CursorCard />
     <FlexCard />
     <GridCard />
