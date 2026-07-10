@@ -1,0 +1,155 @@
+<h1 id="cursor" class="h1">Cursor</h1>
+<p>Utilities for controlling the mouse cursor behavior when hovering over elements, mapping directly to standard interactive web states.</p>
+<h2 id="core-utilities" class="h2">Core Utilities</h2>
+<p>The system builds these static rules using the <code>cur-</code> prefix. Every keyword automatically maps to its native CSS <code>cursor</code> value.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declaration</th>
+<th>Intended UI Context / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cur-auto</code></td>
+<td><code>cursor: auto;</code></td>
+<td>Let the browser decide based on the context.</td>
+</tr>
+<tr>
+<td><code>cur-default</code></td>
+<td><code>cursor: default;</code></td>
+<td>Platform-dependent default (usually an arrow).</td>
+</tr>
+<tr>
+<td><code>cur-pointer</code></td>
+<td><code>cursor: pointer;</code></td>
+<td>Indicates a link, button, or interactive element.</td>
+</tr>
+<tr>
+<td><code>cur-wait</code></td>
+<td><code>cursor: wait;</code></td>
+<td>Indicates the program is busy (spinning wheel/hourglass).</td>
+</tr>
+<tr>
+<td><code>cur-text</code></td>
+<td><code>cursor: text;</code></td>
+<td>Indicates text can be selected or edited (I-beam).</td>
+</tr>
+<tr>
+<td><code>cur-move</code></td>
+<td><code>cursor: move;</code></td>
+<td>Indicates something can be moved or dragged.</td>
+</tr>
+<tr>
+<td><code>cur-help</code></td>
+<td><code>cursor: help;</code></td>
+<td>Indicates help information is available (often a question mark).</td>
+</tr>
+<tr>
+<td><code>cur-not-allowed</code></td>
+<td><code>cursor: not-allowed;</code></td>
+<td>Indicates a disabled action or non-droppable zone.</td>
+</tr>
+<tr>
+<td><code>cur-none</code></td>
+<td><code>cursor: none;</code></td>
+<td>Hides the mouse cursor entirely.</td>
+</tr>
+<tr>
+<td><code>cur-context-menu</code></td>
+<td><code>cursor: context-menu;</code></td>
+<td>Indicates a context menu is available.</td>
+</tr>
+<tr>
+<td><code>cur-progress</code></td>
+<td><code>cursor: progress;</code></td>
+<td>Background task running, but user can still interact.</td>
+</tr>
+<tr>
+<td><code>cur-cell</code></td>
+<td><code>cursor: cell;</code></td>
+<td>Excel-style table cell selection indicator.</td>
+</tr>
+<tr>
+<td><code>cur-crosshair</code></td>
+<td><code>cursor: crosshair;</code></td>
+<td>Precise bitmap selection or drawing cross.</td>
+</tr>
+<tr>
+<td><code>cur-vertical-text</code></td>
+<td><code>cursor: vertical-text;</code></td>
+<td>Vertical text editing layout indicator.</td>
+</tr>
+<tr>
+<td><code>cur-alias</code></td>
+<td><code>cursor: alias;</code></td>
+<td>Indicates a shortcut or alias is being created.</td>
+</tr>
+<tr>
+<td><code>cur-copy</code></td>
+<td><code>cursor: copy;</code></td>
+<td>Indicates something is explicitly ready to be duplicated.</td>
+</tr>
+<tr>
+<td><code>cur-no-drop</code></td>
+<td><code>cursor: no-drop;</code></td>
+<td>Item cannot be dropped at the current location.</td>
+</tr>
+<tr>
+<td><code>cur-grab</code></td>
+<td><code>cursor: grab;</code></td>
+<td>Surface or item can be held/paned around.</td>
+</tr>
+<tr>
+<td><code>cur-grabbing</code></td>
+<td><code>cursor: grabbing;</code></td>
+<td>Actively holding down and shifting a layout around.</td>
+</tr>
+<tr>
+<td><code>cur-all-scroll</code></td>
+<td><code>cursor: all-scroll;</code></td>
+<td>Page or element can be scrolled in any direction.</td>
+</tr>
+<tr>
+<td><code>cur-col-resize</code></td>
+<td><code>cursor: col-resize;</code></td>
+<td>Column width handle resizing.</td>
+</tr>
+<tr>
+<td><code>cur-row-resize</code></td>
+<td><code>cursor: row-resize;</code></td>
+<td>Row height handle resizing.</td>
+</tr>
+</tbody>
+</table>
+<p>Hover over any of the elements below to see the respective mouse cursor behavior in action.</p>
+<div class="card w-fit d-flex fd-row fw-wrap p-3 gap-2">
+<div class="bg-subtle p-3 r-2 text-center cur-pointer">cur-pointer</div>
+<div class="bg-subtle p-3 r-2 text-center cur-wait">cur-wait</div>
+<div class="bg-subtle p-3 r-2 text-center cur-text">cur-text</div>
+<div class="bg-subtle p-3 r-2 text-center cur-help">cur-help</div>
+<div class="bg-subtle p-3 r-2 text-center cur-crosshair">cur-crosshair</div>
+<div class="bg-subtle p-3 r-2 text-center cur-not-allowed">cur-not-allowed</div>
+<div class="bg-subtle p-3 r-2 text-center cur-zoom-in">cur-zoom-in</div>
+<div class="bg-subtle p-3 r-2 text-center cur-zoom-out">cur-zoom-out</div>
+<div class="bg-subtle p-3 r-2 text-center cur-grab">cur-grab</div>
+<div class="bg-subtle p-3 r-2 text-center cur-grabbing">cur-grabbing</div>
+<div class="bg-subtle p-3 r-2 text-center cur-progress">cur-progress</div>
+<div class="bg-subtle p-3 r-2 text-center cur-default">cur-default</div>
+<div class="bg-subtle p-3 r-2 text-center cur-auto">cur-auto</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="cur-pointer">cur-pointer&#x3C;/div>
+&#x3C;div class="cur-wait">cur-wait&#x3C;/div>
+&#x3C;div class="cur-text">cur-text&#x3C;/div>
+&#x3C;div class="cur-help">cur-help&#x3C;/div>
+&#x3C;div class="cur-crosshair">cur-crosshair&#x3C;/div>
+&#x3C;div class="cur-not-allowed">cur-not-allowed&#x3C;/div>
+&#x3C;div class="cur-zoom-in">cur-zoom-in&#x3C;/div>
+&#x3C;div class="cur-zoom-out">cur-zoom-out&#x3C;/div>
+&#x3C;div class="cur-grab">cur-grab&#x3C;/div>
+&#x3C;div class="cur-grabbing">cur-grabbing&#x3C;/div>
+&#x3C;div class="cur-progress">cur-progress&#x3C;/div>
+&#x3C;div class="cur-default">cur-default&#x3C;/div>
+&#x3C;div class="cur-auto">cur-auto&#x3C;/div>
+</code></pre>

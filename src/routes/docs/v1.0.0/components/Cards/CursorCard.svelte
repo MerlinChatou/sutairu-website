@@ -43,7 +43,7 @@
     <div class="bg-subtle p-3 r-2 text-center cur-auto">cur-auto</div>
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="core/cursor">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="interactivity/cursor">&lt;code&gt;</button>
   </div>
 </div>
 {/if}
