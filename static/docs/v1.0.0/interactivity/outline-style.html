@@ -1,1 +1,90 @@
 <h1 id="outline-style" class="h1">Outline Style</h1>
+<p>Utilities for controlling the line style of an element's outlines (e.g., solid, dashed, or decorative 3D effects) without affecting surrounding layout geometry.</p>
+<h2 id="core-utilities" class="h2">Core Utilities</h2>
+<p>The system dynamically processes combinations using the <code>ol-</code> prefix followed by any valid standard CSS outline style.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declaration</th>
+<th>Visual Appearance Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ol-solid</code></td>
+<td><code>outline-style: solid;</code></td>
+<td>A single, solid line.</td>
+</tr>
+<tr>
+<td><code>ol-dashed</code></td>
+<td><code>outline-style: dashed;</code></td>
+<td>A series of short line segments.</td>
+</tr>
+<tr>
+<td><code>ol-dotted</code></td>
+<td><code>outline-style: dotted;</code></td>
+<td>A series of round dots.</td>
+</tr>
+<tr>
+<td><code>ol-double</code></td>
+<td><code>outline-style: double;</code></td>
+<td>Two parallel solid lines with space between them.</td>
+</tr>
+<tr>
+<td><code>ol-none</code></td>
+<td><code>outline-style: none;</code></td>
+<td>Removes all outlines entirely.</td>
+</tr>
+<tr>
+<td><code>ol-auto</code></td>
+<td><code>outline-style: auto;</code></td>
+<td>Uses the user agent's default rendering behavior (often a custom focus ring).</td>
+</tr>
+<tr>
+<td><code>ol-groove</code></td>
+<td><code>outline-style: groove;</code></td>
+<td>A 3D groove carved into the canvas (depends on color).</td>
+</tr>
+<tr>
+<td><code>ol-ridge</code></td>
+<td><code>outline-style: ridge;</code></td>
+<td>A 3D ridge rising out of the canvas (depends on color).</td>
+</tr>
+<tr>
+<td><code>ol-inset</code></td>
+<td><code>outline-style: inset;</code></td>
+<td>Makes the element appear embedded inside the page layout.</td>
+</tr>
+<tr>
+<td><code>ol-outset</code></td>
+<td><code>outline-style: outset;</code></td>
+<td>Makes the element appear embossed or raised off the page.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples" class="h2">Examples</h2>
+<p>See below for a structural preview of how each outline style renders on an element.</p>
+<div class="card w-fit min-w-25ch flex-y p-3 gap-2 gap-y-7">
+<div class="w-full p-2 r-1 bg-subtle text-center ol-2 ol-accent ol-auto">ol-auto</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-2 ol-accent ol-none">ol-none</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-2 ol-accent ol-dotted">ol-dotted</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-2 ol-accent ol-dashed">ol-dashed</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-2 ol-accent ol-solid">ol-solid</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-10 ol-accent ol-double">ol-double</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-10 ol-accent ol-groove">ol-groove</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-10 ol-accent ol-ridge">ol-ridge</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-10 ol-accent ol-inset">ol-inset</div>
+<div class="w-full p-2 r-1 bg-subtle text-center ol-10 ol-accent ol-outset">ol-outset</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ol-2 ol-accent ol-auto">ol-auto&#x3C;/div>
+&#x3C;div class="ol-2 ol-accent ol-none">ol-none&#x3C;/div>
+&#x3C;div class="ol-2 ol-accent ol-dotted">ol-dotted&#x3C;/div>
+&#x3C;div class="ol-2 ol-accent ol-dashed">ol-dashed&#x3C;/div>
+&#x3C;div class="ol-2 ol-accent ol-solid">ol-solid&#x3C;/div>
+&#x3C;div class="ol-10 ol-accent ol-double">ol-double&#x3C;/div>
+&#x3C;div class="ol-10 ol-accent ol-groove">ol-groove&#x3C;/div>
+&#x3C;div class="ol-10 ol-accent ol-ridge">ol-ridge&#x3C;/div>
+&#x3C;div class="ol-10 ol-accent ol-inset">ol-inset&#x3C;/div>
+&#x3C;div class="ol-10 ol-accent ol-outset">ol-outset&#x3C;/div>
+</code></pre>

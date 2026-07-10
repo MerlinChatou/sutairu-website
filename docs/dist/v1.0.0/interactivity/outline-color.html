@@ -1,1 +1,139 @@
 <h1 id="outline-color" class="h1">Outline Color</h1>
+<p>Control the outline color of elements using utility classes. Outlines are drawn outside the element's border edge and do not take up space in the layout flow. Like border colors, outline colors automatically adapt to the active theme and color scheme.</p>
+<h2 id="available-colors" class="h2">Available Colors</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ol-yellow</code></td>
+<td><span class="outline ol-yellow px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-orange</code></td>
+<td><span class="outline ol-orange px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-red</code></td>
+<td><span class="outline ol-red px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-pink</code></td>
+<td><span class="outline ol-pink px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-purple</code></td>
+<td><span class="outline ol-purple px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-blue</code></td>
+<td><span class="outline ol-blue px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-cyan</code></td>
+<td><span class="outline ol-cyan px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-green</code></td>
+<td><span class="outline ol-green px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-white</code></td>
+<td><span class="outline ol-white px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-gray</code></td>
+<td><span class="outline ol-gray px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-black</code></td>
+<td><span class="outline ol-black px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-accent</code></td>
+<td><span class="outline ol-accent px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-container</code></td>
+<td><span class="outline ol-container px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-page</code></td>
+<td><span class="outline ol-page px-2 r-2">Sample block</span></td>
+</tr>
+<tr>
+<td><code>.ol-subtle</code></td>
+<td><span class="outline ol-subtle px-2 r-2">Sample block</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Make sure your element has a defined outline width and style (e.g., <code>.outline</code> or explicit rules <code>.ol-1</code> and <code>ol-solid</code> ) for the outline color utility to be visible.</p>
+</blockquote>
+<p>See below for a structural preview of how each outline color renders on an element:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<div class="p-2 r-2 ol-1 outline ol-orange">Orange outline</div>
+<div class="p-2 r-2 ol-1 outline ol-subtle">Subtle outline</div>
+<div class="p-2 r-2 ol-1 outline ol-accent">Accent outline</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="outline ol-orange">Orange outline&#x3C;/div>
+&#x3C;div class="outline ol-subtle">Subtle outline&#x3C;/div>
+&#x3C;div class="outline ol-accent">Accent outline&#x3C;/div>
+</code></pre>
+<h2 id="theme-variants" class="h2">Theme Variants</h2>
+<p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
+<ul>
+<li><code>dark:</code> — apply styles only in dark mode</li>
+</ul>
+<pre><code class="language-html">&#x3C;div class="outline-1 ol-solid ol-gray dark:ol-black">
+  Adaptive outline color
+&#x3C;/div>
+</code></pre>
+<p><strong>How it works</strong></p>
+<ul>
+<li>Default classes apply to light mode.</li>
+<li><code>dark:</code> variants override styles when the dark theme is enabled.</li>
+</ul>
+<h2 id="advanced-outline-color-control" class="h2">Advanced Outline Color Control</h2>
+<p>Sutairu supports a granular color system using the <code>ol-&#x3C;color>-&#x3C;shade>/&#x3C;opacity></code> pattern. This allows for fine-tuned interactive focus rings, modern access indicators, and styling adjustments straight from your HTML markup.</p>
+<h3 id="shades-and-opacity" class="h3">Shades and Opacity</h3>
+<p>You can append a numeric shade (usually <strong>0–1000</strong>) and an opacity percentage (<strong>0–100</strong>) to any base outline color.</p>
+<table>
+<thead>
+<tr>
+<th>Class Pattern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ol-blue-600</code></td>
+<td>Applies a specific "600" weight of blue from the theme palette.</td>
+</tr>
+<tr>
+<td><code>.ol-red/50</code></td>
+<td>Applies the base red color at <strong>50% opacity</strong>.</td>
+</tr>
+<tr>
+<td><code>.ol-green-400/20</code></td>
+<td>Applies the "400" green shade at <strong>20% opacity</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<p>See below for a structural preview of advanced outline color scales:</p>
+<div class="card w-fit d-flex fd-col p-3 gap-2">
+<div class="ol-2 ol-solid ol-red-400 p-2 r-2">ol-red-400</div>
+<div class="ol-2 ol-solid ol-red-600 p-2 r-2">ol-red-600</div>
+<div class="ol-2 ol-solid ol-green/50 p-2 r-2">ol-green/50</div>
+<div class="ol-2 ol-solid ol-green-700/50 p-2 r-2">ol-green-700/50</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ol-2 ol-solid ol-red-400">ol-red-400&#x3C;/div>
+&#x3C;div class="ol-2 ol-solid ol-red-600">ol-red-600&#x3C;/div>
+&#x3C;div class="ol-2 ol-solid ol-green/50">ol-green/50&#x3C;/div>
+&#x3C;div class="ol-2 ol-solid ol-green-700/50">ol-green-700/50&#x3C;/div>
+</code></pre>

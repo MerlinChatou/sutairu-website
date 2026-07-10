@@ -1,1 +1,58 @@
 <h1 id="outline-width" class="h1">Outline Width</h1>
+<p>Utilities for controlling the outline width of elements, supporting universal scaling and various unit scales without affecting layout geometry.</p>
+<h2 id="core-rules" class="h2">Core Rules</h2>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declarations</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>outline</code></td>
+<td><code>outline-width: 1px; outline-style: solid;</code></td>
+<td>Sets a uniform 1px solid outline.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dynamic-patterns" class="h2">Dynamic Patterns</h2>
+<p>The system dynamically resolves outline widths using two primary patterns: <strong>Pixel-scaled (default)</strong> and <strong>Unit-explicit</strong>.</p>
+<h3 id="pixel-scaled-utilities" class="h3">Pixel-Scaled Utilities</h3>
+<p>When no unit is provided, the number acts on a <strong>1:1 pixel scale</strong>. It supports integers, decimals, and fraction strings (rounded up to 3 decimal places).</p>
+<ul>
+<li><strong>Syntax:</strong> <code>ol-{value}</code></li>
+<li><strong>Examples:</strong> <code>ol-1</code>, <code>ol-2.5</code>, <code>ol-1/2</code></li>
+</ul>
+<p>See below for a structural preview of pixel-scaled outlines on elements:</p>
+<div class="card w-fit d-flex fd-row p-3 gap-2">
+<div class="ol-solid ol-accent ol-1 p-2 r-2">ol-1</div>
+<div class="ol-solid ol-accent ol-2 p-2 r-2">ol-2</div>
+<div class="ol-solid ol-accent ol-5/2 p-2 r-2">ol-5/2</div>
+<div class="ol-solid ol-accent ol-3 p-2 r-2">ol-3</div>
+<div class="ol-solid ol-accent ol-4.5 p-2 r-2">ol-4.5</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ol-solid ol-accent ol-1">ol-1&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-2">ol-2&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-5/2">ol-5/2&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-3">ol-3&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-4.5">ol-4.5&#x3C;/div>
+</code></pre>
+<h3 id="unit-explicit-utilities" class="h3">Unit-Explicit Utilities</h3>
+<p>When a specific CSS length unit is provided, the engine skips pixel scaling and applies the exact value.</p>
+<ul>
+<li><strong>Syntax:</strong> <code>ol-{value}{unit}</code></li>
+<li><strong>Examples:</strong> <code>ol-2rem</code>, <code>ol-4em</code>, <code>ol-10vw</code></li>
+<li><strong>Supported Units:</strong> <code>px</code>, <code>rem</code>, <code>em</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>vi</code>, <code>vb</code>, <code>ch</code>, <code>ex</code>, <code>cqw</code>, <code>cqh</code>, <code>cqi</code>, <code>qb</code>, <code>cqmin</code>, <code>cqmax</code></li>
+</ul>
+<p>See below for a structural preview of unit-explicit outlines on elements:</p>
+<div class="card w-fit d-flex fd-row p-3 gap-2">
+<div class="ol-solid ol-accent ol-2px p-2 r-2">ol-2px</div>
+<div class="ol-solid ol-accent ol-0.1rem p-2 r-2">ol-0.1rem</div>
+<div class="ol-solid ol-accent ol-1/2vmin p-2 r-2">ol-1/2vmin</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="ol-solid ol-accent ol-2px">ol-2px&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-0.1rem">ol-0.1rem&#x3C;/div>
+&#x3C;div class="ol-solid ol-accent ol-1/2vmin">ol-1/2vmin&#x3C;/div>
+</code></pre>
