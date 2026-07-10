@@ -124,6 +124,7 @@
     <SemanticBackgroundCard />
     <BorderColorCard />
     <BorderWidthCard />
+    <BorderRadiusCard />
     <PerSideBorderWidthCard />
     <MarginCard />
     <PaddingCard />    
@@ -134,7 +135,7 @@
     
     
     
-    <BorderRadiusCard />
+    
     
     <CursorCard />
     <FlexCard />
