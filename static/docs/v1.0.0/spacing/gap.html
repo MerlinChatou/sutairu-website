@@ -1,0 +1,81 @@
+<h1 id="gap-utilities" class="h1">Gap utilities</h1>
+<p>Gap utilities control spacing between child elements inside flex and grid containers. They provide consistent layout spacing without relying on margins.</p>
+<h2 id="syntaxe" class="h2">Syntaxe</h2>
+<ul>
+<li>Use <code>gap-*</code> to set spacing between rows and columns simultaneously.</li>
+<li>Use <code>gap-x-*</code> to control horizontal spacing between columns.</li>
+<li>Use <code>gap-y-*</code> to control vertical spacing between rows.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gap-0</code></td>
+<td><code>gap: 0</code></td>
+</tr>
+<tr>
+<td><code>gap-1</code></td>
+<td><code>gap: 0.25rem</code></td>
+</tr>
+<tr>
+<td><code>gap-2</code></td>
+<td><code>gap: 0.5rem</code></td>
+</tr>
+<tr>
+<td><code>gap-x-3</code></td>
+<td><code>column-gap: 0.75rem</code></td>
+</tr>
+<tr>
+<td><code>gap-20px</code></td>
+<td><code>gap: 20px</code></td>
+</tr>
+<tr>
+<td><code>gap-y-5vw</code></td>
+<td><code>row-gap: 5vw</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples" class="h2">Examples</h2>
+<p>See below for a structural preview of a horizontal flex layout displaying uniform spacing on a single axis using the <code>gap-4</code> utility.</p>
+<div class="card p-3 w-fit ff-mono">
+  <div class="flex-x hatching-gray/20 b-1 b-gray/20 gap-4 r-2 text-white">
+    <div class="bg-accent r-2 p-2 ar-1/1">01</div>
+    <div class="bg-accent r-2 p-2 ar-1/1">02</div>
+    <div class="bg-accent r-2 p-2 ar-1/1">03</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="flex-x gap-4">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div>02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<p>See below for a structural preview of a multi-row grid layout using <code>gap-x-8</code> and <code>gap-y-2</code> to apply independent horizontal and vertical gutter dimensions.</p>
+<div class="card p-3 w-fit ff-mono">
+  <div class="d-grid grid-cols-4 gap-x-8 gap-y-2 hatching-gray/20 b-1 b-gray/20 r-2 text-white">
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">01</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">02</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">03</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">04</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">05</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">06</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">07</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">08</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">09</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">10</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">11</div>
+    <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">12</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="d-grid grid-cols-4 gap-x-8 gap-y-2">
+  &#x3C;div>01&#x3C;/div>
+  &#x3C;div>02&#x3C;/div>
+  &#x3C;div>03&#x3C;/div>
+  ...
+&#x3C;/div>
+</code></pre>

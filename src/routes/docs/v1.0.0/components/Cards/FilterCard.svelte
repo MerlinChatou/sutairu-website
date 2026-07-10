@@ -33,7 +33,6 @@
   <div class="card opacity-0" id="filter" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Filters</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
       <div hidden>brightness blur grayscale contrast invert hue rotate hue sepia opacity</div>
     </div>
     <div class="body d-flex fd-col gap-3" bind:this={body}>

@@ -28,7 +28,7 @@
 {#if isVisible}
   <div class="card opacity-0" id="grid" bind:this={cardEl}>
     <div class="header" bind:this={header}><h4 class="h4">Grid</h4></div>
-    <div class="body p-4 d-flex fd-col gap-4 ff-mono text-white" bind:this={body}>
+    <div class="body p-4 d-flex fd-col gap-4 ff-mono text-white text-center" bind:this={body}>
       <div class="grid-x gap-3 hatching-gray/20 b-1 b-gray/20 r-2">
         <div class="align-cc min-h-12 bg-accent bg-400 dark:bg-700 r-2 p-2">01</div>
         <div class="align-cc min-h-12 bg-accent bg-400 dark:bg-700 r-2 p-2">02</div>

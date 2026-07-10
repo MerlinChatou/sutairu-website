@@ -4523,20 +4523,16 @@ body.modal-open {
   flex-direction: row-reverse;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .h4 {
   line-height: var(--su-lh-title);
   color: var(--su-title);
   font-size: var(--su-fs-h4);
   letter-spacing: var(--su-ls-h4);
   font-weight: var(--su-fw-h4);
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.w-24 {
-  width: 6rem;
 }
 
 .h-24 {
@@ -5396,6 +5392,10 @@ body.modal-open {
   font-weight: var(--su-fw-h6);
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .w-4px {
   width: 4px;
 }
@@ -5475,6 +5475,10 @@ body.modal-open {
 .sc-50 {
   --su-sc: 0.5;
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.my-1 {
+  margin-block: 0.25rem;
 }
 
 .sc-75 {
@@ -5617,6 +5621,14 @@ body.modal-open {
 
 .h-2 {
   height: 0.5rem;
+}
+
+.gap-x-8 {
+  column-gap: 2rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 :is([data-color-scheme="dark"] *) {

@@ -89,46 +89,6 @@ Example:
 ```
 
 
-
-## Gap utilities
-
-Gap utilities control spacing between child elements inside flex and grid containers. They provide consistent layout spacing without relying on margins.
-
-### Global gap 
-
-`gap-*` Sets spacing between rows and columns simultaneously.
-
-| Class   | CSS                     |
-| ------- | ----------------------- |
-| `gap-0` | `gap: 0`                |
-| `gap-1` | `gap: 0.25rem` |
-| `gap-2` | `gap: 0.5rem` |
-| `gap-x-3` | `column-gap: 0.75rem` |
-| `gap-20px` | `gap: 20px` |
-| `gap-y-5vw` | `row-gap: 5vw` |
-
-
-#### Example
-
-
-<div class="card p-3 w-fit ff-mono">
-  <div class="flex-y hatching-gray/20 b-1 b-gray/20 gap-5 r-2">
-    <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
-    <div class="bg-accent text-white r-2 p-2 ar-1/1">02</div>
-    <div class="bg-accent text-white r-2 p-2 ar-1/1">03</div>
-  </div>
-</div>
-
-
-```html
-<div class="d-flex gap-4">
-  <div>01</div>
-  <div>02</div>
-  <div>03</div>
-</div>
-```
-
-
 ## Flex wrap
 
 Flex wrap (`fw-`) Controls whether items wrap onto multiple lines.

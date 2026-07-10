@@ -32,18 +32,17 @@
   <div class="card opacity-0" id="scale" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Scale</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
     </div>
-    <div class="body v-flex p-3 text-center gap-4" bind:this={body}>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-50 hover:sc-100 tr-200">.scale-50</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-75 hover:sc-100 tr-200">.scale-75</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-90 hover:sc-100 tr-200">.scale-90</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-95 hover:sc-100 tr-200">.scale-95</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-100 hover:sc-100 tr-200">.scale-100</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-105 hover:sc-100 tr-200">.scale-105</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-110 hover:sc-100 tr-200">.scale-110</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-125 hover:sc-100 tr-200">.scale-125</div>
-      <div class="border mx-auto w-fit bg-subtle p-2 r-2 cur-pointer transform sc-150 hover:sc-100 tr-200">.scale-150</div>
+    <div class="body flex-y p-3 text-center gap-1" bind:this={body}>
+      <div class="border mx-auto my-0 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-50 hover:sc-100 tr-200">.scale-50</div>
+      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-75 hover:sc-100 tr-200">.scale-75</div>
+      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-90 hover:sc-100 tr-200">.scale-90</div>
+      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-95 hover:sc-100 tr-200">.scale-95</div>
+      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-100 hover:sc-100 tr-200">.scale-100</div>
+      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-105 hover:sc-100 tr-200">.scale-105</div>
+      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-110 hover:sc-100 tr-200">.scale-110</div>
+      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-125 hover:sc-100 tr-200">.scale-125</div>
+      <div class="border mx-auto my-4 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-150 hover:sc-100 tr-200">.scale-150</div>
     </div>
     <div class="footer text-right">
       <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/scale">&lt;code&gt;</button>

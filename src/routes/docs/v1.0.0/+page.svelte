@@ -26,6 +26,7 @@
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
   import FormCard from "./components/Cards/FormCard.svelte";
+  import GapCard from "./components/Cards/GapCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";  
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
@@ -131,21 +132,24 @@
     <BorderRadiusCard />
     <BorderStyleCard />
     <PerSideBorderWidthCard />
+    <OutlineColorCard />    
+    <OutlineWidthCard />
+    <OutlineStyleCard />  
     <MarginCard />
     <PaddingCard />    
     <SizingCard />    
     <ButtonColorCard />
-    
+    <CursorCard />
+    <GapCard />
+
+
     <FormCard />
     
-    <!-- <outline /> -->
     
+     
+  
+
     
-    <OutlineColorCard />    
-    <OutlineWidthCard />
-    <OutlineStyleCard />    
-    
-    <CursorCard />
     <FlexCard />
     <GridCard />
     <StackCard />
