@@ -4028,6 +4028,63 @@ body.modal-open {
   border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4);
 }
 
+.text-black {
+  color: var(--su-black);
+}
+
+.text-white {
+  color: var(--su-white);
+}
+
+.text-blue {
+  color: var(--su-blue);
+}
+
+.b-blue {
+  border-color: var(--su-blue);
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.mv-x-120\% {
+  --su-tr-x: 120%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.fw-wrap {
+  flex-wrap: wrap;
+}
+
+.td-u {
+  text-decoration-line: underline;
+}
+
 .b-yellow {
   border-color: var(--su-yellow);
 }
@@ -4042,10 +4099,6 @@ body.modal-open {
 
 .b-purple {
   border-color: var(--su-purple);
-}
-
-.b-blue {
-  border-color: var(--su-blue);
 }
 
 .b-cyan {
@@ -4147,6 +4200,59 @@ body.modal-open {
   border-bottom-right-radius: 0.5rem;
 }
 
+.min-w-25ch {
+  min-width: 25ch;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-auto {
+  border-style: auto;
+}
+
+.b-none {
+  border-style: none;
+}
+
+.b-dotted {
+  border-style: dotted;
+}
+
+.b-dashed {
+  border-style: dashed;
+}
+
+.b-solid {
+  border-style: solid;
+}
+
+.b-10 {
+  border-width: 10px;
+}
+
+.b-double {
+  border-style: double;
+}
+
+.b-groove {
+  border-style: groove;
+}
+
+.b-ridge {
+  border-style: ridge;
+}
+
+.b-inset {
+  border-style: inset;
+}
+
+.b-outset {
+  border-style: outset;
+}
+
 .b-5\/2 {
   border-width: 2.5px;
 }
@@ -4189,59 +4295,6 @@ body.modal-open {
 
 .bx-2 {
   border-inline-width: 2px;
-}
-
-.text-black {
-  color: var(--su-black);
-}
-
-.text-white {
-  color: var(--su-white);
-}
-
-.text-blue {
-  color: var(--su-blue);
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
-}
-
-.pos-rel {
-  position: relative;
-}
-
-.pos-abs {
-  position: absolute;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.mv-x-120\% {
-  --su-tr-x: 120%;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.fw-wrap {
-  flex-wrap: wrap;
-}
-
-.td-u {
-  text-decoration-line: underline;
 }
 
 .bg-gray-100 {
@@ -4303,11 +4356,6 @@ body.modal-open {
 
 .b-gray\/20 {
   border-color: oklch(from var(--su-gray) l c h / 0.2);
-}
-
-.flex-y {
-  display: flex;
-  flex-direction: column;
 }
 
 .fd-row-rev {
@@ -4830,6 +4878,39 @@ body.modal-open {
   display: inline-block;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.td-abbr {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
+.td-l {
+  text-decoration-line: line-through;
+}
+
+.td-del {
+  color: var(--su-red);
+  text-decoration: line-through;
+}
+
+.td-ins {
+  color: var(--su-green);
+  text-decoration: none;
+}
+
+.highlight {
+  background-color: var(--su-highlight);
+  color: marktext;
+}
+
 .p-6px {
   padding: 6px;
 }
@@ -4872,39 +4953,6 @@ body.modal-open {
 
 .h-140px {
   height: 140px;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.td-abbr {
-  border-bottom: 1px dotted;
-  text-decoration: none;
-  cursor: help;
-}
-
-.td-l {
-  text-decoration-line: line-through;
-}
-
-.td-del {
-  color: var(--su-red);
-  text-decoration: line-through;
-}
-
-.td-ins {
-  color: var(--su-green);
-  text-decoration: none;
-}
-
-.highlight {
-  background-color: var(--su-highlight);
-  color: marktext;
 }
 
 .grayscale-50 {
@@ -5207,6 +5255,103 @@ body.modal-open {
   margin: 1.25rem;
 }
 
+.ol-1 {
+  outline-width: 1px;
+}
+
+.outline {
+  outline-width: 1px;
+  outline-style: solid;
+}
+
+.ol-solid {
+  outline-style: solid;
+}
+
+.ol-yellow {
+  outline-color: var(--su-yellow);
+}
+
+.ol-orange {
+  outline-color: var(--su-orange);
+}
+
+.ol-red {
+  outline-color: var(--su-red);
+}
+
+.ol-pink {
+  outline-color: var(--su-pink);
+}
+
+.ol-purple {
+  outline-color: var(--su-purple);
+}
+
+.ol-blue {
+  outline-color: var(--su-blue);
+}
+
+.ol-cyan {
+  outline-color: var(--su-cyan);
+}
+
+.ol-green {
+  outline-color: var(--su-green);
+}
+
+.ol-white {
+  outline-color: var(--su-white);
+}
+
+.ol-gray {
+  outline-color: var(--su-gray);
+}
+
+.ol-black {
+  outline-color: var(--su-black);
+}
+
+.ol-2 {
+  outline-width: 2px;
+}
+
+.ol-accent {
+  outline-color: var(--su-accent);
+}
+
+.ol-none {
+  outline-style: none;
+}
+
+.ol-dotted {
+  outline-style: dotted;
+}
+
+.ol-dashed {
+  outline-style: dashed;
+}
+
+.ol-0 {
+  outline-width: 0;
+}
+
+.ol-3 {
+  outline-width: 3px;
+}
+
+.ol-3px {
+  outline-width: 3px;
+}
+
+.ol-0\.3rem {
+  outline-width: 0.3rem;
+}
+
+.ol-1\/3rem {
+  outline-width: 0.333rem;
+}
+
 .p-0 {
   padding: 0;
 }
@@ -5392,54 +5537,6 @@ body.modal-open {
 
 .h-2 {
   height: 0.5rem;
-}
-
-.b-none {
-  border-style: none;
-}
-
-.b-dotted {
-  border-style: dotted;
-}
-
-.b-dashed {
-  border-style: dashed;
-}
-
-.b-solid {
-  border-style: solid;
-}
-
-.b-10 {
-  border-width: 10px;
-}
-
-.b-double {
-  border-style: double;
-}
-
-.b-groove {
-  border-style: groove;
-}
-
-.b-ridge {
-  border-style: ridge;
-}
-
-.b-inset {
-  border-style: inset;
-}
-
-.b-outset {
-  border-style: outset;
-}
-
-.min-w-25ch {
-  min-width: 25ch;
-}
-
-.b-auto {
-  border-style: auto;
 }
 
 :is([data-color-scheme="dark"] *) {

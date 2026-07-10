@@ -114,6 +114,12 @@
     "border/border-style",
     "border/border-style",
     "border/border-style",
-    "interactivity/cursor"
+    "interactivity/cursor",
+    "interactivity/outline-color",
+    "interactivity/outline-color",
+    "interactivity/outline-width",
+    "interactivity/outline-width",
+    "interactivity/outline-style",
+    "interactivity/outline-style"
   ]
 }

@@ -31,6 +31,9 @@
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
   import MarginCard from "./components/Cards/MarginCard.svelte";
   import ModalCard from "./components/Cards/ModalCard.svelte";
+  import OutlineColorCard from "./components/Cards/OutlineColorCard.svelte";
+  import OutlineStyleCard from "./components/Cards/OutlineStyleCard.svelte";
+  import OutlineWidthCard from "./components/Cards/OutlineWidthCard.svelte";
   import PaddingCard from "./components/Cards/PaddingCard.svelte";
   import PerSideBorderWidthCard from "./components/Cards/PerSideBorderWidthCard.svelte";
   import RotationCard from "./components/Cards/RotationCard.svelte";
@@ -126,6 +129,7 @@
     <BorderColorCard />
     <BorderWidthCard />
     <BorderRadiusCard />
+    <BorderStyleCard />
     <PerSideBorderWidthCard />
     <MarginCard />
     <PaddingCard />    
@@ -136,8 +140,10 @@
     
     <!-- <outline /> -->
     
-    <BorderStyleCard />
     
+    <OutlineColorCard />    
+    <OutlineWidthCard />
+    <OutlineStyleCard />    
     
     <CursorCard />
     <FlexCard />

@@ -1,0 +1,90 @@
+<h1 id="border-style" class="h1">Border Style</h1>
+<p>Utilities for controlling the line style of an element's borders (e.g., solid, dashed, or decorative 3D effects).</p>
+<h2 id="core-utilities" class="h2">Core Utilities</h2>
+<p>The system dynamically processes combinations using the <code>b-</code> prefix followed by any valid standard CSS border style.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declaration</th>
+<th>Visual Appearance Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>b-solid</code></td>
+<td><code>border-style: solid;</code></td>
+<td>A single, solid line.</td>
+</tr>
+<tr>
+<td><code>b-dashed</code></td>
+<td><code>border-style: dashed;</code></td>
+<td>A series of short line segments.</td>
+</tr>
+<tr>
+<td><code>b-dotted</code></td>
+<td><code>border-style: dotted;</code></td>
+<td>A series of round dots.</td>
+</tr>
+<tr>
+<td><code>b-double</code></td>
+<td><code>border-style: double;</code></td>
+<td>Two parallel solid lines with space between them.</td>
+</tr>
+<tr>
+<td><code>b-none</code></td>
+<td><code>border-style: none;</code></td>
+<td>Removes all borders entirely.</td>
+</tr>
+<tr>
+<td><code>b-auto</code></td>
+<td><code>border-style: auto;</code></td>
+<td>Uses the user agent's default rendering behavior.</td>
+</tr>
+<tr>
+<td><code>b-groove</code></td>
+<td><code>border-style: groove;</code></td>
+<td>A 3D groove carved into the canvas (depends on color).</td>
+</tr>
+<tr>
+<td><code>b-ridge</code></td>
+<td><code>border-style: ridge;</code></td>
+<td>A 3D ridge rising out of the canvas (depends on color).</td>
+</tr>
+<tr>
+<td><code>b-inset</code></td>
+<td><code>border-style: inset;</code></td>
+<td>Makes the element appear embedded inside the page layout.</td>
+</tr>
+<tr>
+<td><code>b-outset</code></td>
+<td><code>border-style: outset;</code></td>
+<td>Makes the element appear embossed or raised off the page.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples" class="h2">Examples</h2>
+<p>See below for a structural preview of how each border style renders on an element.</p>
+<div class="card w-fit min-w-25ch flex-y p-3 gap-2">
+<div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-auto">b-auto</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-none">b-none</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-dotted">b-dotted</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-dashed">b-dashed</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-solid">b-solid</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-double">b-double</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-groove">b-groove</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-ridge">b-ridge</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-inset">b-inset</div>
+<div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-outset">b-outset</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="b-2 b-accent b-auto">b-auto&#x3C;/div>
+&#x3C;div class="b-2 b-accent b-none">b-none&#x3C;/div>
+&#x3C;div class="b-2 b-accent b-dotted">b-dotted&#x3C;/div>
+&#x3C;div class="b-2 b-accent b-dashed">b-dashed&#x3C;/div>
+&#x3C;div class="b-2 b-accent b-solid">b-solid&#x3C;/div>
+&#x3C;div class="b-10 b-accent b-double">b-double&#x3C;/div>
+&#x3C;div class="b-10 b-accent b-groove">b-groove&#x3C;/div>
+&#x3C;div class="b-10 b-accent b-ridge">b-ridge&#x3C;/div>
+&#x3C;div class="b-10 b-accent b-inset">b-inset&#x3C;/div>
+&#x3C;div class="b-10 b-accent b-outset">b-outset&#x3C;/div>
+</code></pre>
