@@ -5394,6 +5394,54 @@ body.modal-open {
   height: 0.5rem;
 }
 
+.b-none {
+  border-style: none;
+}
+
+.b-dotted {
+  border-style: dotted;
+}
+
+.b-dashed {
+  border-style: dashed;
+}
+
+.b-solid {
+  border-style: solid;
+}
+
+.b-10 {
+  border-width: 10px;
+}
+
+.b-double {
+  border-style: double;
+}
+
+.b-groove {
+  border-style: groove;
+}
+
+.b-ridge {
+  border-style: ridge;
+}
+
+.b-inset {
+  border-style: inset;
+}
+
+.b-outset {
+  border-style: outset;
+}
+
+.min-w-25ch {
+  min-width: 25ch;
+}
+
+.b-auto {
+  border-style: auto;
+}
+
 :is([data-color-scheme="dark"] *) {
   &.dark\:dotted-white-850 {
     background-position: 0 0;

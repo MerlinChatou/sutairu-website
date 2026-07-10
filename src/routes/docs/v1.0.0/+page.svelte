@@ -12,6 +12,7 @@
   import BlockquoteCard from "./components/Cards/BlockquoteCard.svelte";
   import BorderColorCard from "./components/Cards/BorderColorCard.svelte";  
   import BorderRadiusCard from "./components/Cards/BorderRadiusCard.svelte";
+  import BorderStyleCard from "./components/Cards/BorderStyleCard.svelte";
   import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";
   import ButtonColorCard from "./components/Cards/ButtonCard.svelte";  
   import CardWithHeaderCard from "./components/Cards/CardWithHeaderCard.svelte";
@@ -135,7 +136,7 @@
     
     <!-- <outline /> -->
     
-    
+    <BorderStyleCard />
     
     
     <CursorCard />

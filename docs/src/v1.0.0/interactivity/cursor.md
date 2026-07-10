@@ -32,6 +32,8 @@ The system builds these static rules using the `cur-` prefix. Every keyword auto
 | `cur-row-resize` | `cursor: row-resize;` | Row height handle resizing. |
 
 
+## Examples
+
 Hover over any of the elements below to see the respective mouse cursor behavior in action.
 
 
