@@ -5,7 +5,7 @@
 </script>
 
 <Navbar />
-<div class="container p-4 w-xs flex-y gap-4" data-color-scheme="dark">
+<div class="container p-4 w-xs flex-y gap-4">
   <div>
     <label for="exampleFormControlInputText" class="form-label">Text input</label>
     <input type="text" class="input" id="exampleFormControlInputText" placeholder="Default Input" />
@@ -13,17 +13,17 @@
 
   <div>
     <label for="exampleDisabledInputText" class="form-label">Disabled input</label>
-    <input type="text" class="input" id="exampleFormControlInputText" placeholder="Disabled Input" disabled />
+    <input type="text" class="input" id="exampleDisabledInputText" placeholder="Disabled Input" disabled />
   </div>
 
   <div>
     <label for="exampleVlidInputText" class="form-label">Valid input</label>
-    <input type="text" class="input valid" id="exampleFormControlInputText" placeholder="Valid Input" />
+    <input type="text" class="input valid" id="exampleVlidInputText" placeholder="Valid Input" />
   </div>
 
   <div>
     <label for="exampleInvalidInputText" class="form-label">Invalid input</label>
-    <input type="text" class="input invalid" id="exampleFormControlInputText" placeholder="Invalid Input" />
+    <input type="text" class="input invalid" id="exampleInvalidInputText" placeholder="Invalid Input" />
   </div>
 
   <div>
@@ -55,4 +55,6 @@
       <option value="3">Third choice</option>
     </select>
   </div>
+
+  
 </div>

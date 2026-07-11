@@ -32,33 +32,48 @@
     </div>
     <div class="body d-flex fd-col gap-1" bind:this={body}>
       <div>
-        <label for="exampleFormControlInputText" class="form-label">Text input</label>
-        <input type="text" class="input" id="exampleFormControlInputText" placeholder="Default Input" />
+        <label for="exampleInputText" class="form-label">Text input</label>
+        <input type="text" class="input" id="exampleInputText" placeholder="Default Input" />
       </div>
 
       <div>
-        <label for="exampleFormControlPassword" class="form-label">Password</label>
-        <input type="password" class="input" id="exampleFormControlPassword" placeholder="••••••••" autocomplete="off" />
+        <label for="exampleInputPassword" class="form-label">Password</label>
+        <input type="password" class="input" id="exampleInputPassword" placeholder="••••••••" autocomplete="off" />
       </div>
 
       <div>
-        <label for="exampleFormControlTextarea" class="form-label">Textarea</label>
-        <textarea class="input" id="exampleFormControlTextarea" rows="5" placeholder="Comments"></textarea>
+        <label for="exampleInputTextarea" class="form-label">Textarea</label>
+        <textarea class="input" id="exampleInputTextarea" rows="5" placeholder="Comments"></textarea>
       </div>
 
       <div>
-        <label for="exampleFormFile" class="form-label">File input</label>
-        <input class="input" type="file" id="exampleFormFile" />
+        <label for="exampleInputFormFile" class="form-label">File input</label>
+        <input class="input" type="file" id="exampleInputFormFile" />
       </div>
 
       <div class="bg-container">
-        <label for="exampleFormControlTextarea" class="form-label">Select</label>
-        <select class="input" aria-label="Default select example">
+        <label for="exampleInputSelect" class="form-label">Select</label>
+        <select class="input" aria-label="Default select example" id="exampleInputSelect">
           <option selected>Select</option>
           <option value="1">First choice</option>
           <option value="2">Second choice</option>
           <option value="3">Third choice</option>
         </select>
+      </div>
+
+            <div>
+        <label for="exampleInputDisabled" class="form-label">Disabled input</label>
+        <input type="text" class="input" id="exampleInputDisabled" placeholder="Disabled Input" disabled />
+      </div>
+
+      <div>
+        <label for="exampleInputValid" class="form-label">Valid input</label>
+        <input type="text" class="input valid" id="exampleInputValid" placeholder="Valid Input" />
+      </div>
+
+      <div>
+        <label for="exampleInputInvalid" class="form-label">Invalid input</label>
+        <input type="text" class="input invalid" id="exampleInputInvalid" placeholder="Invalid Input" />
       </div>
     </div>
     <div class="footer text-right">
