@@ -1,27 +1,58 @@
 <script>
-  //import "@merlin-chatou/sutairu-core";
+  import "@fortawesome/fontawesome-free/css/all.min.css";
   import "$lib/generated/sutairu.min.css";
+  import Navbar from "../components/Navbar.svelte";
 </script>
 
+<Navbar />
+<div class="container p-4 w-xs flex-y gap-4" data-color-scheme="dark">
+  <div>
+    <label for="exampleFormControlInputText" class="form-label">Text input</label>
+    <input type="text" class="input" id="exampleFormControlInputText" placeholder="Default Input" />
+  </div>
 
+  <div>
+    <label for="exampleDisabledInputText" class="form-label">Disabled input</label>
+    <input type="text" class="input" id="exampleFormControlInputText" placeholder="Disabled Input" disabled />
+  </div>
 
+  <div>
+    <label for="exampleVlidInputText" class="form-label">Valid input</label>
+    <input type="text" class="input valid" id="exampleFormControlInputText" placeholder="Valid Input" />
+  </div>
 
-<div class="container p-4 flex-y gap-2">
-  <b>Bold</b>
-  <div class="bold">Bold</div>
-  <i>Italic</i>
-  <div class="italic">italic</div>
-  <abbr>abbr</abbr>
-  <div class="td-abbr">abbr</div>
-  <s>Strike</s>
-  <div class="td-l">Strike</div>
-  <u>Underline</u>
-  <div class="td-u">Underline</div>  
-  <o>Overline</o>
-  <del>Deleted</del>
-  <div class="td-del">Deleted</div>  
-  <ins>Inserted</ins>
-  <div class="td-ins">Inserted</div>
-  <mark>Highlight</mark>
-  <div class="highlight">Highlight</div>
+  <div>
+    <label for="exampleInvalidInputText" class="form-label">Invalid input</label>
+    <input type="text" class="input invalid" id="exampleFormControlInputText" placeholder="Invalid Input" />
+  </div>
+
+  <div>
+    <label for="exampleFormControlPassword" class="form-label">Password</label>
+    <input type="password" class="input" id="exampleFormControlPassword" placeholder="••••••••" autocomplete="off" />
+  </div>
+
+  <div>
+    <label for="exampleFormControlTextarea" class="form-label">Textarea</label>
+    <textarea class="input" id="exampleFormControlTextarea" rows="5" placeholder="Comments"></textarea>
+  </div>
+
+  <div>
+    <label for="exampleFormFile" class="form-label">File input</label>
+    <input class="input" type="file" id="exampleFormFile" />
+  </div>
+
+  <div>
+    <label for="exampleFormFileDisabled" class="form-label">Disabled file input</label>
+    <input class="input" type="file" id="exampleFormFileDisabled" disabled />
+  </div>
+
+  <div>
+    <label for="exampleFormSelectList" class="form-label">Select</label>
+    <select class="input" aria-label="Default select example" id="exampleFormSelectList">
+      <option selected>Select</option>
+      <option value="1">First choice</option>
+      <option value="2">Second choice</option>
+      <option value="3">Third choice</option>
+    </select>
+  </div>
 </div>

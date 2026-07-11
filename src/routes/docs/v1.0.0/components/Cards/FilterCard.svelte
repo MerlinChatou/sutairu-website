@@ -45,8 +45,6 @@
       <img class="r-4 filter opacity-10 hover:opacity-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
       <img class="r-4 filter saturate-75 hover:saturate-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
       <img class="r-4 filter sepia-80 hover:sepia-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      
-      
     </div>
     <div class="footer text-right">
       <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/filter">&lt;code&gt;</button>

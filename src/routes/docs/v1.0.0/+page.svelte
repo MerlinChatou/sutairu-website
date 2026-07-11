@@ -140,17 +140,13 @@
     <SizingCard />    
     <ButtonColorCard />
     <CursorCard />
+    <FlexCard />
     <GapCard />
 
 
     <FormCard />
     
     
-     
-  
-
-    
-    <FlexCard />
     <GridCard />
     <StackCard />
     <RotationCard />
