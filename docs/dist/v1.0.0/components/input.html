@@ -1,0 +1,153 @@
+<h1 id="input-elements" class="h1">Input Elements</h1>
+<p>Utilities for styling semantic form components, including text inputs, dropdown select selectors, file upload elements, and explicit validation feedback hooks.</p>
+<h2 id="core-utilities" class="h2">Core Utilities</h2>
+<p>These classes provide base resets and design-token variables mapped to components to ensure design consistency.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input-label</code></td>
+<td>Sets labels to <code>inline-block</code> with structured top spacing parameters.</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Standardizes full-width block sizing, typography metrics, and border token styles.</td>
+</tr>
+</tbody>
+</table>
+<div class="card flex-y gap-2 p-2 w-fit">
+  <div>
+    <label for="exampleInputText" class="input-label">Text input</label>
+    <input type="text" class="input" id="exampleInputText" placeholder="Default Input" />
+  </div>
+  <div>
+    <label for="exampleInputPassword" class="input-label">Password</label>
+    <input type="password" class="input" id="exampleInputPassword" placeholder="••••••••" autocomplete="off" />
+  </div>
+  <div>
+    <label for="exampleInputTextarea" class="input-label">Textarea</label>
+    <textarea class="input" id="exampleInputTextarea" rows="5" placeholder="Comments"></textarea>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div>
+  &#x3C;label for="exampleInputText" class="input-label">Text input&#x3C;/label>
+  &#x3C;input type="text" class="input" id="exampleInputText" placeholder="Default Input" />
+&#x3C;/div>
+
+&#x3C;div>
+  &#x3C;label for="exampleInputPassword" class="input-label">Password&#x3C;/label>
+  &#x3C;input type="password" class="input" id="exampleInputPassword" placeholder="••••••••" autocomplete="off" />
+&#x3C;/div>
+
+&#x3C;div>
+  &#x3C;label for="exampleInputTextarea" class="input-label">Textarea&#x3C;/label>
+  &#x3C;textarea class="input" id="exampleInputTextarea" rows="5" placeholder="Comments">&#x3C;/textarea>
+&#x3C;/div>
+</code></pre>
+<h2 id="form-selectors" class="h2">Form Selectors</h2>
+<p>Adding the standard native <code>&#x3C;select></code> element alongside the utility applies an automated custom background mask layout:</p>
+<ul>
+<li>Hides default native platform arrows via <code>appearance: none</code>.</li>
+<li>Injects a clean arrow shape resource (<code>--su-input-select-image</code>) aligned safely inside the right edge.</li>
+<li>Activates an implicit cursor hover modifier tracking (<code>cursor: pointer</code>).</li>
+</ul>
+<div class="card flex-y gap-2 p-2 w-fit">
+  <div>
+    <label for="exampleInputSelect" class="input-label">Drop-down list</label>
+    <select class="input" aria-label="Default select example" id="exampleInputSelect">
+      <option selected>Select</option>
+      <option value="1">First choice</option>
+      <option value="2">Second choice</option>
+      <option value="3">Third choice</option>
+    </select>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div>
+  &#x3C;label for="exampleInputSelect" class="input-label">Select&#x3C;/label>
+  &#x3C;select class="input" aria-label="Default select example" id="exampleInputSelect">
+    &#x3C;option selected>Select&#x3C;/option>
+    &#x3C;option value="1">First choice&#x3C;/option>
+    &#x3C;option value="2">Second choice&#x3C;/option>
+    &#x3C;option value="3">Third choice&#x3C;/option>
+  &#x3C;/select>
+&#x3C;/div>
+</code></pre>
+<h2 id="file-pickers" class="h2">File Pickers</h2>
+<p>Isolates systemic styles down to native sub-elements using <code>::file-selector-button</code>:</p>
+<ul>
+<li>Normalizes uniform inner button padding parameters while zeroing margins cleanly.</li>
+<li>Handles operational transitions on user pointer action surfaces.</li>
+</ul>
+<div class="card flex-y gap-2 p-2 w-fit">
+  <div>
+    <label for="exampleInputFormFile" class="input-label">File input</label>
+    <input class="input" type="file" id="exampleInputFormFile" />
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div>
+  &#x3C;label for="exampleInputFormFile" class="input-label">File input&#x3C;/label>
+  &#x3C;input class="input" type="file" id="exampleInputFormFile" />
+&#x3C;/div>
+</code></pre>
+<h2 id="component-disabled-modifiers" class="h2">Component Disabled Modifiers</h2>
+<p>Applies a clean structural fallback state instantly across elements when explicitly marking components with <code>:disabled</code> or semantic <code>aria-disabled="true"</code> validation attributes:</p>
+<ul>
+<li>Forces a contextual fallback cursor reset (<code>cursor: not-allowed</code>).</li>
+<li>Diminishes inner text, button components, and active custom placeholder values.</li>
+</ul>
+<div class="card flex-y gap-2 p-2 w-fit">
+  <div>
+    <label for="exampleInputDisabled" class="input-label">Disabled input</label>
+    <input type="text" class="input" id="exampleInputDisabled" placeholder="Disabled Input" disabled />
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div>
+  &#x3C;label for="exampleInputDisabled" class="input-label">Disabled input&#x3C;/label>
+  &#x3C;input type="text" class="input" id="exampleInputDisabled" placeholder="Disabled Input" disabled />
+&#x3C;/div>
+</code></pre>
+<h2 id="validation-indicators" class="h2">Validation Indicators</h2>
+<p>Provide fast structural indicator hooks using state modifiers attached directly to the primary selector node.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-state Modifier Selector</th>
+<th>Intent Context Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input.valid</code></td>
+<td>Clear confirmation check validations.</td>
+</tr>
+<tr>
+<td><code>input.invalid</code></td>
+<td>Alerts missing data or parsing format failures.</td>
+</tr>
+</tbody>
+</table>
+<div class="card flex-y gap-2 p-2 w-fit">
+  <div>
+    <label for="exampleInputValid" class="input-label">Valid input</label>
+    <input type="text" class="input valid" id="exampleInputValid" placeholder="Valid Input" />
+  </div>
+  <div>
+    <label for="exampleInputInvalid" class="input-label">Invalid input</label>
+    <input type="text" class="input invalid" id="exampleInputInvalid" placeholder="Invalid Input" />
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div>
+  &#x3C;label for="exampleInputValid" class="input-label">Valid input&#x3C;/label>
+  &#x3C;input type="text" class="input valid" id="exampleInputValid" placeholder="Valid Input" />
+&#x3C;/div>
+
+&#x3C;div>
+  &#x3C;label for="exampleInputInvalid" class="input-label">Invalid input&#x3C;/label>
+  &#x3C;input type="text" class="input invalid" id="exampleInputInvalid" placeholder="Invalid Input" />
+&#x3C;/div>
+</code></pre>

@@ -30,7 +30,7 @@
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Form</h4>
     </div>
-    <div class="body d-flex fd-col gap-1" bind:this={body}>
+    <div class="body d-flex fd-col gap-0" bind:this={body}>
       <div>
         <label for="exampleInputText" class="input-label">Text input</label>
         <input type="text" class="input" id="exampleInputText" placeholder="Default Input" />
@@ -51,7 +51,7 @@
         <input class="input" type="file" id="exampleInputFormFile" />
       </div>
 
-      <div class="bg-container">
+      <div>
         <label for="exampleInputSelect" class="input-label">Select</label>
         <select class="input" aria-label="Default select example" id="exampleInputSelect">
           <option selected>Select</option>
@@ -61,7 +61,7 @@
         </select>
       </div>
 
-            <div>
+      <div>
         <label for="exampleInputDisabled" class="input-label">Disabled input</label>
         <input type="text" class="input" id="exampleInputDisabled" placeholder="Disabled Input" disabled />
       </div>
@@ -77,7 +77,7 @@
       </div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/button">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/input">&lt;code&gt;</button>
     </div>
   </div>
 {/if}
