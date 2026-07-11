@@ -32,27 +32,27 @@
     </div>
     <div class="body d-flex fd-col gap-1" bind:this={body}>
       <div>
-        <label for="exampleInputText" class="form-label">Text input</label>
+        <label for="exampleInputText" class="input-label">Text input</label>
         <input type="text" class="input" id="exampleInputText" placeholder="Default Input" />
       </div>
 
       <div>
-        <label for="exampleInputPassword" class="form-label">Password</label>
+        <label for="exampleInputPassword" class="input-label">Password</label>
         <input type="password" class="input" id="exampleInputPassword" placeholder="••••••••" autocomplete="off" />
       </div>
 
       <div>
-        <label for="exampleInputTextarea" class="form-label">Textarea</label>
+        <label for="exampleInputTextarea" class="input-label">Textarea</label>
         <textarea class="input" id="exampleInputTextarea" rows="5" placeholder="Comments"></textarea>
       </div>
 
       <div>
-        <label for="exampleInputFormFile" class="form-label">File input</label>
+        <label for="exampleInputFormFile" class="input-label">File input</label>
         <input class="input" type="file" id="exampleInputFormFile" />
       </div>
 
       <div class="bg-container">
-        <label for="exampleInputSelect" class="form-label">Select</label>
+        <label for="exampleInputSelect" class="input-label">Select</label>
         <select class="input" aria-label="Default select example" id="exampleInputSelect">
           <option selected>Select</option>
           <option value="1">First choice</option>
@@ -62,17 +62,17 @@
       </div>
 
             <div>
-        <label for="exampleInputDisabled" class="form-label">Disabled input</label>
+        <label for="exampleInputDisabled" class="input-label">Disabled input</label>
         <input type="text" class="input" id="exampleInputDisabled" placeholder="Disabled Input" disabled />
       </div>
 
       <div>
-        <label for="exampleInputValid" class="form-label">Valid input</label>
+        <label for="exampleInputValid" class="input-label">Valid input</label>
         <input type="text" class="input valid" id="exampleInputValid" placeholder="Valid Input" />
       </div>
 
       <div>
-        <label for="exampleInputInvalid" class="form-label">Invalid input</label>
+        <label for="exampleInputInvalid" class="input-label">Invalid input</label>
         <input type="text" class="input invalid" id="exampleInputInvalid" placeholder="Invalid Input" />
       </div>
     </div>

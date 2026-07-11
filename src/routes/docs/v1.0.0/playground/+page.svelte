@@ -7,47 +7,47 @@
 <Navbar />
 <div class="container p-4 w-xs flex-y gap-4">
   <div>
-    <label for="exampleFormControlInputText" class="form-label">Text input</label>
+    <label for="exampleFormControlInputText" class="input-label">Text input</label>
     <input type="text" class="input" id="exampleFormControlInputText" placeholder="Default Input" />
   </div>
 
   <div>
-    <label for="exampleDisabledInputText" class="form-label">Disabled input</label>
+    <label for="exampleDisabledInputText" class="input-label">Disabled input</label>
     <input type="text" class="input" id="exampleDisabledInputText" placeholder="Disabled Input" disabled />
   </div>
 
   <div>
-    <label for="exampleVlidInputText" class="form-label">Valid input</label>
+    <label for="exampleVlidInputText" class="input-label">Valid input</label>
     <input type="text" class="input valid" id="exampleVlidInputText" placeholder="Valid Input" />
   </div>
 
   <div>
-    <label for="exampleInvalidInputText" class="form-label">Invalid input</label>
+    <label for="exampleInvalidInputText" class="input-label">Invalid input</label>
     <input type="text" class="input invalid" id="exampleInvalidInputText" placeholder="Invalid Input" />
   </div>
 
   <div>
-    <label for="exampleFormControlPassword" class="form-label">Password</label>
+    <label for="exampleFormControlPassword" class="input-label">Password</label>
     <input type="password" class="input" id="exampleFormControlPassword" placeholder="••••••••" autocomplete="off" />
   </div>
 
   <div>
-    <label for="exampleFormControlTextarea" class="form-label">Textarea</label>
+    <label for="exampleFormControlTextarea" class="input-label">Textarea</label>
     <textarea class="input" id="exampleFormControlTextarea" rows="5" placeholder="Comments"></textarea>
   </div>
 
   <div>
-    <label for="exampleFormFile" class="form-label">File input</label>
+    <label for="exampleFormFile" class="input-label">File input</label>
     <input class="input" type="file" id="exampleFormFile" />
   </div>
 
   <div>
-    <label for="exampleFormFileDisabled" class="form-label">Disabled file input</label>
+    <label for="exampleFormFileDisabled" class="input-label">Disabled file input</label>
     <input class="input" type="file" id="exampleFormFileDisabled" disabled />
   </div>
 
   <div>
-    <label for="exampleFormSelectList" class="form-label">Select</label>
+    <label for="exampleFormSelectList" class="input-label">Select</label>
     <select class="input" aria-label="Default select example" id="exampleFormSelectList">
       <option selected>Select</option>
       <option value="1">First choice</option>
