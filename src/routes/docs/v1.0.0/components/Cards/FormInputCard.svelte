@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
   import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
-  import { fade } from "svelte/transition";
+  
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -26,7 +26,7 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-0" id="form" bind:this={cardEl}>
+  <div class="card opacity-0" id="form-input" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Form Input</h4>
     </div>

@@ -77,6 +77,12 @@
     "core/variant-modifier",
     "core/variant-modifier",
     "core/variant-modifier",
-    "core/variant-modifier"
+    "core/variant-modifier",
+    "core/variant-modifier",
+    "core/variant-modifier",
+    "core/variant-modifier",
+    "core/variant-modifier",
+    "components/group",
+    "components/group"
   ]
 }

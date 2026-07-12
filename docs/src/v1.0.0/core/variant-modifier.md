@@ -134,7 +134,8 @@ Apply these prefixes directly to individual items inside a loop. They target the
 
 By applying these self-targeting modifiers directly to the repeating child nodes, each element independently evaluates its structural index to resolve its background treatment relative to its structural siblings.
 
-<div class="flex-x gap-1 w-fit">
+
+<div class="card p-2 flex-x gap-1 w-fit">
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 1</div>
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 2</div>
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 3</div>
@@ -175,7 +176,7 @@ Apply these prefixes directly to individual items inside a loop. They target the
 By declaring the child-targeting variants on the container element, the layout instantly coordinates alternating background patterns alongside specific treatments for the boundary items without requiring a single class on the inner children.
 
 
-<div class="flex-x gap-1 w-fit odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
+<div class="card p-2 flex-x gap-1 w-fit odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
   <div class="p-2 r-2">Item 1</div>
   <div class="p-2 r-2">Item 2</div>
   <div class="p-2 r-2">Item 3</div>

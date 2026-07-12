@@ -329,7 +329,7 @@
   --su-ls-h6: -0.01em;
 
   /* Default border colors*/
-  --su-border: oklch(from var(--su-accent) 94% 0.01 h);
+  --su-border: oklch(from var(--su-accent) 92% 0.01 h);
 
 }
 
@@ -2424,6 +2424,7 @@
 .btn {
   appearance: button;
   display: inline-flex;
+  color: var(--su-body);
   align-items: center;
   justify-content: center;
   line-height: 1;
@@ -3170,6 +3171,7 @@
   outline-width: var(--su-input-ol-width-focus-visible);
   outline-offset: 1px;
   outline-style: solid;
+  z-index: 1;
 }
 
 .input:is(:disabled, [aria-disabled="true"]) {
@@ -3408,19 +3410,56 @@ body.modal-open {
   outline-offset: 1px;
 }
 
-.group-fluid {
+.input-group {
   display: flex;
+  align-item: stretch;
+  justify-content: center;
   width: 100%;
+  border-radius: var(--su-input-border-radius);
+  border-color: var(--su-input-border-color);
+  border-radius: var(--su-input-border-radius);
+  border-width: var(--su-input-border-width);
+  border-style: solid;
 }
 
-.group-item {
-  position: relative;
-  flex: 0 1 auto;
-  min-width: 0;
+.input-group > :is(span, .btn) {
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  align-content: center;
 }
 
-.group-item-fluid {
-  flex: 1 1 auto;
+.input-group > * {
+  border-width: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+.input-group:not(.r-pill) > *:first-child {
+  border-top-left-radius: var(--su-input-border-radius);
+  border-bottom-left-radius: var(--su-input-border-radius);
+}
+
+.input-group:not(.r-pill) > *:last-child {
+  border-top-right-radius: var(--su-input-border-radius);
+  border-bottom-right-radius: var(--su-input-border-radius);
+}
+
+.input-group.r-pill > *:first-child {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.input-group.r-pill > *:last-child {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.input-group.valid {
+  border-color: var(--su-input-border-valid);
+}
+
+.input-group.invalid {
+  border-color: var(--su-input-border-invalid);
 }
 
 .modal-scroll {
@@ -4198,68 +4237,6 @@ body.modal-open {
   border-color: oklch(from color-mix(in oklch, var(--su-purple), #fff 40%) l c h / 0.4);
 }
 
-.text-black {
-  color: var(--su-black);
-}
-
-.text-white {
-  color: var(--su-white);
-}
-
-.text-blue {
-  color: var(--su-blue);
-}
-
-.b-blue {
-  border-color: var(--su-blue);
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
-}
-
-.pos-rel {
-  position: relative;
-}
-
-.pos-abs {
-  position: absolute;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.mv-x-120\% {
-  --su-tr-x: 120%;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.fw-wrap {
-  flex-wrap: wrap;
-}
-
-.td-u {
-  text-decoration-line: underline;
-}
-
-.flex-y {
-  display: flex;
-  flex-direction: column;
-}
-
 .b-yellow {
   border-color: var(--su-yellow);
 }
@@ -4274,6 +4251,10 @@ body.modal-open {
 
 .b-purple {
   border-color: var(--su-purple);
+}
+
+.b-blue {
+  border-color: var(--su-blue);
 }
 
 .b-cyan {
@@ -4379,6 +4360,11 @@ body.modal-open {
   min-width: 25ch;
 }
 
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+
 .b-auto {
   border-style: auto;
 }
@@ -4467,33 +4453,57 @@ body.modal-open {
   border-inline-width: 2px;
 }
 
-.bg-gray-100 {
-  background-color: color-mix(in oklch, var(--su-gray), #fff 80%);
+.text-black {
+  color: var(--su-black);
 }
 
-.max-w-xs {
-  max-width: 20rem;
+.text-white {
+  color: var(--su-white);
 }
 
-.text-gray-400 {
-  color: color-mix(in oklch, var(--su-gray), #fff 20%);
+.text-blue {
+  color: var(--su-blue);
 }
 
-.h4 {
-  line-height: var(--su-lh-title);
-  color: var(--su-title);
-  font-size: var(--su-fs-h4);
-  letter-spacing: var(--su-ls-h4);
-  font-weight: var(--su-fw-h4);
+.p-4 {
+  padding: 1rem;
 }
 
-.flex-x {
-  display: flex;
-  flex-direction: row;
+.pr-4 {
+  padding-right: 1rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.mv-x-120\% {
+  --su-tr-x: 120%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.fw-wrap {
+  flex-wrap: wrap;
+}
+
+.td-u {
+  text-decoration-line: underline;
 }
 
 .outline {
@@ -4655,6 +4665,35 @@ body.modal-open {
 
 .ol-1\/2vmin {
   outline-width: 0.5vmin;
+}
+
+.bg-gray-100 {
+  background-color: color-mix(in oklch, var(--su-gray), #fff 80%);
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.text-gray-400 {
+  color: color-mix(in oklch, var(--su-gray), #fff 20%);
+}
+
+.h4 {
+  line-height: var(--su-lh-title);
+  color: var(--su-title);
+  font-size: var(--su-fs-h4);
+  letter-spacing: var(--su-ls-h4);
+  font-weight: var(--su-fw-h4);
+}
+
+.flex-x {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .text-right {
@@ -4832,96 +4871,6 @@ body.modal-open {
 
 .h-full {
   height: 100%;
-}
-
-.d-grid {
-  display: grid;
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.gap-x-8 {
-  column-gap: 2rem;
-}
-
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.b-accent\/50 {
-  border-color: oklch(from var(--su-accent) l c h / 0.5);
-}
-
-.stripes-accent\/20 {
-  background-image: repeating-linear-gradient(
-                  var(--su-pattern-angle, 135deg),
-                  oklch(from var(--su-accent) l c h / 0.2) 0,
-                  oklch(from var(--su-accent) l c h / 0.2) var(--su-pattern-w, 10px),
-                  transparent calc(var(--su-pattern-w, 10px) + 1px),
-                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
-                );
-}
-
-.bg-accent-200\/20 {
-  background-color: oklch(from color-mix(in oklch, var(--su-accent), #fff 60%) l c h / 0.2);
-}
-
-.py-8 {
-  padding-block: 2rem;
-}
-
-.px-4 {
-  padding-inline: 1rem;
-}
-
-.py-1\/2 {
-  padding-block: 0.125rem;
-}
-
-.py-10vh {
-  padding-block: 10vh;
-}
-
-.px-5vw {
-  padding-inline: 5vw;
-}
-
-.b-accent\/30 {
-  border-color: oklch(from var(--su-accent) l c h / 0.3);
-}
-
-.hatching-accent\/30 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: repeating-linear-gradient(
-        var(--su-pattern-angle, 135deg),
-          oklch(from var(--su-accent) l c h / 0.3) 0,
-          oklch(from var(--su-accent) l c h / 0.3) var(--su-pattern-w, 1px),
-          transparent 0,
-          transparent 50%
-        );
-}
-
-.m-4 {
-  margin: 1rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.\-mt-12 {
-  margin-top: -3rem;
-}
-
-.mx-5vw {
-  margin-inline: 5vw;
 }
 
 .mb-3 {
@@ -5117,6 +5066,96 @@ body.modal-open {
   white-space: break-spaces;
 }
 
+.d-grid {
+  display: grid;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-x-8 {
+  column-gap: 2rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.b-accent\/30 {
+  border-color: oklch(from var(--su-accent) l c h / 0.3);
+}
+
+.hatching-accent\/30 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: repeating-linear-gradient(
+        var(--su-pattern-angle, 135deg),
+          oklch(from var(--su-accent) l c h / 0.3) 0,
+          oklch(from var(--su-accent) l c h / 0.3) var(--su-pattern-w, 1px),
+          transparent 0,
+          transparent 50%
+        );
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.\-mt-12 {
+  margin-top: -3rem;
+}
+
+.mx-5vw {
+  margin-inline: 5vw;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.b-accent\/50 {
+  border-color: oklch(from var(--su-accent) l c h / 0.5);
+}
+
+.stripes-accent\/20 {
+  background-image: repeating-linear-gradient(
+                  var(--su-pattern-angle, 135deg),
+                  oklch(from var(--su-accent) l c h / 0.2) 0,
+                  oklch(from var(--su-accent) l c h / 0.2) var(--su-pattern-w, 10px),
+                  transparent calc(var(--su-pattern-w, 10px) + 1px),
+                  transparent var(--su-pattern-p, calc(var(--su-pattern-w, 10px) * 2))
+                );
+}
+
+.bg-accent-200\/20 {
+  background-color: oklch(from color-mix(in oklch, var(--su-accent), #fff 60%) l c h / 0.2);
+}
+
+.py-8 {
+  padding-block: 2rem;
+}
+
+.px-4 {
+  padding-inline: 1rem;
+}
+
+.py-1\/2 {
+  padding-block: 0.125rem;
+}
+
+.py-10vh {
+  padding-block: 10vh;
+}
+
+.px-5vw {
+  padding-inline: 5vw;
+}
+
 .bg-gray-200 {
   background-color: color-mix(in oklch, var(--su-gray), #fff 60%);
 }
@@ -5267,10 +5306,6 @@ body.modal-open {
 
 .h-140px {
   height: 140px;
-}
-
-.w-xs {
-  width: 20rem;
 }
 
 .grayscale-50 {
@@ -5545,6 +5580,38 @@ body.modal-open {
   grid-row: span 2;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.bg-subtle-600 {
+  background-color: color-mix(in oklch, var(--su-subtle), #000 20%);
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.fs-0\.9rem {
+  font-size: 0.9rem;
+}
+
 .h5 {
   line-height: var(--su-lh-title);
   color: var(--su-title);
@@ -5567,10 +5634,6 @@ body.modal-open {
 
 .m-1 {
   margin: 0.25rem;
-}
-
-.m-2 {
-  margin: 0.5rem;
 }
 
 .m-3 {
@@ -5768,10 +5831,6 @@ body.modal-open {
   text-decoration-line: line-through;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -5813,6 +5872,10 @@ body.modal-open {
     border-color: var(--su-black);
   }
   
+  &.dark\:ol-black {
+    outline-color: var(--su-black);
+  }
+  
   &.dark\:bg-green {
     background-color: var(--su-green);
   }
@@ -5821,12 +5884,12 @@ body.modal-open {
     color: var(--su-white);
   }
   
-  &.dark\:ol-black {
-    outline-color: var(--su-black);
-  }
-  
   &.dark\:bg-gray-700 {
     background-color: color-mix(in oklch, var(--su-gray), #000 40%);
+  }
+  
+  &.dark\:bg-subtle-400 {
+    background-color: color-mix(in oklch, var(--su-subtle), #fff 20%);
   }
   
   &.dark\:stripes-accent-700 {
@@ -5918,10 +5981,6 @@ body.modal-open {
   
   .hover\:bg-gray\/10:hover {
     background-color: oklch(from var(--su-gray) l c h / 0.1);
-  }
-  
-  .hover\:bg-accent:hover {
-    background-color: var(--su-accent);
   }
   
   .hover\:blur-8:hover {

@@ -27,19 +27,19 @@
 </script>
 
 <div class="md:pos-abs md:left-middle d-none md:d-block">
-  <div class="group-fluid b-1 ov-hidden r-pill fs-sm md:w-md">
-    <span class="group-item bg-subtle bg-opacity-0 br-0 p-2"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></span>
+  <div class="input-group b-1 r-pill fs-sm md:w-md">
+    <span class="bg-opacity-0"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></span>
     <input
       id="search-text"
       type="text"
-      class="group-item-fluid input br-0"
+      class="input br-0"
       placeholder="Search"
       aria-label="Search"
       aria-describedby="basic-addon1"
       bind:this={searchInput}
       on:input={handleInput}
     />
-    <button id="search-clear" class="group-item btn hover:bg-accent p-2" aria-label="Reset search bar" on:click={clear}>
+    <button id="search-clear" class="btn btn-primary" aria-label="Reset search bar" on:click={clear}>
       <i class="fa-solid fa-xmark"></i>
     </button>
   </div>

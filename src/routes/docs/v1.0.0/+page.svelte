@@ -19,15 +19,15 @@
   import CardWithImageHeaderCard from "./components/Cards/CardWithImageHeaderCard.svelte";
   import CodeHighlightCard from "./components/Cards/CodeHighlightCard.svelte";
   import ColorSchemeCard from "./components/Cards/ColorSchemeCard.svelte";
-  import CursorCard from "./components/Cards/CursorCard.svelte";
-  import PatternCard from "./components/Cards/PatternCard.svelte";
+  import CursorCard from "./components/Cards/CursorCard.svelte";  
   import FilterCard from "./components/Cards/FilterCard.svelte";
   import FlexCard from "./components/Cards/FlexCard.svelte";
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
   import FontWeightCard from "./components/Cards/FontWeightCard.svelte";
-  import FormCard from "./components/Cards/FormCard.svelte";
+  import FormInputCard from "./components/Cards/FormInputCard.svelte";
   import GapCard from "./components/Cards/GapCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
+  import GroupCard from "./components/Cards/GroupCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";  
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
   import MarginCard from "./components/Cards/MarginCard.svelte";
@@ -36,6 +36,7 @@
   import OutlineStyleCard from "./components/Cards/OutlineStyleCard.svelte";
   import OutlineWidthCard from "./components/Cards/OutlineWidthCard.svelte";
   import PaddingCard from "./components/Cards/PaddingCard.svelte";
+  import PatternCard from "./components/Cards/PatternCard.svelte";
   import PerSideBorderWidthCard from "./components/Cards/PerSideBorderWidthCard.svelte";
   import RotationCard from "./components/Cards/RotationCard.svelte";
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
@@ -139,12 +140,13 @@
     <PaddingCard />    
     <SizingCard />    
     <ButtonColorCard />
-    <CursorCard />
+    <FormInputCard />
     <FlexCard />
     <GapCard />
+    <GroupCard />
+    <CursorCard />
 
-
-    <FormCard />
+    
     
     
     <GridCard />
