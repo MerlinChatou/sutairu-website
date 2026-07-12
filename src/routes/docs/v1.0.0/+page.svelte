@@ -144,10 +144,12 @@
     <FormInputCard />
     <FlexCard />
     <GapCard />
-    <InputGroupCard />
+    
     <CursorCard />
     <AspectRatioCard />
     
+
+    <InputGroupCard />
     
     <GridCard />
     <StackCard />

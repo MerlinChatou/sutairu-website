@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
   import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
-  
+
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -30,14 +30,40 @@
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Input Group</h4>
     </div>
-    <div class="body d-flex fd-col gap-0" bind:this={body}>
-        
-      <div class="group-row border bg-container r-2">
-        <img src="/images/rustine.png" alt="Rustine the dog" class="group-item h-10 w-10 shrink-0 m-2 r-circle bg-subtle-600 dark:bg-subtle-400" />
-        <div class="group-item p-2 pb-4 grow-0">
-          <div class="bold mt-2">Rustine the dog</div>
-          <div class="mt-4 fs-0.9rem">Rustine is Merlin Chatou's faithful four-legged sidekick.</div>    
-        </div>
+    <div class="body d-flex fd-col gap-4" bind:this={body}>
+      <div class="input-group">
+        <span class="bg-subtle">$</span>
+        <input type="text" class="input" placeholder="Amount" />
+        <button class="btn btn-secondary">Donate</button>
+      </div>
+
+      <div class="input-group max-w-md r-pill">
+        <span class="bg-subtle">$</span>
+        <input type="text" class="input" placeholder="Amount" />
+        <button class="btn btn-secondary">Donate</button>
+      </div>
+
+      <div class="input-group max-w-md fs-3xl">
+        <span class="bg-subtle">$</span>
+        <input type="text" class="input" placeholder="Amount" />
+        <button class="btn btn-secondary">Donate</button>
+      </div>
+
+      <div class="input-group max-w-md">
+        <span class="bg-subtle"><i class="fa-solid fa-user"></i></span>
+        <input type="text" class="input" placeholder="Username" />
+        <span class="bg-subtle"><i class="fa-solid fa-lock"></i></span>
+        <input type="password" class="input" placeholder="••••••••" />
+      </div>
+
+      <div class="input-group max-w-md valid">
+        <span class="bg-subtle"><i class="fa-solid fa-check text-green"></i></span>
+        <input type="text" class="input" placeholder="Valid group" />
+      </div>
+
+      <div class="input-group max-w-md invalid">
+        <span class="bg-subtle"><i class="fa-solid fa-xmark text-red"></i></span>
+        <input type="text" class="input" placeholder="Invalid group" />
       </div>
     </div>
     <div class="footer text-right">

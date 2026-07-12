@@ -1,1 +1,86 @@
 <h1 id="input-group" class="h1">Input Group</h1>
+<p>Utilities for seamlessly stacking buttons, text add-ons, and form controls together into unified horizontal fields.</p>
+<h2 id="core-utilities" class="h2">Core Utilities</h2>
+<p>These components establish a Flexbox context and manage structural styling rules for child nodes, normalizing text indicators and layout wrappers.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input-group</code></td>
+<td>Wrapper Box</td>
+<td>Establishes a seamless, full-width structural layout container with standard theme outlines.</td>
+</tr>
+</tbody>
+</table>
+<div class="card p-4 flex-y gap-4 max-w-sm">
+  <div class="input-group">
+    <span class="bg-subtle">$</span>
+    <input type="text" class="input" placeholder="Amount" />
+    <button class="btn btn-primary">Donate</button>
+  </div>
+  <div class="input-group">
+    <span class="bg-container"><i class="fa-solid fa-user"></i></span>
+    <input type="text" class="input" placeholder="Username" />
+    <span class="bg-container"><i class="fa-solid fa-lock"></i></span>
+    <input type="password" class="input" placeholder="••••••••" />
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="input-group">
+  &#x3C;span class="bg-subtle">$&#x3C;/span>
+  &#x3C;input type="text" class="input" placeholder="Amount" />
+  &#x3C;button class="btn btn-primary">Donate&#x3C;/button>
+&#x3C;/div>
+
+&#x3C;div class="input-group">
+  &#x3C;span class="bg-container">&#x3C;i class="fa-solid fa-user">&#x3C;/i>&#x3C;/span>
+  &#x3C;input type="text" class="input" placeholder="Username" />
+  &#x3C;span class="bg-container">&#x3C;i class="fa-solid fa-lock">&#x3C;/i>&#x3C;/span>
+  &#x3C;input type="password" class="input" placeholder="••••••••" />
+&#x3C;/div>
+</code></pre>
+<h2 id="validation-status-blocks" class="h2">Validation Status Blocks</h2>
+<p>Provide immediate structural theme indications across the collective outline boundary box using active status modifier flags.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-state Modifier Selector</th>
+<th>Context Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input-group.valid</code></td>
+<td>Signals successful collection fields.</td>
+</tr>
+<tr>
+<td><code>input-group.invalid</code></td>
+<td>Signals block errors or incomplete inputs.</td>
+</tr>
+</tbody>
+</table>
+<div class="card p-4 flex-y gap-4 max-w-sm">
+  <div class="input-group max-w-md valid">
+    <span class="bg-green-50 dark:bg-green-820"><i class="fa-solid fa-check text-green"></i></span>
+    <input type="text" class="input" placeholder="Valid group" />
+  </div>
+  <div class="input-group max-w-md invalid">
+    <span class="bg-red-50 dark:bg-red-820"><i class="fa-solid fa-xmark text-red"></i></span>
+    <input type="text" class="input" placeholder="Invalid group" />
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="input-group max-w-md valid">
+  &#x3C;span class="bg-green-50 dark:bg-green-820">&#x3C;i class="fa-solid fa-check text-green">&#x3C;/i>&#x3C;/span>
+  &#x3C;input type="text" class="input" placeholder="Valid group" />
+&#x3C;/div>
+
+&#x3C;div class="input-group max-w-md invalid">
+  &#x3C;span class="bg-red-50 dark:bg-red-820">&#x3C;i class="fa-solid fa-xmark text-red">&#x3C;/i>&#x3C;/span>
+  &#x3C;input type="text" class="input" placeholder="Invalid group" />
+&#x3C;/div>
+</code></pre>
