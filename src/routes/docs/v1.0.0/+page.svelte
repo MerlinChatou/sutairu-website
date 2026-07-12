@@ -7,6 +7,7 @@
   import Navbar from "./components/Navbar.svelte";
 
   import AlignmentCard from "./components/Cards/AlignmentCard.svelte";
+  import AspectRatioCard from "./components/Cards/AspectRatioCard.svelte";
   import BackgroundColorCard from "./components/Cards/BackgroundColorCard.svelte";
   import BadgeCard from "./components/Cards/BadgeCard.svelte";
   import BlockquoteCard from "./components/Cards/BlockquoteCard.svelte";
@@ -27,7 +28,7 @@
   import FormInputCard from "./components/Cards/FormInputCard.svelte";
   import GapCard from "./components/Cards/GapCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
-  import GroupCard from "./components/Cards/GroupCard.svelte";
+  import InputGroupCard from "./components/Cards/InputGroupCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";  
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
   import MarginCard from "./components/Cards/MarginCard.svelte";
@@ -143,10 +144,10 @@
     <FormInputCard />
     <FlexCard />
     <GapCard />
-    <GroupCard />
+    <InputGroupCard />
     <CursorCard />
 
-    
+    <AspectRatioCard />
     
     
     <GridCard />

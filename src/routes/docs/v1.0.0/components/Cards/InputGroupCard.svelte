@@ -26,9 +26,9 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-0" id="group" bind:this={cardEl}>
+  <div class="card opacity-0" id="input-group" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Group</h4>
+      <h4 class="h4">Input Group</h4>
     </div>
     <div class="body d-flex fd-col gap-0" bind:this={body}>
         
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/group">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/input-group">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

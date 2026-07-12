@@ -5580,38 +5580,6 @@ body.modal-open {
   grid-row: span 2;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
-.bg-subtle-600 {
-  background-color: color-mix(in oklch, var(--su-subtle), #000 20%);
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.grow-0 {
-  flex-grow: 0;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.fs-0\.9rem {
-  font-size: 0.9rem;
-}
-
 .h5 {
   line-height: var(--su-lh-title);
   color: var(--su-title);
@@ -5634,6 +5602,10 @@ body.modal-open {
 
 .m-1 {
   margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .m-3 {
@@ -5831,6 +5803,10 @@ body.modal-open {
   text-decoration-line: line-through;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -5845,6 +5821,74 @@ body.modal-open {
 
 .h-2 {
   height: 0.5rem;
+}
+
+.fs-0\.85rem {
+  font-size: 0.85rem;
+}
+
+.ar-16\/9 {
+  aspect-ratio: 16/9;
+}
+
+.ar-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ar-0\.6 {
+  aspect-ratio: 0.6;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.bg-subtle-600 {
+  background-color: color-mix(in oklch, var(--su-subtle), #000 20%);
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.fs-0\.9rem {
+  font-size: 0.9rem;
+}
+
+.ai-start {
+  align-items: start;
+}
+
+.min-w-100px {
+  min-width: 100px;
+}
+
+.ar-video {
+  aspect-ratio: 16 / 9;
+}
+
+.ar-cinema {
+  aspect-ratio: 21 / 9;
+}
+
+.ar-2 {
+  aspect-ratio: 2;
+}
+
+.ar-9\/16 {
+  aspect-ratio: 9/16;
+}
+
+.ar-0\.8 {
+  aspect-ratio: 0.8;
 }
 
 :is([data-color-scheme="dark"] *) {
@@ -5888,10 +5932,6 @@ body.modal-open {
     background-color: color-mix(in oklch, var(--su-gray), #000 40%);
   }
   
-  &.dark\:bg-subtle-400 {
-    background-color: color-mix(in oklch, var(--su-subtle), #fff 20%);
-  }
-  
   &.dark\:stripes-accent-700 {
     background-image: repeating-linear-gradient(
                     var(--su-pattern-angle, 135deg),
@@ -5920,6 +5960,10 @@ body.modal-open {
   
   &.dark\:bg-page-400 {
     background-color: color-mix(in oklch, var(--su-page), #fff 20%);
+  }
+  
+  &.dark\:bg-subtle-400 {
+    background-color: color-mix(in oklch, var(--su-subtle), #fff 20%);
   }
 }
 

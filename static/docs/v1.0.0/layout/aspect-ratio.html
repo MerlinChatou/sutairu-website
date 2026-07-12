@@ -1,0 +1,59 @@
+<h1 id="aspect-ratio" class="h1">Aspect Ratio</h1>
+<p>Utilities for controlling the aspect ratio of elements, ensuring precise proportional boxes for media containers, card layouts, and responsive grids.</p>
+<h2 id="semantic-utilities" class="h2">Semantic Utilities</h2>
+<p>A collection of pre-configured keywords mapping to standard digital media and cinema display standards.</p>
+<table>
+<thead>
+<tr>
+<th>Utility Class</th>
+<th>CSS Declaration</th>
+<th>Intended UI Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ar-auto</code></td>
+<td><code>aspect-ratio: auto;</code></td>
+<td>Relies on the element's natural intrinsic dimensions.</td>
+</tr>
+<tr>
+<td><code>ar-square</code></td>
+<td><code>aspect-ratio: 1 / 1;</code></td>
+<td>Perfect square boxes (e.g., avatars, user profile thumbs).</td>
+</tr>
+<tr>
+<td><code>ar-video</code></td>
+<td><code>aspect-ratio: 16 / 9;</code></td>
+<td>Standard widescreen format (e.g., modern web video players).</td>
+</tr>
+<tr>
+<td><code>ar-cinema</code></td>
+<td><code>aspect-ratio: 21 / 9;</code></td>
+<td>Ultra-widescreen cinematic view configurations.</td>
+</tr>
+</tbody>
+</table>
+<div class="card d-grid grid-cols-3 gap-2 p-3 w-fit ff-mono text-white ai-start">
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-square">1/1</div>
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-video">16/9</div>  
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-cinema">21/9</div>    
+</div>
+<pre><code class="language-html">&#x3C;div class="ar-square">1/1&#x3C;/div>
+&#x3C;div class="ar-video">16/9&#x3C;/div>
+&#x3C;div class="ar-cinema">21/9&#x3C;/div>
+</code></pre>
+<h2 id="dynamic-patterns" class="h2">Dynamic Patterns</h2>
+<p>The engine dynamically parses customized proportional values passed directly within class names. It accepts plain integers, decimals, or literal division fractions.</p>
+<ul>
+<li><strong>Syntax:</strong> <code>ar-{value}</code> or <code>!ar-{value}</code></li>
+<li><strong>Examples:</strong> <code>ar-2</code>, <code>ar-1.5</code>, <code>ar-4/3</code>, <code>!ar-16/10</code></li>
+</ul>
+<div class="card d-grid grid-cols-3 gap-2 p-3 w-fit ff-mono text-white ai-start">
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-2">.ar-2</div>
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-9/16">.ar-16/9</div>
+  <div class="bg-accent min-w-100px p-3 align-cc r-2 ar-0.8">.ar-0.8</div>  
+</div>
+<pre><code class="language-html">&#x3C;div class="ar-2">.ar-2&#x3C;/div>
+&#x3C;div class="ar-9/16">.ar-16/9&#x3C;/div>
+&#x3C;div class="ar-0.8">.ar-0.8&#x3C;/div> 
+</code></pre>

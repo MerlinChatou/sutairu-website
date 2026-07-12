@@ -18,6 +18,12 @@
     <button class="btn btn-primary">Donate</button>
   </div>
 
+  <div class="input-group max-w-md fs-3xl">
+    <span class="bg-subtle">$</span>
+    <input type="text" class="input" placeholder="Amount" />
+    <button class="btn btn-primary">Donate</button>
+  </div>
+
   <div class="input-group max-w-md">
     <span class="bg-subtle"><i class="fa-solid fa-user"></i></span>
     <input type="text" class="input" placeholder="Username" />
