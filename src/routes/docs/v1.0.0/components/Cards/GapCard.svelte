@@ -47,7 +47,7 @@
       </div>
     </div>
 <div class="body p-4 d-flex fd-col gap-3 ff-mono text-center" bind:this={body}>
-    <div><code>gap-x-8 gap-y-2</code></div>
+    <div><code>.gap-x-8</code>  <code>gap-y-2</code></div>
       <div class="d-grid grid-cols-4 gap-x-8 gap-y-2 hatching-gray/20 b-1 b-gray/20 r-2 text-white ">
         <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">01</div>
         <div class="bg-accent bg-400 dark:bg-700 r-2 p-2">02</div>
