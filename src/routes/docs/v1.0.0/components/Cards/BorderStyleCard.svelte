@@ -32,11 +32,11 @@
     <div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-dotted">b-dotted</div>
     <div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-dashed">b-dashed</div>
     <div class="w-full p-2 r-2 bg-subtle text-center b-2 b-accent b-solid">b-solid</div>
-    <div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-double">b-double</div>
-    <div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-groove">b-groove</div>
-    <div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-ridge">b-ridge</div>
-    <div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-inset">b-inset</div>
-    <div class="w-full p-2 r-2 bg-subtle text-center b-10 b-accent b-outset">b-outset</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-8 b-accent b-double">b-double</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-8 b-accent b-groove">b-groove</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-8 b-accent b-ridge">b-ridge</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-8 b-accent b-inset">b-inset</div>
+    <div class="w-full p-2 r-2 bg-subtle text-center b-8 b-accent b-outset">b-outset</div>
   </div>
   <div class="footer text-right">
     <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="border/border-style">&lt;code&gt;</button>

@@ -40,6 +40,8 @@
 </tr>
 </tbody>
 </table>
+<h3 id="example" class="h3">Example</h3>
+<p>In this layout, the component spans the full viewport width by default on mobile screens, scales down to occupy half the width on tablets (<code>md:</code>), and settles into a tight one-third width configuration once it reaches laptop-sized viewports (<code>lg:</code>).</p>
 <pre><code class="language-html">&#x3C;div class="w-full md:w-1/2 lg:w-1/3">
   Content Container
 &#x3C;/div>
@@ -92,6 +94,8 @@
 </tr>
 </tbody>
 </table>
+<h3 id="example-1" class="h3">Example</h3>
+<p>In this interface segment, the button transitions its background smoothly when a pointer enters its bounds (<code>hover:</code>), while the adjacent input fields apply distinct contextual color styling exclusively to their placeholder text targets (<code>placeholder:</code>).</p>
 <div class="card w-fit d-flex fd-col p-3 gap-2">
 <button class="btn bg-blue text-white hover:bg-red-600">Hover me</button>
 <input class="b-1 b-gray r-1 placeholder:text-red-300" placeholder="Your email..." />
@@ -119,9 +123,15 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="language-html">&#x3C;div class="group p-4 b-1 b-gray hover:bg-neutral">
-  &#x3C;h3 class="text-title group-hover:text-accent">Card Heading&#x3C;/h3>
-  &#x3C;p class="text-gray-400">Hovering anywhere over the card wrapper flips the header color.&#x3C;/p>
+<h3 id="example-2" class="h3">Example</h3>
+<p>In this card component, applying the <code>group</code> utility to the wrapper allows the <code>group-hover:text-accent</code> class on the heading to trigger seamlessly as soon as a user hovers anywhere within the parent boundary.</p>
+<div class="card max-w-xs group w-fit">
+  <h3 class="header group-hover:text-accent">Card Heading</h3>
+  <div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="card group">
+  &#x3C;h3 class="header group-hover:text-accent">Card Heading&#x3C;/h3>
+  &#x3C;div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.&#x3C;/div>
 &#x3C;/div>
 </code></pre>
 <h2 id="media--hardware-orientation" class="h2">Media &#x26; Hardware Orientation</h2>
@@ -147,6 +157,8 @@
 </tr>
 </tbody>
 </table>
+<h3 id="example-3" class="h3">Example</h3>
+<p>In this layout, content stacks vertically in a column by default on narrow screens (<code>portrait</code>), but automatically shifts to a horizontal, side-by-side row configuration when the viewport width exceeds its height (<code>landscape</code>).</p>
 <pre><code class="language-html">&#x3C;div class="d-flex fd-col landscape:fd-row">
   &#x3C;aside>Sidebar / Top bar&#x3C;/aside>
   &#x3C;main>Main Context&#x3C;/main>
@@ -187,6 +199,8 @@
 </tr>
 </tbody>
 </table>
+<h4 id="example-4" class="h4">Example</h4>
+<p>By applying these self-targeting modifiers directly to the repeating child nodes, each element independently evaluates its structural index to resolve its background treatment relative to its structural siblings.</p>
 <div class="flex-x gap-1 w-fit">
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 1</div>
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 2</div>
@@ -238,6 +252,8 @@
 </tr>
 </tbody>
 </table>
+<h4 id="example-5" class="h4">Example</h4>
+<p>By declaring the child-targeting variants on the container element, the layout instantly coordinates alternating background patterns alongside specific treatments for the boundary items without requiring a single class on the inner children.</p>
 <div class="flex-x gap-1 w-fit odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
   <div class="p-2 r-2">Item 1</div>
   <div class="p-2 r-2">Item 2</div>
@@ -254,7 +270,7 @@
   ...
 &#x3C;/div>
 </code></pre>
-<h2 id="6-theme-settings" class="h2">6. Theme Settings</h2>
+<h2 id="theme-settings" class="h2">Theme Settings</h2>
 <p>Handle accessibility considerations or user configuration choices cleanly via global theme flags.</p>
 <p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
 <table>
@@ -271,8 +287,15 @@
 </tr>
 </tbody>
 </table>
-<div class="b-1 b-gray p-2 r-2 w-fit bg-white text-black dark:bg-black dark:text-white">
-  Adaptive Sheet Content
+<h3 id="example-6" class="h3">Example</h3>
+<p>In this component, the base <code>bg-white</code> and <code>text-black</code> classes apply by default, while the <code>dark:bg-black</code> and <code>dark:text-white</code> modifiers seamlessly invert the color palette when a dark theme context is active.</p>
+<div class="card flex-x gap-2 w-fit p-2">
+  <div class="b-1 b-gray p-2 r-2 w-fit bg-white text-black">
+    Light mode
+  </div>
+  <div class="b-1 b-gray p-2 r-2 w-fit bg-black text-white">
+    Dark mode
+  </div>
 </div>
 <pre><code class="language-html">&#x3C;div class="bg-white text-black dark:bg-black dark:text-white">
   Adaptive Sheet Content

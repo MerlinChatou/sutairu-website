@@ -6,6 +6,19 @@
 
 <Navbar />
 <div class="container p-4 w-xs flex-y gap-4">
+  <div class="card group">
+    <h3 class="header group-hover:text-accent">Card Heading</h3>
+    <div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.</div>
+  </div>
+
+  <div class="card group p-4 b-1 b-gray hover:bg-neutral">
+    <div class="header">
+      <h3 class="text-title group-hover:text-accent">Card Heading</h3>
+    </div>
+      <div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.</div>
+
+  </div>
+
   <div>
     <label for="exampleFormControlInputText" class="input-label">Text input</label>
     <input type="text" class="input" id="exampleFormControlInputText" placeholder="Default Input" />
@@ -55,6 +68,4 @@
       <option value="3">Third choice</option>
     </select>
   </div>
-
-  
 </div>

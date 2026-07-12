@@ -117,3 +117,12 @@
     </div>
   </div>
 </div>
+
+<style>
+  #documentation-modal :global(h2) { margin-top: 1.5rem; }
+  #documentation-modal :global(h3) { margin-top: 1rem; }
+  #documentation-modal :global(h4) { margin-top: 0.5rem; }
+  #documentation-modal :global(h4) { margin-top: 0.375rem; }
+  #documentation-modal :global(h5) { margin-top: 0.25rem; }
+  #documentation-modal :global(h6) { margin-top: 0.25rem; }
+</style>

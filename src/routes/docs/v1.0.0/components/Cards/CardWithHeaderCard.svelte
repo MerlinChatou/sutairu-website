@@ -27,8 +27,7 @@
 {#if isVisible}
 <div class="card opacity-0" id="card-with-header" bind:this={cardEl}>
   <div class="header d-flex jc-between ai-center"  bind:this={header}>
-    <h4 class="h4">Card with Headers</h4>
-    <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
+    <h4 class="h4">Card with Headers</h4>    
   </div>
 
   <div class="body" bind:this={body}>Example of card with several <b>headers</b>.</div>

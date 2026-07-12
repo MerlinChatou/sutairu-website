@@ -28,7 +28,7 @@
 {#if isVisible}
   <div class="card opacity-0" id="form" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Form</h4>
+      <h4 class="h4">Form Input</h4>
     </div>
     <div class="body d-flex fd-col gap-0" bind:this={body}>
       <div>

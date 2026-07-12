@@ -29,8 +29,7 @@
   <img class="header bg-accent" src="/images/card-header.png" alt="Sutairu Logo"  bind:this={header}/>
   <div class="body" bind:this={body}>
     <div class="d-flex jc-between ai-center">
-      <h4 class="h4">Card with Image</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
+      <h4 class="h4">Card with Image</h4>      
     </div>
     Example of a card with an image for blog posts, user cards, and many more.
   </div>

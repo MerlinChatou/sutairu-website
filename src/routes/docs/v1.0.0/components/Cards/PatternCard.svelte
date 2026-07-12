@@ -29,7 +29,6 @@
   <div class="card opacity-0" id="dotted-grid" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Patterns</h4>
-      <i class="fa-solid fa-puzzle-piece fs-xl text-accent text-200 dark:text-700" title="Optional Add-on"></i>
     </div>
     <div class="body p-3 d-flex fd-col gap-2 ff-mono text-center" bind:this={body}>
       <div class="w-full p-3 r-2 stripes-accent-300 bg-accent-200 dark:stripes-accent-700 dark:bg-accent-650">.stripes-accent</div>

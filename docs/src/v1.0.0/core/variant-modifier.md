@@ -19,6 +19,10 @@ These prefixes implement a **mobile-first** responsive design strategy. Base cla
 | `xl:` | `@media (min-width: 80rem)` | Large Desktops |
 | `xxl:` | `@media (min-width: 96rem)` | Ultra-Wide Displays |
 
+### Example
+
+In this layout, the component spans the full viewport width by default on mobile screens, scales down to occupy half the width on tablets (`md:`), and settles into a tight one-third width configuration once it reaches laptop-sized viewports (`lg:`).
+
 ```html
 <div class="w-full md:w-1/2 lg:w-1/3">
   Content Container
@@ -39,6 +43,11 @@ These modifiers tap directly into native CSS pseudo-classes to style dynamic int
 | `disabled:` | `:disabled` | Applied when a form control or button has its `disabled` attribute set. |
 | `selected:` | `.selected` | Custom state modifier indicating a persistent choice (e.g., active tabs/toggles). |
 | `placeholder:` | `::placeholder` | Targets the temporary hint text inside `<input>` or `<textarea>` tags. |
+
+
+### Example
+
+In this interface segment, the button transitions its background smoothly when a pointer enters its bounds (`hover:`), while the adjacent input fields apply distinct contextual color styling exclusively to their placeholder text targets (`placeholder:`).
 
 <div class="card w-fit d-flex fd-col p-3 gap-2">
 <button class="btn bg-blue text-white hover:bg-red-600">Hover me</button>
@@ -61,10 +70,21 @@ Sutairu allows you to style an element based on the interaction state of its **p
 | `group-hover:` | Styles the child element when *any* part of the parent `.group` is hovered. |
 | `group-selected:` | Styles the child element when the parent container has the `.selected` class active. |
 
+
+### Example
+
+In this card component, applying the `group` utility to the wrapper allows the `group-hover:text-accent` class on the heading to trigger seamlessly as soon as a user hovers anywhere within the parent boundary.
+
+<div class="card max-w-xs group w-fit">
+  <h3 class="header group-hover:text-accent">Card Heading</h3>
+  <div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.</div>
+</div>
+
+
 ```html
-<div class="group p-4 b-1 b-gray hover:bg-neutral">
-  <h3 class="text-title group-hover:text-accent">Card Heading</h3>
-  <p class="text-gray-400">Hovering anywhere over the card wrapper flips the header color.</p>
+<div class="card group">
+  <h3 class="header group-hover:text-accent">Card Heading</h3>
+  <div class="body text-gray-400">Hovering anywhere over the card wrapper flips the header color.</div>
 </div>
 ```
 
@@ -78,6 +98,11 @@ These modifiers let you alter your interface presentation to best match user har
 | --- | --- | --- |
 | `portrait:` | `@media (orientation: portrait)` | Viewport width is less than or equal to its height (e.g., vertical phones). |
 | `landscape:` | `@media (orientation: landscape)` | Viewport width is greater than its height (e.g., desktop view, turned tablets). |
+
+### Example
+
+In this layout, content stacks vertically in a column by default on narrow screens (`portrait`), but automatically shifts to a horizontal, side-by-side row configuration when the viewport width exceeds its height (`landscape`).
+
 
 ```html
 <div class="d-flex fd-col landscape:fd-row">
@@ -104,6 +129,10 @@ Apply these prefixes directly to individual items inside a loop. They target the
 | `is-last:` | `:last-child` | Targets the element only if it is the absolute last sibling. |
 | `is-odd:` | `:nth-child(odd)` | Targets the element if its index is odd (1, 3, 5, etc.). |
 | `is-even:` | `:nth-child(even)` | Targets the element if its index is even (2, 4, 6, etc.). |
+
+#### Example
+
+By applying these self-targeting modifiers directly to the repeating child nodes, each element independently evaluates its structural index to resolve its background treatment relative to its structural siblings.
 
 <div class="flex-x gap-1 w-fit">
   <div class="p-2 r-2 is-odd:bg-red is-even:bg-green is-first:!bg-yellow is-last:!bg-blue">Item 1</div>
@@ -141,6 +170,11 @@ Apply these prefixes directly to individual items inside a loop. They target the
 | `odd:` | `> :nth-child(odd)` | Automatically styles all odd-indexed children (1, 3, 5...). |
 | `even:` | `> :nth-child(even)` | Automatically styles all even-indexed children (2, 4, 6...). |
 
+#### Example
+
+By declaring the child-targeting variants on the container element, the layout instantly coordinates alternating background patterns alongside specific treatments for the boundary items without requiring a single class on the inner children.
+
+
 <div class="flex-x gap-1 w-fit odd:bg-red even:bg-green first:!bg-yellow last:!bg-blue">
   <div class="p-2 r-2">Item 1</div>
   <div class="p-2 r-2">Item 2</div>
@@ -165,14 +199,7 @@ Apply these prefixes directly to individual items inside a loop. They target the
 
 
 
-
-
-
-
-
-
-
-## 6. Theme Settings
+## Theme Settings
 
 Handle accessibility considerations or user configuration choices cleanly via global theme flags.
 
@@ -183,11 +210,17 @@ Sutairu uses a **light-first** approach. Base utilities target light mode by def
 | `dark:` | Triggers alternative style arrays when the system or application context has enabled its global dark mode profile. |
 
 
-<div class="b-1 b-gray p-2 r-2 w-fit bg-white text-black dark:bg-black dark:text-white">
-  Adaptive Sheet Content
+### Example
+
+In this component, the base `bg-white` and `text-black` classes apply by default, while the `dark:bg-black` and `dark:text-white` modifiers seamlessly invert the color palette when a dark theme context is active.
+<div class="card flex-x gap-2 w-fit p-2">
+  <div class="b-1 b-gray p-2 r-2 w-fit bg-white text-black">
+    Light mode
+  </div>
+  <div class="b-1 b-gray p-2 r-2 w-fit bg-black text-white">
+    Dark mode
+  </div>
 </div>
-
-
 
 ```html
 <div class="bg-white text-black dark:bg-black dark:text-white">
