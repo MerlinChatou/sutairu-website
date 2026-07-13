@@ -1,0 +1,172 @@
+<h1 id="transitions" class="h1">Transitions</h1>
+<p>An elegant, real-time shorthand utility engine for managing element transitions and animations with automatic unit processing.</p>
+<h2 id="utility-structure" class="h2">Utility Structure</h2>
+<p>Transition classes use an intuitive, declarative pattern to customize your animations on the fly. Components are separated by hyphens:</p>
+<pre><code>tr-{property}-{duration}-{delay}-{easing}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Only the property key is strictly required. Missing parameters automatically fallback to design system defaults.</p>
+</blockquote>
+<h2 id="properties" class="h2">Properties</h2>
+<p>Choose which CSS properties should morph smoothly over time.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Targets Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tr-none</code></td>
+<td><code>none</code></td>
+<td>Disables transitions entirely.</td>
+</tr>
+<tr>
+<td><code>tr-all</code></td>
+<td><code>all</code></td>
+<td>Tracks all animatable properties.</td>
+</tr>
+<tr>
+<td><code>tr-base</code></td>
+<td><code>color, background-color, border-color, transform, opacity, ...</code></td>
+<td>Default core transition target combo.</td>
+</tr>
+<tr>
+<td><code>tr-colors</code></td>
+<td><code>color, background-color, border-color, fill, stroke, ...</code></td>
+<td>Targets color and paint states.</td>
+</tr>
+<tr>
+<td><code>tr-layout</code></td>
+<td><code>width, height, margin, padding, top, right, bottom, left, gap</code></td>
+<td>Coordinates structural changes.</td>
+</tr>
+</tbody>
+</table>
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-colors-500">.tr-colors</div>
+<pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-colors">.tr-colors&#x3C;/div>
+</code></pre>
+<h3 id="single-property-helpers" class="h3">Single Property Helpers</h3>
+<p>You can also pinpoint individual properties cleanly:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Targets Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>tr-opacity</code></strong></td>
+<td><code>opacity</code></td>
+<td>Smoothly handles opacity changes.</td>
+</tr>
+<tr>
+<td><strong><code>tr-transform</code></strong></td>
+<td><code>transform</code></td>
+<td>Smoothly handles translations, scales, and rotations.</td>
+</tr>
+<tr>
+<td><strong><code>tr-filter</code></strong></td>
+<td><code>filter</code></td>
+<td>Animates graphical filters (blur, brightness, etc.).</td>
+</tr>
+<tr>
+<td><strong><code>tr-shadow</code></strong></td>
+<td><code>box-shadow</code></td>
+<td>Animates depth and shadow changes.</td>
+</tr>
+<tr>
+<td><strong><code>tr-bg</code></strong></td>
+<td><code>background-color</code></td>
+<td>Targets the element's background color.</td>
+</tr>
+<tr>
+<td><strong><code>tr-color</code></strong></td>
+<td><code>color</code></td>
+<td>Targets foreground text color.</td>
+</tr>
+<tr>
+<td><strong><code>tr-radius</code></strong></td>
+<td><code>border-radius</code></td>
+<td>Animates corner rounding transitions.</td>
+</tr>
+<tr>
+<td><strong><code>tr-width</code></strong></td>
+<td><code>width</code></td>
+<td>Targets the element width.</td>
+</tr>
+<tr>
+<td><strong><code>tr-height</code></strong></td>
+<td><code>height</code></td>
+<td>Targets the element height.</td>
+</tr>
+<tr>
+<td><strong><code>tr-border</code></strong></td>
+<td><code>border-color</code></td>
+<td>Targets outer border color changes.</td>
+</tr>
+<tr>
+<td><strong><code>tr-fill</code></strong></td>
+<td><code>fill</code></td>
+<td>Targets SVG path fills.</td>
+</tr>
+<tr>
+<td><strong><code>tr-outline</code></strong></td>
+<td><code>outline-color</code></td>
+<td>Targets element accessibility outlines.</td>
+</tr>
+</tbody>
+</table>
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-500">.tr-bg</div>
+<pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-bg">.tr-bg&#x3C;/div>
+</code></pre>
+<h2 id="timing-duration--delay" class="h2">Timing (Duration &#x26; Delay)</h2>
+<ul>
+<li><strong>Duration:</strong> Inferred as the <strong>first numeric value</strong> after the property key (defaults to <code>150ms</code>). Pass as a raw integer representing milliseconds.</li>
+<li><strong>Delay:</strong> Inferred as the <strong>second numeric value</strong> following duration.</li>
+</ul>
+<div class="card flex-x p-3 w-fit gap-2">
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-1500">.tr-bg-1500</div>
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-0-300">.tr-bg-0-300</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-bg-1500">.tr-bg-1500&#x3C;/div>
+&#x3C;div class="bg-blue hover:bg-yellow tr-bg-1500">.tr-bg-0-300&#x3C;/div>
+</code></pre>
+<h2 id="easing-curves" class="h2">Easing Curves</h2>
+<p>Control acceleration pacing by appending keyword easings, cubic beziers, or step counters.</p>
+<h3 id="native-keyword-presets" class="h3">Native Keyword Presets</h3>
+<p>Append <code>linear</code>, <code>ease</code>, <code>ease-in</code>, <code>ease-out</code>, or <code>ease-in-out</code> at the tail end of the utility token.</p>
+<div class="card flex-y p-3 w-375px gap-2 group text-center">
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-linear">linear</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-in-out">ease-in-out</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-in">ease-in</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-out">ease-out</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease">ease</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-step-start">step-start</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-step-end">step-end</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="hover:mv-x-200px tr-transform-750-linear">linear&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-ease-in-out">ease-in-out&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-ease-in">ease-in&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-ease-out">ease-out&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-ease">ease&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-step-start">step-start&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-step-end">step-end&#x3C;/div>
+</code></pre>
+<h3 id="advanced-complex-easings" class="h3">Advanced Complex Easings</h3>
+<p>Pass explicit geometric arguments or stepping functions wrapped inside standard parentheses. The parser maps these directly to standard CSS types:</p>
+<ul>
+<li><code>cubic(...)</code> translates into <code>cubic-bezier(...)</code></li>
+<li><code>step(...)</code> translates into <code>steps(...)</code></li>
+</ul>
+<div class="card flex-y p-3 w-375px gap-2 group text-center">
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-cubic(0.25,1,0.5,1)">cubic()</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-step(4, end)">step()</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="hover:mv-x-200px tr-transform-750-cubic(0.25,1,0.5,1)">cubic()&#x3C;/div>
+&#x3C;div class="hover:mv-x-200px tr-transform-750-step(4, end)">step()&#x3C;/div>
+</code></pre>

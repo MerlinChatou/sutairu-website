@@ -2,7 +2,6 @@
 
 A structured, flexible container component with automatic internal layout adjustments, conditional borders, and smart border-radius management.
 
----
 
 ## Structure & Classes
 
@@ -13,7 +12,6 @@ The card component relies on a parent wrapper and designated direct children to 
 * **`body`**: The main content area. Handles standard content padding and conditional borders.
 * **`footer`**: The bottom action or information bar.
 
----
 
 ## Basic Usage
 

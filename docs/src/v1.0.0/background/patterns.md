@@ -15,7 +15,7 @@ The pattern utilities support the full range of your color palette, including sh
 
 Example: 
 
-<div class="my-2 p-3 px-8 w-fit r-2 stripes-yellow-300 bg-yellow-200">.stripes-yellow-300</div>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-yellow-300 bg-yellow-200 text-black">.stripes-yellow-300</div>
 
 ```html
 <div class="stripes-yellow-300 bg-yellow-200">.stripes-yellow-300</div>
@@ -50,19 +50,19 @@ Using aliases allows you to compose complex backgrounds with minimal code:
 ```
 
 
-<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pa-20deg">.pattern-angle-20deg</div>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pa-20deg text-black">.pattern-angle-20deg</div>
 
 ```html
 <div class="stripes-accent-300 bg-accent-200 pattern-angle-20deg">.pattern-angle-20deg</div>
 ```
 
-<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px">.pattern-period-60px</div>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px text-black">.pattern-period-60px</div>
 
 ```html
 <div class="stripes-accent-300 bg-accent-200 pattern-period-60px">.pattern-period-60px</div>
 ```
 
-<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px pattern-width-40px">.pattern-width-40px</div>
+<div class="my-2 p-3 px-8 w-fit r-2 stripes-accent-300 bg-accent-200 pattern-period-60px pattern-width-40px text-black">.pattern-width-40px</div>
 
 ```html
 <div class="stripes-accent-300 bg-accent-200 pattern-period-60px pattern-width-40px">.pattern-width-40px</div>

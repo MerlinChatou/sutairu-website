@@ -8,26 +8,14 @@
 <div class="container p-4 flex-y gap-4 max-w-md">
   
 
-<div class="card p-2 w-fit">
-  <div class="grid-y grid-cols-3 gap-2 text-white">
-    <div class="bg-accent p-2 r-2">Item 1</div>
-    <div class="bg-accent p-2 r-2">Item 2</div>
-    <div class="bg-accent p-2 r-2">Item 3</div>
-    <div class="bg-accent p-2 r-2">Item 4</div>
-    <div class="bg-accent p-2 r-2">Item 5</div>
-  </div>
-</div>
-
-
-
-<div class="card p-2 w-fit">
-  <div class="grid-x grid-rows-3 gap-2 text-white">
-    <div class="bg-accent p-2 r-2">Item 1</div>
-    <div class="bg-accent p-2 r-2">Item 2</div>
-    <div class="bg-accent p-2 r-2">Item 3</div>
-    <div class="bg-accent p-2 r-2">Item 4</div>
-    <div class="bg-accent p-2 r-2">Item 5</div>
-  </div>
+<div class="card flex-y p-3 w-375px gap-2 group text-center">
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-linear">linear</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-in-out">ease-in-out</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-in">ease-in</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease-out">ease-out</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-ease">ease</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-step-start">step-start</div>
+<div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-step-end">step-end</div>
 </div>
 
 
