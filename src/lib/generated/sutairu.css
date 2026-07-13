@@ -6028,12 +6028,36 @@ body.modal-open {
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
 }
 
-.bg-yellow\/60 {
-  background-color: oklch(from var(--su-yellow) l c h / 0.6);
+.bg-green\/60 {
+  background-color: oklch(from var(--su-green) l c h / 0.6);
 }
 
 .bg-blue\/60 {
   background-color: oklch(from var(--su-blue) l c h / 0.6);
+}
+
+.mv-x-10px {
+  --su-tr-x: 10px;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.mv-y-10px {
+  --su-tr-y: 10px;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-mv-x-60px {
+  --su-tr-x: -60px;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-mv-y-20\% {
+  --su-tr-y: -20%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.bg-yellow\/60 {
+  background-color: oklch(from var(--su-yellow) l c h / 0.6);
 }
 
 .mv-x-40px {
@@ -6048,11 +6072,6 @@ body.modal-open {
 
 .\-mv-x-10px {
   --su-tr-x: -10px;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.\-mv-y-20\% {
-  --su-tr-y: -20%;
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
 }
 
@@ -6283,6 +6302,16 @@ body.modal-open {
 
   .group:hover .group-hover\:text-accent {
     color: var(--su-accent);
+  }
+  
+  .group:hover .group-hover\:mv-x-0 {
+    --su-tr-x: 0px;
+    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+  }
+  
+  .group:hover .group-hover\:mv-y-0 {
+    --su-tr-y: 0px;
+    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
 
 @media (orientation: landscape) {

@@ -34,16 +34,16 @@
       <h4 class="h4">Translate</h4>
       <div hidden>translating move transform</div>
     </div>
-    <div class="body flex-y p-3 text-center gap-1" bind:this={body}>
-      <div class="border mx-auto my-0 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-50 hover:sc-100 tr-200">.scale-50</div>
-      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-75 hover:sc-100 tr-200">.scale-75</div>
-      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-90 hover:sc-100 tr-200">.scale-90</div>
-      <div class="border mx-auto my-1 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-95 hover:sc-100 tr-200">.scale-95</div>
-      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-100 hover:sc-100 tr-200">.scale-100</div>
-      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-105 hover:sc-100 tr-200">.scale-105</div>
-      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-110 hover:sc-100 tr-200">.scale-110</div>
-      <div class="border mx-auto my-2 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-125 hover:sc-100 tr-200">.scale-125</div>
-      <div class="border mx-auto my-4 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-150 hover:sc-100 tr-200">.scale-150</div>
+    <div class="body flex-y p-3 text-center gap-6 ai-center" bind:this={body}>
+      <div class="stack w-100px ar-1 fs-2xl text-white ff-mono group">
+        <div class="w-80px r-2 ar-1 align-cc bg-green/60">From</div>  
+        <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-10px mv-y-10px group-hover:mv-x-0 group-hover:mv-y-0 tr-transform-400">To</div>
+      </div>
+
+      <div class="stack w-100px ar-1 fs-2xl text-white ff-mono group">
+        <div class="w-80px r-2 ar-1 align-cc bg-green/60">From</div>
+        <div class="w-80px r-2 ar-1 align-cc bg-blue/60 -mv-x-60px -mv-y-20% group-hover:mv-x-0 group-hover:mv-y-0 tr-transform-400">To</div>  
+      </div>
     </div>
     <div class="footer text-right">
       <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="transform/translate">&lt;code&gt;</button>
