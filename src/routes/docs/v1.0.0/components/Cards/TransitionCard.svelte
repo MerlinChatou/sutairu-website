@@ -4,7 +4,6 @@
   import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
   import { fade } from "svelte/transition";
 
-  
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -31,18 +30,18 @@
 {#if isVisible}
   <div class="card opacity-0" id="transition" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Transition</h4>      
+      <h4 class="h4">Transition</h4>
     </div>
-    <div class="body flex-y p-3 text-center gap-1" bind:this={body}>
-      <div class="border mx-auto my-0 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-1/2 hover:sc-100 tr-200">.sc-1/2</div>
-      <div class="border mx-auto my-1 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-0.75 hover:sc-100 tr-200">.sc-0.75</div>
-      <div class="border mx-auto my-1 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-90 hover:sc-100 tr-200">.sc-90</div>
-      <div class="border mx-auto my-1 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-95 hover:sc-100 tr-200">.sc-95</div>
-      <div class="border mx-auto my-2 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-100 hover:sc-100 tr-200">.sc-100</div>
-      <div class="border mx-auto my-2 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-1.05 hover:sc-100 tr-200">.sc-1.05</div>
-      <div class="border mx-auto my-2 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-110 hover:sc-100 tr-200">.sc-110</div>
-      <div class="border mx-auto my-2 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-125 hover:sc-100 tr-200">.sc-125</div>
-      <div class="border mx-auto my-4 w-85px bg-subtle p-2 r-2 cur-pointer transform sc-3/2 hover:sc-100 tr-200">.sc-3/2</div>
+    <div class="body flex-y p-3 text-center gap-1 group text-center" bind:this={body}>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-2500">delay</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-1000">duration</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-linear">linear</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-ease-in-out">ease-in-out</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-ease-in">ease-in</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-ease-out">ease-out</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-ease">ease</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-step-start">step-start</div>
+      <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-step-end">step-end</div>
     </div>
     <div class="footer text-right">
       <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="effect/transition">&lt;code&gt;</button>

@@ -5668,6 +5668,14 @@ body.modal-open {
   height: 140px;
 }
 
+.w-100\% {
+  width: 100%;
+}
+
+.w-40\% {
+  width: 40%;
+}
+
 .h-fit {
   height: fit-content;
 }
@@ -6189,6 +6197,14 @@ body.modal-open {
   color: oklch(from color-mix(in oklch, var(--su-accent), #fff 30%) l c h / 0.5);
 }
 
+.tr-transform-2500 {
+  transition: transform 2500ms ease;
+}
+
+.tr-transform-750-1000 {
+  transition: transform 750ms ease 1000ms;
+}
+
 .mv-x-10px {
   --su-tr-x: 10px;
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
@@ -6223,10 +6239,6 @@ body.modal-open {
 
 .ml-3 {
   margin-left: 0.75rem;
-}
-
-.w-100\% {
-  width: 100%;
 }
 
 .bg-page-600 {
@@ -6485,6 +6497,11 @@ body.modal-open {
   
   .group:hover .group-hover\:mv-x-200px {
     --su-tr-x: 200px;
+    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+  }
+  
+  .group:hover .group-hover\:mv-x-150\% {
+    --su-tr-x: 150%;
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
   

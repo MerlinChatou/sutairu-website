@@ -160,7 +160,9 @@
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
 
-    <!-- transitions -->
+    <TransitionCard />
+    
+
     
 
     <ModalCard />
@@ -169,7 +171,7 @@
     <LoaderCard />
 
     <FilterCard />
-    <TransitionCard />
+    
     
     <BtnCloseCard />
   </div>
