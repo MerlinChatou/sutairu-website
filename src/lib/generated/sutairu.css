@@ -5243,6 +5243,14 @@ body.modal-open {
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
 .fs-2xl {
   font-size: 1.5rem;
 }

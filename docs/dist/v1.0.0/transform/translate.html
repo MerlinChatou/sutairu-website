@@ -43,13 +43,24 @@
 </tr>
 </tbody>
 </table>
-<div class="stack w-100px my-2 ar-1 fs-2xl text-white ff-mono">
-  <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
-  <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
+<div class="card p-10 flex-x w-fit gap-16">
+  <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+    <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
+    <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
+  </div>
+  <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+    <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
+    <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-middle">02</div>  
+  </div>
 </div>
 <pre><code class="language-html">&#x3C;div class="stack">
-  &#x3C;div class="bg-green/60">01&#x3C;/div>
-  &#x3C;div class="bg-blue/60 mv-x-40px mv-y-20%">02&#x3C;/div>
+  &#x3C;div>01&#x3C;/div>  
+  &#x3C;div class="mv-x-40px mv-y-20%">02&#x3C;/div>  
+&#x3C;/div>
+
+&#x3C;div class="stack">
+  &#x3C;div>01&#x3C;/div>  
+  &#x3C;div class="mv-middle">02&#x3C;/div>  
 &#x3C;/div>
 </code></pre>
 <h2 id="negative--important-modifiers" class="h2">Negative &#x26; Important Modifiers</h2>

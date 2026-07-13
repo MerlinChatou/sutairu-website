@@ -18,15 +18,27 @@ Use the `mv-{axis}-{value}{unit}` utility to translate an element along a specif
 | `mv-middle`   | `--su-tr-x: -50%;<br>--su-tr-y: -50%;` | `transform: translateX(-50%) translateY(-50%) ...;` |
 | `mv-x-middle` | `--su-tr-x: -50%;`                     | `transform: translateX(-50%) ...;`                  |
 
-<div class="stack w-100px my-2 ar-1 fs-2xl text-white ff-mono">
-  <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
-  <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
+<div class="card p-10 flex-x w-fit gap-16">
+  <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+    <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
+    <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
+  </div>
+
+  <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+    <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
+    <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-middle">02</div>  
+  </div>
 </div>
 
 ```html
 <div class="stack">
-  <div class="bg-green/60">01</div>
-  <div class="bg-blue/60 mv-x-40px mv-y-20%">02</div>
+  <div>01</div>  
+  <div class="mv-x-40px mv-y-20%">02</div>  
+</div>
+
+<div class="stack">
+  <div>01</div>  
+  <div class="mv-middle">02</div>  
 </div>
 ```
 
