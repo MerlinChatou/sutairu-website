@@ -17,14 +17,14 @@ Use the `mv-{axis}-{value}{unit}` utility to translate an element.
 
 
 <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
-  <div class="w-80px r-2 ar-1 align-cc bg-yellow/60">01</div>  
+  <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
   <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
 </div>
 
 
 ```html
 <div class="stack">
-  <div class="bg-yellow/60">01</div>  
+  <div class="bg-green/60">01</div>  
   <div class="bg-blue/60 mv-x-40px mv-y-20%">02</div>
 </div>
 ```
@@ -38,14 +38,14 @@ To move an element in the opposite direction (left or up), prefix the utility wi
 * `!-mv-y-10` => `--su-tr-y: -10px !important;` *(Shifts up by 10px with high priority)*
 
 <div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
-  <div class="w-80px r-2 ar-1 align-cc bg-yellow/60">01</div>  
+  <div class="w-80px r-2 ar-1 align-cc bg-green/60">01</div>  
   <div class="w-80px r-2 ar-1 align-cc bg-blue/60 -mv-x-10px -mv-y-20%">02</div>  
 </div>
 
 
 ```html
 <div class="stack">
-  <div class="bg-yellow/60">01</div>  
+  <div class="bg-green/60">01</div>  
   <div class="bg-blue/60 -mv-x-10px -mv-y-20%">02</div>
 </div>
 ```
