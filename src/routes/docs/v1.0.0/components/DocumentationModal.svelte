@@ -125,4 +125,5 @@
   #documentation-modal :global(h4) { margin-top: 0.375rem; }
   #documentation-modal :global(h5) { margin-top: 0.25rem; }
   #documentation-modal :global(h6) { margin-top: 0.25rem; }
+  #documentation-modal :global(table code) { text-wrap: nowrap; }
 </style>

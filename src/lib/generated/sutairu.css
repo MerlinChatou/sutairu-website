@@ -6075,6 +6075,83 @@ body.modal-open {
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
+.w-50px {
+  width: 50px;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.right-10\% {
+  right: 10%;
+}
+
+.inset-10\% {
+  inset: 10%;
+}
+
+.top-middle {
+  top: 50%;
+  --su-tr-y: -50%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.left-70\% {
+  left: 70%;
+}
+
+.inset-x-5 {
+  inset-inline: 1.25rem;
+}
+
+.inset-y-8 {
+  inset-block: 2rem;
+}
+
+.inset-x-2 {
+  inset-inline: 0.5rem;
+}
+
+.inset-y-5 {
+  inset-block: 1.25rem;
+}
+
+.left-middle {
+  left: 50%;
+  --su-tr-x: -50%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.inset-middle {
+  inset: 50%;
+  --su-tr-x: -50%;
+  --su-tr-y: -50%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-top-25px {
+  top: -25px;
+}
+
+.\-left-25px {
+  left: -25px;
+}
+
+.mv-x-50\% {
+  --su-tr-x: 50%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-mv-y-50\% {
+  --su-tr-y: -50%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
 :is([data-color-scheme="dark"] *) {
   &.dark\:dotted-white-850 {
     background-position: 0 0;

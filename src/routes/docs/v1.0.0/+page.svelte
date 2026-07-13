@@ -39,6 +39,7 @@
   import PaddingCard from "./components/Cards/PaddingCard.svelte";
   import PatternCard from "./components/Cards/PatternCard.svelte";
   import PerSideBorderWidthCard from "./components/Cards/PerSideBorderWidthCard.svelte";
+  import PositionCard from "./components/Cards/PositionCard.svelte";
   import RotationCard from "./components/Cards/RotationCard.svelte";
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
@@ -148,6 +149,7 @@
     <GridCard />
     <GapCard />
     <CursorCard />
+    <PositionCard />
     <AspectRatioCard />
     <RotationCard />
     <ScaleCard />
@@ -156,6 +158,8 @@
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
 
+    <!-- positions -->
+    <!-- transitions -->
     
 
     <ModalCard />

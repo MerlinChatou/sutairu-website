@@ -1,0 +1,191 @@
+<h1 id="position--directional-coordinates" class="h1">Position &#x26; Directional Coordinates</h1>
+<p>Control element positioning context alongside directional offsets and shorthand inset properties.</p>
+<hr>
+<h2 id="position-context" class="h2">Position Context</h2>
+<p>Establish the coordinate space or stacking context for an element.</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>CSS Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pos-static</code></td>
+<td><code>position: static;</code></td>
+</tr>
+<tr>
+<td><code>pos-rel</code></td>
+<td><code>position: relative;</code></td>
+</tr>
+<tr>
+<td><code>pos-abs</code></td>
+<td><code>position: absolute;</code></td>
+</tr>
+<tr>
+<td><code>pos-fix</code></td>
+<td><code>position: fixed;</code></td>
+</tr>
+<tr>
+<td><code>pos-sticky</code></td>
+<td><code>position: sticky;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card flex-x gap-8 p-8 w-fit">
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 align-cc w-50px ar-1 bg-green/60">pin</div>  
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs">Pin&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="directional-offsets" class="h2">Directional Offsets</h2>
+<p>Position elements vertically or horizontally via <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, or universal <code>inset</code> attributes.</p>
+<h3 id="sizing-scale--inference" class="h3">Sizing Scale &#x26; Inference</h3>
+<ul>
+<li><strong>Unitless Numbers:</strong> Interpreted as sizing steps multiplied by <code>0.25rem</code> (e.g., <code>4</code> => <code>1rem</code>).</li>
+<li><strong>Explicit Units:</strong> Pass standard units seamlessly (e.g., <code>top-20px</code>, <code>left-2rem</code>).</li>
+<li><strong>Aliases:</strong> Supports semantic helper targets like <code>full</code> (<code>100%</code>) and <code>auto</code> (<code>auto</code>).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility Example</th>
+<th>Generated CSS Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>top-0</code></td>
+<td><code>top: 0;</code></td>
+</tr>
+<tr>
+<td><code>right-4</code></td>
+<td><code>right: 1rem;</code></td>
+</tr>
+<tr>
+<td><code>bottom-2rem</code></td>
+<td><code>bottom: 2rem;</code></td>
+</tr>
+<tr>
+<td><code>left-full</code></td>
+<td><code>left: 100%;</code></td>
+</tr>
+<tr>
+<td><code>inset-auto</code></td>
+<td><code>inset: auto;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card flex-x gap-8 p-8 w-fit">
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 bottom-0 right-10% align-cc">pin</div>  
+  </div>
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 inset-10% align-cc">pin</div>  
+  </div>
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 top-middle left-70% align-cc">pin</div>  
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs bottom-0 right-10%">Pin&#x3C;/div>
+&#x3C;/div>
+
+&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs inset-10%">Pin&#x3C;/div>
+&#x3C;/div>
+
+&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs top-middle left-70%">Pin&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="inset-shorhands" class="h2">Inset Shorhands</h2>
+<p>Quickly set multiple coordinate edges at once using logical layout axes wrappers.</p>
+<ul>
+<li><strong><code>inset-{value}</code></strong>: Sets all four sides simultaneously.</li>
+<li><strong><code>inset-x-{value}</code></strong>: Sets horizontal edges via <code>inset-inline</code> (left &#x26; right).</li>
+<li><strong><code>inset-y-{value}</code></strong>: Sets vertical edges via <code>inset-block</code> (top &#x26; bottom).</li>
+</ul>
+<div class="card flex-x gap-3 p-3 w-fit">
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 inset-x-5 inset-y-8 align-cc">pin</div>  
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs inset-x-2 inset-y-5">Pin&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="the-middle-centering-magic" class="h2">The <code>middle</code> Centering Magic</h2>
+<p>Passing the <code>middle</code> keyword triggers a smart positional offset. It establishes a <code>50%</code> offset distance and automatically loads the hardware-accelerated transform engine to back-translate the element by <code>-50%</code>. This handles true pixel-perfect centering without complex layout boilerplate.</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS Style Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>left-middle</code></td>
+<td><code>left: 50%; --su-tr-x: -50%; transform: translateX(-50%) ...;</code></td>
+</tr>
+<tr>
+<td><code>top-middle</code></td>
+<td><code>top: 50%; --su-tr-y: -50%; transform: translateY(-50%) ...;</code></td>
+</tr>
+<tr>
+<td><code>inset-middle</code></td>
+<td><code>inset: 50%; --su-tr-x: -50%; --su-tr-y: -50%; transform: ...;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card flex-x gap-3 p-3 w-fit">
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 top-middle align-cc">pin</div>  
+  </div>
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 left-middle align-cc">pin</div>  
+  </div>
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 inset-middle align-cc">pin</div>  
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs top-middle">pin&#x3C;/div>  
+&#x3C;/div>
+
+&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs left-middle">pin&#x3C;/div>  
+&#x3C;/div>
+
+&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs inset-middle">pin&#x3C;/div>  
+&#x3C;/div>
+</code></pre>
+<h2 id="direction-modifiers" class="h2">Direction Modifiers</h2>
+<p>Prefix properties with a minus sign (<code>-</code>) to shift elements outward beyond boundary fields. Prepend the exclamation mark (<code>!</code>) at the absolute beginning for utility override rules.</p>
+<ul>
+<li><code>-top-4</code> => <code>top: -1rem;</code></li>
+<li><code>-left-full</code> => <code>left: -100%;</code></li>
+<li><code>!-bottom-middle</code> => <code>bottom: calc(50% * -1) !important;</code></li>
+</ul>
+<div class="card flex-x gap-3 p-8 w-fit">
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 -top-25px -left-25px align-cc">pin</div>  
+  </div>
+  <div class="pos-rel r-1 w-100px ar-1 bg-blue/60 text-white">
+    <div class="pos-abs r-2 w-50px ar-1 bg-green/60 right-0 mv-x-50% top-0 -mv-y-50% align-cc">pin</div>  
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs -top-25px -left-25px">pin&#x3C;/div>  
+&#x3C;/div>
+
+&#x3C;div class="pos-rel">
+  &#x3C;div class="pos-abs right-0 top-0 mv-x-50% -mv-y-50%">pin&#x3C;/div>  
+&#x3C;/div>
+</code></pre>
