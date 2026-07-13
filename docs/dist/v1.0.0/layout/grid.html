@@ -1,1 +1,231 @@
-<h1 id="grid" class="h1">Grid</h1>
+<h1 id="grid-layout" class="h1">Grid Layout</h1>
+<p>A fast, atomic grid system designed to build efficient layouts with minimal overhead.</p>
+<h2 id="grid-container-types" class="h2">Grid Container Types</h2>
+<p>Initialize a grid container and control its auto-flow direction using these foundational classes.</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>CSS Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grid-x</code>, <code>grid-row</code></td>
+<td><code>display: grid; grid-auto-flow: column;</code></td>
+<td>Creates a horizontal grid (items append inline).</td>
+</tr>
+<tr>
+<td><code>grid-y</code>, <code>grid-col</code></td>
+<td><code>display: grid; grid-auto-flow: row;</code></td>
+<td>Creates a vertical grid (items append stacked).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples" class="h3">Examples</h3>
+<div class="card p-2 w-fit">
+  <div class="grid-x gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-accent p-2 r-2">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-x">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<div class="card p-2 w-fit">
+  <div class="grid-col gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-accent p-2 r-2">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-col">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="grid-templates" class="h2">Grid Templates</h2>
+<p>Define explicit track sizing for columns and rows.</p>
+<h3 id="columns" class="h3">Columns</h3>
+<ul>
+<li><strong>Numeric:</strong> <code>grid-cols-{number}</code> creates equal-width columns using <code>repeat(n, minmax(0, 1fr))</code>.</li>
+<li><strong>Keywords:</strong> <code>none</code> or <code>subgrid</code>.</li>
+<li><strong>Custom Sizing:</strong> Pass explicit CSS values inside square brackets <code>[...]</code>. Use <strong>underscores (<code>_</code>)</strong> to denote spaces.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grid-cols-3</code></td>
+<td><code>grid-template-columns: repeat(3, minmax(0, 1fr));</code></td>
+</tr>
+<tr>
+<td><code>grid-cols-none</code></td>
+<td><code>grid-template-columns: none;</code></td>
+</tr>
+<tr>
+<td><code>grid-cols-subgrid</code></td>
+<td><code>grid-template-columns: subgrid;</code></td>
+</tr>
+<tr>
+<td><code>grid-cols-[200px_1fr]</code></td>
+<td><code>grid-template-columns: 200px 1fr;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card p-2 w-fit">
+  <div class="grid-y grid-cols-3 gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-accent p-2 r-2">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+    <div class="bg-accent p-2 r-2">Item 4</div>
+    <div class="bg-accent p-2 r-2">Item 5</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-y grid-cols-3">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+  &#x3C;div>Item 4&#x3C;/div>
+  &#x3C;div>Item 5&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="rows" class="h3">Rows</h3>
+<ul>
+<li><strong>Numeric:</strong> <code>grid-rows-{number}</code> creates equal-height rows.</li>
+<li><strong>Keywords:</strong> <code>none</code> or <code>subgrid</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grid-rows-4</code></td>
+<td><code>grid-template-rows: repeat(4, minmax(0, 1fr));</code></td>
+</tr>
+<tr>
+<td><code>grid-rows-none</code></td>
+<td><code>grid-template-rows: none;</code></td>
+</tr>
+<tr>
+<td><code>grid-rows-subgrid</code></td>
+<td><code>grid-template-rows: subgrid;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card p-2 w-fit">
+  <div class="grid-x grid-rows-3 gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-accent p-2 r-2">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+    <div class="bg-accent p-2 r-2">Item 4</div>
+    <div class="bg-accent p-2 r-2">Item 5</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-x grid-rows-3">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+  &#x3C;div>Item 4&#x3C;/div>
+  &#x3C;div>Item 5&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="item-spanning" class="h2">Item Spanning</h2>
+<p>Control how many tracks a grid item should span across columns or rows.</p>
+<h3 id="column-spanning" class="h3">Column Spanning</h3>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gc-span-{number}</code></td>
+<td><code>grid-column: span {number};</code></td>
+<td>Spans a specific number of columns.</td>
+</tr>
+<tr>
+<td><code>gc-span-full</code></td>
+<td><code>grid-column: 1 / -1;</code></td>
+<td>Spans the entire width of the grid.</td>
+</tr>
+</tbody>
+</table>
+<div class="card p-2 w-fit">
+  <div class="grid-y grid-cols-3 gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-green p-2 r-2 gr-span-3">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+    <div class="bg-accent p-2 r-2">Item 4</div>
+    <div class="bg-accent p-2 r-2">Item 5</div>
+    <div class="bg-accent p-2 r-2">Item 6</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-y grid-cols-3">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div class="gr-span-3">Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+  &#x3C;div>Item 4&#x3C;/div>
+  &#x3C;div>Item 5&#x3C;/div>
+  &#x3C;div>Item 6&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="row-spanning" class="h3">Row Spanning</h3>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gr-span-{number}</code></td>
+<td><code>grid-row: span {number};</code></td>
+<td>Spans a specific number of rows.</td>
+</tr>
+<tr>
+<td><code>gr-span-full</code></td>
+<td><code>grid-row: 1 / -1;</code></td>
+<td>Spans the entire height of the grid.</td>
+</tr>
+</tbody>
+</table>
+<div class="card p-2 w-fit">
+  <div class="grid-y grid-cols-3 gap-2 text-white text-center">
+    <div class="bg-accent p-2 r-2">Item 1</div>
+    <div class="bg-accent p-2 r-2">Item 2</div>
+    <div class="bg-accent p-2 r-2">Item 3</div>
+    <div class="bg-green p-2 r-2 gc-span-2">Item 4</div>
+    <div class="bg-accent p-2 r-2">Item 5</div>
+    <div class="bg-accent p-2 r-2">Item 6</div>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="grid-y grid-cols-3">
+  &#x3C;div>Item 1&#x3C;/div>
+  &#x3C;div>Item 2&#x3C;/div>
+  &#x3C;div>Item 3&#x3C;/div>
+  &#x3C;div class="gc-span-2">Item 4&#x3C;/div>
+  &#x3C;div>Item 5&#x3C;/div>
+  &#x3C;div>Item 5&#x3C;/div>
+&#x3C;/div>
+</code></pre>

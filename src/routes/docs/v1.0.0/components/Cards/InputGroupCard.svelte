@@ -57,12 +57,12 @@
       </div>
 
       <div class="input-group max-w-md valid">
-        <span class="bg-subtle"><i class="fa-solid fa-check text-green"></i></span>
+        <span class="bg-green-50 dark:bg-green-820"><i class="fa-solid fa-check text-green"></i></span>
         <input type="text" class="input" placeholder="Valid group" />
       </div>
 
       <div class="input-group max-w-md invalid">
-        <span class="bg-subtle"><i class="fa-solid fa-xmark text-red"></i></span>
+        <span class="bg-red-50 dark:bg-red-820"><i class="fa-solid fa-xmark text-red"></i></span>
         <input type="text" class="input" placeholder="Invalid group" />
       </div>
     </div>

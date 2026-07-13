@@ -142,16 +142,18 @@
     <SizingCard />    
     <ButtonColorCard />
     <FormInputCard />
+    <InputGroupCard />
     <FlexCard />
+    <GridCard />
     <GapCard />
     
     <CursorCard />
     <AspectRatioCard />
     
 
-    <InputGroupCard />
     
-    <GridCard />
+    
+    
     <StackCard />
     <RotationCard />
     <ScaleCard />
