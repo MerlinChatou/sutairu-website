@@ -45,7 +45,7 @@
       <div class="border mx-auto my-4 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-150 hover:sc-100 tr-200">.scale-150</div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/scale">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="transform/scale">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

@@ -1,0 +1,84 @@
+<h1 id="transforms-scale" class="h1">Transforms: Scale</h1>
+<p>Control the sizing scale of your elements across both axes, or target individual axes independently using hardware-accelerated GPU transforms.</p>
+<h2 id="usage" class="h2">Usage</h2>
+<p>Use the <code>sc-{value}</code> utility to modify an element's scale.</p>
+<h3 id="smart-scale-inference" class="h3">Smart Scale Inference</h3>
+<p>The utility intelligently interprets numbers based on how they are written:</p>
+<ul>
+<li><strong>Integers greater than 10:</strong> Treated as percentages (e.g., <code>150</code> => <code>1.5</code> scale factor).</li>
+<li><strong>Integers 10 or less:</strong> Treated as direct multipliers (e.g., <code>2</code> => <code>2</code>x scale factor).</li>
+<li><strong>Decimals and Fractions:</strong> Treated as direct multipliers (e.g., <code>0.5</code> or <code>1/2</code> => half size).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS Variables</th>
+<th>Combined Output CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sc-150</code></td>
+<td><code>--su-sc: 1.5;</code></td>
+<td><code>transform: scaleX(calc(1 * 1.5)) scaleY(calc(1 * 1.5)) ...;</code></td>
+</tr>
+<tr>
+<td><code>sc-2</code></td>
+<td><code>--su-sc: 2;</code></td>
+<td><code>transform: scaleX(calc(1 * 2)) scaleY(calc(1 * 2)) ...;</code></td>
+</tr>
+<tr>
+<td><code>sc-1/2</code></td>
+<td><code>--su-sc: 0.5;</code></td>
+<td><code>transform: scaleX(calc(1 * 0.5)) scaleY(calc(1 * 0.5)) ...;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="flex-x px-8 gap-8 my-8">
+<div class="bg-accent p-3 w-80px r-2 align-cc text-white sc-3/4">sc-3/4</div>
+<div class="bg-accent p-3 w-80px r-2 align-cc text-white sc-1">sc-1</div>
+<div class="bg-accent p-3 w-80px r-2 align-cc text-white sc-110">sc-110</div>
+<div class="bg-accent p-3 w-80px r-2 align-cc text-white sc-1.2">sc-1.2</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="sc-3/4">sc-3/4&#x3C;/div>
+&#x3C;div class="sc-1">sc-1&#x3C;/div>
+&#x3C;div class="sc-110">sc-110&#x3C;/div>
+&#x3C;div class="sc-1.2">sc-1.2&#x3C;/div>
+</code></pre>
+<h2 id="directional-scaling" class="h2">Directional Scaling</h2>
+<p>Target specific axes by injecting <code>x</code> or <code>y</code> into the utility pattern: <code>sc-{axis}-{value}</code>.</p>
+<ul>
+<li><strong><code>sc-x-{value}</code></strong>: Scales only the horizontal axis (<code>--su-sc-x</code>).</li>
+<li><strong><code>sc-y-{value}</code></strong>: Scales only the vertical axis (<code>--su-sc-y</code>).</li>
+</ul>
+<div class="flex-x px-8 gap-8 my-8">
+<div class="bg-accent p-3 w-100px ar-1 r-2 align-cc text-white sc-1">sc-1</div>
+<div class="bg-accent p-3 w-100px ar-1 r-2 align-cc text-white sc-y-150">sc-y-120</div>
+<div class="bg-accent p-3 w-100px ar-1 r-2 align-cc text-white sc-x-150">sc-x-120</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="sc-1">sc-1&#x3C;/div>
+&#x3C;div class="sc-y-150">sc-y-120&#x3C;/div>
+&#x3C;div class="sc-x-150">sc-x-120&#x3C;/div>
+</code></pre>
+<h2 id="negative--important-modifiers" class="h2">Negative &#x26; Important Modifiers</h2>
+<p>To flip or invert the axis calculation, prefix the utility with a minus sign (<code>-</code>). Combine it with <code>!</code> at the very beginning to force rule overriding.</p>
+<ul>
+<li><code>-sc-1</code> => <code>--su-sc: -1;</code> <em>(Inverts the element completely)</em></li>
+<li><code>!-sc-x-2</code> => <code>--su-sc-x: -2 !important;</code> <em>(Inverts and stretches horizontally with high priority)</em></li>
+</ul>
+<div class="flex-x px-8 gap-8 my-8">
+<div class="bg-accent p-3 w-100px ar-1 r-2 align-cc text-white -sc-y-1">-sc-y-1</div>
+<div class="bg-accent p-3 w-100px ar-1 r-2 align-cc text-white -sc-x-80">-sc-x-80</div>
+</div>
+<pre><code class="language-html">&#x3C;div class="-sc-y-1">-sc-y-1&#x3C;/div>
+&#x3C;div class="-sc-x-80">-sc-x-80&#x3C;/div>
+</code></pre>
+<h2 id="core-engine-synchronization" class="h2">Core Engine Synchronization</h2>
+<p>Every scaling class automatically loads the global transform engine. This allows you to safely mix <code>sc-</code>, <code>rot-</code>, and <code>tr-</code> utilities on the same HTML tag without losing previous transformations:</p>
+<pre><code class="language-css">transform: translateX(var(--su-tr-x, 0)) 
+           translateY(var(--su-tr-y, 0)) 
+           rotate(var(--su-rot, 0)) 
+           scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) 
+           scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+</code></pre>
