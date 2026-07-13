@@ -31,7 +31,7 @@
   <div class="card opacity-0" id="rotate" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Rotations</h4>      
-      <div hidden>rotate</div>
+      <div hidden>rotate transform</div>
     </div>
     <div class="body d-grid grid-cols-2 p-4 text-center gap-4" bind:this={body}>
       <img class="mx-auto w-50% tr-transform-400 r-3 rot-45 hover:rot-0 bg-accent" src="/images/rustine.png" alt="Rustine" />

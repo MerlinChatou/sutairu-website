@@ -29,10 +29,10 @@
 </script>
 
 {#if isVisible}
-  <div class="card opacity-0" id="scale" bind:this={cardEl}>
+  <div class="card opacity-0" id="translate" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Scale</h4>
-      <div hidden>Scaling transform</div>
+      <h4 class="h4">Translate</h4>
+      <div hidden>translating move transform</div>
     </div>
     <div class="body flex-y p-3 text-center gap-1" bind:this={body}>
       <div class="border mx-auto my-0 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-50 hover:sc-100 tr-200">.scale-50</div>
@@ -46,7 +46,7 @@
       <div class="border mx-auto my-4 w-fit bg-subtle p-2 r-2 cur-pointer transform sc-150 hover:sc-100 tr-200">.scale-150</div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="transform/scale">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="transform/translate">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

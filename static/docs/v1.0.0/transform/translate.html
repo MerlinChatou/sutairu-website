@@ -1,0 +1,66 @@
+<h1 id="translate" class="h1">Translate</h1>
+<p>Displace elements along the horizontal or vertical axes using hardware-accelerated GPU translation. This utility alters the <code>--su-tr-x</code> and <code>--su-tr-y</code> variables, allowing seamless combinations with scaling and rotation without causing utility overrides.</p>
+<h2 id="usage" class="h2">Usage</h2>
+<p>Use the <code>mv-{axis}-{value}{unit}</code> utility to translate an element.</p>
+<ul>
+<li><strong>Axes:</strong> Use <code>x</code> for horizontal movement and <code>y</code> for vertical movement.</li>
+<li><strong>Default Unit:</strong> If no unit is explicitly provided, the framework defaults to <code>px</code>. Supported units include <code>px</code>, <code>rem</code>, <code>%</code>, and <code>em</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Generated CSS Variables</th>
+<th>Combined Output CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv-x-20</code></td>
+<td><code>--su-tr-x: 20px;</code></td>
+<td><code>transform: translateX(20px) ...;</code></td>
+</tr>
+<tr>
+<td><code>mv-y-2rem</code></td>
+<td><code>--su-tr-y: 2rem;</code></td>
+<td><code>transform: translateY(2rem) ...;</code></td>
+</tr>
+<tr>
+<td><code>mv-x-50%</code></td>
+<td><code>--su-tr-x: 50%;</code></td>
+<td><code>transform: translateX(50%) ...;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+  <div class="w-80px r-2 ar-1 align-cc bg-yellow/60">01</div>  
+  <div class="w-80px r-2 ar-1 align-cc bg-blue/60 mv-x-40px mv-y-20%">02</div>  
+</div>
+<pre><code class="language-html">&#x3C;div class="stack">
+  &#x3C;div class="bg-yellow/60">01&#x3C;/div>  
+  &#x3C;div class="bg-blue/60 mv-x-40px mv-y-20%">02&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="negative--important-modifiers" class="h2">Negative &#x26; Important Modifiers</h2>
+<p>To move an element in the opposite direction (left or up), prefix the utility with a minus sign (<code>-</code>). Combine it with <code>!</code> at the very beginning to force rule priority.</p>
+<ul>
+<li><code>-mv-x-50%</code> => <code>--su-tr-x: -50%;</code> <em>(Shifts left by half its width)</em></li>
+<li><code>!-mv-y-10</code> => <code>--su-tr-y: -10px !important;</code> <em>(Shifts up by 10px with high priority)</em></li>
+</ul>
+<div class="stack w-100px ar-1 fs-2xl text-white ff-mono">
+  <div class="w-80px r-2 ar-1 align-cc bg-yellow/60">01</div>  
+  <div class="w-80px r-2 ar-1 align-cc bg-blue/60 -mv-x-10px -mv-y-20%">02</div>  
+</div>
+<pre><code class="language-html">&#x3C;div class="stack">
+  &#x3C;div class="bg-yellow/60">01&#x3C;/div>  
+  &#x3C;div class="bg-blue/60 -mv-x-10px -mv-y-20%">02&#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="core-engine-synchronization" class="h2">Core Engine Synchronization</h2>
+<p>Every translation class automatically injects the framework's central transform engine. This safeguards your styles so that mixing <code>mv-</code>, <code>rot-</code>, and <code>sc-</code> utilities together on a single element behaves exactly as expected:</p>
+<pre><code class="language-css">transform: translateX(var(--su-tr-x, 0)) 
+           translateY(var(--su-tr-y, 0)) 
+           rotate(var(--su-rot, 0)) 
+           scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) 
+           scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+</code></pre>
