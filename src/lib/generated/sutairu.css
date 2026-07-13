@@ -4509,16 +4509,16 @@ body.modal-open {
   gap: 0.25rem;
 }
 
-.tr-colors-500 {
-  transition: color 500ms ease, background-color 500ms ease, border-color 500ms ease, outline-color 500ms ease, text-decoration-color 500ms ease, fill 500ms ease, stroke 500ms ease;
+.tr-colors-1000 {
+  transition: color 1000ms ease, background-color 1000ms ease, border-color 1000ms ease, outline-color 1000ms ease, text-decoration-color 1000ms ease, fill 1000ms ease, stroke 1000ms ease;
 }
 
 .tr-colors {
   transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, outline-color 150ms ease, text-decoration-color 150ms ease, fill 150ms ease, stroke 150ms ease;
 }
 
-.tr-bg-500 {
-  transition: background-color 500ms ease;
+.tr-bg-1000 {
+  transition: background-color 1000ms ease;
 }
 
 .tr-bg {

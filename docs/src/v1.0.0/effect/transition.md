@@ -27,7 +27,7 @@ Choose which CSS properties should morph smoothly over time.
 | `tr-layout` | `width, height, margin, padding, top, right, bottom, left, gap` | Coordinates structural changes. |
 
 
-<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-colors-500">.tr-colors</div>
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-colors-1000">.tr-colors</div>
 
 ```html
 <div class="bg-blue hover:bg-yellow tr-colors">.tr-colors</div>
@@ -55,7 +55,7 @@ You can also pinpoint individual properties cleanly:
 | **`tr-outline`** | `outline-color` | Targets element accessibility outlines. |
 
 
-<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-500">.tr-bg</div>
+<div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-1000">.tr-bg</div>
 
 ```html
 <div class="bg-blue hover:bg-yellow tr-bg">.tr-bg</div>
