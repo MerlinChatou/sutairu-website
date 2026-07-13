@@ -145,11 +145,10 @@
     <InputGroupCard />
     <FlexCard />
     <GridCard />
-    <GapCard />
-    
+    <GapCard />    
     <CursorCard />
     <AspectRatioCard />
-    
+    <CardWithHeaderCard />
 
     
     
@@ -157,7 +156,7 @@
     <StackCard />
     <RotationCard />
     <ScaleCard />
-    <CardWithHeaderCard />
+    
     <CardWithImageHeaderCard />
     <ModalCard />
     <BadgeCard />

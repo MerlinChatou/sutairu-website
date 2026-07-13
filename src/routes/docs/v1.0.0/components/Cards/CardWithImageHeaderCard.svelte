@@ -26,7 +26,7 @@
 </script>
 {#if isVisible}
 <div class="card opacity-0" id="card-with-image" bind:this={cardEl}>
-  <img class="header bg-accent" src="/images/card-header.png" alt="Sutairu Logo"  bind:this={header}/>
+  <img class="header bg-accent" src="/images/card-header.png" alt="Merlin Chatou"  bind:this={header}/>
   <div class="body" bind:this={body}>
     <div class="d-flex jc-between ai-center">
       <h4 class="h4">Card with Image</h4>      
@@ -34,7 +34,7 @@
     Example of a card with an image for blog posts, user cards, and many more.
   </div>
   <div class="footer text-right">
-    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/card">&lt;code&gt;</button>
+    <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/card">&lt;code&gt;</button>
   </div>
 </div>
 {/if}

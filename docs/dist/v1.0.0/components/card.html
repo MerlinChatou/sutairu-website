@@ -1,0 +1,67 @@
+<h1 id="card-component" class="h1">Card Component</h1>
+<p>A structured, flexible container component with automatic internal layout adjustments, conditional borders, and smart border-radius management.</p>
+<hr>
+<h2 id="structure--classes" class="h2">Structure &#x26; Classes</h2>
+<p>The card component relies on a parent wrapper and designated direct children to build unified UI segments.</p>
+<ul>
+<li><strong><code>card</code></strong>: The main container wrapper. Manages the outer border, shadows, base background, and automatically strips internal padding if structural child components are present.</li>
+<li><strong><code>header</code></strong>: The top section. Can contain typography or a banner image. Automatically adds a bottom border unless it's an image or the final element.</li>
+<li><strong><code>body</code></strong>: The main content area. Handles standard content padding and conditional borders.</li>
+<li><strong><code>footer</code></strong>: The bottom action or information bar.</li>
+</ul>
+<hr>
+<h2 id="basic-usage" class="h2">Basic Usage</h2>
+<p>Mix and match the internal structural classes to assemble standard, partial, or asset-led card variations.</p>
+<h3 id="standard-complex-card" class="h3">Standard Complex Card</h3>
+<p>Includes a header, content body, and an action footer.</p>
+<div class="card max-w-xs">
+  <div class="header">
+    <h4 class="my-0">Card Title</h4>
+  </div>
+  <div class="body">
+    <p>This is the primary content area of the card component.</p>
+  </div>
+  <div class="footer">
+    <button class="btn btn-primary">Action</button>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="card">
+  &#x3C;div class="header">
+    &#x3C;h3>Card Title&#x3C;/h3>
+  &#x3C;/div>
+  &#x3C;div class="body">
+    &#x3C;p>This is the primary content area of the card component.&#x3C;/p>
+  &#x3C;/div>
+  &#x3C;div class="footer">
+    &#x3C;button>Action&#x3C;/button>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="clean-body-card" class="h3">Clean Body Card</h3>
+<p>A simplified variation using only the <code>body</code> element for text-heavy widgets.</p>
+<div class="card max-w-xs">
+  <div class="body">
+    <p>A simple card variant containing only core text contents.</p>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="card">
+  &#x3C;div class="body">
+    &#x3C;p>A simple card variant containing only core text contents.&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="media-card" class="h3">Media Card</h3>
+<p>Use an <code>img</code> tag with the <code>header</code> class to seamlessly snap images to the outer top boundaries without manual cropping.</p>
+<div class="card max-w-xs">
+  <img class="header bg-accent" src="/images/card-header.png" alt="Merlin Chatou" />
+  <div class="body">
+    <p>Media contents integrate perfectly with the smart border clipping.</p>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="card">
+  &#x3C;img class="header" src="image.png" />
+  &#x3C;div class="body">
+    &#x3C;p>Media contents integrate perfectly with the smart border clipping.&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
