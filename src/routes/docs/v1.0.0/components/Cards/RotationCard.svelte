@@ -35,13 +35,13 @@
       <div hidden>rotate</div>
     </div>
     <div class="body d-grid grid-cols-2 p-4 text-center gap-4" bind:this={body}>
-      <img class="mx-auto w-50% transform tr-rotate-45 hover:rotate-0 bg-accent r-3 tr-transform tr-400" src="/images/rustine.png" alt="Rustine" />
-      <img class="mx-auto w-50% transform rotate-0 hover:rotate-270 bg-accent r-3 tr-transform tr-400" src="/images/rustine.png" alt="Rustine" />
-      <img class="mx-auto w-50% transform rotate-180 hover:rotate-0 bg-accent r-3 tr-transform tr-400" src="/images/rustine.png" alt="Rustine" />
-      <img class="mx-auto w-50% transform rotate-135 hover:rotate-0 bg-accent r-3 tr-transform tr-400" src="/images/rustine.png" alt="Rustine" />
+      <img class="mx-auto w-50% tr-transform-400 r-3 rot-45 hover:rot-0 bg-accent" src="/images/rustine.png" alt="Rustine" />
+      <img class="mx-auto w-50% tr-transform-400 r-3 rot-0 hover:rot-270 bg-accent" src="/images/rustine.png" alt="Rustine" />
+      <img class="mx-auto w-50% tr-transform-400 r-3 rot-180 hover:rot-0 bg-accent" src="/images/rustine.png" alt="Rustine" />
+      <img class="mx-auto w-50% tr-transform-400 r-3 rot-135 hover:rot-0 bg-accent" src="/images/rustine.png" alt="Rustine" />
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/rotate">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="transform/rotate">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

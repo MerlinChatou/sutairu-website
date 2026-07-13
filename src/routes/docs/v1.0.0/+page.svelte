@@ -147,17 +147,16 @@
     <GridCard />
     <GapCard />    
     <CursorCard />
-    <AspectRatioCard />
+    <AspectRatioCard /> 
+    <RotationCard />
+    <ScaleCard />            
     <CardWithHeaderCard />
-
+    <CardWithImageHeaderCard />
     
     
     
     <StackCard />
-    <RotationCard />
-    <ScaleCard />
     
-    <CardWithImageHeaderCard />
     <ModalCard />
     <BadgeCard />
     <CodeHighlightCard />
@@ -166,6 +165,7 @@
     <PatternCard />
     <BtnCloseCard />
   </div>
+  
 
   <NoSearchResult />
 
