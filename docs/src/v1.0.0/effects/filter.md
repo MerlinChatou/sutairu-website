@@ -20,6 +20,7 @@ Apply these classes directly to any `<img>` or visual container to achieve the d
 | `.saturate-[value]` | `filter: saturate(value%)` | Controls the color intensity/saturation of the element. |
 | `.sepia-[value]` | `filter: sepia(value%)` | Converts the image to sepia, giving it a warm, vintage brown tone. |
 
+> **Note:** The `.blur-[value]` and `.hue-rotate-[value]` utilities can accept optional unit suffixes (such as `px`, `rem`, `em` for blur, or `deg`, `grad`, `rad`, `turn` for hue-rotation) directly in the class name if a custom unit is preferred over the default configuration.
 
 ## Code Examples
 
