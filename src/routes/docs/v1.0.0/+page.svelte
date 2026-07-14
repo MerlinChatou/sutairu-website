@@ -160,14 +160,12 @@
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
     <BadgeCard />
-    <TransitionCard />
-    
-
-    <ModalCard />
-    
-    <CodeHighlightCard />
-    <LoaderCard />
     <FilterCard />
+    <TransitionCard />
+    <ModalCard />
+    <CodeHighlightCard />
+    
+    <LoaderCard />    
     <BtnCloseCard />
   </div>
 

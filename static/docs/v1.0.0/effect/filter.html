@@ -1,0 +1,80 @@
+<h1 id="filters" class="h1">Filters</h1>
+<p>Sutairu provides a set of highly performant, utility-first classes to apply visual filter effects directly to your images or elements. These classes wrap the native CSS <code>filter</code> property, allowing you to easily adjust tones, colors, and visibility without touching your stylesheet.</p>
+<hr>
+<h2 id="utility-classes-reference" class="h2">Utility Classes Reference</h2>
+<p>Apply these classes directly to any <code>&#x3C;img></code> or visual container to achieve the desired effect.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.grayscale-[value]</code></td>
+<td><code>filter: grayscale(value%)</code></td>
+<td>Converts the image to grayscale, desaturating its colors.</td>
+</tr>
+<tr>
+<td><code>.brightness-[value]</code></td>
+<td><code>filter: brightness(value%)</code></td>
+<td>Adjusts the image brightness (values above 100 increase brightness).</td>
+</tr>
+<tr>
+<td><code>.blur-[value]</code></td>
+<td><code>filter: blur(value rem/px)</code></td>
+<td>Applies a Gaussian blur to the element.</td>
+</tr>
+<tr>
+<td><code>.contrast-[value]</code></td>
+<td><code>filter: contrast(value%)</code></td>
+<td>Adjusts the contrast (values above 100 increase contrast).</td>
+</tr>
+<tr>
+<td><code>.invert-[value]</code></td>
+<td><code>filter: invert(value%)</code></td>
+<td>Inverts the samples in the element (e.g., creating a negative-like effect).</td>
+</tr>
+<tr>
+<td><code>.hue-rotate-[value]</code></td>
+<td><code>filter: hue-rotate(value deg)</code></td>
+<td>Rotates the hue of the element's colors around the color wheel.</td>
+</tr>
+<tr>
+<td><code>.opacity-[value]</code></td>
+<td><code>filter: opacity(value%)</code></td>
+<td>Controls the transparency level of the element.</td>
+</tr>
+<tr>
+<td><code>.saturate-[value]</code></td>
+<td><code>filter: saturate(value%)</code></td>
+<td>Controls the color intensity/saturation of the element.</td>
+</tr>
+<tr>
+<td><code>.sepia-[value]</code></td>
+<td><code>filter: sepia(value%)</code></td>
+<td>Converts the image to sepia, giving it a warm, vintage brown tone.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="code-examples" class="h2">Code Examples</h2>
+<p>Here is how you can use these classes in your markup:</p>
+<pre><code class="language-html">&#x3C;img class="r-4 grayscale-90" src="/images/color-image-no-bg.png" alt="90% Grayscale filter">
+&#x3C;img class="r-4 brightness-150" src="/images/color-image-no-bg.png" alt="150% Brightness filter">
+&#x3C;img class="r-4 blur-4" src="/images/color-image-no-bg.png" alt="Blurred filter">
+&#x3C;img class="r-4 contrast-200" src="/images/color-image-no-bg.png" alt="200% Contrast filter">
+&#x3C;img class="r-4 invert-80" src="/images/color-image-no-bg.png" alt="80% Inverted filter">
+&#x3C;img class="r-4 hue-rotate-180" src="/images/color-image-no-bg.png" alt="180-degree Hue Rotate filter">
+&#x3C;img class="r-4 opacity-10" src="/images/color-image-no-bg.png" alt="10% Opacity filter">
+&#x3C;img class="r-4 saturate-75" src="/images/color-image-no-bg.png" alt="75% Saturation filter">
+&#x3C;img class="r-4 sepia-80" src="/images/color-image-no-bg.png" alt="80% Sepia filter">
+</code></pre>
+<hr>
+<h2 id="performance--optimization-tips" class="h2">Performance &#x26; Optimization Tips</h2>
+<ul>
+<li><strong>Hardware Acceleration:</strong> Browser-level CSS filters run on the GPU. However, animating filters like <code>.blur</code> can sometimes be resource-intensive. For smooth animations, pair them with <code>will-change: filter</code>.</li>
+<li><strong>Combining Filters:</strong> You can safely combine these utility classes on a single element (e.g., <code>class="grayscale-90 opacity-10"</code>), but keep in mind that the browser processes them in a specific order which can slightly affect the final look compared to a single custom class.</li>
+</ul>

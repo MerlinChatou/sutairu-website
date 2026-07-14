@@ -15,7 +15,7 @@
 
 <button class="btn btn-primary" data-open-modal="modal-id">Launch demo modal</button>
 
-<div class="modal no-blur" id="modal-id">
+<div class="modal no-animation" id="modal-id">
   <div class="modal-content">
     <div class="header">
       <h2>Modal Title</h2>

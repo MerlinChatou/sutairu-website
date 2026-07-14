@@ -44,7 +44,7 @@
       <div class="bg-subtle group-hover:mv-x-150% px-2 py-1 b-1 b-accent r-2 w-40% tr-transform-750-step-end">step-end</div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="effect/transition">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="effects/transition">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

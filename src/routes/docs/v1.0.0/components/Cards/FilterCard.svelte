@@ -36,18 +36,18 @@
       <div hidden>brightness blur grayscale contrast invert hue rotate hue sepia opacity</div>
     </div>
     <div class="body d-flex fd-col gap-3" bind:this={body}>
-      <img class="r-4 filter grayscale-90 hover:grayscale-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter brightness-150 hover:brightness-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter blur-4 hover:blur-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter contrast-200 hover:contrast-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter invert-80 hover:invert-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter hue-rotate-180 hover:hue-rotate-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter opacity-10 hover:opacity-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter saturate-75 hover:saturate-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
-      <img class="r-4 filter sepia-80 hover:sepia-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 grayscale-90 hover:grayscale-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 brightness-150 hover:brightness-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 blur-4 hover:blur-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 contrast-200 hover:contrast-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 invert-80 hover:invert-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 hue-rotate-180 hover:hue-rotate-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 opacity-10 hover:opacity-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 saturate-75 hover:saturate-100" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
+      <img class="r-4 sepia-80 hover:sepia-0" src="/images/color-image-no-bg.png" alt="Colored pens to demonstrate filters">
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/filter">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="effects/filter">&lt;code&gt;</button>
     </div>
   </div>
 {/if}
