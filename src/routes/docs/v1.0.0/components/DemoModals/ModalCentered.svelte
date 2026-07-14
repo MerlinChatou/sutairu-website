@@ -9,7 +9,7 @@
 			This modal is centered in the viewport
 		</div>
     <div class="footer text-right">
-      <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="extras/modal">Documentation</button>
+      <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="components/modal">Documentation</button>
       <button class="btn btn-neutral" data-close-modal>Close</button>
     </div>
 	</div>

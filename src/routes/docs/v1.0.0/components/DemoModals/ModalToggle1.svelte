@@ -9,7 +9,7 @@
             <button class="btn btn-success fs-xl w-full" data-open-modal="toggle-modal-2">Open second modal</button>
         </div>
       <div class="footer text-right">
-        <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="extras/modal">Documentation</button>
+        <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="components/modal">Documentation</button>
         <button class="btn btn-neutral" data-close-modal>Close</button>
       </div>
     </div>

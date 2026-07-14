@@ -48,7 +48,7 @@
       <button class="btn btn-secondary" data-open-modal="full-width-modal">Full width</button>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/modal">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/modal">&lt;code&gt;</button>
     </div>
   </div>
 

@@ -1,0 +1,160 @@
+<h1 id="modal-dialogs" class="h1">Modal Dialogs</h1>
+<p>An accessible, lightweight, and smooth-transitioning modal system. It handles focus trapping, scroll restoration, sequential modal toggling, backdrop clicks, and keyboard navigation out of the box.</p>
+<h2 id="getting-started" class="h2">Getting Started</h2>
+<p>Import the module and initialize the global event listeners. This sets up delegation for clicks, keydowns, and scroll resets.</p>
+<pre><code class="language-javascript">import { Modal } from "@merlin-chatou/sutairu";
+
+// Initialize the modal listeners
+Modal.init();
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Important:</strong> You must ensure that the DOM is fully loaded before calling <code>Modal.init()</code>. You can achieve this by placing your script at the bottom of the HTML <code>&#x3C;body></code> or wrapping the initialization in a <code>DOMContentLoaded</code> event listener.</p>
+</blockquote>
+<h2 id="html-layout" class="h2">HTML Layout</h2>
+<p>To ensure the Javascript and CSS rules target your elements correctly, use the following HTML modal structure:</p>
+<pre><code class="language-html">&#x3C;div id="modal-id" tabindex="-1" class="modal" data-close-modal>
+  &#x3C;div class="modal-content">
+    &#x3C;div class="header">&#x3C;/div>
+    &#x3C;div class="body">&#x3C;/div>
+    &#x3C;div class="footer">&#x3C;/div>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<p>The modal content is structured into the following elements:</p>
+<ul>
+<li><code>.modal</code>: the backdrop container</li>
+<li><code>.modal-content</code>: is the modal container</li>
+<li><code>.header</code>: contains the modal title and optional close button.</li>
+<li><code>.body</code>: main content area of the modal.</li>
+<li><code>.footer</code>: footer of the modal</li>
+</ul>
+<h3 id="accessibility" class="h3">Accessibility</h3>
+<p>Add the following properties to the main <code>.modal</code> element:</p>
+<ul>
+<li><code>aria-modal="true"</code> for screen readers.</li>
+<li><code>tabindex="-1"</code> ensure modals receive focus when opened.</li>
+<li><code>data-color-modal</code> allows closing the modal when user clicks on the backdrop.</li>
+</ul>
+<h3 id="html-template-example" class="h3">HTML Template Example</h3>
+<p>This layout is the standard modal layout with a scrollable interior body.</p>
+<pre><code class="language-html">&#x3C;div class="modal" id="modal-id">
+  &#x3C;div class="modal-content">
+    &#x3C;div class="header">
+      &#x3C;h2>Modal Title&#x3C;/h2>
+      &#x3C;button type="button" class="btn-close" data-close-modal aria-label="Close">&#x3C;/button>
+    &#x3C;/div>    
+    &#x3C;div class="body">
+      &#x3C;p>This is the modal content area.&#x3C;/p>
+    &#x3C;/div>    
+    &#x3C;div class="footer">
+      &#x3C;button data-close-modal class="btn btn-neutral">Close&#x3C;/button>
+    &#x3C;/div>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="opening-button" class="h2">Opening Button</h2>
+<p>Use the <code>[data-open-modal]="modal-id"</code> attribute on a button to open a specific modal:</p>
+<p><button class="btn btn-primary" data-open-modal="modal-basic-example">Launch demo modal</button></p>
+<pre><code class="language-html">&#x3C;button class="btn btn-primary" data-open-modal="modal-id">Launch demo modal&#x3C;/button>
+</code></pre>
+<h2 id="closing-button" class="h2">Closing Button</h2>
+<p>Use the <code>[data-close-modal]</code> attribute on buttons to close the modal via
+event delegation.</p>
+<p><button class="btn btn-neutral" data-close-modal>Close modal</button></p>
+<pre><code class="language-html">&#x3C;button class="btn btn-neutral" data-close-modal>Close modal&#x3C;/button>
+</code></pre>
+<p>Add a closing cross in the modal header with the following code:</p>
+<pre><code class="language-html">&#x3C;div class="header">
+  &#x3C;h2>Modal Title&#x3C;/h2>
+  &#x3C;button type="button" class="btn-close" data-close-modal aria-label="Close">&#x3C;/button>
+&#x3C;/div>
+</code></pre>
+<h2 id="additional-classes" class="h2">Additional classes</h2>
+<p>Add the following classes to the main container (<code>.modal</code>) for custom styles:</p>
+<ul>
+<li><code>.centered</code> — center the modal in the viewport</li>
+<li><code>.no-animation</code> — disable animations</li>
+<li><code>.no-blur</code> — remove backdrop blur</li>
+<li><code>.w-*</code> — control modal width</li>
+</ul>
+<h2 id="long-content" class="h2">Long content</h2>
+<p>Natively, the scroll bar appears in the body. You can get a page scroll instead by adding a div with <code>.modal-scroll</code>:</p>
+<pre><code class="language-html">&#x3C;div id="modal-id" tabindex="-1" aria-modal="true" class="modal" data-close-modal>
+  &#x3C;div class="modal-scroll">
+    &#x3C;div class="modal-content">
+      &#x3C;div class="header">&#x3C;/div>
+      &#x3C;div class="body">&#x3C;/div>
+      &#x3C;div class="footer">&#x3C;/div>
+    &#x3C;/div>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="javascript-api" class="h2">JavaScript API</h2>
+<p>If you need programmatic control over your modals, use the exported API methods:</p>
+<h3 id="open-modal" class="h3">Open Modal</h3>
+<p><code>Modal.open(modalId, triggerEvent)</code> opens the modal matching the provided ID. If another modal is currently open, it safely closes that modal first before opening the new one.</p>
+<ul>
+<li><code>modalId</code> <em>(string)</em>: The DOM ID of the target modal.</li>
+<li><code>triggerEvent</code> <em>(Event, optional)</em>: The event that initiated the open action (useful for tracking triggers).</li>
+</ul>
+<pre><code class="language-javascript">import Modal from "./Modal.js";
+
+Modal.open("modal-id");
+</code></pre>
+<h3 id="close-modal" class="h3">Close Modal</h3>
+<p><code>Modal.close(modalId, triggerEvent, next)</code> closes the specified modal.</p>
+<ul>
+<li><code>modalId</code> <em>(string)</em>: The DOM ID of the modal to close.</li>
+<li><code>triggerEvent</code> <em>(Event, optional)</em>: The event that initiated the close action.</li>
+<li><code>next</code> <em>(string, optional)</em>: ID of another modal to open immediately after this one finishes its transition.</li>
+</ul>
+<pre><code class="language-javascript">// Closes 'modal-id' and sequentially opens 'success-modal'
+Modal.close("modal-id", null, "success-modal");
+</code></pre>
+<h3 id="destroy" class="h3">Destroy</h3>
+<p><code>Modal.destroy()</code> cleans up and removes all global event listeners registered by the modal module to prevent memory leaks.</p>
+<pre><code class="language-javascript">Modal.destroy();
+</code></pre>
+<h2 id="custom-events" class="h2">Custom Events</h2>
+<p>Modals dispatch lifecycle events that you can listen to on the individual <code>&#x3C;modal></code> elements:</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onModalOpen</code></td>
+<td>Fires immediately when the modal begins its opening transition.</td>
+</tr>
+<tr>
+<td><code>onModalOpened</code></td>
+<td>Fires after the opening animation completes and the modal is fully visible.</td>
+</tr>
+<tr>
+<td><code>onModalClose</code></td>
+<td>Fires immediately when the modal begins its closing transition.</td>
+</tr>
+<tr>
+<td><code>onModalClosed</code></td>
+<td>Fires after the closing animation completes and the modal is fully hidden.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event-example" class="h3">Event Example</h3>
+<pre><code class="language-javascript">const myModal = document.getElementById("modal-id");
+
+myModal.addEventListener("onModalOpened", (event) => {
+  console.log("Modal is open and ready for user interaction!", event.triggerEvent);
+});
+</code></pre>
+<h2 id="focus--accessibility-a11y" class="h2">Focus &#x26; Accessibility (A11y)</h2>
+<p>The modal is built with solid accessibility defaults:</p>
+<ul>
+<li><strong>Focus Trap:</strong> When a modal is active, focus is strictly trapped inside it. Users cannot tab out of the modal into the background page.</li>
+<li><strong>Auto-Focus:</strong> Opening a modal automatically focuses the first focusable element inside it. If no focusable element is found, the modal container itself receives focus.</li>
+<li><strong>Focus Restoration:</strong> Once closed, focus is automatically returned to the element that triggered the modal in the first place.</li>
+<li><strong>Escape Key:</strong> Pressing the <code>Escape</code> key automatically closes the currently active modal.</li>
+</ul>

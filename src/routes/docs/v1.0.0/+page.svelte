@@ -1,6 +1,6 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
-  import { Masonry, Modal } from "@merlin-chatou/sutairu";
+  import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
   import "$lib/generated/sutairu.min.css";
 
@@ -159,20 +159,15 @@
     <PatternCard />
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />
-
+    <BadgeCard />
     <TransitionCard />
     
 
-    
-
     <ModalCard />
-    <BadgeCard />
+    
     <CodeHighlightCard />
     <LoaderCard />
-
     <FilterCard />
-    
-    
     <BtnCloseCard />
   </div>
 
