@@ -2,7 +2,7 @@
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
-  import "$lib/generated/sutairu.min.css";
+  import "#lib/generated/sutairu.min.css";
 
   import Navbar from "./components/Navbar.svelte";
 
@@ -70,7 +70,7 @@
   import ModalFullWidth from "./components/DemoModals/ModalFullWidth.svelte";
 
   // Initialize documentation version from URL
-  import BrowserInit from "$lib/components/BrowserInit.svelte";
+  import BrowserInit from "#lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
 
   let masonry = $state();

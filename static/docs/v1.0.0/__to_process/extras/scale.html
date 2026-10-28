@@ -1,7 +1,7 @@
-<h1 id="scale-utilities" class="h1">Scale Utilities</h1>
+<h1 class="h1">Scale Utilities</h1>
 <p>Scale utilities use a composed transform stack.</p>
 <p>They mutate the <code>--scale</code> CSS variable, which is consumed by the shared <code>transform</code> declaration.</p>
-<h2 id="how-it-works" class="h2">How It Works</h2>
+<h2 class="h2">How It Works</h2>
 <p>All transform-related utilities mutate CSS variables.
 A single composed <code>transform</code> declaration reads those variables.</p>
 <div class="border my-5 w-fit p-2 transform rotate-30 scale-80">Rotate and scale</div>
@@ -14,7 +14,7 @@ A single composed <code>transform</code> declaration reads those variables.</p>
 <li>any other transform utility using variables</li>
 </ul>
 <p>No transform overrides occur.</p>
-<h2 id="base-scale-classes" class="h2">Base Scale Classes</h2>
+<h2 class="h2">Base Scale Classes</h2>
 <table>
 <thead>
 <tr>
@@ -100,12 +100,12 @@ A single composed <code>transform</code> declaration reads those variables.</p>
 <div class="bg-accent text-white m-4 r-3 w-fit p-2 transform hover:scale-150">Hover me</div>
 <pre><code class="language-html">&#x3C;div class="transform hover:scale-150">Hover me&#x3C;/div>
 </code></pre>
-<h2 id="transition" class="h2">Transition</h2>
+<h2 class="h2">Transition</h2>
 <p>Add a transition to get smooth scaling with <code>tr-transform</code> and <code>tr-*</code> in milliseconds:</p>
 <div class="bg-accent text-white m-4 r-3 w-fit p-2 transform hover:scale-150 tr-transform tr-500">Hover me</div>
 <pre><code class="language-html">&#x3C;div class="transform hover:scale-150 tr-transform tr-500">Hover me&#x3C;/div>
 </code></pre>
-<h2 id="transform-order" class="h2">Transform Order</h2>
+<h2 class="h2">Transform Order</h2>
 <p>The transform order is fixed:</p>
 <pre><code>translate → scale → rotate
 </code></pre>

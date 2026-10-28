@@ -1,6 +1,6 @@
-<h1 id="outline-width" class="h1">Outline Width</h1>
+<h1 class="h1">Outline Width</h1>
 <p>Utilities for controlling the outline width of elements, supporting universal scaling and various unit scales without affecting layout geometry.</p>
-<h2 id="core-rules" class="h2">Core Rules</h2>
+<h2 class="h2">Core Rules</h2>
 <table>
 <thead>
 <tr>
@@ -17,9 +17,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="dynamic-patterns" class="h2">Dynamic Patterns</h2>
+<h2 class="h2">Dynamic Patterns</h2>
 <p>The system dynamically resolves outline widths using two primary patterns: <strong>Pixel-scaled (default)</strong> and <strong>Unit-explicit</strong>.</p>
-<h3 id="pixel-scaled-utilities" class="h3">Pixel-Scaled Utilities</h3>
+<h3 class="h3">Pixel-Scaled Utilities</h3>
 <p>When no unit is provided, the number acts on a <strong>1:1 pixel scale</strong>. It supports integers, decimals, and fraction strings (rounded up to 3 decimal places).</p>
 <ul>
 <li><strong>Syntax:</strong> <code>ol-{value}</code></li>
@@ -39,7 +39,7 @@
 &#x3C;div class="ol-solid ol-accent ol-3">ol-3&#x3C;/div>
 &#x3C;div class="ol-solid ol-accent ol-4.5">ol-4.5&#x3C;/div>
 </code></pre>
-<h3 id="unit-explicit-utilities" class="h3">Unit-Explicit Utilities</h3>
+<h3 class="h3">Unit-Explicit Utilities</h3>
 <p>When a specific CSS length unit is provided, the engine skips pixel scaling and applies the exact value.</p>
 <ul>
 <li><strong>Syntax:</strong> <code>ol-{value}{unit}</code></li>

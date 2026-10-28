@@ -1,13 +1,13 @@
-<h1 id="transitions" class="h1">Transitions</h1>
+<h1 class="h1">Transitions</h1>
 <p>An elegant, real-time shorthand utility engine for managing element transitions and animations with automatic unit processing.</p>
-<h2 id="utility-structure" class="h2">Utility Structure</h2>
+<h2 class="h2">Utility Structure</h2>
 <p>Transition classes use an intuitive, declarative pattern to customize your animations on the fly. Components are separated by hyphens:</p>
 <pre><code>tr-{property}-{duration}-{delay}-{easing}
 </code></pre>
 <blockquote>
 <p><strong>Note:</strong> Only the property key is strictly required. Missing parameters automatically fallback to design system defaults.</p>
 </blockquote>
-<h2 id="properties" class="h2">Properties</h2>
+<h2 class="h2">Properties</h2>
 <p>Choose which CSS properties should morph smoothly over time.</p>
 <table>
 <thead>
@@ -48,7 +48,7 @@
 <div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-colors-1000">.tr-colors</div>
 <pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-colors">.tr-colors&#x3C;/div>
 </code></pre>
-<h3 id="single-property-helpers" class="h3">Single Property Helpers</h3>
+<h3 class="h3">Single Property Helpers</h3>
 <p>You can also pinpoint individual properties cleanly:</p>
 <table>
 <thead>
@@ -124,7 +124,7 @@
 <div class="bg-blue text-white hover:bg-green hover:text-black p-4 r-2 w-fit tr-bg-1000">.tr-bg</div>
 <pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-bg">.tr-bg&#x3C;/div>
 </code></pre>
-<h2 id="timing-duration--delay" class="h2">Timing (Duration &#x26; Delay)</h2>
+<h2 class="h2">Timing (Duration &#x26; Delay)</h2>
 <ul>
 <li><strong>Duration:</strong> Inferred as the <strong>first numeric value</strong> after the property key (defaults to <code>150ms</code>). Pass as a raw integer representing milliseconds.</li>
 <li><strong>Delay:</strong> Inferred as the <strong>second numeric value</strong> following duration.</li>
@@ -136,9 +136,9 @@
 <pre><code class="language-html">&#x3C;div class="bg-blue hover:bg-yellow tr-bg-1500">.tr-bg-1500&#x3C;/div>
 &#x3C;div class="bg-blue hover:bg-yellow tr-bg-1500">.tr-bg-0-300&#x3C;/div>
 </code></pre>
-<h2 id="easing-curves" class="h2">Easing Curves</h2>
+<h2 class="h2">Easing Curves</h2>
 <p>Control acceleration pacing by appending keyword easings, cubic beziers, or step counters.</p>
-<h3 id="native-keyword-presets" class="h3">Native Keyword Presets</h3>
+<h3 class="h3">Native Keyword Presets</h3>
 <p>Append <code>linear</code>, <code>ease</code>, <code>ease-in</code>, <code>ease-out</code>, or <code>ease-in-out</code> at the tail end of the utility token.</p>
 <div class="card flex-y p-3 w-375px gap-2 group text-center">
 <div class="bg-blue text-white group-hover:mv-x-200px p-2 r-2 w-150px tr-transform-750-linear">linear</div>
@@ -157,7 +157,7 @@
 &#x3C;div class="hover:mv-x-200px tr-transform-750-step-start">step-start&#x3C;/div>
 &#x3C;div class="hover:mv-x-200px tr-transform-750-step-end">step-end&#x3C;/div>
 </code></pre>
-<h3 id="advanced-complex-easings" class="h3">Advanced Complex Easings</h3>
+<h3 class="h3">Advanced Complex Easings</h3>
 <p>Pass explicit geometric arguments or stepping functions wrapped inside standard parentheses. The parser maps these directly to standard CSS types:</p>
 <ul>
 <li><code>cubic(...)</code> translates into <code>cubic-bezier(...)</code></li>

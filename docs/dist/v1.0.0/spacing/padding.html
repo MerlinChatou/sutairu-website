@@ -1,7 +1,7 @@
-<h1 id="padding-utilities" class="h1">Padding Utilities</h1>
+<h1 class="h1">Padding Utilities</h1>
 <p>Sutairu features a highly flexible dynamic padding system that mirrors the margin engine. It supports the standard proportional numeric scale, decimal adjustments, fractional spacing, and arbitrary CSS units—all while using logical properties to ensure native support for multi-directional layouts (RTL/LTR).</p>
 <p>Unlike margins, padding handles internal spacing, meaning it does not support <code>auto</code> values or negative dimensions.</p>
-<h2 id="direction-prefixes" class="h2">Direction Prefixes</h2>
+<h2 class="h2">Direction Prefixes</h2>
 <p>Sutairu uses a consistent prefix system to isolate specific interior directions:</p>
 <table>
 <thead>
@@ -52,7 +52,7 @@
 <div class="p-5 b-1 b-accent/50 r-2 w-fit stripes-accent/20 text-body bg-accent-200/20">p-5</div>
 <pre><code class="language-html">&#x3C;div class="p-5">p-5&#x3C;/div>
 </code></pre>
-<h2 id="reset-and-proportional-scale" class="h2">Reset and Proportional Scale</h2>
+<h2 class="h2">Reset and Proportional Scale</h2>
 <p>The numeric scale is root-relative (<code>rem</code>). By default, <strong>1 unit = 0.25rem (4px)</strong>.</p>
 <table>
 <thead>
@@ -105,7 +105,7 @@
   &#x3C;h2>Section Heading&#x3C;/h2>
 &#x3C;/section>
 </code></pre>
-<h2 id="fractional-padding" class="h2">Fractional Padding</h2>
+<h2 class="h2">Fractional Padding</h2>
 <p>When building component structures like compact buttons or complex table cells, you can use fractional syntax to get spaces tighter than the default <code>0.25rem</code> step.</p>
 <ul>
 <li><strong>Fractional Scale:</strong> <code>.py-1/2</code> -> <code>padding-block: 0.125rem;</code> (0.5 * *0.25rem)</li>
@@ -114,7 +114,7 @@
 <pre><code class="language-html">&#x3C;!-- High-density table cell styling -->
 &#x3C;td class="py-1/2 px-2">Table Data&#x3C;/td>
 </code></pre>
-<h2 id="arbitrary-units-literal-sizing" class="h2">Arbitrary Units (Literal Sizing)</h2>
+<h2 class="h2">Arbitrary Units (Literal Sizing)</h2>
 <p>For rigid layouts, custom designs, or viewport-responsive elements, you can append the literal CSS unit directly into the utility string. This drops the default framework multiplier.</p>
 <table>
 <thead>

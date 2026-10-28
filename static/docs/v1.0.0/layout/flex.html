@@ -1,6 +1,6 @@
-<h1 id="flex-utilities" class="h1">Flex Utilities</h1>
+<h1 class="h1">Flex Utilities</h1>
 <p>The flex utilities provide low-level control over layout using the CSS Flexible Box Layout (Flexbox). They are designed to be composable: combine multiple utilities to build precise layouts without writing custom CSS.</p>
-<h2 id="display" class="h2">Display</h2>
+<h2 class="h2">Display</h2>
 <p>Enable flex layout on an element.</p>
 <p><code>.d-flex</code> creates a flex container:</p>
 <div class="card p-3 w-fit ff-mono">
@@ -32,7 +32,7 @@
 </div>
 <pre><code class="language-html">&#x3C;div class="flex-y">...&#x3C;/div>
 </code></pre>
-<h2 id="flex-direction" class="h2">Flex direction</h2>
+<h2 class="h2">Flex direction</h2>
 <p>Flex direction (<code>fd-</code>) controls the main axis direction.</p>
 <table>
 <thead>
@@ -72,7 +72,7 @@
   ...
 &#x3C;/div>
 </code></pre>
-<h2 id="flex-wrap" class="h2">Flex wrap</h2>
+<h2 class="h2">Flex wrap</h2>
 <p>Flex wrap (<code>fw-</code>) Controls whether items wrap onto multiple lines.</p>
 <table>
 <thead>
@@ -108,9 +108,9 @@
   ...
 &#x3C;/div>
 </code></pre>
-<h2 id="alignment-utilities" class="h2">Alignment utilities</h2>
+<h2 class="h2">Alignment utilities</h2>
 <p>Alignment utilities control how flex (and grid) items are positioned along the main axis and cross axis. These utilities apply to flex containers, grid containers, or individual items depending on the property.</p>
-<h3 id="align-items" class="h3">Align items</h3>
+<h3 class="h3">Align items</h3>
 <p>Align items (<code>ai-*</code>) controls how items align along the <strong>cross axis</strong> inside a flex or grid container.</p>
 <table>
 <thead>
@@ -142,7 +142,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example" class="h4">Example</h4>
+<h4 class="h4">Example</h4>
 <div class="card p-3 ff-mono w-fit">
   <div class="d-flex ai-center h-24 hatching-gray/20 b-1 b-gray/20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
@@ -156,7 +156,7 @@
   &#x3C;div>03&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h3 id="align-content" class="h3">Align content</h3>
+<h3 class="h3">Align content</h3>
 <p>Align content (<code>ac-*</code>) controls how multiple lines are distributed along the cross axis.</p>
 <p>⚠️ Only applies when:</p>
 <ul>
@@ -197,7 +197,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-1" class="h4">Example</h4>
+<h4 class="h4">Example</h4>
 <div class="card p-3 ff-mono w-fit">
   <div class="d-flex max-w-20 h-32 fw-wrap ac-between hatching-gray/20 b-1 b-gray/20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
@@ -209,7 +209,7 @@
   ...
 &#x3C;/div>
 </code></pre>
-<h3 id="justify-content" class="h3">Justify content</h3>
+<h3 class="h3">Justify content</h3>
 <p>Justify content (<code>jc-*</code>) controls alignment along the <strong>main axis</strong>.</p>
 <table>
 <thead>
@@ -245,7 +245,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-2" class="h4">Example</h4>
+<h4 class="h4">Example</h4>
 <div class="card p-3 w-fit ff-mono">
   <div class="d-flex jc-evenly w-md hatching-gray/20 b-1 b-gray/20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
@@ -259,7 +259,7 @@
   &#x3C;div>03&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h3 id="align-self" class="h3">Align self</h3>
+<h3 class="h3">Align self</h3>
 <p>Align self (<code>as-*</code>) overrides the container’s <code>align-items</code> value for a single item.</p>
 <table>
 <thead>
@@ -295,7 +295,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-3" class="h4">Example</h4>
+<h4 class="h4">Example</h4>
 <div class="card p-3 w-fit ff-mono">
   <div class="flex-y h-32 ai-center w-md hatching-gray/20 b-1 b-gray/20 gap-2 r-2">
     <div class="bg-accent text-white r-2 p-2 ar-1/1">01</div>
@@ -309,7 +309,7 @@
   &#x3C;div>03&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h2 id="flex-grow" class="h2">Flex grow</h2>
+<h2 class="h2">Flex grow</h2>
 <p>Flex grow (<code>fg-</code>) controls how items grow to fill available space.</p>
 <table>
 <thead>
@@ -341,7 +341,7 @@
   &#x3C;div class="grow-1">02&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h2 id="flex-shrink" class="h2">Flex shrink</h2>
+<h2 class="h2">Flex shrink</h2>
 <p>Flex shrink (<code>shrink-</code>) controls how items shrink when space is limited.</p>
 <table>
 <thead>
@@ -375,7 +375,7 @@
   &#x3C;div class="shrink-0">03&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h2 id="flex-shorthand" class="h2">Flex shorthand</h2>
+<h2 class="h2">Flex shorthand</h2>
 <p>Flex basis utilities control the initial main size of a flex item before any available space is distributed according to <code>flex-grow</code> and <code>flex-shrink</code>.</p>
 <table>
 <thead>
@@ -428,7 +428,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="example-4" class="h3">Example</h3>
+<h3 class="h3">Example</h3>
 <div class="card p-3 ff-mono w-fit ta-center">
 <div class="d-flex fw-nowrap hatching-gray/20 b-1 b-gray/20 gap-2 r-2 ov-hidden">
   <div class="align-cc fb-auto bg-accent text-white r-2 p-2">Auto</div>

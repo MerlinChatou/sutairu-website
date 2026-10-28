@@ -1,5 +1,5 @@
 <script>
-  import { browser } from "$app/environment";
+  import { browser } from "$app/env";
   import colorScheme from "@merlin-chatou/color-scheme";
 
   let currentColorScheme = $state("light");

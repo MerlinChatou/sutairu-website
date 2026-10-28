@@ -4,12 +4,17 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": ">=24.0.0",
-    "npm": ">=11.6.0"
+    "node": ">=26.13.0",
+    "npm": ">=11.20.0"
+  },
+  "imports": {
+    "#lib": "./src/lib/index.js",
+    "#lib/*": "./src/lib/*"
   },
   "scripts": {
     "dev:docs": "node docs/build-docs.js --watch",
     "dev:site": "vite dev",
+    "dev:site:host": "vite dev --host",
     "dev": "concurrently \"npm:dev:docs\" \"npm:dev:site\"",
     "build": "vite build",
     "preview": "vite preview",
@@ -18,36 +23,37 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^7.0.0",
-    "@sveltejs/kit": "^2.49.2",
-    "@sveltejs/vite-plugin-svelte": "^6.2.1",
-    "concurrently": "^9.2.1",
-    "markdown-it": "^14.1.0",
-    "mdsvex": "^0.12.6",
+    "@sveltejs/adapter-auto": "^8.0.0",
+    "@sveltejs/kit": "^3.1.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "concurrently": "^10.0.6",
+    "markdown-it": "^15.0.3",
+    "mdsvex": "^0.12.8",
+    "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "remark-prism": "^1.3.6",
-    "remark-slug": "^7.0.1",
-    "svelte": "^5.43.8",
-    "svelte-check": "^4.3.4",
-    "svelte-preprocess": "^6.0.3",
-    "typescript": "^5.9.3",
-    "unist-util-visit": "^5.0.0",
-    "vite": "^7.2.2"
+    "remark-slug": "^8.0.0",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.7",
+    "svelte-preprocess": "^6.0.5",
+    "typescript": "^6.0.0",
+    "unist-util-visit": "^5.2.0",
+    "vite": "^8.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@merlin-chatou/color-scheme": "^1.0.6",
-    "chokidar": "^3.6.0",
-    "firebase": "^12.6.0",
-    "highlight.js": "^11.11.1",
+    "chokidar": "^6.0.0",
+    "firebase": "^13.1.0",
+    "highlight.js": "^11.12.0",
     "i": "^0.3.7",
-    "npm": "^11.7.0"
+    "npm": "^12.2.1"
   },
   "volta": {
-    "node": "24.11.1",
-    "npm": "11.6.4"
+    "node": "26.13.0",
+    "npm": "11.20.0"
   }
 }

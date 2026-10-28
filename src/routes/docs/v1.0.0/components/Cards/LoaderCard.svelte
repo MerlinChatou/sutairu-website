@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
-  import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
-  import { fade } from "svelte/transition";
+  import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
+  
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -32,10 +32,10 @@
     </div>
     <div class="body p-3 v-flex gap-5 ff-mono" bind:this={body}>
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader text-red ps-center"></span>
+        <span class="loader ps-center"></span>
         <span class="loader h-48px w-48px ps-center"></span>
-        <span class="loader b-purple text-white text-opacity-0 h-48px w-48px ps-center"></span>
-        <span class="loader place-self-center b-white b-opacity-0 text-green h-48px w-48px anim-dur-2000 ps-center"></span>
+        <span class="loader b-10 b-gray/50 bb-purple h-48px w-48px ps-center"></span>
+        <span class="loader place-self-center bb-opacity-0 b-green h-48px w-48px anim-dur-2000 ps-center"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
@@ -80,7 +80,7 @@
       </div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="extras/loader">&lt;code&gt;</button>
+      <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/loader">&lt;code&gt;</button>
     </div>
   </div>
 {/if}

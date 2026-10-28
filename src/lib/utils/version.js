@@ -1,4 +1,4 @@
-import { docsVersion } from "$lib/stores/docs";
+import { docsVersion } from "#lib/stores/docs";
 
 
 export const getCurrentVersionFromPath = () => {

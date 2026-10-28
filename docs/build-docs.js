@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
-import remarkSlug from 'remark-slug';
+import rehypeSlug from 'rehype-slug'
 //import remarkPrism from 'remark-prism';
 import remarkGfm from 'remark-gfm';
 import remarkFrontmatter from 'remark-frontmatter';
@@ -39,7 +39,7 @@ async function buildFile(srcPath) {
 
     const file = await remark()
       .use(remarkFrontmatter)
-      .use(remarkSlug)  // Add heading IDs
+      .use(rehypeSlug)  // Add heading IDs
       .use(remarkGfm)   // For tables
       .use(remarkHeadingClasses) // For adding .hx to <hx>
       .use(remarkHtml, { sanitize: false })

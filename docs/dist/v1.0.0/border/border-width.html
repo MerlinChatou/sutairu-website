@@ -1,6 +1,6 @@
-<h1 id="border-width" class="h1">Border Width</h1>
+<h1 class="h1">Border Width</h1>
 <p>Utilities for controlling the border width of elements, supporting physical sides, logical properties, and various unit scales.</p>
-<h2 id="core-rules" class="h2">Core Rules</h2>
+<h2 class="h2">Core Rules</h2>
 <table>
 <thead>
 <tr>
@@ -17,9 +17,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="dynamic-patterns" class="h2">Dynamic Patterns</h2>
+<h2 class="h2">Dynamic Patterns</h2>
 <p>The system dynamically resolves border widths using two primary patterns: <strong>Pixel-scaled (default)</strong> and <strong>Unit-explicit</strong>.</p>
-<h3 id="pixel-scaled-utilities" class="h3">Pixel-Scaled Utilities</h3>
+<h3 class="h3">Pixel-Scaled Utilities</h3>
 <p>When no unit is provided, the number acts on a <strong>1:1 pixel scale</strong>. It supports integers, decimals, and fraction strings (rounded up to 3 decimal places).</p>
 <ul>
 <li><strong>Syntax:</strong> <code>{type}-{value}</code></li>
@@ -38,7 +38,7 @@
 &#x3C;div class="b-3">b-3&#x3C;/div>
 &#x3C;div class="b-4.5">b-4.5&#x3C;/div>
 </code></pre>
-<h3 id="unit-explicit-utilities" class="h3">Unit-Explicit Utilities</h3>
+<h3 class="h3">Unit-Explicit Utilities</h3>
 <p>When a specific CSS length unit is provided, the engine skips pixel scaling and applies the exact value.</p>
 <ul>
 <li><strong>Syntax:</strong> <code>{type}-{value}{unit}</code></li>
@@ -54,9 +54,9 @@
 &#x3C;div class="b-0.1rem">b-0.1rem&#x3C;/div>
 &#x3C;div class="b-1/2vmin">b-1/2vmin&#x3C;/div>
 </code></pre>
-<h2 id="target-reference-map" class="h2">Target Reference Map</h2>
+<h2 class="h2">Target Reference Map</h2>
 <p>Use the prefixes below to target specific sides or axes. This handles both traditional physical boundaries and modern logical properties for bidirectional layouts.</p>
-<h3 id="physical-targets" class="h3">Physical Targets</h3>
+<h3 class="h3">Physical Targets</h3>
 <table>
 <thead>
 <tr>
@@ -93,7 +93,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="logical--axis-targets" class="h3">Logical &#x26; Axis Targets</h3>
+<h3 class="h3">Logical &#x26; Axis Targets</h3>
 <table>
 <thead>
 <tr>

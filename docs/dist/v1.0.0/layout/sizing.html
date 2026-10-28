@@ -1,6 +1,6 @@
-<h1 id="sizing-utilities" class="h1">Sizing Utilities</h1>
+<h1 class="h1">Sizing Utilities</h1>
 <p>Sutairu features a fully integrated layout engine to control <code>width</code> and <code>height</code>, along with their <code>min</code>/<code>max</code> constraints. The system combines a fixed semantic scale, a step-based spacing scale, layout percentages (fractions), explicit unit overrides, and a bracket-based escape hatch for complex CSS calculations.</p>
-<h2 id="property-prefixes" class="h2">Property Prefixes</h2>
+<h2 class="h2">Property Prefixes</h2>
 <p>Sutairu uses descriptive prefixes to handle sizing parameters:</p>
 <table>
 <thead>
@@ -24,7 +24,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="semantic-scale" class="h2">Semantic Scale</h2>
+<h2 class="h2">Semantic Scale</h2>
 <p>These semantic keywords allow you to build fluid layouts, constrain readable line lengths, or stretch items relative to the viewport boundaries.</p>
 <table>
 <thead>
@@ -92,15 +92,15 @@
   &#x3C;div>Splash Content&#x3C;/div>
 &#x3C;/section>
 </code></pre>
-<h2 id="standard-steps--fractions" class="h2">Standard Steps &#x26; Fractions</h2>
+<h2 class="h2">Standard Steps &#x26; Fractions</h2>
 <p>Sutairu splits its core numeric sizing utilities into two logical processing models based on layout context: <strong>Steps</strong> (for spacing) and <strong>Fractions</strong> (for grid distributions).</p>
-<h3 id="proportional-steps-rem-based" class="h3">Proportional Steps (Rem-based)</h3>
+<h3 class="h3">Proportional Steps (Rem-based)</h3>
 <p>When passing a simple decimal or integer without a fraction or unit, it evaluates against the standard scale where <strong>1 unit = 0.25rem (4px)</strong>.</p>
 <ul>
 <li><code>.w-4</code> -> <code>width: 1rem;</code> (16px)</li>
 <li><code>.h-64</code> -> <code>height: 16rem;</code> (256px)</li>
 </ul>
-<h3 id="layout-fractions-percentage-based" class="h3">Layout Fractions (Percentage-based)</h3>
+<h3 class="h3">Layout Fractions (Percentage-based)</h3>
 <p>When a forward slash <code>/</code> is present, Sutairu computes it as a fluid percentage out of 100.</p>
 <ul>
 <li><code>.w-1/2</code> -> <code>width: 50%;</code></li>
@@ -113,7 +113,7 @@
   &#x3C;aside class="w-1/4">25% Sidebar&#x3C;/aside>
 &#x3C;/div>
 </code></pre>
-<h2 id="sizing-constants-breakpoint-envelopes" class="h2">Sizing Constants (Breakpoint Envelopes)</h2>
+<h2 class="h2">Sizing Constants (Breakpoint Envelopes)</h2>
 <p>Sutairu bundles fixed rem boundaries useful for building responsive card widths, floating panels, or viewport step constraints.</p>
 <table>
 <thead>
@@ -171,9 +171,9 @@
   &#x3C;h3>Card Layout Component&#x3C;/h3>
 &#x3C;/div>
 </code></pre>
-<h2 id="literal-units--arbitrary-escape-hatches" class="h2">Literal Units &#x26; Arbitrary Escape Hatches</h2>
+<h2 class="h2">Literal Units &#x26; Arbitrary Escape Hatches</h2>
 <p>When exact layout restrictions are needed, Sutairu offers two literal syntax escape hatches.</p>
-<h3 id="explicit-units" class="h3">Explicit Units</h3>
+<h3 class="h3">Explicit Units</h3>
 <p>Append the targeted CSS measurement unit directly to the end of your size definition:</p>
 <ul>
 <li><code>.w-16px</code> -> <code>width: 16px;</code></li>
@@ -181,7 +181,7 @@
 <li><code>.max-w-100%</code> -> <code>max-width: 100%;</code></li>
 <li><code>.min-h-50vh</code> -> <code>min-height: 50vh;</code></li>
 </ul>
-<h3 id="bracket-notation" class="h3">Bracket Notation</h3>
+<h3 class="h3">Bracket Notation</h3>
 <p>For absolute control over arbitrary calculations, variable evaluation, or complex math layout functions, wrap your value inside square brackets (<code>[...]</code>). Use underscores <code>_</code> to represent spaces in complex rules:</p>
 <ul>
 <li><code>.w-[150px]</code> -> <code>width: 150px;</code></li>

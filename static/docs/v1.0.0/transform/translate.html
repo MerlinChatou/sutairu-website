@@ -1,6 +1,6 @@
-<h1 id="translate" class="h1">Translate</h1>
+<h1 class="h1">Translate</h1>
 <p>Displace elements along the horizontal or vertical axes using hardware-accelerated GPU translation. This utility alters the <code>--su-tr-x</code> and <code>--su-tr-y</code> variables, allowing seamless combinations with scaling and rotation without causing utility overrides.</p>
-<h2 id="usage" class="h2">Usage</h2>
+<h2 class="h2">Usage</h2>
 <p>Use the <code>mv-{axis}-{value}{unit}</code> utility to translate an element along a specific axis, or omit the axis entirely (<code>mv-{value}{unit}</code>) to apply the movement to <strong>both</strong> axes simultaneously.</p>
 <ul>
 <li><strong>Axes:</strong> Use <code>x</code> for horizontal movement and <code>y</code> for vertical movement. Leave the axis out (e.g., <code>mv-20</code>) to apply to both <code>x</code> and <code>y</code>.</li>
@@ -63,7 +63,7 @@
   &#x3C;div class="mv-middle">02&#x3C;/div>  
 &#x3C;/div>
 </code></pre>
-<h2 id="negative--important-modifiers" class="h2">Negative &#x26; Important Modifiers</h2>
+<h2 class="h2">Negative &#x26; Important Modifiers</h2>
 <p>To move an element in the opposite direction (left or up), prefix the utility with a minus sign (<code>-</code>). Combine it with <code>!</code> at the very beginning to force rule priority.</p>
 <blockquote>
 <p>[!NOTE]
@@ -83,7 +83,7 @@ When using <code>-</code> with the <code>middle</code> keyword, the negative fla
   &#x3C;div class="bg-blue/60 -mv-10px">02&#x3C;/div>
 &#x3C;/div>
 </code></pre>
-<h2 id="core-engine-synchronization" class="h2">Core Engine Synchronization</h2>
+<h2 class="h2">Core Engine Synchronization</h2>
 <p>Every translation class automatically injects the framework's central transform engine. This safeguards your styles so that mixing <code>mv-</code>, <code>rot-</code>, and <code>sc-</code> utilities together on a single element behaves exactly as expected:</p>
 <pre><code class="language-css">transform: translateX(var(--su-tr-x, 0)) 
            translateY(var(--su-tr-y, 0)) 

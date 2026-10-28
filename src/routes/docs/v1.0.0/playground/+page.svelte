@@ -1,6 +1,6 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
-  import "$lib/generated/sutairu.min.css";
+  import "#lib/generated/sutairu.min.css";
   import { Modal } from "@merlin-chatou/sutairu";
   import Navbar from "../components/Navbar.svelte";
 

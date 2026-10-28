@@ -1,6 +1,6 @@
-<h1 id="margin-utilities" class="h1">Margin Utilities</h1>
+<h1 class="h1">Margin Utilities</h1>
 <p>Sutairu features a highly flexible dynamic margin system. It supports automatic margins, a standard proportional numeric scale, negative values, fractional offsets, and arbitrary CSS units—all while remaining fully compatible with logical properties for modern, multi-directional layouts (RTL/LTR).</p>
-<h2 id="direction-prefixes" class="h2">Direction Prefixes</h2>
+<h2 class="h2">Direction Prefixes</h2>
 <p>Sutairu uses an intuitive mapping system to target specific sides or directions:</p>
 <table>
 <thead>
@@ -53,7 +53,7 @@
 </div>
 <pre><code class="language-html">&#x3C;div class="m-4">m-4&#x3C;/div>
 </code></pre>
-<h2 id="auto-and-reset-margins" class="h2">Auto and Reset Margins</h2>
+<h2 class="h2">Auto and Reset Margins</h2>
 <p>Perfect for centering blocks or pushing items apart within flex and grid layouts.</p>
 <table>
 <thead>
@@ -82,7 +82,7 @@
 </tbody>
 </table>
 <p><em>(Available for all direction prefixes: <code>mt-auto</code>, <code>mb-0</code>, etc.)</em></p>
-<h2 id="standard-proportional-scale" class="h2">Standard Proportional Scale</h2>
+<h2 class="h2">Standard Proportional Scale</h2>
 <p>The numeric scale is root-relative (<code>rem</code>). By default, <strong>1 unit = 0.25rem (4px)</strong>.</p>
 <table>
 <thead>
@@ -126,7 +126,7 @@
 &#x3C;!-- Center a container horizontally with standard padding -->
 &#x3C;div class="mx-auto w-half">Centered Content&#x3C;/div>
 </code></pre>
-<h2 id="negative-and-fractional-margins" class="h2">Negative and Fractional Margins</h2>
+<h2 class="h2">Negative and Fractional Margins</h2>
 <p>Need to intentionally overlap elements or map offsets to fractional grids? prepend a <code>-</code> for negative values, or use a <code>/</code> for fractions.</p>
 <ul>
 <li><strong>Negative Margin:</strong> <code>.-mt-4</code> -> <code>margin-top: -1rem;</code></li>
@@ -136,7 +136,7 @@
 <pre><code class="language-html">&#x3C;!-- Pull a hero image up into a header header block -->
 &#x3C;img class="-mt-12 src="..." />
 </code></pre>
-<h2 id="arbitrary-units-literal-sizing" class="h2">Arbitrary Units (Literal Sizing)</h2>
+<h2 class="h2">Arbitrary Units (Literal Sizing)</h2>
 <p>If your layout requires exact physical constraints or viewport-fluid scaling, append the literal CSS unit directly to the class name. This breaks out of the standard <code>0.25rem</code> multiplier system.</p>
 <table>
 <thead>

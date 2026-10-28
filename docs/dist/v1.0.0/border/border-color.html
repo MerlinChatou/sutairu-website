@@ -1,6 +1,6 @@
-<h1 id="border-color" class="h1">Border Color</h1>
-<p>Control the border color of elements using utility classes. Like background colors, border colors automatically adapt to the active theme and color scheme.</p>
-<h2 id="available-colors" class="h2">Available colors</h2>
+<h1 class="h1">Border Color</h1>
+<p>Control the border color and directional border colors of elements using utility classes. Like background colors, border colors automatically adapt to the active theme and color scheme.</p>
+<h2 class="h2">Available colors</h2>
 <table>
 <thead>
 <tr>
@@ -83,7 +83,81 @@
 &#x3C;div class="b-1 b-subtle">Title border&#x3C;/div>
 &#x3C;div class="b-1 b-accent">Accent border&#x3C;/div>
 </code></pre>
-<h2 id="theme-variants" class="h2">Theme variants</h2>
+<h2 class="h2">Directional Border Colors</h2>
+<p>Border color utilities can be targeted to specific sides, axes, or logical directions using direction prefixes:</p>
+<table>
+<thead>
+<tr>
+<th>Utility Prefix</th>
+<th>CSS Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>b-</code></td>
+<td><code>border-color</code></td>
+<td>All sides</td>
+</tr>
+<tr>
+<td><code>bt-</code></td>
+<td><code>border-top-color</code></td>
+<td>Top side</td>
+</tr>
+<tr>
+<td><code>bb-</code></td>
+<td><code>border-bottom-color</code></td>
+<td>Bottom side</td>
+</tr>
+<tr>
+<td><code>bl-</code></td>
+<td><code>border-left-color</code></td>
+<td>Left side</td>
+</tr>
+<tr>
+<td><code>br-</code></td>
+<td><code>border-right-color</code></td>
+<td>Right side</td>
+</tr>
+<tr>
+<td><code>bx-</code></td>
+<td><code>border-inline-color</code></td>
+<td>Horizontal (left &#x26; right)</td>
+</tr>
+<tr>
+<td><code>by-</code></td>
+<td><code>border-block-color</code></td>
+<td>Vertical (top &#x26; bottom)</td>
+</tr>
+<tr>
+<td><code>bs-</code></td>
+<td><code>border-inline-start-color</code></td>
+<td>Logical start side (LTR/RTL compliant)</td>
+</tr>
+<tr>
+<td><code>be-</code></td>
+<td><code>border-inline-end-color</code></td>
+<td>Logical end side (LTR/RTL compliant)</td>
+</tr>
+</tbody>
+</table>
+<h3 class="h3">Directional Examples</h3>
+<div class="card w-fit d-flex fd-col p-4 gap-4">
+<div class="p-2 b-1 bb-2 bb-red">Bottom red border</div>
+<div class="p-2 b-1 bt-2 bt-blue">Top blue border</div>
+<div class="p-2 b-1 bx-2 bx-green">Horizontal green border</div>
+</div>
+<pre><code class="language-html">&#x3C;!-- Bottom border color -->
+&#x3C;div class="b-1 bb-2 bb-red">Bottom red border&#x3C;/div>
+
+&#x3C;!-- Top border color -->
+&#x3C;div class="b-1 bt-2 bt-blue">Top blue border&#x3C;/div>
+
+&#x3C;!-- Inline (horizontal) border color -->
+&#x3C;div class="b-1 bx-2 bx-green">Horizontal green border&#x3C;/div>
+
+</code></pre>
+<h2 class="h2">Theme variants</h2>
 <p>Sutairu uses a <strong>light-first</strong> approach. Base utilities target light mode by default, while variants override styles for dark mode when active.</p>
 <ul>
 <li><code>dark:</code> — apply styles only in dark mode</li>
@@ -91,16 +165,15 @@
 <pre><code class="language-html">&#x3C;div class="b-1 b-gray dark:b-black">
   Adaptive border color
 &#x3C;/div>
-
 </code></pre>
 <p><strong>How it works</strong></p>
 <ul>
 <li>Default classes apply to light mode.</li>
 <li><code>dark:</code> variants override styles when the dark theme is enabled.</li>
 </ul>
-<h2 id="advanced-border-color-control" class="h2">Advanced Border Color Control</h2>
+<h2 class="h2">Advanced Border Color Control</h2>
 <p>Sutairu supports a granular color system using the <code>b-&#x3C;color>-&#x3C;shade>/&#x3C;opacity></code> pattern. This allows for fine-tuned UI dividers, card outlines, and interactive focus states straight from your HTML markup.</p>
-<h3 id="shades-and-opacity" class="h3">Shades and Opacity</h3>
+<h3 class="h3">Shades and Opacity</h3>
 <p>You can append a numeric shade (usually <strong>0–1000</strong>) and an opacity percentage (<strong>0–100</strong>) to any base border color.</p>
 <table>
 <thead>
@@ -124,7 +197,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="examples" class="h3">Examples</h3>
+<h3 class="h3">Examples</h3>
 <p>Here are some examples of advanced border colors:</p>
 <div class="card w-fit d-flex fd-col p-3 gap-2">
 <div class="b-1 b-red-400 p-2 r-2">b-red-400</div>

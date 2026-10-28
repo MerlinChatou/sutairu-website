@@ -1,5 +1,5 @@
 <script>
-  import { docsVersion } from "$lib/stores/docs";
+  import { docsVersion } from "#lib/stores/docs";
   import { onMount } from "svelte";
   import { Scroll } from "@merlin-chatou/sutairu/utils";
 

@@ -1,6 +1,6 @@
-<h1 id="font-size-utilities" class="h1">Font Size Utilities</h1>
+<h1 class="h1">Font Size Utilities</h1>
 <p>Utility classes for controlling font size.</p>
-<h2 id="semantic-sizing" class="h2">Semantic Sizing</h2>
+<h2 class="h2">Semantic Sizing</h2>
 <p>Apply a font size directly on any element:</p>
 <div class="card mb-3 w-fit d-flex fd-col p-3 gap-3">
   <div class="fs-xs">.fs-xs</div>
@@ -21,7 +21,7 @@
 &#x3C;div class="fs-3xl">.fs-3xl&#x3C;/div>
 &#x3C;div class="fs-4xl">.fs-4xl&#x3C;/div>
 </code></pre>
-<h2 id="classes-details" class="h2">Classes details</h2>
+<h2 class="h2">Classes details</h2>
 <table>
 <thead>
 <tr>
@@ -73,9 +73,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="literal--custom-sizing" class="h2">Literal &#x26; Custom Sizing</h2>
+<h2 class="h2">Literal &#x26; Custom Sizing</h2>
 <p>For cases where the semantic scale isn't enough, Sutairu provides utilities for literal pixel values, rem units, viewport units, and even fractional calculations.</p>
-<h3 id="numeric-scale-rem-based" class="h3">Numeric Scale (Rem-based)</h3>
+<h3 class="h3">Numeric Scale (Rem-based)</h3>
 <p>Sutairu includes a numeric scale where each unit typically represents <code>0.25rem</code> (4px by default).</p>
 <table>
 <thead>
@@ -103,7 +103,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="arbitrary-units" class="h3">Arbitrary Units</h3>
+<h3 class="h3">Arbitrary Units</h3>
 <p>You can define exact sizes using pixels, rems, or viewport units directly in the class name for one-off requirements.</p>
 <table>
 <thead>
@@ -136,13 +136,13 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fractional-sizing" class="h3">Fractional Sizing</h3>
+<h3 class="h3">Fractional Sizing</h3>
 <p>When you need precise typographic ratios, you can use fractional syntax. This is particularly useful for matching mathematical design grids.</p>
 <ul>
 <li><strong>Example:</strong> <code>.fs-5/3rem</code></li>
 <li><strong>CSS:</strong> <code>font-size: calc(5/3 * 1rem);</code> (~26.6px)</li>
 </ul>
-<h3 id="examples" class="h3">Examples</h3>
+<h3 class="h3">Examples</h3>
 <div class="card w-fit d-flex fd-col gap-2 p-3">
   <div class="fs-10px">.fs-10px (Fixed)</div>
   <div class="fs-4">.fs-4 (1rem)</div>
@@ -152,9 +152,9 @@
 &#x3C;div class="fs-4">.fs-4 (1rem)&#x3C;/div>
 &#x3C;div class="fs-2.5rem">.fs-2.5rem (Large)&#x3C;/div>
 </code></pre>
-<h2 id="fluid-font-size-utility" class="h2">Fluid Font Size Utility</h2>
+<h2 class="h2">Fluid Font Size Utility</h2>
 <p>The <code>fs-fluid</code> utility provides <strong>responsive typography</strong> that scales linearly between a minimum and maximum viewport width. This eliminates the need for multiple media queries by using the CSS <code>clamp()</code> function.</p>
-<h3 id="basic-syntax" class="h3">Basic Syntax</h3>
+<h3 class="h3">Basic Syntax</h3>
 <pre><code class="language-css">fs-fluid-[min]-[max][unit]
 </code></pre>
 <ul>
@@ -162,9 +162,9 @@
 <li><strong><code>max</code></strong>: The font size at the maximum viewport width (1200px).</li>
 <li><strong><code>unit</code></strong>: Optional. Supports <code>rem</code> (default) and <code>px</code>.</li>
 </ul>
-<h3 id="how-it-works" class="h3">How it Works</h3>
+<h3 class="h3">How it Works</h3>
 <p>The utility calculates a <strong>linear scale</strong> (the "slope") between two defined points. As the browser window resizes, the font size adjusts smoothly until it hits the defined boundaries.</p>
-<h3 id="usage-examples" class="h3">Usage Examples</h3>
+<h3 class="h3">Usage Examples</h3>
 <table>
 <thead>
 <tr>
@@ -196,7 +196,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="examples-1" class="h3">Examples</h3>
+<h3 class="h3">Examples</h3>
 <div class="card w-fit d-flex fd-col gap-2 p-3">
   <div class="fs-fluid-1-2">.fs-fluid-1-2</div>
   <div class="fs-fluid-16-64px">.fs-fluid-16-64px</div>

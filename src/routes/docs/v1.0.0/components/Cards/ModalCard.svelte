@@ -10,7 +10,7 @@
   });
 
   import { searchState } from "../../state/search.svelte.js";
-  import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
+  import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
   import { fade } from "svelte/transition";
   let header = $state();
   let body = $state();

@@ -1,8 +1,8 @@
-<h1 id="transforms-rotation" class="h1">Transforms: Rotation</h1>
+<h1 class="h1">Transforms: Rotation</h1>
 <p>Apply 2D rotations to elements. Under the hood, this utility updates a shared transform engine variable (<code>--su-rot</code>), allowing you to safely chain rotations with translation and scaling utilities without conflicts.</p>
-<h2 id="usage" class="h2">Usage</h2>
+<h2 class="h2">Usage</h2>
 <p>Use the <code>rot-{value}</code> utility to rotate an element.</p>
-<h3 id="smart-unit-inference" class="h3">Smart Unit Inference</h3>
+<h3 class="h3">Smart Unit Inference</h3>
 <p>You don't always need to specify a unit. The framework automatically infers the correct CSS unit based on your input style:</p>
 <ul>
 <li><strong>Degrees (<code>deg</code>):</strong> Inferred if you provide a whole number (e.g., <code>90</code> $\rightarrow$ <code>90deg</code>).</li>
@@ -41,7 +41,7 @@
 <pre><code class="language-html">&#x3C;div class="rot-30">r-30&#x3C;/div>
 &#x3C;div class="rot-1/6">r-1/6&#x3C;/div>
 </code></pre>
-<h3 id="explicit-units" class="h3">Explicit Units</h3>
+<h3 class="h3">Explicit Units</h3>
 <p>If you prefer to be explicit, you can append <code>deg</code> or <code>turn</code> directly to the utility.</p>
 <ul>
 <li><code>rot-45deg</code> => <code>--su-rot: 45deg;</code></li>
@@ -54,7 +54,7 @@
 <pre><code class="language-html">&#x3C;div class="rot-30deg">r-30deg&#x3C;/div>
 &#x3C;div class="rot-0.1turn">r-0.1turn&#x3C;/div>
 </code></pre>
-<h2 id="negative-values" class="h2">Negative Values</h2>
+<h2 class="h2">Negative Values</h2>
 <p>To rotate counter-clockwise, prefix the utility with a minus sign (<code>-</code>). If you are also using the important modifier (<code>!</code>), the exclamation mark always comes first.</p>
 <div class="flex-x px-8 gap-8 my-8">
 <div class="bg-accent p-3 r-2 align-cc text-white -rot-30">-rot-30</div>
@@ -63,7 +63,7 @@
 <pre><code class="language-html">&#x3C;div class="-rot-30deg">-r-30&#x3C;/div>
 &#x3C;div class="-rot-0.1turn">-r-0.1turn&#x3C;/div>
 </code></pre>
-<h2 id="hardware-acceleration" class="h2">Hardware Acceleration</h2>
+<h2 class="h2">Hardware Acceleration</h2>
 <p>Every rotation class automatically injects the framework's core transform engine. This ensures all translation, rotation, and scale properties stay perfectly synchronized on a single layer:</p>
 <pre><code class="language-css">transform: translateX(var(--su-tr-x, 0)) 
            translateY(var(--su-tr-y, 0)) 

@@ -1,5 +1,5 @@
 <script>
-  import "$lib/generated/sutairu.min.css";
+  import "#lib/generated/sutairu.min.css";
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
   //import { getContentWidth, debounce } from "@merlin-chatou/sutairu/utils";

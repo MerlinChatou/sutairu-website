@@ -1,8 +1,8 @@
-<h1 id="border-radius" class="h1">Border Radius</h1>
+<h1 class="h1">Border Radius</h1>
 <p>Utilities for controlling the border radius (corner rounding) of elements. Supports semantic aliases, unitless step scaling, percentage fractions, and explicit CSS units across all corners and sides.</p>
-<h2 id="dynamic-scales--patterns" class="h2">Dynamic Scales &#x26; Patterns</h2>
+<h2 class="h2">Dynamic Scales &#x26; Patterns</h2>
 <p>The system processes numeric variations dynamically using three scaling behaviors depending on the syntax format:</p>
-<h3 id="1-step-scaled-utilities-rem" class="h3">1. Step-Scaled Utilities (Rem)</h3>
+<h3 class="h3">1. Step-Scaled Utilities (Rem)</h3>
 <p>When a raw, unitless number is passed (without any explicit unit or fraction forward-slash), it resolves on a <strong>0.25rem per step scale</strong>.</p>
 <ul>
 <li><strong>Syntax:</strong> <code>{prefix}-{step}</code></li>
@@ -21,7 +21,7 @@
 &#x3C;div class="b-2 b-accent r-4">r-4&#x3C;/div>
 &#x3C;div class="b-2 b-accent r-5">r-5&#x3C;/div>
 </code></pre>
-<h3 id="2-fractional-percentage-utilities" class="h3">2. Fractional Percentage Utilities</h3>
+<h3 class="h3">2. Fractional Percentage Utilities</h3>
 <p>When a fraction string containing a forward slash (<code>/</code>) is passed, the engine converts it into an explicit percentage value.</p>
 <ul>
 <li><strong>Syntax:</strong> <code>{prefix}-{numerator}/{denominator}</code></li>
@@ -34,7 +34,7 @@
 <pre><code class="language-html">&#x3C;div class="b-2 b-accent r-1/5">r-1/5&#x3C;/div>
 &#x3C;div class="b-2 b-accent r-1/2">r-1/2&#x3C;/div>
 </code></pre>
-<h3 id="3-explicit-length-unit-utilities" class="h3">3. Explicit Length Unit Utilities</h3>
+<h3 class="h3">3. Explicit Length Unit Utilities</h3>
 <p>When a number is coupled with an explicit CSS unit, the system bypasses step and percentage calculations, preserving the exact literal value. If no unit is provided but it hits this specific broad pattern fallback, it defaults to pixels (<code>px</code>).</p>
 <ul>
 <li><strong>Syntax:</strong> <code>{prefix}-{value}{unit}</code></li>
@@ -48,7 +48,7 @@
 <pre><code class="language-html">&#x3C;div class="b-2 b-accent r-0.5rem">r-0.5rem&#x3C;/div>
 &#x3C;div class="b-2 b-accent r-10px">r-10px&#x3C;/div>
 </code></pre>
-<h3 id="semantic-utilities" class="h3">Semantic Utilities</h3>
+<h3 class="h3">Semantic Utilities</h3>
 <p>A collection of pre-configured keywords that map to standard design system shapes. These apply to all directional prefixes (e.g., <code>r-pill</code>, <code>rt-none</code>, <code>rbl-circle</code>).</p>
 <table>
 <thead>
@@ -85,7 +85,7 @@
 &#x3C;div class="b-2 b-accent r-pill">r-pill&#x3C;/div>
 &#x3C;div class="b-2 b-accent r-circle">r-full&#x3C;/div>
 </code></pre>
-<h2 id="directional-prefix-reference" class="h2">Directional Prefix Reference</h2>
+<h2 class="h2">Directional Prefix Reference</h2>
 <p>Replace <code>{prefix}</code> with any of the keys below to target specific corners, structural boundaries, or the whole layout.</p>
 <table>
 <thead>

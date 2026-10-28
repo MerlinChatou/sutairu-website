@@ -1,15 +1,15 @@
-<h1 id="color-scheme" class="h1">Color Scheme</h1>
+<h1 class="h1">Color Scheme</h1>
 <p>Sutairu features semantic support for <strong>light</strong> and <strong>dark</strong> modes. Sutairu’s utilities are designed to be context-aware, automatically adapting to the active environment.</p>
 <p>To control the color scheme globally, apply the <code>data-color-scheme</code> attribute to the <code>&#x3C;html></code> element:</p>
-<h2 id="default-light-mode" class="h2">Default (Light Mode)</h2>
+<h2 class="h2">Default (Light Mode)</h2>
 <p>If the attribute is omitted, Sutairu renders the standard light variants.</p>
 <pre><code class="language-html">&#x3C;html>
 </code></pre>
-<h2 id="dark-mode" class="h2">Dark Mode</h2>
+<h2 class="h2">Dark Mode</h2>
 <p>To shift the framework into its dark-mode variant, explicitly set the attribute to <code>dark</code>.</p>
 <pre><code class="language-html">&#x3C;html data-color-scheme="dark">
 </code></pre>
-<h2 id="lightdark-utility-prefixes" class="h2">Light/Dark Utility Prefixes</h2>
+<h2 class="h2">Light/Dark Utility Prefixes</h2>
 <p>Many classes support the <code>dark:</code> prefix to apply a style <strong>only in dark mode</strong>.</p>
 <div class="card w-fit ta-center ff-mono">
   <div class="p-3 r-2 bg-red dark:bg-green text-white">Light = red / Dark = green</div>  
@@ -17,7 +17,7 @@
 <pre><code class="language-html">&#x3C;!-- Container is red in light mode and green in dark mode -->
 &#x3C;div class="bg-red dark:bg-green">Light = red / Dark = green&#x3C;/div>
 </code></pre>
-<h2 id="design-philosophy-light-first" class="h2">Design Philosophy: Light-First</h2>
+<h2 class="h2">Design Philosophy: Light-First</h2>
 <p>Sutairu is built on a <strong>deterministic, light-first architecture</strong>.</p>
 <ul>
 <li><strong>The Norm:</strong> Light mode serves as the baseline for all component structures and color scales.</li>
@@ -45,7 +45,7 @@
 </tbody>
 </table>
 <p>To keep the core lightweight, Sutairu intentionally avoids localized theme overrides. Nested color schemes are not supported and may result in unpredictable rendering and CSS variable conflicts.</p>
-<h2 id="user-preferences" class="h2">User Preferences</h2>
+<h2 class="h2">User Preferences</h2>
 <p>Use <a href="https://www.npmjs.com/settings/merlin-chatou/packages">@merlin-chatou/color-scheme</a> to control and persist the color scheme in your app.</p>
 <pre><code class="language-bash">npm i @merlin-chatou/color-scheme
 </code></pre>

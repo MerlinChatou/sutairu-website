@@ -1,9 +1,9 @@
 <script>
   import hljs from "highlight.js";
-  import { escapeHtml } from "$lib/utils/escapeHtml";
+  import { escapeHtml } from "#lib/utils/escapeHtml";
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
-  import { containsAllSubstrings } from "$lib/utils/containAllSubstring.js";
+  import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
   import { fade } from "svelte/transition";
 
   // import "@merlin-chatou/sutairu-extras/code-highlight/style";
