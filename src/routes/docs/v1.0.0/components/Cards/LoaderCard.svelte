@@ -54,24 +54,24 @@
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-dots-fade text-red fs-2xs h-4px w-4px ps-center"></span>
-        <span class="loader-dots-fade ps-center"></span>
-        <span class="loader-dots-fade text-purple ps-center"></span>
-        <span class="loader-dots-fade text-green anim-dur-2000 scale-150 ps-center"></span>
+        <span class="loader-dots-fade text-red fs-xs h-4px w-4px"></span>
+        <span class="loader-dots-fade text-blue"></span>
+        <span class="loader-dots-fade text-purple"></span>
+        <span class="loader-dots-fade text-green anim-dur-2000 sc-150 "></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-dots-spin text-red fs-2xs h-4px w-4px ps-center"></span>
-        <span class="loader-dots-spin ps-center"></span>
-        <span class="loader-dots-spin text-purple ps-center"></span>
-        <span class="loader-dots-spin text-green anim-dur-2000 scale-150 ps-center"></span>
+        <span class="loader-dots-spin text-red fs-xs h-4px w-4px"></span>
+        <span class="loader-dots-spin text-blue"></span>
+        <span class="loader-dots-spin text-purple"></span>
+        <span class="loader-dots-spin text-green anim-dur-2000 sc-150"></span>
       </div>
 
-      <div class="w-full h-64px text-center d-grid grid-cols-4">
-        <span class="loader-comet text-red fs-2xs h-4px w-4px ps-center"></span>
-        <span class="loader-comet ps-center"></span>
-        <span class="loader-comet text-purple ps-center"></span>
-        <span class="loader-comet text-green anim-dur-2000 scale-150 ps-center"></span>
+      <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
+        <span class="loader-comet text-red fs-xs h-4px w-4px"></span>
+        <span class="loader-comet text-blue"></span>
+        <span class="loader-comet text-purple"></span>
+        <span class="loader-comet text-green anim-dur-2000 scale-150"></span>
       </div>
       <div class="w-full v-flex gap-2">
         <div class="loader-skeleton r-3 h-16px"></div>
