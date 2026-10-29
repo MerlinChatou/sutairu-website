@@ -32,17 +32,17 @@
     </div>
     <div class="body p-3 v-flex gap-5 ff-mono" bind:this={body}>
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader ps-center"></span>
-        <span class="loader h-48px w-48px ps-center"></span>
-        <span class="loader b-10 b-gray/50 bb-purple h-48px w-48px ps-center"></span>
-        <span class="loader place-self-center bb-opacity-0 b-green h-48px w-48px anim-dur-2000 ps-center"></span>
+        <span class="loader text-accent"></span>
+        <span class="loader b-7 text-accent b-subtle/60 h-48px w-48px"></span>
+        <span class="loader text-transparent b-purple h-48px w-48px"></span>
+        <span class="loader text-green h-48px w-48px anim-dur-2000"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-clip text-red ps-center"></span>
-        <span class="loader-clip h-48px w-48px ps-center"></span>
-        <span class="loader-clip text-purple h-48px w-48px ps-center"></span>
-        <span class="loader-clip text-green h-48px w-48px scale-150 anim-dur-2000 ps-center"></span>
+        <span class="loader-clip text-red"></span>
+        <span class="loader-clip h-48px w-48px"></span>
+        <span class="loader-clip text-purple b-gray/50 h-48px w-48px"></span>
+        <span class="loader-clip text-green b-7 h-48px w-48px anim-dur-3s before:anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">

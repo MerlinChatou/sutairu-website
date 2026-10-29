@@ -25,6 +25,7 @@
     "components/code-highlight",
     "components/input-group",
     "components/input",
+    "components/loader",
     "components/modal",
     "core/color-scheme",
     "core/table",
