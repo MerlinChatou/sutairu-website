@@ -30,7 +30,8 @@
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Loaders</h4>      
     </div>
-    <div class="body p-3 v-flex gap-5 ff-mono" bind:this={body}>
+    <div class="body p-4 flex-y gap-4 ff-mono" bind:this={body}>
+
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader text-accent"></span>
         <span class="loader b-7 text-accent b-subtle/60 h-48px w-48px"></span>
@@ -40,16 +41,16 @@
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader-clip text-red"></span>
-        <span class="loader-clip h-48px w-48px"></span>
+        <span class="loader-clip text-accent h-48px w-48px"></span>
         <span class="loader-clip text-purple b-gray/50 h-48px w-48px"></span>
         <span class="loader-clip text-green b-7 h-48px w-48px anim-dur-3s before:anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader-grow bg-red ps-center"></span>
-        <span class="loader-grow h-48px w-48px ps-center"></span>
+        <span class="loader-grow text-accent h-48px w-48px ps-center"></span>
         <span class="loader-grow bg-purple h-48px w-48px ps-center"></span>
-        <span class="loader-grow bg-green h-64px w-64px ps-center"></span>
+        <span class="loader-grow bg-green h-64px w-64px ps-center anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
