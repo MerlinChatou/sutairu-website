@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
   import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
-  
+
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -28,10 +28,9 @@
 {#if isVisible}
   <div class="card opacity-0" id="loader" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
-      <h4 class="h4">Loaders</h4>      
+      <h4 class="h4">Loaders</h4>
     </div>
     <div class="body p-4 flex-y gap-4 ff-mono" bind:this={body}>
-
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader text-accent"></span>
         <span class="loader b-7 text-accent b-subtle/60 h-48px w-48px"></span>
@@ -57,7 +56,7 @@
         <span class="loader-dots-fade text-red fs-xs h-4px w-4px"></span>
         <span class="loader-dots-fade text-blue"></span>
         <span class="loader-dots-fade text-purple"></span>
-        <span class="loader-dots-fade text-green anim-dur-2000 sc-150 "></span>
+        <span class="loader-dots-fade text-green anim-dur-2000 sc-150"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
