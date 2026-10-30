@@ -77,7 +77,7 @@
         <div class="loader-skeleton r-2 h-32px bg-black-100 dark:bg-black-450 text-white-50 fg-100 dark:text-black-100"></div>
         <div class="loader-skeleton r-2 h-32px bg-red-200 dark:bg-red-650 text-red-100 fg-100 dark:text-red-500"></div>
         <div class="loader-skeleton r-2 h-32px bg-blue-200 dark:bg-blue-650 text-blue-100 dark:text-blue-500"></div>
-        <div class="loader-skeleton r-2 h-32px pa--45deg bg-green-200 dark:bg-green-650 text-green-100 dark:text-green-500"></div>
+        <div class="loader-skeleton r-2 h-32px pa--45deg bg-green-200 dark:bg-green-650 text-white-100 dark:text-green-200 anim-dur-4000"></div>
       </div>
     </div>
     <div class="footer text-right">

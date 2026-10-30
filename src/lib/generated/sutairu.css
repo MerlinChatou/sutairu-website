@@ -7203,6 +7203,14 @@ body.modal-open {
   font-weight: var(--su-fw-h6);
 }
 
+.text-white-100 {
+  color: color-mix(in oklch, var(--su-white), #fff 80%);
+}
+
+.anim-dur-4000 {
+  animation-duration: 4000ms;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -7556,6 +7564,10 @@ body.modal-open {
   
   &.dark\:text-green-500 {
     color: var(--su-green);
+  }
+  
+  &.dark\:text-green-200 {
+    color: color-mix(in oklch, var(--su-green), #fff 60%);
   }
   
   &.dark\:stripes-accent-700 {
