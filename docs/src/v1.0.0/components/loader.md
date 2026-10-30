@@ -82,21 +82,21 @@ Multi-dot animation loaders (`loader-dots-fade`, `loader-dots-spin`) for subtle 
   <span class="loader-dots-fade text-red w-48px"></span>
   <span class="loader-dots-fade text-blue fs-2xl"></span>
   <span class="loader-dots-fade text-purple fs-2xl"></span>
-  <span class="loader-dots-fade text-green anim-dur-4s fs-4xl"></span>
+  <span class="loader-dots-fade text-green anim-dur-3s fs-4xl"></span>
 </div>
 
 ```html
 <span class="loader-dots-fade text-red"></span>
 <span class="loader-dots-fade text-blue fs-2xl"></span>
 <span class="loader-dots-fade text-purple fs-2xl"></span>
-<span class="loader-dots-fade text-green anim-dur-4s fs-4xl"></span>
+<span class="loader-dots-fade text-green anim-dur-3s fs-4xl"></span>
 ```
 
 <div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
   <span class="loader-dots-spin text-red"></span>
   <span class="loader-dots-spin text-blue fs-2xl"></span>
   <span class="loader-dots-spin text-purple fs-2xl"></span>
-  <span class="loader-dots-spin text-green anim-dur-4s fs-4xl"></span>
+  <span class="loader-dots-spin text-green anim-dur-3s fs-4xl"></span>
 </div>
 
 
@@ -104,7 +104,7 @@ Multi-dot animation loaders (`loader-dots-fade`, `loader-dots-spin`) for subtle 
 <span class="loader-dots-spin text-red"></span>
 <span class="loader-dots-spin text-blue fs-2xl"></span>
 <span class="loader-dots-spin text-purple fs-2xl"></span>
-<span class="loader-dots-spin text-green anim-dur-4s fs-4xl"></span>
+<span class="loader-dots-spin text-green anim-dur-3s fs-4xl"></span>
 ```
 
 ## Comet Loader

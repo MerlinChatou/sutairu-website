@@ -1,5 +1,5 @@
 <script>
-  import { docsVersion } from "#lib/stores/docs";
+  import { docsVersion } from "#lib/stores/docs.js";
   import { onMount } from "svelte";
   import { Scroll } from "@merlin-chatou/sutairu/utils";
 
@@ -15,7 +15,6 @@
   let isFailing = $state(false);
 
   // Get current version
-  let version;
   let modal;
 
   // Populate the modal on opening
@@ -75,6 +74,7 @@
     // Show the modal content
     isLoading = false;
     isFailing = false;
+    
 
     //hljs.highlightAll();
     highlightModalCode(modal);
@@ -92,13 +92,15 @@
       <button type="button" class="btn-close hover:bg-gray/10" data-close-modal aria-label="Close"></button>
     </div>
     <div class="body py-4">
-      <div id="documentation-modal-loader" class="v-flex gap-3" class:d-none={!isLoading}>
-        <div class="loader-skeleton h-2rem0px r-3 dark:fg-subtle dark:fg-400"></div>
-        <div class="loader-skeleton h-64px w-1/2 r-3 dark:fg-subtle dark:fg-400"></div>
-        <div class="loader-skeleton h-2rem0px r-3 dark:fg-subtle dark:fg-400"></div>
-        <div class="loader-skeleton h-2rem0px r-3 dark:fg-subtle dark:fg-400"></div>
-        <div class="loader-skeleton h-2rem0px r-3 dark:fg-subtle dark:fg-400"></div>
+      {#if isLoading}
+      <div id="documentation-modal-loader" class="gap-3 {isLoading ? 'flex-y' : 'd-none'}">
+        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+        <div class="loader-skeleton h-64px w-1/2 r-3 bg-gray/20 text-gray-300/20"></div>
+        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
       </div>
+      {/if}
       <!--
       <div id="documentation-modal-loader" class="text-center" class:d-none={!isLoading}>
         <div class="mb-5">Documentation is loading, please wait.</div>
