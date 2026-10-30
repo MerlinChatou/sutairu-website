@@ -73,11 +73,11 @@
         <span class="loader-comet text-purple"></span>
         <span class="loader-comet text-green anim-dur-2000 scale-150"></span>
       </div>
-      <div class="w-full v-flex gap-2">
-        <div class="loader-skeleton r-3 h-16px"></div>
-        <div class="loader-skeleton r-3 h-16px bg-red bg-200 dark:bg-700 fg-red fg-100 dark:fg-500"></div>
-        <div class="loader-skeleton r-3 h-16px bg-blue bg-200 dark:bg-700 fg-blue fg-100 dark:fg-500"></div>
-        <div class="loader-skeleton r-3 h-16px bg-green bg-200 dark:bg-700 fg-green fg-100 dark:fg-500"></div>
+      <div class="w-full flex-y gap-2">
+        <div class="loader-skeleton r-2 h-32px bg-black-100 dark:bg-black-450 text-white-50 fg-100 dark:text-black-100"></div>
+        <div class="loader-skeleton r-2 h-32px bg-red-200 dark:bg-red-650 text-red-100 fg-100 dark:text-red-500"></div>
+        <div class="loader-skeleton r-2 h-32px bg-blue-200 dark:bg-blue-650 text-blue-100 dark:text-blue-500"></div>
+        <div class="loader-skeleton r-2 h-32px pa--45deg bg-green-200 dark:bg-green-650 text-green-100 dark:text-green-500"></div>
       </div>
     </div>
     <div class="footer text-right">
