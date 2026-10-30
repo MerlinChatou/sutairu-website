@@ -33,50 +33,50 @@
     <div class="body p-4 flex-y gap-4 ff-mono" bind:this={body}>
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader text-accent"></span>
-        <span class="loader b-7 text-accent b-subtle/60 h-48px w-48px"></span>
-        <span class="loader text-transparent b-purple h-48px w-48px"></span>
-        <span class="loader text-green h-48px w-48px anim-dur-2000"></span>
+        <span class="loader b-7 text-accent b-subtle/60 fs-xl"></span>
+        <span class="loader text-transparent b-purple fs-xl"></span>
+        <span class="loader text-green fs-3xl anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
         <span class="loader-clip text-red"></span>
-        <span class="loader-clip text-accent h-48px w-48px"></span>
-        <span class="loader-clip text-purple b-gray/50 h-48px w-48px"></span>
-        <span class="loader-clip text-green b-7 h-48px w-48px anim-dur-3s before:anim-dur-2s"></span>
+        <span class="loader-clip text-accent fs-2xl"></span>
+        <span class="loader-clip text-purple b-subtle/60 fs-2xl"></span>
+        <span class="loader-clip text-green b-7 fs-3xl anim-dur-3s before:anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-grow bg-red ps-center"></span>
-        <span class="loader-grow text-accent h-48px w-48px ps-center"></span>
-        <span class="loader-grow bg-purple h-48px w-48px ps-center"></span>
-        <span class="loader-grow bg-green h-64px w-64px ps-center anim-dur-2s"></span>
+        <span class="loader-grow bg-red"></span>
+        <span class="loader-grow text-accent fs-2xl"></span>
+        <span class="loader-grow bg-purple fs-2xl"></span>
+        <span class="loader-grow bg-green fs-3xl anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-dots-fade text-red fs-xs h-4px w-4px"></span>
-        <span class="loader-dots-fade text-blue"></span>
-        <span class="loader-dots-fade text-purple"></span>
-        <span class="loader-dots-fade text-green anim-dur-2000 sc-150"></span>
+        <span class="loader-dots-fade text-red"></span>
+        <span class="loader-dots-fade text-blue fs-2xl"></span>
+        <span class="loader-dots-fade text-purple fs-2xl"></span>
+        <span class="loader-dots-fade text-green fs-3xl anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-dots-spin text-red fs-xs h-4px w-4px"></span>
-        <span class="loader-dots-spin text-blue"></span>
-        <span class="loader-dots-spin text-purple"></span>
-        <span class="loader-dots-spin text-green anim-dur-2000 sc-150"></span>
+        <span class="loader-dots-spin text-red fs-8px"></span>
+        <span class="loader-dots-spin text-blue fs-2xl"></span>
+        <span class="loader-dots-spin text-purple fs-2xl"></span>
+        <span class="loader-dots-spin text-green fs-3xl anim-dur-2s"></span>
       </div>
 
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">
-        <span class="loader-comet text-red fs-xs h-4px w-4px"></span>
-        <span class="loader-comet text-blue"></span>
-        <span class="loader-comet text-purple"></span>
-        <span class="loader-comet text-green anim-dur-2000 scale-150"></span>
+        <span class="loader-comet text-red "></span>
+        <span class="loader-comet text-blue fs-2xl"></span>
+        <span class="loader-comet text-purple fs-2xl"></span>
+        <span class="loader-comet text-green fs-3xl anim-dur-2s"></span>
       </div>
       <div class="w-full flex-y gap-2">
-        <div class="loader-skeleton r-2 h-32px bg-black-100 dark:bg-black-450 text-white-50 fg-100 dark:text-black-100"></div>
-        <div class="loader-skeleton r-2 h-32px bg-red-200 dark:bg-red-650 text-red-100 fg-100 dark:text-red-500"></div>
-        <div class="loader-skeleton r-2 h-32px bg-blue-200 dark:bg-blue-650 text-blue-100 dark:text-blue-500"></div>
-        <div class="loader-skeleton r-2 h-32px pa--45deg bg-green-200 dark:bg-green-650 text-white-100 dark:text-green-200 anim-dur-4000"></div>
+        <div class="loader-skeleton r-3 h-16px bg-black-100 dark:bg-black-450 text-white-50 fg-100 dark:text-black-100"></div>
+        <div class="loader-skeleton r-3 h-16px bg-red-200 dark:bg-red-650 text-red-100 fg-100 dark:text-red-500"></div>
+        <div class="loader-skeleton r-3 h-16px bg-blue-200 dark:bg-blue-650 text-blue-100 dark:text-blue-500"></div>
+        <div class="loader-skeleton r-3 h-16px pa--45deg bg-green-200 dark:bg-green-650 text-white-100 dark:text-green-200 anim-dur-3s"></div>
       </div>
     </div>
     <div class="footer text-right">

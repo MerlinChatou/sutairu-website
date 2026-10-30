@@ -1,2 +1,135 @@
 <h1 class="h1">Loaders</h1>
-<p>bla bla</p>
+<p>Loaders use a <strong>utility-driven architecture</strong>. Base classes handle shape and animation, while atomic utilities (<code>text-*</code>, <code>bg-*</code>, <code>b-*</code>, etc.) handle color, size, and timing dynamically.</p>
+<h2 class="h2">Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+<th>Color / Styling Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loader</code></td>
+<td>Classic rotating border ring</td>
+<td>Inherits <code>currentColor</code> (<code>text-*</code>)</td>
+</tr>
+<tr>
+<td><code>loader-clip</code></td>
+<td>Dual-tone clipped spinner</td>
+<td>Text &#x26; border utilities</td>
+</tr>
+<tr>
+<td><code>loader-grow</code></td>
+<td>Pulsing fill loader</td>
+<td>Background (<code>bg-*</code>) / text utilities</td>
+</tr>
+<tr>
+<td><code>loader-dots-fade</code></td>
+<td>Staggered fading dots</td>
+<td>Text color</td>
+</tr>
+<tr>
+<td><code>loader-dots-spin</code></td>
+<td>Orbiting spinning dots</td>
+<td>Text color</td>
+</tr>
+<tr>
+<td><code>loader-comet</code></td>
+<td>Trailing comet animation</td>
+<td>Text color</td>
+</tr>
+<tr>
+<td><code>loader-skeleton</code></td>
+<td>Content placeholder pulse</td>
+<td>Background (<code>bg-*</code>) tokens</td>
+</tr>
+</tbody>
+</table>
+<p>Loaders scale automatically with font size (<code>em</code>), letting you adjust dimensions effortlessly using typography utilities like <code>fs-*</code>. Animation speeds can also be customized instantly with atomic duration classes like <code>anim-dur-*</code>.</p>
+<h2 class="h2">Classic Spinner</h2>
+<p>Standard rotating border loader (<code>.loader</code>). Inherits its stroke color from <code>text-*</code> and can be customized with custom borders and animation speeds.</p>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader text-accent"></span>
+  <span class="loader b-7 text-accent b-subtle/60 fs-2xl"></span>
+  <span class="loader text-transparent b-purple fs-2xl"></span>
+  <span class="loader text-green fs-4xl anim-dur-2s"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader text-accent">&#x3C;/span>
+&#x3C;span class="loader b-7 text-accent b-subtle/60 fs-2xl">&#x3C;/span>
+&#x3C;span class="loader text-transparent b-purple fs-2xl">&#x3C;/span>
+&#x3C;span class="loader text-green fs-4xl anim-dur-2s">&#x3C;/span>
+</code></pre>
+<h2 class="h2">Clipped Spinner</h2>
+<p>A modern clipped-ring spinner design (<code>loader-clip</code>) that supports pseudo-element duration control (<code>before:anim-dur-*</code>). Inherits its primary stroke color from <code>text-*</code> and can be paired with custom border utilities (<code>b-*</code>) for multi-tone styling.</p>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader-clip text-red"></span>
+  <span class="loader-clip text-accent fs-2xl"></span>
+  <span class="loader-clip text-purple b-subtle/60 fs-2xl"></span>
+  <span class="loader-clip text-green b-7 fs-4xl anim-dur-3s before:anim-dur-4s"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-clip text-red">&#x3C;/span>
+&#x3C;span class="loader-clip text-accent fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-clip text-purple b-subtle/60 fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-clip text-green b-7 fs-4xl anim-dur-3s before:anim-dur-4s">&#x3C;/span>
+</code></pre>
+<h2 class="h2">Growing Loader</h2>
+<p>A pulsing scale loader (<code>loader-grow</code>) that utilizes background fills (<code>bg-*</code>) and centering utilities. It relies on background and text utilities for dynamic color and appearance customization.</p>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader-grow bg-red"></span>
+  <span class="loader-grow text-accent fs-2xl"></span>
+  <span class="loader-grow bg-purple fs-2xl"></span>
+  <span class="loader-grow bg-green fs-4xl anim-dur-4s"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-grow bg-red">&#x3C;/span>
+&#x3C;span class="loader-grow text-accent fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-grow bg-purple fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-grow bg-green fs-4xl anim-dur-4s">&#x3C;/span>
+</code></pre>
+<h2 class="h2">Dot Loaders</h2>
+<p>Multi-dot animation loaders (<code>loader-dots-fade</code>, <code>loader-dots-spin</code>) for subtle status indicators. They inherit their dot colors dynamically from text utilities (<code>text-*</code>).</p>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader-dots-fade text-red w-48px"></span>
+  <span class="loader-dots-fade text-blue fs-2xl"></span>
+  <span class="loader-dots-fade text-purple fs-2xl"></span>
+  <span class="loader-dots-fade text-green anim-dur-4s fs-4xl"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-dots-fade text-red">&#x3C;/span>
+&#x3C;span class="loader-dots-fade text-blue fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-dots-fade text-purple fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-dots-fade text-green anim-dur-4s fs-4xl">&#x3C;/span>
+</code></pre>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader-dots-spin text-red"></span>
+  <span class="loader-dots-spin text-blue fs-2xl"></span>
+  <span class="loader-dots-spin text-purple fs-2xl"></span>
+  <span class="loader-dots-spin text-green anim-dur-4s fs-4xl"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-dots-spin text-red">&#x3C;/span>
+&#x3C;span class="loader-dots-spin text-blue fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-dots-spin text-purple fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-dots-spin text-green anim-dur-4s fs-4xl">&#x3C;/span>
+</code></pre>
+<h2 class="h2">Comet Loader</h2>
+<p>A smooth trailing comet animation loader (<code>loader-comet</code>) for dynamic progress indicators. It inherits its colors dynamically from text utilities (<code>text-*</code>).</p>
+<div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
+  <span class="loader-comet text-red"></span>
+  <span class="loader-comet text-blue fs-2xl"></span>
+  <span class="loader-comet text-purple fs-2xl"></span>
+  <span class="loader-comet text-green anim-dur-3s fs-4xl"></span>
+</div>
+<pre><code class="language-html">&#x3C;span class="loader-comet text-red">&#x3C;/span>
+&#x3C;span class="loader-comet text-blue fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-comet text-purple fs-2xl">&#x3C;/span>
+&#x3C;span class="loader-comet text-green anim-dur-3s fs-4xl">&#x3C;/span>
+</code></pre>
+<h2 class="h2">Skeleton Loader</h2>
+<p>A content placeholder skeleton loader (<code>loader-skeleton</code>) for loading states. It uses background (<code>bg-*</code>) and text utilities for colors (<code>text-*</code>), and its pattern angle can be customized using <code>pa-*</code> or <code>pattern-angle-*</code> utilities.</p>
+<div class="card w-fit text-center flex-y gap-4 p-4 pi-center">
+  <div class="loader-skeleton r-3 w-md h-32px bg-gray text-gray-350"></div>
+  <div class="loader-skeleton r-3 w-md h-64px bg-blue text-orange-200 pa--45deg anim-dur-3s"></div>
+</div>
+<pre><code class="language-html">&#x3C;div class="loader-skeleton r-3 w-md h-32px bg-gray text-gray-350">&#x3C;/div>
+&#x3C;div class="loader-skeleton r-3 w-md h-64px bg-blue text-orange-200 pa--45deg anim-dur-3s">&#x3C;/div>
+</code></pre>
