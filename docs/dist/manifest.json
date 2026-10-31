@@ -56,9 +56,6 @@
     "typography/heading",
     "typography/text-color",
     "typography/typography",
-    "typography/white-space",
-    "components/loader",
-    "components/loader",
-    "components/loader"
+    "typography/white-space"
   ]
 }

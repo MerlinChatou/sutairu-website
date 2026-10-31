@@ -11,15 +11,12 @@
 </script>
 
 <Navbar />
-<div class="card w-350px m-5">
-  <div class="body p-4 flex-y gap-4 ff-mono">
-    <div class="card w-fit text-center d-grid grid-cols-4 gap-4 p-4 pi-center">
-      <span class="loader-dots-spin text-red"></span>
-      <span class="loader-dots-spin text-blue"></span>
-      <span class="loader-dots-spin text-purple"></span>
-      <span class="loader-dots-spin text-green anim-dur-2000 fs-2xl"></span>
-    </div>
-  </div>
+<div class="card w-fit m-5 flex-x gap-2 p-3">
+  <span class="i-twitter r-2"></span>
+  <span class="i-github ol-blue"></span>
+  <span class="i-discord"></span>
+  <span class="i-search"></span>
+  <p>This is a test of the Sutairu icon <span class="i-search"></span> bla <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> bla</p>
 </div>
 
 <span class="my-loader-clip text-red ps-center"></span>
