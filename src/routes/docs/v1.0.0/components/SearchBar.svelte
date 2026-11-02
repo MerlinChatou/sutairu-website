@@ -28,8 +28,8 @@
 
 <div class="md:pos-abs md:left-middle d-none md:d-block">
   <div class="input-group b-1 r-pill fs-sm md:w-md">
-     <!-- <span class="bg-opacity-0"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></span> -->
-     <i class="i-search fs-lg mx-2"></i>
+    <!-- <span class="bg-opacity-0"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></span> -->
+    <span><i class="icon i-search fs-lg mx-1"></i></span>
     <input
       id="search-text"
       type="text"
@@ -41,8 +41,7 @@
       on:input={handleInput}
     />
     <button id="search-clear" class="btn btn-primary" aria-label="Reset search bar" on:click={clear}>
-      <!-- <i class="fa-solid fa-xmark"></i> -->
-       <i class="i-search fs-lg"></i>
+      <i class="icon i-times-wide fs-2xl"></i>
     </button>
   </div>
 </div>

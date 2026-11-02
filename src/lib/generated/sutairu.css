@@ -2751,14 +2751,6 @@
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.masonry {
-  position: relative;
-}
-
-.masonry > * {
-  position: absolute;
-}
-
 .badge {
   display: inline-flex;
   align-items: center;
@@ -4052,6 +4044,14 @@ body.modal-open {
   overflow-y: hidden;
 }
 
+.masonry {
+  position: relative;
+}
+
+.masonry > * {
+  position: absolute;
+}
+
 .btn-close-accent {
   appearance: button;
   display: inline-block;
@@ -4545,82 +4545,12 @@ body.modal-open {
   color: var(--su-body);
 }
 
-.px-1 {
-  padding-inline: 0.25rem;
-}
-
-.dotted-black-75 {
-  background-position: 0 0;
-  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-  background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 85%) var(--su-pattern-w, 1px), transparent 0);
-}
-
-.min-h-100vh {
-  min-height: 100vh;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.fd-row {
-  flex-direction: row;
-}
-
-.as-center {
-  align-self: center;
-}
-
-.jc-center {
-  justify-content: center;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
-.d-inline {
-  display: inline;
-}
-
-.my-0 {
-  margin-block: 0;
-}
-
-.max-w-lg {
-  max-width: 48rem;
-}
-
-.mx-auto {
-  margin-inline: auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
+.bg-yellow {
+  background-color: var(--su-yellow);
 }
 
 .px-2 {
   padding-inline: 0.5rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.bg-yellow {
-  background-color: var(--su-yellow);
 }
 
 .r-2 {
@@ -4681,6 +4611,10 @@ body.modal-open {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.d-flex {
+  display: flex;
 }
 
 .fd-col {
@@ -4913,6 +4847,10 @@ body.modal-open {
   border-color: oklch(from color-mix(in oklch, var(--su-green), #000 40%) l c h / 0.5);
 }
 
+.fd-row {
+  flex-direction: row;
+}
+
 .ff-mono {
   font-family: var(--su-ff-mono);
   font-size-adjust: var(--su-fs-adjust-mono);
@@ -4971,6 +4909,10 @@ body.modal-open {
 .flex-y {
   display: flex;
   flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .b-auto {
@@ -5098,6 +5040,10 @@ body.modal-open {
   max-width: 20rem;
 }
 
+.my-0 {
+  margin-block: 0;
+}
+
 .max-w-sm {
   max-width: 32rem;
 }
@@ -5202,9 +5148,29 @@ body.modal-open {
   --su-pattern-angle: -45deg;
 }
 
+.bg-gray-100 {
+  background-color: color-mix(in oklch, var(--su-gray), #fff 80%);
+}
+
+.text-gray-400 {
+  color: color-mix(in oklch, var(--su-gray), #fff 20%);
+}
+
+.h4 {
+  line-height: var(--su-lh-title);
+  color: var(--su-title);
+  font-size: var(--su-fs-h4);
+  letter-spacing: var(--su-ls-h4);
+  font-weight: var(--su-fw-h4);
+}
+
 .flex-x {
   display: flex;
   flex-direction: row;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .max-w-max {
@@ -5313,26 +5279,6 @@ body.modal-open {
 
 .tr-transform-750-cubic\(0\.25\,1\,0\.5\,1\) {
   transition: transform 750ms cubic-bezier(0.25,1,0.5,1);
-}
-
-.bg-gray-100 {
-  background-color: color-mix(in oklch, var(--su-gray), #fff 80%);
-}
-
-.text-gray-400 {
-  color: color-mix(in oklch, var(--su-gray), #fff 20%);
-}
-
-.h4 {
-  line-height: var(--su-lh-title);
-  color: var(--su-title);
-  font-size: var(--su-fs-h4);
-  letter-spacing: var(--su-ls-h4);
-  font-weight: var(--su-fw-h4);
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .outline {
@@ -5781,6 +5727,10 @@ body.modal-open {
   max-width: 65ch;
 }
 
+.mx-auto {
+  margin-inline: auto;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -5866,6 +5816,10 @@ body.modal-open {
   padding: 0.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .\-mt-12 {
   margin-top: -3rem;
 }
@@ -5914,6 +5868,117 @@ body.modal-open {
 
 .px-5vw {
   padding-inline: 5vw;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.rot-30 {
+  --su-rot: 30deg;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.rot-1\/6 {
+  --su-rot: 0.167turn;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.my-8 {
+  margin-block: 2rem;
+}
+
+.rot-30deg {
+  --su-rot: 30deg;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.rot-0\.1turn {
+  --su-rot: 0.1turn;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-rot-30 {
+  --su-rot: -30deg;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-rot-0\.1turn {
+  --su-rot: -0.1turn;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-rot-30deg {
+  --su-rot: -30deg;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.w-80px {
+  width: 80px;
+}
+
+.sc-3\/4 {
+  --su-sc: 0.75;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.sc-1 {
+  --su-sc: 1;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.sc-110 {
+  --su-sc: 1.1;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.sc-1\.2 {
+  --su-sc: 1.2;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.sc-y-150 {
+  --su-sc-y: 1.5;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.sc-x-150 {
+  --su-sc-x: 1.5;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-sc-y-1 {
+  --su-sc-y: -1;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-sc-x-80 {
+  --su-sc-x: -0.8;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.mv-x-40px {
+  --su-tr-x: 40px;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.mv-y-20\% {
+  --su-tr-y: 20%;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+}
+
+.\-mv-10px {
+  --su-tr-x: -10px;
+  --su-tr-y: -10px;
+  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
 }
 
 .mb-3 {
@@ -6085,115 +6150,50 @@ body.modal-open {
   white-space: break-spaces;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.px-1 {
+  padding-inline: 0.25rem;
 }
 
-.rot-30 {
-  --su-rot: 30deg;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.dotted-black-75 {
+  background-position: 0 0;
+  background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+  background-image: radial-gradient(color-mix(in oklch, var(--su-black), #fff 85%) var(--su-pattern-w, 1px), transparent 0);
 }
 
-.rot-1\/6 {
-  --su-rot: 0.167turn;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.min-h-100vh {
+  min-height: 100vh;
 }
 
-.my-8 {
-  margin-block: 2rem;
+.as-center {
+  align-self: center;
 }
 
-.rot-30deg {
-  --su-rot: 30deg;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.jc-center {
+  justify-content: center;
 }
 
-.rot-0\.1turn {
-  --su-rot: 0.1turn;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.mt-0 {
+  margin-top: 0;
 }
 
-.\-rot-30 {
-  --su-rot: -30deg;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
-.\-rot-0\.1turn {
-  --su-rot: -0.1turn;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
-.\-rot-30deg {
-  --su-rot: -30deg;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.d-inline {
+  display: inline;
 }
 
-.w-80px {
-  width: 80px;
+.max-w-lg {
+  max-width: 48rem;
 }
 
-.sc-3\/4 {
-  --su-sc: 0.75;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.sc-1 {
-  --su-sc: 1;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.sc-110 {
-  --su-sc: 1.1;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.sc-1\.2 {
-  --su-sc: 1.2;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.sc-y-150 {
-  --su-sc-y: 1.5;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.sc-x-150 {
-  --su-sc-x: 1.5;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.\-sc-y-1 {
-  --su-sc-y: -1;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.\-sc-x-80 {
-  --su-sc-x: -0.8;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
-.gap-16 {
-  gap: 4rem;
-}
-
-.mv-x-40px {
-  --su-tr-x: 40px;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.mv-y-20\% {
-  --su-tr-y: 20%;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.\-mv-10px {
-  --su-tr-x: -10px;
-  --su-tr-y: -10px;
-  transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .grayscale-50 {
@@ -6352,30 +6352,39 @@ body.modal-open {
   margin-block: 0.75rem;
 }
 
-.i-search {
+.icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.i-search::before {
-  content: "";
-  display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.125em;
+  vertical-align: middle;
+}
+
+.icon::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   background-color: currentColor;
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M%20601%20199C%20601%20199%20601%20199%20601%20199C%20491%20199%20401%20289%20401%20399C%20401%20452%20422%20503%20460%20540C%20497%20578%20548%20599%20601%20599C%20711%20599%20801%20509%20801%20399C%20801%20289%20711%20199%20601%20199M%20601%2099C%20601%2099%20601%2099%20601%2099C%20767%2099%20901%20233%20901%20399C%20901%20479%20869%20555%20813%20611C%20757%20667%20681%20699%20601%20699C%20534%20699%20468%20676%20416%20634C%20416%20634%20211%20839%20211%20839C%20201%20849%20176%20850%20166%20840C%20166%20840%20136%20809%20136%20809C%20126%20799%20126%20774%20136%20764C%20136%20764%20345%20555%20345%20555C%20316%20508%20301%20454%20301%20399C%20301%20319%20333%20243%20389%20187C%20445%20131%20521%2099%20601%2099%22%2F%3E%3C%2Fsvg%3E");
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
 }
 
-.mx-2 {
-  margin-inline: 0.5rem;
+.i-search::before {
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M14.07%205.42%20C7.75%205.42%207.76%2015.03%2014.07%2015.03%20C20.39%2015.02%2020.39%205.42%2014.07%205.42%20M14.07%203.02%20C23.09%203.02%2023.78%2016.44%2014.82%2017.39%20C12.97%2017.58%2011.08%2017.04%209.63%2015.87%20L6%2019.49%20C5.71%2019.78%204.92%2020.68%204.6%2020.86%20C3.76%2021.36%202.42%2019.94%202.81%2019.13%20C3.1%2018.52%207.1%2014.79%207.93%2013.97%20C4.99%209.2%208.49%203.02%2014.07%203.02%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.mx-1 {
+  margin-inline: 0.25rem;
 }
 
 .br-0 {
   border-right-width: 0;
+}
+
+.i-times-wide::before {
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M7.2%206.29%20C7.44%206.29%207.66%206.38%207.85%206.55%20L12%2010.73%20L16.15%206.55%20C16.32%206.38%2016.56%206.29%2016.78%206.29%20C17.16%206.29%2017.5%206.5%2017.64%206.84%20C17.79%207.18%2017.71%207.59%2017.45%207.85%20L13.27%2012%20L17.45%2016.15%20C17.66%2016.39%2017.76%2016.73%2017.69%2017.04%20C17.59%2017.35%2017.35%2017.59%2017.04%2017.69%20C16.73%2017.76%2016.39%2017.66%2016.15%2017.45%20L12%2013.27%20L7.85%2017.45%20C7.61%2017.66%207.27%2017.76%206.96%2017.69%20C6.65%2017.59%206.41%2017.35%206.31%2017.04%20C6.24%2016.73%206.34%2016.39%206.55%2016.15%20L10.73%2012%20L6.55%207.85%20C6.31%207.59%206.21%207.2%206.36%206.86%20C6.5%206.5%206.82%206.29%207.2%206.29%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .p-1px {
@@ -6450,58 +6459,16 @@ body.modal-open {
   margin: 1.25rem;
 }
 
-.i-twitter {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .i-twitter::before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  background-color: currentColor;
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M%20756%20184C%20758%20186%20760%20187%20761%20189C%20766%20196%20769%20197%20773%20197C%20778%20198%20785%20198%20793%20195C%20811%20189%20833%20175%20856%20166C%20868%20161%20883%20167%20888%20179C%20895%20196%20890%20208%20885%20218C%20883%20222%20881%20226%20879%20230C%20896%20224%20915%20238%20913%20256C%20911%20270%20905%20277%20899%20286C%20893%20294%20886%20303%20877%20312C%20864%20325%20850%20338%20836%20349C%20838%20466%20797%20582%20725%20673C%20634%20789%20488%20855%20342%20853C%20342%20853%20342%20853%20342%20853C%20342%20853%20341%20853%20341%20853C%20341%20853%20341%20853%20341%20853C%20341%20853%20341%20853%20341%20853C%20247%20853%20154%20826%2075%20775C%2065%20768%2061%20756%2065%20745C%2069%20734%2080%20727%2092%20729C%20151%20736%20214%20725%20267%20698C%20217%20678%20176%20637%20157%20585C%20155%20577%20156%20569%20160%20562C%20163%20559%20165%20557%20167%20555C%20123%20519%2095%20464%2096%20405C%2096%20391%20108%20381%20122%20381C%2089%20323%2087%20249%20123%20191C%20132%20176%20153%20175%20164%20188C%20235%20277%20343%20336%20456%20349C%20454%20305%20466%20261%20493%20225C%20530%20173%20592%20147%20653%20149C%20689%20150%20726%20161%20756%20184C%20756%20184%20756%20184%20756%20184M%20651%20199C%20606%20198%20560%20218%20534%20254C%20534%20255%20534%20255%20533%20255C%20509%20287%20500%20331%20509%20371C%20513%20387%20500%20402%20484%20401C%20359%20396%20238%20340%20152%20250C%20138%20306%20160%20372%20209%20403C%20218%20409%20223%20420%20220%20431C%20217%20441%20208%20449%20197%20449C%20180%20450%20165%20447%20151%20443C%20165%20492%20208%20534%20258%20543C%20268%20545%20276%20553%20278%20564C%20280%20574%20275%20585%20265%20590C%20248%20599%20233%20599%20220%20598C%20245%20635%20289%20660%20333%20660C%20344%20660%20353%20667%20357%20677C%20360%20687%20357%20698%20349%20705C%20302%20742%20247%20766%20189%20776C%20238%20794%20290%20803%20342%20803C%20342%20803%20342%20803%20342%20803C%20342%20803%20342%20803%20342%20803C%20473%20805%20605%20746%20685%20642C%20685%20642%20685%20642%20685%20642C%20753%20557%20791%20446%20786%20338C%20786%20329%20790%20321%20797%20316C%20803%20312%20810%20306%20818%20299C%20812%20300%20807%20301%20802%20302C%20789%20303%20778%20296%20775%20284C%20771%20272%20777%20260%20788%20255C%20791%20253%20796%20249%20802%20244C%20791%20247%20778%20249%20765%20247C%20750%20244%20736%20236%20725%20223C%20703%20208%20678%20200%20651%20199C%20651%20199%20651%20199%20651%20199M%20195%20597C%20195%20597%20194%20597%20194%20597C%20193%20598%20193%20598%20195%20597C%20195%20597%20195%20597%20195%20597%22%2F%3E%3C%2Fsvg%3E");
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-}
-
-.i-github {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M18.28%204.57%20C18.41%204.69%2018.5%204.88%2018.69%204.88%20C19.48%205.06%2020.94%203.46%2021.43%204.4%20C21.54%204.62%2021.56%204.88%2021.49%205.11%20C21.44%205.3%2021.32%205.49%2021.23%205.67%20C21.81%205.47%2022.2%206.04%2021.97%206.6%20C21.7%207.23%2020.74%208.11%2020.2%208.53%20C20.3%2014.31%2016.3%2019.4%2010.57%2020.44%20C8.24%2020.86%205.74%2020.58%203.57%2019.63%20C3.03%2019.39%201.22%2018.71%201.76%2017.9%20C1.85%2017.77%201.99%2017.68%202.15%2017.65%20C2.36%2017.61%203%2017.7%203.28%2017.7%20C4.41%2017.68%205.54%2017.42%206.55%2016.91%20C5.57%2016.52%203.15%2014.55%204.14%2013.47%20C3.71%2013.12%203.34%2012.69%203.06%2012.21%20C2.74%2011.65%201.82%209.3%203.07%209.3%20C2.75%208.75%202.56%208.14%202.49%207.51%20C2.41%206.82%202.65%204.2%203.75%204.46%20C4.01%204.53%205.06%205.74%205.38%206.02%20C6.98%207.39%208.99%208.29%2011.08%208.53%20C10.92%204.83%2015.24%202.22%2018.28%204.57%20M15.62%204.78%20C14.56%204.75%2013.45%205.22%2012.82%206.1%20C12.82%206.12%2012.82%206.12%2012.79%206.12%20C11.86%207.37%2012.34%209.13%2012.1%209.42%20C11.82%209.74%2011.2%209.61%2010.82%209.56%20C8.11%209.26%205.53%207.97%203.65%206%20C3.37%207.13%203.69%208.44%204.52%209.27%20C4.72%209.47%205.13%209.7%205.24%209.92%20C5.77%2010.98%204.12%2010.78%203.62%2010.63%20C3.91%2011.63%204.7%2012.51%205.67%2012.88%20C5.92%2012.98%206.31%2013.01%206.49%2013.19%20C7.28%2013.95%205.96%2014.41%205.28%2014.35%20C6.36%2015.96%208.17%2015.68%208.48%2016.08%20C9.36%2017.24%205.29%2018.5%204.54%2018.62%20C10.16%2020.7%2016.17%2017.86%2018.21%2012.25%20C18.52%2011.41%2018.73%2010.53%2018.82%209.64%20C18.86%209.29%2018.84%208.03%2018.93%207.83%20C19.01%207.64%2019.45%207.34%2019.63%207.18%20C19.07%207.27%2018.18%207.09%2018.66%206.34%20C18.74%206.21%2019.11%205.98%2019.25%205.86%20C18.53%206.06%2017.89%205.94%2017.4%205.35%20C16.87%204.99%2016.27%204.8%2015.62%204.78%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .i-github::before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  background-color: currentColor;
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M%20500%200C%20500%200%20500%200%20500%200C%20776%200%201000%20224%201000%20500C%201000%20720%20857%20908%20659%20974C%20634%20979%20625%20963%20625%20950C%20625%20933%20626%20879%20626%20813C%20626%20766%20610%20736%20592%20720C%20703%20708%20820%20665%20820%20473C%20820%20418%20801%20374%20769%20339C%20774%20327%20791%20275%20764%20207C%20764%20207%20722%20193%20626%20258C%20586%20247%20544%20241%20501%20241C%20459%20241%20416%20247%20376%20258C%20281%20194%20239%20207%20239%20207C%20211%20275%20229%20327%20234%20339C%20202%20374%20183%20419%20183%20473C%20183%20665%20299%20708%20410%20720C%20396%20733%20383%20755%20378%20787C%20349%20800%20278%20821%20233%20746C%20223%20731%20195%20694%20156%20695C%20114%20695%20139%20718%20156%20728C%20178%20740%20202%20784%20208%20798C%20218%20826%20250%20880%20376%20857C%20376%20899%20376%20938%20376%20950C%20376%20963%20367%20978%20342%20974C%20143%20908%200%20721%200%20500C%200%20224%20224%200%20500%200%22%2F%3E%3C%2Fsvg%3E");
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-}
-
-.i-discord {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M12%200%20C24.41%200%2028.54%2016.59%2017.79%2022.51%20C17.3%2022.79%2015.8%2023.6%2015.3%2023.33%20C14.44%2022.88%2015.82%2018.71%2014.21%2017.28%20C17.56%2016.92%2019.5%2015.42%2019.67%2011.87%20C19.74%2010.42%2019.46%209.23%2018.46%208.14%20C18.86%207.18%2018.71%205.9%2018.34%204.97%20C17.5%204.69%2015.65%205.77%2015.02%206.19%20C13.05%205.65%2011%205.65%209.02%206.19%20C8.39%205.77%206.58%204.71%205.74%204.97%20C5.34%205.92%205.21%207.16%205.62%208.14%20C4.62%209.22%204.33%2010.43%204.4%2011.87%20C4.57%2015.42%206.49%2016.92%209.84%2017.28%20C9.4%2017.69%209.16%2018.3%209.07%2018.89%20C5.79%2020.36%205.82%2016.71%203.81%2016.68%20C3.66%2016.68%203.37%2016.68%203.25%2016.78%20C3%2016.99%204.22%2017.87%204.46%2018.22%20C4.79%2018.7%204.95%2019.2%205.23%2019.64%20C6.04%2020.86%207.76%2020.8%209.02%2020.57%20C9.02%2021.01%209.16%2022.95%208.84%2023.24%20C8.47%2023.58%207.88%2023.27%207.49%2023.12%20C5.28%2022.22%203.38%2020.68%202.05%2018.71%20C-1%2014.2%20-0.62%208.19%202.97%204.09%20C5.26%201.49%208.53%200%2012%200%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .i-discord::before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  background-color: currentColor;
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%201000%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M%20193%2042C%20193%2042%20193%2042%20193%2042C%20193%2042%20807%2042%20807%2042C%20859%2042%20901%2084%20901%20136C%20901%20136%20901%20958%20901%20958C%20901%20958%20802%20871%20802%20871C%20802%20871%20747%20820%20747%20820C%20747%20820%20688%20765%20688%20765C%20688%20765%20712%20850%20712%20850C%20712%20850%20193%20850%20193%20850C%20141%20850%2099%20808%2099%20756C%2099%20756%2099%20136%2099%20136C%2099%2084%20141%2042%20193%2042M%20429%20255C%20429%20255%20429%20255%20429%20255C%20422%20255%20363%20257%20301%20304C%20301%20304%20235%20423%20235%20571C%20235%20571%20274%20637%20375%20640C%20375%20640%20392%20620%20406%20602C%20347%20585%20326%20548%20326%20548C%20326%20548%20330%20551%20338%20556C%20339%20556%20339%20557%20340%20557C%20342%20558%20343%20559%20344%20560C%20356%20566%20367%20571%20378%20575C%20396%20582%20419%20590%20445%20595C%20479%20601%20520%20604%20564%20595C%20585%20592%20607%20585%20630%20576C%20646%20570%20664%20561%20683%20549C%20683%20549%20660%20586%20600%20603C%20614%20620%20630%20640%20630%20640C%20731%20637%20770%20571%20770%20571C%20770%20423%20704%20304%20704%20304C%20638%20254%20576%20255%20576%20255C%20576%20255%20569%20263%20569%20263C%20647%20287%20683%20321%20683%20321C%20636%20295%20589%20282%20545%20277C%20512%20273%20481%20274%20453%20278C%20450%20278%20448%20278%20445%20279C%20429%20280%20390%20286%20341%20308C%20324%20315%20314%20321%20314%20321C%20314%20321%20352%20285%20435%20261C%20435%20261%20430%20255%20430%20255C%20430%20255%20430%20255%20429%20255M%20417%20426C%20417%20426%20417%20426%20417%20426C%20443%20426%20464%20449%20464%20477C%20464%20505%20443%20528%20417%20528C%20391%20528%20370%20505%20370%20477C%20370%20449%20391%20426%20417%20426M%20584%20426C%20584%20426%20584%20426%20584%20426C%20610%20426%20631%20449%20631%20477C%20631%20505%20610%20528%20584%20528C%20559%20528%20538%20505%20538%20477C%20538%20449%20558%20426%20584%20426%22%2F%3E%3C%2Fsvg%3E");
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M4.63%201.01%20L19.37%201.01%20C20.62%201.01%2021.62%202.02%2021.62%203.27%20L21.62%2022.99%20L19.25%2020.91%20L17.93%2019.68%20L16.51%2018.36%20L17.09%2020.4%20L4.63%2020.4%20C3.38%2020.4%202.38%2019.39%202.38%2018.14%20L2.38%203.27%20C2.38%202.02%203.38%201.01%204.63%201.01%20M10.3%206.12%20C9.26%206.12%208.03%206.69%207.23%207.3%20C6.23%209.08%205.64%2011.69%205.64%2013.71%20C6.28%2014.78%207.83%2015.33%209%2015.36%20C9.25%2015.06%209.51%2014.76%209.75%2014.45%20C9.09%2014.26%208.18%2013.78%207.82%2013.15%20C7.91%2013.22%208.02%2013.28%208.11%2013.34%20C8.14%2013.34%208.14%2013.37%208.16%2013.37%20C8.2%2013.39%208.23%2013.41%208.26%2013.44%20C10.89%2014.78%2013.87%2014.77%2016.39%2013.18%20C16.01%2013.8%2015.07%2014.28%2014.4%2014.47%20C14.64%2014.77%2014.88%2015.06%2015.12%2015.36%20C16.3%2015.33%2017.85%2014.78%2018.48%2013.71%20C18.48%2011.69%2017.89%209.08%2016.9%207.3%20C16.12%206.71%2014.84%206.11%2013.82%206.12%20L13.66%206.31%20C14.49%206.57%2015.74%207.09%2016.39%207.7%20C15.02%206.95%2012.21%206.21%2010.68%206.7%20C9.74%206.75%208.33%207.24%207.54%207.7%20C8.22%207.05%209.56%206.52%2010.44%206.27%20L10.32%206.12%20L10.3%206.12%20M10.01%2010.23%20C11.49%2010.23%2011.49%2012.67%2010.01%2012.67%20C8.52%2012.67%208.52%2010.23%2010.01%2010.23%20M14.02%2010.23%20C15.5%2010.23%2015.5%2012.67%2014.02%2012.67%20C12.58%2012.67%2012.55%2010.23%2014.02%2010.23%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .text-left {
@@ -6998,12 +6965,6 @@ body.modal-open {
 }
 
 :is([data-color-scheme="dark"] *) {
-  &.dark\:dotted-white-850 {
-    background-position: 0 0;
-    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #000 70%) var(--su-pattern-w, 1px), transparent 0);
-  }
-  
   &.dark\:bg-black {
     background-color: var(--su-black);
   }
@@ -7040,6 +7001,12 @@ body.modal-open {
   
   &.dark\:ol-black {
     outline-color: var(--su-black);
+  }
+  
+  &.dark\:dotted-white-850 {
+    background-position: 0 0;
+    background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #000 70%) var(--su-pattern-w, 1px), transparent 0);
   }
   
   &.dark\:bg-gray-700 {
@@ -7109,46 +7076,6 @@ body.modal-open {
   }
 }
 
-@media (width >= 48rem) {
-  .md\:mb-5 {
-    margin-bottom: 1.25rem;
-  }
-  
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-  
-  .md\:px-2 {
-    padding-inline: 0.5rem;
-  }
-  
-  .md\:d-block {
-    display: block;
-  }
-  
-  .md\:pos-abs {
-    position: absolute;
-  }
-  
-  .md\:left-middle {
-    left: 50%;
-    --su-tr-x: -50%;
-    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-  }
-  
-  .md\:w-md {
-    width: 36rem;
-  }
-  
-  .md\:bg-red {
-    background-color: var(--su-red);
-  }
-  
-  .md\:d-inline {
-    display: inline;
-  }
-}
-
   .before\:anim-dur-4s::before {
     animation-duration: 4s;
   }
@@ -7157,6 +7084,22 @@ body.modal-open {
     animation-duration: 2s;
   }
 
+  .odd\:bg-accent\/5 > :nth-child(odd) {
+    background-color: oklch(from var(--su-accent) l c h / 0.05);
+  }
+  
+  .odd\:bg-red > :nth-child(odd) {
+    background-color: var(--su-red);
+  }
+
+  .hover\:bg-gray-200:hover {
+    background-color: color-mix(in oklch, var(--su-gray), #fff 60%);
+  }
+  
+  .hover\:bg-red-600:hover {
+    background-color: color-mix(in oklch, var(--su-red), #000 20%);
+  }
+  
   .hover\:grayscale-0:hover {
     --su-grayscale: grayscale(0);
   }
@@ -7210,14 +7153,6 @@ body.modal-open {
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
   
-  .hover\:bg-gray-200:hover {
-    background-color: color-mix(in oklch, var(--su-gray), #fff 60%);
-  }
-  
-  .hover\:bg-red-600:hover {
-    background-color: color-mix(in oklch, var(--su-red), #000 20%);
-  }
-  
   .hover\:blur-8:hover {
     --su-blur: blur(8px);
   }
@@ -7253,13 +7188,71 @@ body.modal-open {
     background-color: var(--su-pink);
   }
 
-  .group:hover .group-hover\:mv-x-200px {
-    --su-tr-x: 200px;
+@media (width >= 64rem) {
+  .lg\:w-200px {
+    width: 200px;
+  }
+  
+  .lg\:w-1\/3 {
+    width: 33.333%;
+  }
+  
+  .lg\:bg-red {
+    background-color: var(--su-red);
+  }
+}
+
+@media (width >= 48rem) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+  
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+  
+  .md\:px-2 {
+    padding-inline: 0.5rem;
+  }
+  
+  .md\:d-block {
+    display: block;
+  }
+  
+  .md\:pos-abs {
+    position: absolute;
+  }
+  
+  .md\:left-middle {
+    left: 50%;
+    --su-tr-x: -50%;
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
   
+  .md\:w-md {
+    width: 36rem;
+  }
+  
+  .md\:bg-red {
+    background-color: var(--su-red);
+  }
+  
+  .md\:d-inline {
+    display: inline;
+  }
+}
+
+  .placeholder\:text-red-300::placeholder {
+    color: color-mix(in oklch, var(--su-red), #fff 40%);
+  }
+
   .group:hover .group-hover\:text-accent {
     color: var(--su-accent);
+  }
+  
+  .group:hover .group-hover\:mv-x-200px {
+    --su-tr-x: 200px;
+    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
   }
   
   .group:hover .group-hover\:mv-x-150\% {
@@ -7275,32 +7268,6 @@ body.modal-open {
   .group:hover .group-hover\:mv-y-0 {
     --su-tr-y: 0px;
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-  }
-
-  .odd\:bg-accent\/5 > :nth-child(odd) {
-    background-color: oklch(from var(--su-accent) l c h / 0.05);
-  }
-  
-  .odd\:bg-red > :nth-child(odd) {
-    background-color: var(--su-red);
-  }
-
-@media (width >= 64rem) {
-  .lg\:w-200px {
-    width: 200px;
-  }
-  
-  .lg\:w-1\/3 {
-    width: 33.333%;
-  }
-  
-  .lg\:bg-red {
-    background-color: var(--su-red);
-  }
-}
-
-  .placeholder\:text-red-300::placeholder {
-    color: color-mix(in oklch, var(--su-red), #fff 40%);
   }
 
 @media (orientation: landscape) {
