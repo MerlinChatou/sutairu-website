@@ -16,6 +16,7 @@
   import BorderStyleCard from "./components/Cards/BorderStyleCard.svelte";
   import BorderWidthCard from "./components/Cards/BorderWidthCard.svelte";
   import ButtonColorCard from "./components/Cards/ButtonCard.svelte";
+  import BtnCloseCard from "./components/Cards/BtnCloseCard.svelte";
   import CardWithHeaderCard from "./components/Cards/CardWithHeaderCard.svelte";
   import CardWithImageHeaderCard from "./components/Cards/CardWithImageHeaderCard.svelte";
   import CodeHighlightCard from "./components/Cards/CodeHighlightCard.svelte";
@@ -43,6 +44,7 @@
   import RotationCard from "./components/Cards/RotationCard.svelte";
   import ScaleCard from "./components/Cards/ScaleCard.svelte";
   import SemanticBackgroundCard from "./components/Cards/SemanticBackgroundCard.svelte";
+  import SizingCard from "./components/Cards/SizingCard.svelte";
   import StackCard from "./components/Cards/StackCard.svelte";
   import TableCard from "./components/Cards/TableCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
@@ -51,8 +53,8 @@
   import TranslateCard from "./components/Cards/TranslateCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
   import VariantModifierCard from "./components/Cards/VariantModifierCard.svelte";
-  import BtnCloseCard from "./components/Cards/BtnCloseCard.svelte";
-  import SizingCard from "./components/Cards/SizingCard.svelte";
+  
+  
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
   import DocumentationModal from "./components/DocumentationModal.svelte";
