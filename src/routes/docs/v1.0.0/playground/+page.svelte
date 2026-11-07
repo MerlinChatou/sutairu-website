@@ -16,6 +16,16 @@
   <span class="icon i-github ol-blue"></span>
   <span class="icon i-discord"></span>
   <span class="icon i-search"></span>  
+  <span class="icon i-none bg-accent"></span>  
+  <span class="icon i-user-solid text-blue bg-blue-200 r-1 fs-5xl"></span>  
+  <span class="icon i-sign-in-solid"></span>  
+  <span class="icon i-sign-in-solid rot-90"></span>  
+  <span class="icon i-sign-in-solid rot-180"></span>  
+  <span class="icon i-sign-in-solid -rot-90"></span>  
+  <div class="stack fs-5xl h-fit">
+    <span class="icon i-car-front-small text-blue"></span>
+    <span class="icon i-circle-line-wide text-red"></span>
+  </div>
   <span class="icon i-times-wide"></span>
   text
   <p>This is a test of the Sutairu icon <span class="icon i-search"></span> bla <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i> bla</p>
