@@ -48,7 +48,7 @@
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-google"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-paypal"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-instagram"></i></div>
-      <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-friconix"></i></div>
+      <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sutairu"></i></div>
 
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid rot-1/4"></i></div>
