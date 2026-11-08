@@ -84,8 +84,16 @@
   $: shown = results.slice(0, MAX_RESULTS);
 </script>
 
-<Navbar  title="Sutairu Icons" searchBarVisible={false}/>
-
+<Navbar searchBarVisible={false}/>
+<div class="px-1 tg-glow dotted-black-30 dark:dotted-white-850 min-h-100vh">
+  <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
+    <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
+    <h1 class="h1 d-inline my-0">Sutairu Icons</h1>
+  </div>
+  <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
+    Browse Sutairu’s vector icons and drop them into your HTML with a single class; only the icons you use are automatically embedded in your CSS bundle, with no extra setup.
+  </p>
+  
 
 
 <div class="max-w-md">
@@ -110,7 +118,7 @@
     {/each}
   </div>
 {/if}
-
+</div>
 
 <style>
   .dynamic-icon::before {

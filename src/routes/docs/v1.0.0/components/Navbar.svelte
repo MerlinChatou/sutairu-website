@@ -3,8 +3,7 @@
   import ThemeSelector from "./ThemeSelector.svelte";
   import SearchBar from "./SearchBar.svelte";
   
-  export let searchBarVisible = true; 
-  export let title = "Sutairu";
+  export let searchBarVisible = true;   
 </script>
 
 
@@ -12,7 +11,7 @@
   <div class="d-flex ai-center">
     <a href="/" class="logo h-fit d-flex ai-center gap-1 td-none text-title">
       <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" class="bg-accent r-2 h-2rem" />
-      <span class="d-none md:d-block -ls-md fs-2rem text-title fw-black">{title}</span>
+      <span class="d-none md:d-block -ls-md fs-2rem text-title fw-black">Sutairu</span>
     </a>
   </div>
   {#if searchBarVisible}
