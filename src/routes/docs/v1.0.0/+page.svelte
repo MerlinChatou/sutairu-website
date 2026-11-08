@@ -111,7 +111,7 @@
 <BrowserInit />
 <Navbar />
 
-<div class="px-1 tg-glow dotted-black-75 dark:dotted-white-850 min-h-100vh">
+<div class="px-1 tg-glow dotted-black-30 dark:dotted-white-850 min-h-100vh">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
     <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
     <h1 class="h1 d-inline my-0">Sutairu</h1>
