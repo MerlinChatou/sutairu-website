@@ -96,7 +96,7 @@
       </div>
     </div>
     <div class="footer text-right">
-      <button class="btn btn-primary" data-open-modal="documentation-modal" data-documentation="components/loader">More</button>
+      <a class="btn btn-primary" href="/docs/v1.0.0/icons/" target="_blank">More</a>
     </div>
   </div>
 {/if}

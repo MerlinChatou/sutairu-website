@@ -109,7 +109,7 @@
 </script>
 
 <BrowserInit />
-<Navbar />
+<Navbar/>
 
 <div class="px-1 tg-glow dotted-black-30 dark:dotted-white-850 min-h-100vh">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
