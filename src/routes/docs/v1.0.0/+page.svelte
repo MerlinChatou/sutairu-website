@@ -29,6 +29,7 @@
   import FormInputCard from "./components/Cards/FormInputCard.svelte";
   import GapCard from "./components/Cards/GapCard.svelte";
   import GridCard from "./components/Cards/GridCard.svelte";
+  import IconCard from "./components/Cards/IconCard.svelte";
   import InputGroupCard from "./components/Cards/InputGroupCard.svelte";
   import HeadingCard from "./components/Cards/HeadingCard.svelte";
   import LoaderCard from "./components/Cards/LoaderCard.svelte";
@@ -158,6 +159,7 @@
     <ScaleCard />
     <TranslateCard />
     <StackCard />
+    <IconCard />
     <PatternCard />
     <CardWithHeaderCard />
     <CardWithImageHeaderCard />

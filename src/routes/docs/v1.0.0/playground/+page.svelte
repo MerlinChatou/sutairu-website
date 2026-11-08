@@ -14,7 +14,7 @@
   const MAX_RESULTS = 120; // displayed at once, the counter still shows the real total
   const MIN_QUERY_LENGTH = 2; // a single letter would match half of the icons
   const STYLE_SUFFIX = /-(solid|thin|wide-alt|wide)$/;
-  
+
   // ---- search index (built once, ~ms for 1600 icons) ----------------------
   // "name" is tokenized on hyphens by MiniSearch's default tokenizer, so
   // "close-envelope-thin" is indexed as: close, envelope, thin.
@@ -23,7 +23,7 @@
     storeFields: ["name", "category", "style"],
   });
 
-index.addAll(
+  index.addAll(
     iconsMeta.icons.map((icon) => ({
       id: icon.name,
       name: icon.name,
@@ -34,8 +34,7 @@ index.addAll(
     })),
   );
 
-
-    // ---- icon rendering ------------------------------------------------------
+  // ---- icon rendering ------------------------------------------------------
   // Search results only carry the stored fields (name, category, style), so the
   // SVG is looked up by name at render time. The data URI is built lazily, only
   // for the icons actually displayed, then cached.
@@ -49,22 +48,20 @@ index.addAll(
     return uriCache.get(name);
   }
 
-
   let query = "";
   let style = "all";
   let category = "all";
 
- 
   function search(q, style, category) {
     const matchesFilters = (icon) => (style === "all" || icon.style === style) && (category === "all" || icon.category === category);
- 
+
     const term = q.trim();
- 
+
     // No (or too short) query: browse everything, alphabetical, filters applied
     if (term.length < MIN_QUERY_LENGTH) {
       return iconsMeta.icons.filter(matchesFilters);
     }
- 
+
     const hits = index.search(term, {
       boost: { name: 3, tags: 2, related: 0.5 }, // name > tags > related
       prefix: true, // "env" finds "envelope" while typing
@@ -74,7 +71,7 @@ index.addAll(
       // on equal relevance, the plain icon comes before its -solid / -thin / -wide variants
       boostDocument: (id) => (STYLE_SUFFIX.test(id) ? 1 : 1.15),
     });
- 
+
     // An exact match on the icon name always comes first:
     // "search" -> search, search-solid, search-thin... then the other icons by score
     const wanted = term.toLowerCase().replace(/\s+/g, "-");
@@ -82,13 +79,43 @@ index.addAll(
     return hits.sort((a, b) => rank(a) - rank(b) || b.score - a.score);
   }
 
-
   // style and category are passed as arguments so Svelte re-runs this on change
   $: results = search(query, style, category);
   $: shown = results.slice(0, MAX_RESULTS);
 </script>
 
 <Navbar />
+
+<div class="card w-xs grid-y grid-cols-4 gap-3 p-3">
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-user-thin"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-user"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-user-wide"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-user-solid"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in rot-1/4"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in rot-1/2"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in rot-3/4"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-apple"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-google"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-paypal"></i></div>
+  <div class="bg-subtle text-title r-4 ar-1 align-cc"><i class="h-80% w-80% icon i-instagram"></i></div>
+  <div class="stack bg-subtle text-black r-4 ar-1 align-cc">
+      <i class="h-80% w-80% text-green icon i-circle-solid"></i>
+      <i class="h-80% w-80% text-white icon i-check"></i>
+  </div>
+  <div class="stack bg-subtle text-black r-4 ar-1 align-cc">
+      <i class="h-80% w-80% text-red icon i-circle-solid"></i>
+      <i class="h-80% w-80% text-white icon i-times-solid"></i>
+  </div>
+  <div class="stack bg-subtle text-black r-4 ar-1 align-cc">
+      <i class="h-80% w-80% text-yellow-450 icon i-equilateral-solid"></i>
+      <i class="h-80% w-80% text-orange-550 icon i-warning-solid"></i>
+  </div>
+    <div class="stack bg-subtle text-black r-4 ar-1 align-cc">
+      <i class="h-80% w-80% text-blue icon i-car-front-small"></i>
+      <i class="h-80% w-80% text-red icon i-circle-line-wide"></i>
+  </div>
+</div>
 
 <div class="max-w-md">
   <label for="exampleInputText" class="input-label">Search</label>
@@ -104,14 +131,12 @@ index.addAll(
   <p>No icon found for "{query.trim()}". Try a more generic word.</p>
 {:else}
   <div class="flex-x w-max-screen fw-wrap">
-  
     {#each shown as icon (icon.name)}
       <div class="card flex-y gap-1 p-2 m-1 as-center jc-center">
         <i class="icon dynamic-icon fs-5xl" style:--icon-path={iconUri(icon.name)}></i>
         <small class="fs-0.5em">{icon.name}</small>
       </div>
     {/each}
-  
   </div>
 {/if}
 

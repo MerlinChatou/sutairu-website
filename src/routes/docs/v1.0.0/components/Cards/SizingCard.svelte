@@ -29,7 +29,7 @@
   <div class="card opacity-0" id="sizing" bind:this={cardEl}>
     <div class="header" bind:this={header}>
       <h4 class="h4">Sizing</h4>
-      <div hidden>width height size</div>
+      <div hidden>width height size dimension dimensions box geometry metric min-width min-h max-width max-h min max</div>
     </div>
     <div class="body p-3 d-grid grid-cols-[max-content_1fr] ff-mono gap-2 text-center fs-sm" bind:this={body}>
       <span class="align-cr">.w-1</span>
