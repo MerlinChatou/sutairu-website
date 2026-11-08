@@ -96,7 +96,7 @@
       </div>
     </div>
     <div class="footer text-right">
-      <a class="btn btn-primary" href="/docs/v1.0.0/icons/" target="_blank">More</a>
+      <a class="btn btn-primary" href="/docs/v1.0.0/icons/" >More</a>
     </div>
   </div>
 {/if}

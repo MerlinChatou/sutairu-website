@@ -7162,10 +7162,10 @@ body.modal-open {
 }
 
 :is([data-color-scheme="dark"] *) {
-  &.dark\:dotted-white-850 {
+  &.dark\:dotted-white-875 {
     background-position: 0 0;
     background-size: var(--su-pattern-p, 10px) var(--su-pattern-p, 10px);
-    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #000 70%) var(--su-pattern-w, 1px), transparent 0);
+    background-image: radial-gradient(color-mix(in oklch, var(--su-white), #000 75%) var(--su-pattern-w, 1px), transparent 0);
   }
   
   &.dark\:bg-black {
