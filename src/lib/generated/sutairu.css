@@ -7406,6 +7406,11 @@ body.modal-open {
     background-color: oklch(from var(--su-green) l c h / 0.2);
   }
   
+  .hover\:sc-110:hover {
+    --su-sc: 1.1;
+    transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
+  }
+  
   .hover\:rot-0:hover {
     --su-rot: 0deg;
     transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
