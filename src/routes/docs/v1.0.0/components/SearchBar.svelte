@@ -1,5 +1,4 @@
 <script>
-  // import "@merlin-chatou/sutairu-extras/input-group/style";
   import { onMount } from "svelte";
   import { searchState } from "../state/search.svelte.js";
   let searchInput;

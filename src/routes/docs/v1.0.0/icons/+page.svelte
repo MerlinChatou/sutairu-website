@@ -5,6 +5,7 @@
   import iconsMeta from "@merlin-chatou/sutairu/icons-meta";
   import iconsData from "@merlin-chatou/sutairu/icons-data";
   import MiniSearch from "minisearch";
+  import SearchBarIcons from "../components/SearchBarIcons.svelte";
 
   import { onMount } from "svelte";
   onMount(() => {
@@ -53,6 +54,7 @@
   let category = "all";
 
   function search(q, style, category) {
+    console.log(q)
     const matchesFilters = (icon) => (style === "all" || icon.style === style) && (category === "all" || icon.category === category);
 
     const term = q.trim();
@@ -93,14 +95,16 @@
   <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
     Browse Sutairu’s vector icons and drop them into your HTML with a single class; only the icons you use are automatically embedded in your CSS bundle, with no extra setup.
   </p>
+
+  <SearchBarIcons bind:value={query}/>
   
 
-
+<!--
 <div class="max-w-md">
   <label for="exampleInputText" class="input-label">Search</label>
   <input type="text" class="input" id="icon-search" placeholder="keywords" autocomplete="off" bind:value={query} />
 </div>
-
+-->
 <p>
   {results.length} icon{results.length === 1 ? "" : "s"}
   {#if results.length > MAX_RESULTS}(showing the first {MAX_RESULTS}){/if}

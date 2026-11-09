@@ -1,0 +1,4 @@
+/** @type {{ querieIcons: string[]}} */
+export const searchIconsState = $state({
+  querieIcons: [],
+});
