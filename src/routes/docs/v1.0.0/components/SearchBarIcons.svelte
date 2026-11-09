@@ -22,13 +22,13 @@
   });
 </script>
 
-<div class="md:pos-abs md:left-middle d-none md:d-block">
+<div class="flex-x jc-center">
   <div class="input-group b-1 r-pill fs-sm md:w-md">
-    <span><i class="icon i-search fs-lg mx-1"></i></span>
+    <span><i class="icon i-search fs-2xl mx-1"></i></span>
     <input
       id="search-text"
       type="text"
-      class="input br-0"
+      class="input br-0 fs-xl"
       placeholder="Search"
       aria-label="Search"
       aria-describedby="Icon search bar"
@@ -36,7 +36,7 @@
       bind:value={value}
     />
     <button id="search-clear" class="btn btn-primary" aria-label="Reset search bar" on:click={clear}>
-      <i class="icon i-times-wide fs-2xl"></i>
+      <i class="icon i-times-wide fs-3xl"></i>
     </button>
   </div>
 </div>

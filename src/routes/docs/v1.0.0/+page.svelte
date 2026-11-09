@@ -2,7 +2,7 @@
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
-  import "#lib/generated/sutairu.min.css";
+  import "./lib/generated/sutairu-v1-0-0.min.css";
 
   import Navbar from "./components/Navbar.svelte";
 
@@ -54,8 +54,7 @@
   import TranslateCard from "./components/Cards/TranslateCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
   import VariantModifierCard from "./components/Cards/VariantModifierCard.svelte";
-  
-  
+
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
   import DocumentationModal from "./components/DocumentationModal.svelte";
@@ -109,11 +108,11 @@
 </script>
 
 <BrowserInit />
-<Navbar/>
+<Navbar />
 
 <div class="px-1 tg-glow dotted-black-30 dark:dotted-white-875 min-h-100vh">
   <div class="d-flex fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
-    <img src="/images/logo/logo-no-bg.svg" alt="Sutairu Logo" height="50" class="d-inline m-0 as-center bg-accent r-3" />
+    <i class="icon i-sutairu fs-5xl d-inline m-0 as-center text-white-0 bg-accent r-3"></i>
     <h1 class="h1 d-inline my-0">Sutairu</h1>
   </div>
   <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
@@ -168,8 +167,8 @@
     <TransitionCard />
     <ModalCard />
     <CodeHighlightCard />
-    
-    <LoaderCard />    
+
+    <LoaderCard />
     <BtnCloseCard />
   </div>
 

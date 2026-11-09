@@ -1,5 +1,5 @@
 <script>
-  import "#lib/generated/sutairu.min.css";
+  import "../lib/generated/sutairu-v1-0-0.min.css";
   import { Modal } from "@merlin-chatou/sutairu";
   import Navbar from "../components/Navbar.svelte";
   import iconsMeta from "@merlin-chatou/sutairu/icons-meta";
