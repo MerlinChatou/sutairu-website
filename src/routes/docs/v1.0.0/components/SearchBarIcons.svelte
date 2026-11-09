@@ -22,13 +22,14 @@
   });
 </script>
 
-<div class="flex-x jc-center">
+<div class="flex-x jc-center px-2">
   <div class="input-group b-1 r-pill fs-sm md:w-md">
     <span><i class="icon i-search fs-2xl mx-1"></i></span>
     <input
-      id="search-text"
+      id="icon-search-text"
       type="text"
       class="input br-0 fs-xl"
+      autocomplete="off"
       placeholder="Search"
       aria-label="Search"
       aria-describedby="Icon search bar"

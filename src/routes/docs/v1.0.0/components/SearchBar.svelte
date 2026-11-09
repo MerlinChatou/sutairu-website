@@ -34,6 +34,7 @@
       type="text"
       class="input br-0"
       placeholder="Search"
+      autocomplete="off"
       aria-label="Search"
       aria-describedby="basic-addon1"
       bind:this={searchInput}

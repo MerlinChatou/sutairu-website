@@ -27,7 +27,7 @@
     <i class="icon i-sutairu fs-5xl d-inline m-0 as-center text-white-0 bg-accent r-3"></i>
     <h1 class="h1 d-inline my-0">Sutairu Icons</h1>
   </div>
-  <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
+  <p class="max-w-lg mx-auto text-center mb-4 md:mb-5 fs-0.95em md:fs-1em">
     Browse Sutairu's vector icons and drop them into your HTML with a single class; only the icons you use are automatically embedded in your CSS bundle, with
     no extra setup.
   </p>
