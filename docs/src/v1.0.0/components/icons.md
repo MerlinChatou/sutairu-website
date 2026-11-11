@@ -123,6 +123,142 @@ By combining the `.stack` layout container with multiple icon layers, you can cr
 </div>
 ```
 
+
+Let's refine that phrasing to sound much more professional. Instead of "Most of the time," we can frame it as a common layout pattern.
+
+Here is the updated **Stacking Icons** section:
+
+Here is the updated **Geometric Base Shapes** table including the prohibitory line-wide icon, which is ideal for creating "forbidden", "disabled", or "restricted" status badges.
+
+### Geometric Base Shapes & Overlays
+
+When stacking icons using the `.stack` layout container, base shapes and overlays are commonly used to form notification badges, status markers, and warning indicators.
+
+Sutairu applies a consistent modifier suffix convention to control stroke weight and fill style across all geometric primitives.
+
+#### 1. Style Suffixes
+
+| Suffix / Modifier | Style Type | Description |
+| --- | --- | --- |
+| **`-thin`** | Stroke | Fine, delicate line weight for standard icons. |
+| **(Default)** | Stroke | Balanced, standard line weight. |
+| **`-wide`** | Stroke | Bold, high-visibility line weight. |
+| **`-solid`** | Fill | Solid silhouette fill (unavailable for prohibitory overlays). |
+| **`line-thin`** | Outline | Fine line weight specifically for geometric shapes. |
+| **`line`** *(or base)* | Outline | Standard line weight for geometric shapes. |
+| **`line-wide`** | Outline | Bold line weight for geometric shapes and warning frames. |
+
+---
+
+#### 2. Available Shapes
+
+| Shape Name | Base Identifier | Example Combinations |
+| --- | --- | --- |
+| **Circle** | `i-circle` | `i-circle-solid`, `i-circle-line-wide` |
+| **Square** | `i-square` | `i-square-solid`, `i-square-line-thin` |
+| **Triangle** | `i-triangle` | `i-triangle-solid`, `i-triangle-line` |
+| **Equilateral** | `i-equilateral` | `i-equilateral-solid`, `i-equilateral-line-wide` |
+| **Octagon** | `i-octagon` | `i-octagon-solid`, `i-octagon-line` |
+| **Hexagon** | `i-hexagon` | `i-hexagon-solid`, `i-hexagon-line-thin` |
+| **Prohibitory** | `i-prohibitory` | `i-prohibitory-line-thin`, `i-prohibitory-line-wide` |
+
+
+<div class="card w-fit grid-y grid-cols-9 gap-4 p-4 fs-2rem">    
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>  
+  <i class="icon i-prohibitory-line-thin"></i>
+  <i class="icon i-prohibitory-line"></i>
+  <i class="icon i-prohibitory-line-wide"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-circle-thin"></i>
+  <i class="icon i-circle"></i>
+  <i class="icon i-circle-wide"></i>  
+  <i class="icon i-circle-line-thin"></i>
+  <i class="icon i-circle-line"></i>
+  <i class="icon i-circle-line-wide"></i>  
+  <i class="icon i-circle-solid"></i>
+  <i class="icon i-none"></i>  
+  <i class="icon i-none"></i>  
+  <i class="icon i-square-thin"></i>
+  <i class="icon i-square"></i>
+  <i class="icon i-square-wide"></i>  
+  <i class="icon i-square-line-thin"></i>
+  <i class="icon i-square-line"></i>
+  <i class="icon i-square-line-wide"></i>  
+  <i class="icon i-square-solid-thin"></i>
+  <i class="icon i-square-solid"></i>
+  <i class="icon i-square-solid-wide"></i>
+  <i class="icon i-triangle-thin"></i>
+  <i class="icon i-triangle"></i>
+  <i class="icon i-triangle-wide"></i>  
+  <i class="icon i-triangle-line-thin"></i>
+  <i class="icon i-triangle-line"></i>
+  <i class="icon i-triangle-line-wide"></i>  
+  <i class="icon i-triangle-solid-thin"></i>
+  <i class="icon i-triangle-solid"></i>
+  <i class="icon i-triangle-solid-wide"></i>
+  <i class="icon i-equilateral-thin"></i>
+  <i class="icon i-equilateral"></i>
+  <i class="icon i-equilateral-wide"></i>  
+  <i class="icon i-equilateral-line-thin"></i>
+  <i class="icon i-equilateral-line"></i>
+  <i class="icon i-equilateral-line-wide"></i>  
+  <i class="icon i-equilateral-solid-thin"></i>
+  <i class="icon i-equilateral-solid"></i>
+  <i class="icon i-equilateral-solid-wide"></i>
+  <i class="icon i-hexagon-thin"></i>
+  <i class="icon i-hexagon"></i>
+  <i class="icon i-hexagon-wide"></i>  
+  <i class="icon i-hexagon-line-thin"></i>
+  <i class="icon i-hexagon-line"></i>
+  <i class="icon i-hexagon-line-wide"></i>  
+  <i class="icon i-hexagon-solid-thin"></i>
+  <i class="icon i-hexagon-solid"></i>
+  <i class="icon i-hexagon-solid-wide"></i>
+  <i class="icon i-octagon-thin"></i>
+  <i class="icon i-octagon"></i>
+  <i class="icon i-octagon-wide"></i>  
+  <i class="icon i-octagon-line-thin"></i>
+  <i class="icon i-octagon-line"></i>
+  <i class="icon i-octagon-line-wide"></i>  
+  <i class="icon i-octagon-solid-thin"></i>
+  <i class="icon i-octagon-solid"></i>
+  <i class="icon i-octagon-solid-wide"></i>
+</div>
+
+```html
+<!-- Prohibitory -->
+<i class="icon i-prohibitory-line-thin"></i>
+<i class="icon i-prohibitory-line"></i>
+<i class="icon i-prohibitory-line-wide"></i>
+<!-- Circles -->
+<i class="icon i-circle-thin"></i>
+<i class="icon i-circle"></i>
+<i class="icon i-circle-wide"></i>  
+<i class="icon i-circle-line-thin"></i>
+<i class="icon i-circle-line"></i>
+<i class="icon i-circle-line-wide"></i>  
+<i class="icon i-circle-solid"></i>
+<!-- Squares -->
+<i class="icon i-square-thin"></i>
+<i class="icon i-square"></i>
+<i class="icon i-square-wide"></i>  
+<i class="icon i-square-line-thin"></i>
+<i class="icon i-square-line"></i>
+<i class="icon i-square-line-wide"></i>  
+<i class="icon i-square-solid-thin"></i>
+<i class="icon i-square-solid"></i>
+<i class="icon i-square-solid-wide"></i> 
+<!-- Triangles -->
+...
+```
+
+
+
+
 ## Effect Transforms & Scaling
 
 Combine scale transitions, hover states, and mirroring utilities to build responsive interactive icons.

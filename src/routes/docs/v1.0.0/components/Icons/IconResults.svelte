@@ -58,9 +58,9 @@
 <NoIconSearchResult isVisible={results.length === 0} />
 
 {#if results.length !== 0}
-  <div class="max-w-100%">
+  <div class="">
      <!--<div class="flex-x jc-center fw-wrap gap-3 pb-5vh"> -->
-    <div class="d-grid grid-icon-container gap-3 p-3">
+    <div class="d-grid grid-icon-container jc-center gap-3 p-3">
       {#each shown as icon (icon.name)}
       <IconCard {icon} />
       <!--
@@ -92,8 +92,7 @@
 
 <style>
 .grid-icon-container {
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adapte selon la taille de vos items */
-
+  grid-template-columns: repeat(auto-fit, 120px); /* Adapte selon la taille de vos items */
 }
 </style>
 

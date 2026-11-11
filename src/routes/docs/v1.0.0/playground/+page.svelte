@@ -17,8 +17,18 @@
 
 
 
-<div class="flex-y border b-red p-4 w-fit h-200px gap-2">
-  <div class="border b-blue">Header</div>
-  <div class="border b-green grow-2">Body</div>
-  <div class="border b-purple grow-1">Footer</div>
+<div class="flex-x fs-3xl gap-2">
+  <i class="icon i-prohibitory-line-wide"></i>
+  <i class="icon i-circle-solid"></i>
+  <i class="icon i-circle-line-wide"></i>
+  <i class="icon i-square-solid"></i>
+  <i class="icon i-square-line-wide"></i>
+  <i class="icon i-triangle-solid"></i>
+  <i class="icon i-triangle-line-wide"></i>  
+  <i class="icon i-equilateral-solid"></i>
+  <i class="icon i-equilateral-line-wide"></i>  
+  <i class="icon i-octagon-solid"></i>
+  <i class="icon i-octagon-line-wide"></i>
+  <i class="icon i-hexagon-solid"></i>
+  <i class="icon i-hexagon-line-wide"></i>
 </div>

@@ -109,6 +109,197 @@
   &#x3C;i class="icon i-eight-wide text-purple ">&#x3C;/i>
 &#x3C;/div>
 </code></pre>
+<p>Let's refine that phrasing to sound much more professional. Instead of "Most of the time," we can frame it as a common layout pattern.</p>
+<p>Here is the updated <strong>Stacking Icons</strong> section:</p>
+<p>Here is the updated <strong>Geometric Base Shapes</strong> table including the prohibitory line-wide icon, which is ideal for creating "forbidden", "disabled", or "restricted" status badges.</p>
+<h3 class="h3">Geometric Base Shapes &#x26; Overlays</h3>
+<p>When stacking icons using the <code>.stack</code> layout container, base shapes and overlays are commonly used to form notification badges, status markers, and warning indicators.</p>
+<p>Sutairu applies a consistent modifier suffix convention to control stroke weight and fill style across all geometric primitives.</p>
+<h4 class="h4">1. Style Suffixes</h4>
+<table>
+<thead>
+<tr>
+<th>Suffix / Modifier</th>
+<th>Style Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>-thin</code></strong></td>
+<td>Stroke</td>
+<td>Fine, delicate line weight for standard icons.</td>
+</tr>
+<tr>
+<td><strong>(Default)</strong></td>
+<td>Stroke</td>
+<td>Balanced, standard line weight.</td>
+</tr>
+<tr>
+<td><strong><code>-wide</code></strong></td>
+<td>Stroke</td>
+<td>Bold, high-visibility line weight.</td>
+</tr>
+<tr>
+<td><strong><code>-solid</code></strong></td>
+<td>Fill</td>
+<td>Solid silhouette fill (unavailable for prohibitory overlays).</td>
+</tr>
+<tr>
+<td><strong><code>line-thin</code></strong></td>
+<td>Outline</td>
+<td>Fine line weight specifically for geometric shapes.</td>
+</tr>
+<tr>
+<td><strong><code>line</code></strong> <em>(or base)</em></td>
+<td>Outline</td>
+<td>Standard line weight for geometric shapes.</td>
+</tr>
+<tr>
+<td><strong><code>line-wide</code></strong></td>
+<td>Outline</td>
+<td>Bold line weight for geometric shapes and warning frames.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 class="h4">2. Available Shapes</h4>
+<table>
+<thead>
+<tr>
+<th>Shape Name</th>
+<th>Base Identifier</th>
+<th>Example Combinations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Circle</strong></td>
+<td><code>i-circle</code></td>
+<td><code>i-circle-solid</code>, <code>i-circle-line-wide</code></td>
+</tr>
+<tr>
+<td><strong>Square</strong></td>
+<td><code>i-square</code></td>
+<td><code>i-square-solid</code>, <code>i-square-line-thin</code></td>
+</tr>
+<tr>
+<td><strong>Triangle</strong></td>
+<td><code>i-triangle</code></td>
+<td><code>i-triangle-solid</code>, <code>i-triangle-line</code></td>
+</tr>
+<tr>
+<td><strong>Equilateral</strong></td>
+<td><code>i-equilateral</code></td>
+<td><code>i-equilateral-solid</code>, <code>i-equilateral-line-wide</code></td>
+</tr>
+<tr>
+<td><strong>Octagon</strong></td>
+<td><code>i-octagon</code></td>
+<td><code>i-octagon-solid</code>, <code>i-octagon-line</code></td>
+</tr>
+<tr>
+<td><strong>Hexagon</strong></td>
+<td><code>i-hexagon</code></td>
+<td><code>i-hexagon-solid</code>, <code>i-hexagon-line-thin</code></td>
+</tr>
+<tr>
+<td><strong>Prohibitory</strong></td>
+<td><code>i-prohibitory</code></td>
+<td><code>i-prohibitory-line-thin</code>, <code>i-prohibitory-line-wide</code></td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit grid-y grid-cols-9 gap-4 p-4 fs-2rem">    
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>  
+  <i class="icon i-prohibitory-line-thin"></i>
+  <i class="icon i-prohibitory-line"></i>
+  <i class="icon i-prohibitory-line-wide"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-none"></i>
+  <i class="icon i-circle-thin"></i>
+  <i class="icon i-circle"></i>
+  <i class="icon i-circle-wide"></i>  
+  <i class="icon i-circle-line-thin"></i>
+  <i class="icon i-circle-line"></i>
+  <i class="icon i-circle-line-wide"></i>  
+  <i class="icon i-circle-solid"></i>
+  <i class="icon i-none"></i>  
+  <i class="icon i-none"></i>  
+  <i class="icon i-square-thin"></i>
+  <i class="icon i-square"></i>
+  <i class="icon i-square-wide"></i>  
+  <i class="icon i-square-line-thin"></i>
+  <i class="icon i-square-line"></i>
+  <i class="icon i-square-line-wide"></i>  
+  <i class="icon i-square-solid-thin"></i>
+  <i class="icon i-square-solid"></i>
+  <i class="icon i-square-solid-wide"></i>
+  <i class="icon i-triangle-thin"></i>
+  <i class="icon i-triangle"></i>
+  <i class="icon i-triangle-wide"></i>  
+  <i class="icon i-triangle-line-thin"></i>
+  <i class="icon i-triangle-line"></i>
+  <i class="icon i-triangle-line-wide"></i>  
+  <i class="icon i-triangle-solid-thin"></i>
+  <i class="icon i-triangle-solid"></i>
+  <i class="icon i-triangle-solid-wide"></i>
+  <i class="icon i-equilateral-thin"></i>
+  <i class="icon i-equilateral"></i>
+  <i class="icon i-equilateral-wide"></i>  
+  <i class="icon i-equilateral-line-thin"></i>
+  <i class="icon i-equilateral-line"></i>
+  <i class="icon i-equilateral-line-wide"></i>  
+  <i class="icon i-equilateral-solid-thin"></i>
+  <i class="icon i-equilateral-solid"></i>
+  <i class="icon i-equilateral-solid-wide"></i>
+  <i class="icon i-hexagon-thin"></i>
+  <i class="icon i-hexagon"></i>
+  <i class="icon i-hexagon-wide"></i>  
+  <i class="icon i-hexagon-line-thin"></i>
+  <i class="icon i-hexagon-line"></i>
+  <i class="icon i-hexagon-line-wide"></i>  
+  <i class="icon i-hexagon-solid-thin"></i>
+  <i class="icon i-hexagon-solid"></i>
+  <i class="icon i-hexagon-solid-wide"></i>
+  <i class="icon i-octagon-thin"></i>
+  <i class="icon i-octagon"></i>
+  <i class="icon i-octagon-wide"></i>  
+  <i class="icon i-octagon-line-thin"></i>
+  <i class="icon i-octagon-line"></i>
+  <i class="icon i-octagon-line-wide"></i>  
+  <i class="icon i-octagon-solid-thin"></i>
+  <i class="icon i-octagon-solid"></i>
+  <i class="icon i-octagon-solid-wide"></i>
+</div>
+<pre><code class="language-html">&#x3C;!-- Prohibitory -->
+&#x3C;i class="icon i-prohibitory-line-thin">&#x3C;/i>
+&#x3C;i class="icon i-prohibitory-line">&#x3C;/i>
+&#x3C;i class="icon i-prohibitory-line-wide">&#x3C;/i>
+&#x3C;!-- Circles -->
+&#x3C;i class="icon i-circle-thin">&#x3C;/i>
+&#x3C;i class="icon i-circle">&#x3C;/i>
+&#x3C;i class="icon i-circle-wide">&#x3C;/i>  
+&#x3C;i class="icon i-circle-line-thin">&#x3C;/i>
+&#x3C;i class="icon i-circle-line">&#x3C;/i>
+&#x3C;i class="icon i-circle-line-wide">&#x3C;/i>  
+&#x3C;i class="icon i-circle-solid">&#x3C;/i>
+&#x3C;!-- Squares -->
+&#x3C;i class="icon i-square-thin">&#x3C;/i>
+&#x3C;i class="icon i-square">&#x3C;/i>
+&#x3C;i class="icon i-square-wide">&#x3C;/i>  
+&#x3C;i class="icon i-square-line-thin">&#x3C;/i>
+&#x3C;i class="icon i-square-line">&#x3C;/i>
+&#x3C;i class="icon i-square-line-wide">&#x3C;/i>  
+&#x3C;i class="icon i-square-solid-thin">&#x3C;/i>
+&#x3C;i class="icon i-square-solid">&#x3C;/i>
+&#x3C;i class="icon i-square-solid-wide">&#x3C;/i> 
+&#x3C;!-- Triangles -->
+...
+</code></pre>
 <h2 class="h2">Effect Transforms &#x26; Scaling</h2>
 <p>Combine scale transitions, hover states, and mirroring utilities to build responsive interactive icons.</p>
 <table>
