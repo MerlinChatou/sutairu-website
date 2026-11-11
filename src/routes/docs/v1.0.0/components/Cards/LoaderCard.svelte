@@ -29,7 +29,7 @@
   <div class="card opacity-0" id="loader" bind:this={cardEl}>
     <div class="header d-flex jc-between ai-center" bind:this={header}>
       <h4 class="h4">Loaders</h4>
-      <div hidden>loader loading spinner spin indicator progress wait</div>      
+      <div hidden>spinner loading growing dots comet skeleton spinner spin indicator progress wait</div>      
     </div>
     <div class="body p-4 flex-y gap-4 ff-mono" bind:this={body}>
       <div class="w-full h-64px text-center d-grid grid-cols-4 pi-center">

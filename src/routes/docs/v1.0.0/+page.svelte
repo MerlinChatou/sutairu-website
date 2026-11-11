@@ -58,7 +58,7 @@
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
   import DocumentationModal from "./components/DocumentationModal.svelte";
-  import NoSearchResult from "./components/NoSearchResult.svelte";
+  import NoSearchResult from "./components/Search/NoSearchResult.svelte";
 
   import ModalBasicExample from "./components/DemoModals/ModalBasicExample.svelte";
   import ModalNoAnimation from "./components/DemoModals/ModalNoAnimation.svelte";

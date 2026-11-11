@@ -15,4 +15,10 @@
 
 <Navbar />
 
-<i class="w-50px icon i-three-bars-thin"></i>
+
+
+<div class="flex-y border b-red p-4 w-fit h-200px gap-2">
+  <div class="border b-blue">Header</div>
+  <div class="border b-green grow-2">Body</div>
+  <div class="border b-purple grow-1">Footer</div>
+</div>

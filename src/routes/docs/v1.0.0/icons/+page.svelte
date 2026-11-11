@@ -5,14 +5,14 @@
   import iconsData from "@merlin-chatou/sutairu/icons-data";
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
-  import SearchBarIcons from "../components/SearchBarIcons.svelte";
-  import IconResults from "../components/IconResults.svelte";
-  import { createIconSearch, createIconUri } from "../lib/icons/createIconSearch.js";
+  import SearchBarIcons from "../components/Icons/SearchBarIcons.svelte";
+  import IconResults from "../components/Icons/IconResults.svelte";
+  import { createIconSearch } from "../lib/icons/SearchEngine.js";
 
   onMount(() => Modal.init());
 
   const search = createIconSearch(iconsMeta);
-  const iconUri = createIconUri(iconsData);
+  //const iconUri = createIconUri(iconsData);
 
   let query = "";
   let style = "all";
@@ -33,5 +33,5 @@
   </p>
   
   <SearchBarIcons bind:value={query} />  
-  <IconResults {results} {iconUri} {query} />
+  <IconResults {results} />
 </div>

@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { searchState } from "../state/search.svelte.js";
+  import { searchState } from "../../state/search.svelte.js";
   let searchInput;
 
   function clear() {

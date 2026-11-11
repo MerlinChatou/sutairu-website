@@ -1,9 +1,11 @@
-<script>
-  import NoIconSearchResult from "../components/NoIconSearchResult.svelte";
+<script>  
+  import NoIconSearchResult from "./NoIconSearchResult.svelte";
+  import IconCard from "./IconCard.svelte";
+  import IconLoader from "./IconLoader.svelte";
   import { onDestroy } from "svelte";
 
   export let results = [];
-  export let iconUri;
+  //export let iconUri;
   export let pageSize = 60;
   export let loadDelay = 150; //150;
 
@@ -56,19 +58,30 @@
 <NoIconSearchResult isVisible={results.length === 0} />
 
 {#if results.length !== 0}
-  <div class="">
-    <div class="flex-x jc-center fw-wrap gap-1 pb-5vh">
+  <div class="max-w-100%">
+     <!--<div class="flex-x jc-center fw-wrap gap-3 pb-5vh"> -->
+    <div class="d-grid grid-icon-container gap-3 p-3">
       {#each shown as icon (icon.name)}
-        <div class="card w-100px flex-y gap-1 p-2 m-1 as-center jc-center">
+      <IconCard {icon} />
+      <!--
+      <div class="card w-100px flex-y gap-1 p-2 m-1 as-center jc-center">
           <i class="icon dynamic-icon fs-5xl" style:--icon-path={iconUri(icon.name)}></i>
           <small class="fs-0.5em">{icon.name}</small>
         </div>
+      -->
       {/each}
       {#if hasMore}
       {#key version}
-        <div class="card w-100px min-h-50px flex-y" use:onVisible={loadMore} aria-live="polite">
-          <span class="loader-skeleton w-100% h-100% anim-dur-1.5s align-cc fs-xs" role="status" aria-label="Loading more icons">Loading</span>
+      <div use:onVisible={loadMore} aria-live="polite">
+        <IconLoader />
+      </div>
+      <!--
+        <div class="card w-120px min-h-50px flex-y" use:onVisible={loadMore} aria-live="polite">
+          <div class="loader-skeleton text-gray/30 w-100% h-100% anim-dur-1.5s align-cc fs-xs" role="status" aria-label="Loading more icons">
+            <span class="text-body">Loading</span>
+          </div>
         </div>
+        -->
       {/key}
     {/if}
     </div>
@@ -78,7 +91,9 @@
 {/if}
 
 <style>
-  .dynamic-icon::before {
-    mask-image: var(--icon-path);
-  }
+.grid-icon-container {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adapte selon la taille de vos items */
+
+}
 </style>
+

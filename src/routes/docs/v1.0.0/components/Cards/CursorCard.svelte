@@ -26,7 +26,10 @@
 </script>
 {#if isVisible}
 <div class="card opacity-0" id="cursor" bind:this={cardEl}>
-  <div class="header" bind:this={header}><h4 class="h4">Cursor</h4></div>
+  <div class="header" bind:this={header}>
+    <h4 class="h4">Cursor</h4>
+    <div hidden>mouse</div>
+  </div>
   <div class="body p-4 d-flex fd-col gap-2 ff-mono" bind:this={body}>
     <div class="bg-subtle p-3 r-2 text-center cur-pointer">cur-pointer</div>
     <div class="bg-subtle p-3 r-2 text-center cur-wait">cur-wait</div>

@@ -1,6 +1,9 @@
 import MiniSearch from "minisearch";
+import iconsData from "@merlin-chatou/sutairu/icons-data";
+
 
 const STYLE_SUFFIX = /-(solid|thin|wide-alt|wide)$/;
+
 
 export function createIconSearch(iconsMeta, { minQueryLength = 2 } = {}) {
   const index = new MiniSearch({
@@ -46,7 +49,18 @@ export function createIconSearch(iconsMeta, { minQueryLength = 2 } = {}) {
     return hits.sort((a, b) => rank(a) - rank(b) || b.score - a.score);
   };
 }
+const uriCache = new Map();
 
+export function iconUri(name) {
+  if (!uriCache.has(name)) {
+    const d = iconsData[name];
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="${d}"/></svg>`;
+    uriCache.set(name, d ? `url("data:image/svg+xml,${encodeURIComponent(svg)}")` : "none");
+  }
+  return uriCache.get(name);
+}
+
+/*
 export function createIconUri(iconsData) {
   const cache = new Map();
   return function iconUri(name) {
@@ -58,3 +72,4 @@ export function createIconUri(iconsData) {
     return cache.get(name);
   };
 }
+*/

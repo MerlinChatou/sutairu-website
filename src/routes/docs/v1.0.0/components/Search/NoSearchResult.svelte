@@ -1,6 +1,6 @@
 <script>
   //let isVisible = $state(false);
-  import { searchState } from "../state/search.svelte.js";
+  import { searchState } from "../../state/search.svelte.js";
   import { fade } from 'svelte/transition';
   let isVisible =$state(false);
 
