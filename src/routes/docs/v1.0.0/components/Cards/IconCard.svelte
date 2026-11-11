@@ -56,47 +56,47 @@
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid rot-3/4"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid -rot-45deg"></i></div>
 
-      <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-warning"></i></div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 bg-subtle r-2 ar-1"><i class="h-80% w-80% icon i-warning"></i></div>
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% icon i-circle"></i>
         <i class="h-80% w-80% icon i-warning"></i>
       </div>
-      <div class="hover:sc-110 hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% icon i-equilateral"></i>
         <i class="h-60% w-70% icon i-warning"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% icon i-square"></i>
         <i class="h-80% w-80% icon i-warning"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% icon i-octagon"></i>
         <i class="h-80% w-80% icon i-warning"></i>
       </div>
 
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-green icon i-circle-solid"></i>
         <i class="h-80% w-80% text-white icon i-check"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-red icon i-circle-solid"></i>
         <i class="h-80% w-80% text-white icon i-times-solid"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-yellow-450 icon i-equilateral-solid"></i>
         <i class="h-80% w-80% text-orange-550 icon i-warning-solid"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-blue icon i-car-front-small"></i>
         <i class="h-80% w-80% text-red icon i-circle-line-wide"></i>
       </div>
-      <div class="hover:sc-110 stack bg-subtle r-2 ar-1 align-cc">
+      <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-gray/20 icon i-octagon-solid-wide"></i>
         <i class="h-80% w-55% text-green-500 icon i-power-solid"></i>
       </div>
     </div>
     <div class="footer text-right">
-      <a class="btn btn-primary" href="/docs/v1.0.0/icons/" target="_blank">More</a>
+        <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="components/icons">&lt;code&gt;</button>      
     </div>
   </div>
 {/if}

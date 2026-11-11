@@ -1,0 +1,144 @@
+<h1 class="h1">Icons</h1>
+<p>Sutairu includes a robust, utility-friendly icon system designed for crisp rendering at any size. Icons integrate seamlessly with your layout and typography utilities, supporting custom colors, smooth rotations, multi-layer stacking, and hover animations.</p>
+<p><strong>Icon Search Engine:</strong> You can browse the full library, copy class names, and preview symbols live using the online search tool.</p>
+<div class="flex-x jc-center">
+<a href="/docs/v1.0.0/icons" target="_blank" class="btn btn-primary">Browse Icon Library</a>
+</div>
+<h2 class="h2">Basic Usage</h2>
+<p>To render an icon, use an empty element (such as <code>&#x3C;i></code> or <code>&#x3C;span></code>) combined with the base <code>.icon</code> class and a specific icon identifier starting with <code>i-&#x3C;icon-name></code>.</p>
+<div class="card w-fit flex-x gap-4 p-4 fs-3.5rem">  
+  <i class="icon i-home-solid"></i>
+  <i class="icon i-user-thin"></i>
+  <i class="icon i-apple"></i>
+  <i class="icon i-thumb-solid"></i>
+</div>
+<pre><code class="language-html">&#x3C;i class="icon i-home-solid">&#x3C;/i>
+&#x3C;i class="icon i-user-thin">&#x3C;/i>
+&#x3C;i class="icon i-apple">&#x3C;/i>
+&#x3C;i class="icon i-thumb-solid">&#x3C;/i>
+</code></pre>
+<h2 class="h2">Color &#x26; Styling</h2>
+<p>Because icons inherit text formatting properties, you can color them instantly using standard Sutairu text color utilities (<code>text-{color}</code>) or place them inside styled containers.</p>
+<div class="card w-fit flex-x gap-4 p-4 fs-3.5rem">    
+  <i class="icon i-warning-solid text-orange"></i>  
+  <i class="icon i-sign-in-solid bg-accent/50"></i>
+  <i class="icon i-plus-solid text-red bg-white r-2"></i>  
+  <i class="icon i-check text-white bg-green r-pill"></i>
+</div>
+<pre><code class="language-html">&#x3C;i class="icon i-warning-solid text-orange">&#x3C;/i>  
+&#x3C;i class="icon i-sign-in-solid bg-accent/50">&#x3C;/i>
+&#x3C;i class="icon i-plus-solid text-red bg-white r-2">&#x3C;/i>  
+&#x3C;i class="icon i-check text-white bg-green r-pill">&#x3C;/i>
+</code></pre>
+<h2 class="h2">Rotation</h2>
+<p>You can rotate icons using fractional step modifiers or explicit angle specifications.</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.rot-1/4</code></td>
+<td>Rotates 90 degrees clockwise (1/4 turn)</td>
+</tr>
+<tr>
+<td><code>.rot-1/2</code></td>
+<td>Rotates 180 degrees (1/2 turn)</td>
+</tr>
+<tr>
+<td><code>.rot-3/4</code></td>
+<td>Rotates 270 degrees (3/4 turn)</td>
+</tr>
+<tr>
+<td><code>.-rot-45deg</code></td>
+<td>Rotates 45 degrees counter-clockwise</td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit flex-x gap-4 p-4 fs-3.5rem">    
+  <i class="icon i-skateboard"></i>
+  <i class="icon i-skateboard rot-1/4"></i>
+  <i class="icon i-skateboard rot-1/2"></i>
+  <i class="icon i-skateboard -rot-45deg"></i>
+</div>
+<pre><code class="language-html">&#x3C;i class="icon i-skateboard">&#x3C;/i>
+&#x3C;i class="icon i-skateboard rot-1/4">&#x3C;/i>
+&#x3C;i class="icon i-skateboard rot-1/2">&#x3C;/i>
+&#x3C;i class="icon i-skateboard -rot-45deg">&#x3C;/i>
+</code></pre>
+<h2 class="h2">Stacking Icons</h2>
+<p>By combining the <code>.stack</code> layout container with multiple icon layers, you can create complex badge notifications, status pins, and containerized indicators.</p>
+<div class="card w-fit flex-x gap-4 p-4 fs-3.5rem">    
+  <div class="stack">
+    <i class="icon i-equilateral-solid text-yellow-450"></i>
+    <i class="icon i-warning-solid text-orange-550"></i>
+  </div>
+  <div class="stack">
+    <i class="icon i-car-front-small text-blue"></i>
+    <i class="icon i-circle-line-wide text-red"></i>
+  </div>
+  <div class="stack">
+    <i class="icon i-octagon-solid-wide text-gray/20"></i>
+    <i class="icon i-power-solid text-green-500"></i>
+  </div>
+  <div class="stack">
+    <i class="icon i-square-wide text-purple/50 "></i>
+    <i class="icon i-eight-wide text-purple "></i>
+  </div>
+</div>
+<pre><code class="language-html">&#x3C;div class="stack">
+  &#x3C;i class="icon i-equilateral-solid text-yellow-450">&#x3C;/i>
+  &#x3C;i class="icon i-warning-solid text-orange-550">&#x3C;/i>
+&#x3C;/div>
+
+&#x3C;div class="stack">
+  &#x3C;i class="icon i-car-front-small text-blue">&#x3C;/i>
+  &#x3C;i class="icon i-circle-line-wide text-red">&#x3C;/i>
+&#x3C;/div>
+
+&#x3C;div class="stack">
+  &#x3C;i class="icon i-octagon-solid-wide text-gray/20">&#x3C;/i>
+  &#x3C;i class="icon i-power-solid text-green-500">&#x3C;/i>
+&#x3C;/div>
+
+&#x3C;div class="stack">
+  &#x3C;i class="icon i-square-wide text-purple/50 ">&#x3C;/i>
+  &#x3C;i class="icon i-eight-wide text-purple ">&#x3C;/i>
+&#x3C;/div>
+</code></pre>
+<h2 class="h2">Effect Transforms &#x26; Scaling</h2>
+<p>Combine scale transitions, hover states, and mirroring utilities to build responsive interactive icons.</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.hover:sc-110</code></td>
+<td>Scales the element up to 110% on mouse hover.</td>
+</tr>
+<tr>
+<td><code>.-sc-x-1</code></td>
+<td>Flips/mirrors the icon horizontally across the X-axis.</td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit flex-x gap-4 p-4 fs-4rem">  
+  <i class="icon i-collapse-menu-solid hover:sc-120 tr-transform-250ms"></i>
+  <i class="icon i-dancer-alt-solid -rot-20deg hover:rot-20deg tr-transform-250ms"></i>
+</div>
+<pre><code class="language-html">&#x3C;i class="icon i-collapse-menu-solid hover:sc-120 tr-transform-250ms">&#x3C;/i>
+&#x3C;i class="icon i-dancer-alt-solid -rot-20deg hover:rot-20deg tr-transform-250ms">&#x3C;/i>
+</code></pre>
+<h2 class="h2">Requesting New Icons</h2>
+<p>If your design requires a symbol not currently present in the Sutairu library:</p>
+<ul>
+<li>Open an <a href="https://github.com/MerlinChatou/sutairu/issues">issue on the Sutairu repository</a> to request a new icon.</li>
+<li>Design your icon and submit a pull request by following <a href="https://github.com/MerlinChatou/sutairu/tree/main/src/icons">the instructions on the GitHub Sutairu icon page</a>.</li>
+</ul>
