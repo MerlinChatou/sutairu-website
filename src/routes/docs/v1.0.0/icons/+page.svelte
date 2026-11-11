@@ -31,7 +31,7 @@
     Browse Sutairu's vector icons and drop them into your HTML with a single class; only the icons you use are automatically embedded in your CSS bundle, with
     no extra setup.
   </p>
-
-  <SearchBarIcons bind:value={query} />
+  
+  <SearchBarIcons bind:value={query} />  
   <IconResults {results} {iconUri} {query} />
 </div>

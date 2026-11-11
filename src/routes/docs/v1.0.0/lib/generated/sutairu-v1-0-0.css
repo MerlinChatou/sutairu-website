@@ -6405,12 +6405,44 @@ body.modal-open {
   margin-block: 1rem;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.b-subtle\/50 {
+  border-color: oklch(from var(--su-subtle) l c h / 0.5);
+}
+
+.pb-5vh {
+  padding-bottom: 5vh;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
 
 .fs-0\.5em {
   font-size: 0.5em;
+}
+
+.min-h-50px {
+  min-height: 50px;
+}
+
+.w-100\% {
+  width: 100%;
+}
+
+.h-100\% {
+  height: 100%;
+}
+
+.anim-dur-1\.5s {
+  animation-duration: 1.5s;
 }
 
 .pos-sticky {
@@ -6601,10 +6633,6 @@ body.modal-open {
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mb-0 {
-  margin-bottom: 0;
 }
 
 .r-0 {
@@ -7168,16 +7196,32 @@ body.modal-open {
   margin-left: 0.75rem;
 }
 
-.w-100\% {
-  width: 100%;
-}
-
 .bg-page-600 {
   background-color: color-mix(in oklch, var(--su-page), #000 20%);
 }
 
 .h-2 {
   height: 0.5rem;
+}
+
+.text-title\/75 {
+  color: oklch(from var(--su-title) l c h / 0.75);
+}
+
+.py-6 {
+  padding-block: 1.5rem;
+}
+
+.px-6 {
+  padding-inline: 1.5rem;
+}
+
+.py-3 {
+  padding-block: 0.75rem;
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 :is([data-color-scheme="dark"] *) {
@@ -7309,6 +7353,10 @@ body.modal-open {
     display: block;
   }
   
+  .md\:mb-7 {
+    margin-bottom: 1.75rem;
+  }
+  
   .md\:pos-abs {
     position: absolute;
   }
@@ -7333,6 +7381,10 @@ body.modal-open {
   
   .md\:d-inline {
     display: inline;
+  }
+  
+  .md\:fs-3xl {
+    font-size: 1.875rem;
   }
 }
 
