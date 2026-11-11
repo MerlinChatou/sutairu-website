@@ -1,6 +1,6 @@
 import MiniSearch from "minisearch";
 import iconsData from "@merlin-chatou/sutairu/icons-data";
-
+import { parsePath } from "#lib/utils/pathGeometry.js";
 
 const STYLE_SUFFIX = /-(solid|thin|wide-alt|wide)$/;
 
@@ -60,16 +60,36 @@ export function iconUri(name) {
   return uriCache.get(name);
 }
 
-/*
-export function createIconUri(iconsData) {
-  const cache = new Map();
-  return function iconUri(name) {
-    if (!cache.has(name)) {
-      const d = iconsData[name];
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="${d}"/></svg>`;
-      cache.set(name, d ? `url("data:image/svg+xml,${encodeURIComponent(svg)}")` : "none");
-    }
-    return cache.get(name);
-  };
+
+
+
+const overlayCache = new Map();
+
+function buildOverlay(d) {
+  const { anchors, controls, handles } = parsePath(d);
+
+  const lines = handles
+    .map((h) => `<line x1="${h.a.x}" y1="${h.a.y}" x2="${h.b.x}" y2="${h.b.y}"/>`)
+    .join("");
+  const ctrl = controls.map((p) => `<circle cx="${p.x}" cy="${p.y}" r=".12"/>`).join("");
+  const anch = anchors.map((p) => `<circle cx="${p.x}" cy="${p.y}" r=".25"/>`).join("");
+
+return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<g stroke="#000" stroke-width=".1" stroke-opacity="0.9">${lines}</g>
+<g fill="#000" fill-opacity="1">${ctrl}</g>
+<g fill="#000" fill-opacity="1">${anch}</g>
+</svg>`;
 }
-*/
+
+
+
+export function iconOverlayUri(name) {
+  if (!overlayCache.has(name)) {
+    const d = iconsData[name];
+    overlayCache.set(
+      name,
+      d ? `url("data:image/svg+xml,${encodeURIComponent(buildOverlay(d))}")` : "none",
+    );
+  }
+  return overlayCache.get(name);
+}

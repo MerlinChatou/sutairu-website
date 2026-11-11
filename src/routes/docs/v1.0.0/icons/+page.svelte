@@ -7,6 +7,7 @@
   import Navbar from "../components/Navbar.svelte";
   import SearchBarIcons from "../components/Icons/SearchBarIcons.svelte";
   import IconResults from "../components/Icons/IconResults.svelte";
+  import IconModal from "../components/Icons/IconModal.svelte";
   import { createIconSearch } from "../lib/icons/SearchEngine.js";
 
   onMount(() => Modal.init());
@@ -35,3 +36,7 @@
   <SearchBarIcons bind:value={query} />  
   <IconResults {results} />
 </div>
+
+<IconModal />
+
+
