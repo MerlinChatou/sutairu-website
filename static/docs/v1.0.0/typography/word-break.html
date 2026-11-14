@@ -10,22 +10,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>break-normal</code></td>
+<td><code>wb-normal</code></td>
 <td><code>word-break: normal;</code></td>
 <td>Default line break behavior at standard word boundaries.</td>
 </tr>
 <tr>
-<td><code>break-all</code></td>
+<td><code>wb-all</code></td>
 <td><code>word-break: break-all;</code></td>
 <td>Breaks text at any character to prevent overflow.</td>
 </tr>
 <tr>
-<td><code>break-keep</code></td>
+<td><code>wb-keep</code></td>
 <td><code>word-break: keep-all;</code></td>
 <td>Prevents word breaks within CJK (Chinese, Japanese, Korean) text.</td>
 </tr>
 <tr>
-<td><code>break-word</code></td>
+<td><code>wb-word</code></td>
 <td><code>overflow-wrap: break-word;</code></td>
 <td>Wraps long, unbroken strings onto a new line to avoid container overflow.</td>
 </tr>
@@ -35,35 +35,35 @@
 <div class="card max-w-xs p-3 d-flex fd-col gap-3">
   <!-- 1. Break Normal -->
   <div class="border p-2 r-2">
-    <code class="fs-xs fw-bold">break-normal</code>
-    <p class="break-normal fs-sm mt-1">
+    <code class="fs-xs fw-bold">wb-normal</code>
+    <p class="wb-normal fs-sm mt-1">
       https://example.com/very-long-unbroken-string-that-will-overflow
     </p>
   </div>
   <!-- 2. Break All -->
   <div class="border p-2 r-2">
-    <code class="fs-xs fw-bold">break-all</code>
-    <p class="break-all fs-sm mt-1">
+    <code class="fs-xs fw-bold">wb-all</code>
+    <p class="wb-all fs-sm mt-1">
       https://example.com/very-long-unbroken-string-that-will-overflow
     </p>
   </div>
   <!-- 3. Break Keep -->
   <div class="border p-2 r-2">
-    <code class="fs-xs fw-bold">break-keep</code>
-    <p class="break-keep fs-sm mt-1">
+    <code class="fs-xs fw-bold">wb-keep</code>
+    <p class="wb-keep fs-sm mt-1">
       CJK テキストの改行を防ぎます長い文字列の挙動確認用テストデータ
     </p>
   </div>
   <!-- 4. Break Word -->
   <div class="border p-2 r-2">
-    <code class="fs-xs fw-bold">break-word</code>
-    <p class="break-word fs-sm mt-1">
+    <code class="fs-xs fw-bold">wb-word</code>
+    <p class="wb-word fs-sm mt-1">
       https://example.com/very-long-unbroken-string-that-will-overflow
     </p>
   </div>
 </div>
-<pre><code class="language-html">&#x3C;p class="break-normal fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
-&#x3C;p class="break-all fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
-&#x3C;p class="break-keep fs-sm mt-1">CJK テキストの改行を防ぎます長い文字列の挙動確認用テストデータ&#x3C;/p>
-&#x3C;p class="break-word fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
+<pre><code class="language-html">&#x3C;p class="wb-normal fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
+&#x3C;p class="wb-all fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
+&#x3C;p class="wb-keep fs-sm mt-1">CJK テキストの改行を防ぎます長い文字列の挙動確認用テストデータ&#x3C;/p>
+&#x3C;p class="wb-word fs-sm mt-1">https://example.com/very-long-unbroken-string-that-will-overflow&#x3C;/p>
 </code></pre>

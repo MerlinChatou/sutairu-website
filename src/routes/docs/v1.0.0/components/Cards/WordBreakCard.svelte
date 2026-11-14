@@ -33,23 +33,23 @@
     </div>
     <div class="body p-3 d-flex fd-col gap-3" bind:this={body}>
       <div class="ov-hidden">
-        <code>break-normal</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 w-2rem/3 break-normal fs-sm">
+        <code>wb-normal</code>
+        <p class="border p-1 r-2 mt-2 mb-4 ml-3 w-2rem/3 wb-normal fs-sm">
           https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
         </p>
 
-        <code>break-all</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 break-all w-2rem/3 fs-sm">
+        <code>wb-all</code>
+        <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-all w-2rem/3 fs-sm">
           https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
         </p>
 
-        <code>break-keep</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 break-keep w-2rem/3 fs-sm">
+        <code>wbreak-keep</code>
+        <p class="wb p-1 r-2 mt-2 mb-4 ml-3 wb-keep w-2rem/3 fs-sm">
           https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
         </p>
 
-        <code>break-word</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 break-word w-2rem/3 fs-sm">
+        <code>wb-word</code>
+        <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-word w-2rem/3 fs-sm">
           https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
         </p>
       </div>

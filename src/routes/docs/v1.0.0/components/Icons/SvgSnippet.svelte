@@ -26,7 +26,7 @@
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 
-    <pre class="py-0 my-0"><code class="language-html ws-pre-wrap break-word my-0 w-full cur-pointer" onclick={handleCopy}>{@html highlightedCode}</code></pre>
+    <pre class="py-0 my-0"><code class="language-html ws-pre-wrap wb-word my-0 w-full cur-pointer" onclick={handleCopy}>{@html highlightedCode}</code></pre>
     {#if copied}
       <div class="pos-abs left-middle top-middle left-0 top-0">
         <div out:fly={{ y: -120, duration: 1200, opacity: 0 , easing: cubicOut }} class="bg-accent-300 border b-body dark:bg-accent-700 p-3 r-2">Copied!</div>
