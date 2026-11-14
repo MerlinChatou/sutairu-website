@@ -1,8 +1,7 @@
 <script>
+  import "@fortawesome/fontawesome-free/css/all.min.css";
   import "../lib/generated/sutairu-v1-0-0.min.css";
   import { Modal } from "@merlin-chatou/sutairu";
-  import iconsMeta from "@merlin-chatou/sutairu/icons-meta";
-  import iconsData from "@merlin-chatou/sutairu/icons-data";
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
   import SearchBarIcons from "../components/Icons/SearchBarIcons.svelte";
@@ -12,7 +11,7 @@
 
   onMount(() => Modal.init());
 
-  const search = createIconSearch(iconsMeta);
+  const search = createIconSearch();
   //const iconUri = createIconUri(iconsData);
 
   let query = "";

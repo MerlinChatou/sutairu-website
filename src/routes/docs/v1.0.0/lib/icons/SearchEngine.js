@@ -1,11 +1,12 @@
 import MiniSearch from "minisearch";
 import iconsData from "@merlin-chatou/sutairu/icons-data";
+import iconsMeta from "@merlin-chatou/sutairu/icons-meta";
 import { parsePath } from "#lib/utils/pathGeometry.js";
 
 const STYLE_SUFFIX = /-(solid|thin|wide-alt|wide)$/;
 
 
-export function createIconSearch(iconsMeta, { minQueryLength = 2 } = {}) {
+export function createIconSearch({ minQueryLength = 2 } = {}) {
   const index = new MiniSearch({
     fields: ["name", "tags", "related"],
     storeFields: ["name", "category", "style"],
@@ -105,4 +106,10 @@ export function iconOverlayUri(name) {
     );
   }
   return overlayCache.get(name);
+}
+
+
+export function getCategoryByName(iconName) {
+  const icon = iconsMeta.icons.find((i) => i.name === iconName);
+  return icon ? icon.category : null;
 }

@@ -74,7 +74,6 @@
     // Show the modal content
     isLoading = false;
     isFailing = false;
-    
 
     //hljs.highlightAll();
     highlightModalCode(modal);
@@ -86,27 +85,24 @@
     <div class="header">
       <div>
         <div class="h2 m-0" class:d-none={!isLoading}>Loading...</div>
-        <div class="h2 m-0" class:d-none={!isFailing}><i class="fa-solid fa-circle-exclamation"></i> Something wrong occured</div>
+        <div class="h2 m-0 flex-x ai-center gap-2" class:d-none={!isFailing}>
+          <i class="icon i-exclamation-mark-rounded text-white bg-orange r-pill va-text-bottom"></i>
+          Something wrong occured
+        </div>
         <h1 class="h1 m-0" class:d-none={isLoading || isFailing}>{docTitle}</h1>
       </div>
       <button type="button" class="btn-close hover:bg-gray/10" data-close-modal aria-label="Close"></button>
     </div>
     <div class="body py-4">
       {#if isLoading}
-      <div id="documentation-modal-loader" class="gap-3 {isLoading ? 'flex-y' : 'd-none'}">
-        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
-        <div class="loader-skeleton h-64px w-1/2 r-3 bg-gray/20 text-gray-300/20"></div>
-        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
-        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
-        <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
-      </div>
+        <div id="documentation-modal-loader" class="gap-3 {isLoading ? 'flex-y' : 'd-none'}">
+          <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+          <div class="loader-skeleton h-64px w-1/2 r-3 bg-gray/20 text-gray-300/20"></div>
+          <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+          <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+          <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
+        </div>
       {/if}
-      <!--
-      <div id="documentation-modal-loader" class="text-center" class:d-none={!isLoading}>
-        <div class="mb-5">Documentation is loading, please wait.</div>
-        <span class="loader h-64px"></span>
-      </div>
--->
       <div id="documentation-modal-error" class="text-center" class:d-none={!isFailing}>
         <i class="fa-regular fa-face-frown fs-64px text-orange"></i>
         <div class="text-orange my-4">Documentation is unreachable, please try later or reload page.</div>
@@ -121,11 +117,25 @@
 </div>
 
 <style>
-  #documentation-modal :global(h2) { margin-top: 1.5rem; }
-  #documentation-modal :global(h3) { margin-top: 1rem; }
-  #documentation-modal :global(h4) { margin-top: 0.5rem; }
-  #documentation-modal :global(h4) { margin-top: 0.375rem; }
-  #documentation-modal :global(h5) { margin-top: 0.25rem; }
-  #documentation-modal :global(h6) { margin-top: 0.25rem; }
-  #documentation-modal :global(table code) { text-wrap: nowrap; }
+  #documentation-modal :global(h2) {
+    margin-top: 1.5rem;
+  }
+  #documentation-modal :global(h3) {
+    margin-top: 1rem;
+  }
+  #documentation-modal :global(h4) {
+    margin-top: 0.5rem;
+  }
+  #documentation-modal :global(h4) {
+    margin-top: 0.375rem;
+  }
+  #documentation-modal :global(h5) {
+    margin-top: 0.25rem;
+  }
+  #documentation-modal :global(h6) {
+    margin-top: 0.25rem;
+  }
+  #documentation-modal :global(table code) {
+    text-wrap: nowrap;
+  }
 </style>

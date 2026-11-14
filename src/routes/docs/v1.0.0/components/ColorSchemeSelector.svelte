@@ -32,7 +32,8 @@
     class:active={(currentColorScheme == 'light')}     
     onclick={() => colorScheme.setUserChoice("light")}
   >
-    <i class="fa-solid fa-sun fs-sm"></i>
+    
+    <i class="icon i-brightness-wide-full fs-lg"></i>
     <span class="d-none md:d-block">light</span>
   </button>
 
@@ -40,8 +41,8 @@
     class="btn btn-primary r-pill p-1 md:px-2 fs-xs d-flex gap-1 fd-row ai-center"
     class:active={(currentColorScheme == 'light dark')}
     onclick={() => colorScheme.setUserChoice("light dark")}
-  >
-    <i class="fa-solid fa-display fs-sm"></i>
+  >    
+    <i class="icon i-tv-wide fs-lg"></i>
     <span class="d-none md:d-block">system</span>
   </button>
 
@@ -50,7 +51,7 @@
     class:active={(currentColorScheme == 'dark')}
     onclick={() => colorScheme.setUserChoice("dark")}
   >
-    <i class="fa-solid fa-moon fs-sm"></i>
+    <i class="icon i-moon fs-lg"></i>
     <span class="d-none md:d-block">dark</span>
   </button>
 

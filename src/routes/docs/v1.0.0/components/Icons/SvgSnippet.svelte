@@ -9,7 +9,7 @@
   // Accept the icon name as a prop
   let { name = "" } = $props();
   let copied = $state(false);
-  $inspect(name)
+
   // Reactively build the code string and highlight it
   let codeString = $derived(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" d="${iconPath(name)}"/></svg>`);
   let highlightedCode = $derived(name ? hljs.highlight(codeString, { language: "html" }).value : "");
