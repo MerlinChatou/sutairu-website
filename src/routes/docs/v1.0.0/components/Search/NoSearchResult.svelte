@@ -14,8 +14,8 @@
 </script>
 
 {#if isVisible}
-  <div class="w-full text-center text-title" in:fade={{ delay: 250 }}>
-    <i class="fa-regular fa-face-sad-tear fs-4xl"></i>
+  <div class="w-full text-center text-title" in:fade={{ delay: 250 }}>    
+    <i class="icon i-smiley-sad-tears-circle-wide fs-5xl mt-5"></i>
     <div class="my-3 fs-3xl">Hmm… we couldn't find any results for your search.</div>
     <div>Please try a different keyword or check for typos.</div>
   </div>

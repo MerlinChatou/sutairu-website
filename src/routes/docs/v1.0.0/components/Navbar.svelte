@@ -11,7 +11,7 @@
   <div class="d-flex ai-center">
     <a href="/" class="logo h-fit d-flex ai-center gap-1 td-none text-title">
       
-      <i class="icon i-sutairu fs-3xl d-inline m-0 as-center text-white-0 bg-accent r-2"></i>
+      <i class="icon i-sutairu fs-3xl m-0 as-center text-white-0 bg-accent r-2"></i>
       <span class="d-none md:d-block -ls-md fs-2rem text-title fw-black">Sutairu</span>
     </a>
   </div>

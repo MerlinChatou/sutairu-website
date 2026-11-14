@@ -38,7 +38,7 @@ Because icons inherit text formatting properties, you can color them instantly u
   <i class="icon i-warning-solid text-orange"></i>  
   <i class="icon i-sign-in-solid bg-accent/50"></i>
   <i class="icon i-plus-solid text-red bg-white r-2"></i>  
-  <i class="icon i-check text-white bg-green r-pill"></i>
+  <i class="icon i-check-alt text-white bg-green r-pill"></i>
 </div>
 
 
@@ -46,7 +46,7 @@ Because icons inherit text formatting properties, you can color them instantly u
 <i class="icon i-warning-solid text-orange"></i>  
 <i class="icon i-sign-in-solid bg-accent/50"></i>
 <i class="icon i-plus-solid text-red bg-white r-2"></i>  
-<i class="icon i-check text-white bg-green r-pill"></i>
+<i class="icon i-check-alt text-white bg-green r-pill"></i>
 ```
 
 
@@ -148,7 +148,6 @@ Sutairu applies a consistent modifier suffix convention to control stroke weight
 | **`line`** *(or base)* | Outline | Standard line weight for geometric shapes. |
 | **`line-wide`** | Outline | Bold line weight for geometric shapes and warning frames. |
 
----
 
 #### 2. Available Shapes
 

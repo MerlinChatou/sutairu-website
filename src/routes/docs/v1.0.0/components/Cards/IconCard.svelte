@@ -38,7 +38,7 @@
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-three-bars-solid"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-collapse-menu-solid"></i></div>
 
-      <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-user-solid"></i></div>
+      <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-user-alt-solid"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-user-lock-solid"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-user-unlock-solid"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-user-plus-solid"></i></div>
@@ -56,7 +56,9 @@
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid rot-3/4"></i></div>
       <div class="hover:sc-110 bg-subtle r-2 ar-1 align-cc"><i class="h-80% w-80% icon i-sign-in-solid -rot-45deg"></i></div>
 
-      <div class="hover:sc-110 bg-subtle r-2 ar-1"><i class="h-80% w-80% icon i-warning"></i></div>
+      <div class="hover:sc-110 bg-subtle stack r-2 ar-1">
+        <i class="h-80% w-80% icon i-warning"></i>
+      </div>
       <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% icon i-circle"></i>
         <i class="h-80% w-80% icon i-warning"></i>
@@ -76,11 +78,11 @@
 
       <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-green icon i-circle-solid"></i>
-        <i class="h-80% w-80% text-white icon i-check"></i>
+        <i class="h-80% w-80% text-white icon i-check-alt"></i>
       </div>
       <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-red icon i-circle-solid"></i>
-        <i class="h-80% w-80% text-white icon i-times-solid"></i>
+        <i class="h-80% w-80% text-white icon i-times-alt-solid"></i>
       </div>
       <div class="hover:sc-110 stack bg-subtle r-2 ar-1">
         <i class="h-80% w-80% text-yellow-450 icon i-equilateral-solid"></i>

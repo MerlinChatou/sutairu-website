@@ -50,19 +50,19 @@
       </div>
 
       <div class="input-group max-w-md">
-        <span class="bg-subtle"><i class="fa-solid fa-user"></i></span>
+        <span class="bg-subtle"><i class="icon i-user-solid"></i></span>
         <input type="text" class="input" placeholder="Username" />
-        <span class="bg-subtle"><i class="fa-solid fa-lock"></i></span>
+        <span class="bg-subtle"><i class="icon i-lock-solid"></i></span>
         <input type="password" class="input" placeholder="••••••••" />
       </div>
 
       <div class="input-group max-w-md valid">
-        <span class="bg-green-50 dark:bg-green-820"><i class="fa-solid fa-check text-green"></i></span>
+        <span class="bg-green-50 dark:bg-green-820"><i class="icon i-check text-green"></i></span>
         <input type="text" class="input" placeholder="Valid group" />
       </div>
 
       <div class="input-group max-w-md invalid">
-        <span class="bg-red-50 dark:bg-red-820"><i class="fa-solid fa-xmark text-red"></i></span>
+        <span class="bg-red-50 dark:bg-red-820"><i class="icon i-times-wide fs-sm text-red"></i></span>
         <input type="text" class="input" placeholder="Invalid group" />
       </div>
     </div>

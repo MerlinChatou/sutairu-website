@@ -58,6 +58,24 @@
     "typography/text-color",
     "typography/typography",
     "typography/white-space",
-    "typography/word-break"
+    "typography/word-break",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/input-group",
+    "components/icons",
+    "components/icons",
+    "components/icons"
   ]
 }

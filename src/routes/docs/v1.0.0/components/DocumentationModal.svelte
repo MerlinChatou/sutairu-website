@@ -103,8 +103,8 @@
           <div class="loader-skeleton h-2rem r-3 bg-gray/20 text-gray-300/20"></div>
         </div>
       {/if}
-      <div id="documentation-modal-error" class="text-center" class:d-none={!isFailing}>
-        <i class="fa-regular fa-face-frown fs-64px text-orange"></i>
+      <div id="documentation-modal-error" class="text-center" class:d-none={!isFailing}>        
+        <i class="icon i-smiley-sad-tears-circle-wide fs-64px text-orange"></i>
         <div class="text-orange my-4">Documentation is unreachable, please try later or reload page.</div>
       </div>
 

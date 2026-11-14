@@ -19,9 +19,9 @@ These components establish a Flexbox context and manage structural styling rules
   </div>
 
   <div class="input-group">
-    <span class="bg-container"><i class="fa-solid fa-user"></i></span>
+    <span class="bg-container"><i class="icon i-user-solid"></i></span>
     <input type="text" class="input" placeholder="Username" />
-    <span class="bg-container"><i class="fa-solid fa-lock"></i></span>
+    <span class="bg-container"><i class="icon i-lock-solid"></i></span>
     <input type="password" class="input" placeholder="••••••••" />
   </div>
 </div>
@@ -34,9 +34,9 @@ These components establish a Flexbox context and manage structural styling rules
 </div>
 
 <div class="input-group">
-  <span class="bg-container"><i class="fa-solid fa-user"></i></span>
+  <span class="bg-container"><i class="icon i-user-solid"></i></span>
   <input type="text" class="input" placeholder="Username" />
-  <span class="bg-container"><i class="fa-solid fa-lock"></i></span>
+  <span class="bg-container"><i class="icon i-lock-solid"></i></span>
   <input type="password" class="input" placeholder="••••••••" />
 </div>
 ```
@@ -58,12 +58,12 @@ Provide immediate structural theme indications across the collective outline bou
 
 <div class="card p-4 flex-y gap-4 max-w-sm">
   <div class="input-group max-w-md valid">
-    <span class="bg-green-50 dark:bg-green-820"><i class="fa-solid fa-check text-green"></i></span>
+    <span class="bg-green-50 dark:bg-green-820"><i class="icon i-check text-green"></i></i></span>
     <input type="text" class="input" placeholder="Valid group" />
   </div>
 
   <div class="input-group max-w-md invalid">
-    <span class="bg-red-50 dark:bg-red-820"><i class="fa-solid fa-xmark text-red"></i></span>
+    <span class="bg-red-50 dark:bg-red-820"><i class="icon i-times-wide fs-sm text-red"></i></span>
     <input type="text" class="input" placeholder="Invalid group" />
   </div>
 </div>
@@ -71,12 +71,12 @@ Provide immediate structural theme indications across the collective outline bou
 
 ```html
 <div class="input-group max-w-md valid">
-  <span class="bg-green-50 dark:bg-green-820"><i class="fa-solid fa-check text-green"></i></span>
+  <span class="bg-green-50 dark:bg-green-820"><i class="icon i-check text-green"></i></span>
   <input type="text" class="input" placeholder="Valid group" />
 </div>
 
 <div class="input-group max-w-md invalid">
-  <span class="bg-red-50 dark:bg-red-820"><i class="fa-solid fa-xmark text-red"></i></span>
+  <span class="bg-red-50 dark:bg-red-820"><i class="icon i-times-wide fs-sm text-red"></i></span>
   <input type="text" class="input" placeholder="Invalid group" />
 </div>
 ```

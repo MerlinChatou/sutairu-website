@@ -8,8 +8,8 @@
 
 
 {#if isVisible}
-  <div class="w-full text-center text-title/75 py-6 px-6" in:fade={{ delay: 250 }}>
-    <i class="fa-regular fa-face-sad-tear fs-4xl"></i>
+  <div class="w-full text-center text-title/75 py-6 px-6" in:fade={{ delay: 250 }}>    
+    <i class="icon i-smiley-sad-tears-circle-wide fs-5xl"></i>
     <div class="my-3 fs-2xl md:fs-3xl">Hmm… we couldn't find any results for your search.</div>
     <div class="py-3">
       Can't find the icon you need? 

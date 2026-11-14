@@ -24,7 +24,7 @@
 
 <div class="flex-x jc-center px-2">
   <div class="input-group b-1 r-pill fs-sm md:w-md">
-    <span><i class="icon i-search fs-2xl mx-1"></i></span>
+    <span><i class="icon i-search fs-xl mx-1"></i></span>
     <input
       id="icon-search-text"
       type="text"
@@ -37,7 +37,7 @@
       bind:value={value}
     />
     <button id="search-clear" class="btn btn-primary" aria-label="Reset search bar" on:click={clear}>
-      <i class="icon i-times-wide fs-3xl"></i>
+      <i class="icon i-times-wide ml-1 mr-2"></i>
     </button>
   </div>
 </div>
