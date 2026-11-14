@@ -34,7 +34,7 @@
     <div class="modal-content w-md max-100">
       <div class="header">
         <h3 class="h3 flex-x ai-center gap-2">
-          <i class="icon dynamic-icon fs-2xl" style:--icon-path={icon.path}></i>
+          <i class="icon dynamic-icon fs-2xl text-body/50" style:--icon-path={icon.path}></i>
           {icon.name}
           <span class="fs-md text-body/50">({getCategoryByName(icon.name)})</span>
         </h3>
