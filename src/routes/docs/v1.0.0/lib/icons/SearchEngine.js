@@ -49,8 +49,11 @@ export function createIconSearch(iconsMeta, { minQueryLength = 2 } = {}) {
     return hits.sort((a, b) => rank(a) - rank(b) || b.score - a.score);
   };
 }
-const uriCache = new Map();
 
+/**
+ *  Return the icon URI
+ */
+const uriCache = new Map();
 export function iconUri(name) {
   if (!uriCache.has(name)) {
     const d = iconsData[name];
@@ -60,7 +63,17 @@ export function iconUri(name) {
   return uriCache.get(name);
 }
 
-
+/**
+ * Return the icon path
+ */
+const pathCache = new Map();
+export function iconPath(name) {
+  if (!pathCache.has(name)) {
+    const d = iconsData[name];
+    pathCache.set(name, d || "");
+  }
+  return pathCache.get(name);
+}
 
 
 const overlayCache = new Map();

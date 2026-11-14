@@ -54,6 +54,7 @@
   import TranslateCard from "./components/Cards/TranslateCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
   import VariantModifierCard from "./components/Cards/VariantModifierCard.svelte";
+  import WordBreakCard from "./components/Cards/WordBreakCard.svelte";
 
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
@@ -131,6 +132,7 @@
     <TableCard />
     <AlignmentCard />
     <WhiteSpaceCard />
+    <WordBreakCard />
     <TextColorsCard />
     <BackgroundColorCard />
     <SemanticBackgroundCard />
