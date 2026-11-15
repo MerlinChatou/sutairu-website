@@ -31,27 +31,35 @@
       <h4 class="h4">Word Break</h4>
       <div hidden></div>
     </div>
-    <div class="body p-3 d-flex fd-col gap-3" bind:this={body}>
-      <div class="ov-hidden">
-        <code>wb-normal</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 w-2rem/3 wb-normal fs-sm">
-          https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
-        </p>
+    <div class="body p-3" bind:this={body}>
+      <div class="ov-hidden flex-y gap-3">
+        <div>
+          <code>wb-normal</code>
+          <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-normal w-80% fs-sm">
+            https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
+          </p>
+        </div>
 
-        <code>wb-all</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-all w-2rem/3 fs-sm">
-          https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
-        </p>
+        <div>
+          <code>wb-all</code>
+          <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-all w-80% fs-sm">
+            https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
+          </p>
+        </div>
 
-        <code>wbreak-keep</code>
-        <p class="wb p-1 r-2 mt-2 mb-4 ml-3 wb-keep w-2rem/3 fs-sm">
-          https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
-        </p>
+        <div>
+          <code>wb-keep</code>
+          <p class="border wb p-1 r-2 mt-2 mb-4 ml-3 wb-keep w-80% fs-sm">
+            https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
+          </p>
+        </div>
 
-        <code>wb-word</code>
-        <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-word w-2rem/3 fs-sm">
-          https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
-        </p>
+        <div>
+          <code>wb-word</code>
+          <p class="border p-1 r-2 mt-2 mb-4 ml-3 wb-word w-80% fs-sm">
+            https://very-long-url-example-that-does-not-contain-any-spaces-and-might-overflow.com/profile/settings/security/tokens
+          </p>
+        </div>
       </div>
     </div>
     <div class="footer text-right ws-normal">

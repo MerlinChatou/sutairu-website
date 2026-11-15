@@ -1,0 +1,80 @@
+<h1 class="h1">Overflow</h1>
+<p>Control how content handles overflow behavior relative to its container using concise atomic classes. Both full (<code>overflow</code>) and shorthand (<code>ov</code>) prefixes are supported, along with directional axes and importance modifiers.</p>
+<h2 class="h2">Syntax</h2>
+<pre><code class="language-text">[!]{overflow|ov}[-x|-y]-{value}
+</code></pre>
+<ul>
+<li><code>!</code> <em>(Optional)</em>: Prepends an importance flag (<code>!important</code>).</li>
+<li><code>overflow</code> or <code>ov</code>: Base utility prefix.</li>
+<li><code>-x</code> or <code>-y</code> <em>(Optional)</em>: Restricts the rule to the horizontal or vertical axis. Omit to apply to both.</li>
+<li><code>{value}</code>: The desired overflow behavior (see table below).</li>
+</ul>
+<h2 class="h2">Supported Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>CSS Property Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auto</code></td>
+<td><code>overflow: auto;</code></td>
+<td>Clips content and adds scrollbars only when content overflows.</td>
+</tr>
+<tr>
+<td><code>hidden</code></td>
+<td><code>overflow: hidden;</code></td>
+<td>Clips overflowing content without rendering scrollbars.</td>
+</tr>
+<tr>
+<td><code>clip</code></td>
+<td><code>overflow: clip;</code></td>
+<td>Clips content at the padding box boundary (disables all scrolling).</td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td><code>overflow: visible;</code></td>
+<td>Leaves overflowing content unclipped outside the element box.</td>
+</tr>
+<tr>
+<td><code>scroll</code></td>
+<td><code>overflow: scroll;</code></td>
+<td>Always renders scrollbars regardless of whether content overflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="h2">Examples</h2>
+<div class="card bg-subtle mt-4 p-4 max-w-xs ov-visible ws-nowrap">
+My ego is way too big for this tiny container and I strictly refuse to be contained by your CSS borders!
+</div>
+<div class="card bg-subtle mt-4 p-4 max-w-xs ov-hidden ws-nowrap">
+Nothing to see here, move along! Everything is totally fine and definitely not awkwardly cut off mid-sentence.
+</div>
+<div class="card bg-subtle mt-4 p-4 max-w-xs ov-scroll ws-nowrap">
+Congratulations! You unlocked the legendary horizontal scrollbar. Keep scrolling right to claim your free pizza! 🍕
+</div>
+<div class="card bg-subtle mt-4 p-4 max-w-xs ov-x-scroll ws-nowrap">
+I only throw a horizontal scrollbar tantrum when my text is too wide to fit, but hey, at least you get to swipe sideways like a VIP!
+</div>
+<div class="card bg-subtle mt-4 p-4 max-w-xs ov-auto ws-nowrap">
+I only show scrollbars when you actually need them, unlike my overachieving show-off cousin ov-scroll.
+</div>
+<pre><code class="language-html">&#x3C;div class="ws-nowrap ov-visible">
+My ego is way too big for this tiny container and I strictly refuse to be contained by your CSS borders!
+&#x3C;/div>
+&#x3C;div class="ws-nowrap ov-hidden">
+Nothing to see here, move along! Everything is totally fine and definitely not awkwardly cut off mid-sentence.
+&#x3C;/div>
+&#x3C;div class="ws-nowrap ov-scroll">
+Congratulations! You unlocked the legendary horizontal scrollbar. Keep scrolling right to claim your free pizza! 🍕
+&#x3C;/div>
+&#x3C;div class="ws-nowrap ov-x-scroll">
+I only throw a horizontal scrollbar tantrum when my text is too wide to fit, but hey, at least you get to swipe sideways like a VIP!
+&#x3C;/div>
+&#x3C;div class="ws-nowrap ov-auto">
+I only show scrollbars when you actually need them, unlike my overachieving show-off cousin ov-scroll.
+&#x3C;/div>
+</code></pre>

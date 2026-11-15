@@ -37,6 +37,7 @@
   import OutlineColorCard from "./components/Cards/OutlineColorCard.svelte";
   import OutlineStyleCard from "./components/Cards/OutlineStyleCard.svelte";
   import OutlineWidthCard from "./components/Cards/OutlineWidthCard.svelte";
+  import OverflowCard from "./components/Cards/OverflowCard.svelte";
   import PaddingCard from "./components/Cards/PaddingCard.svelte";
   import PatternCard from "./components/Cards/PatternCard.svelte";
   import PerSideBorderWidthCard from "./components/Cards/PerSideBorderWidthCard.svelte";
@@ -130,6 +131,7 @@
     <BlockquoteCard />
     <TableCard />
     <AlignmentCard />
+    <OverflowCard />
     <WhiteSpaceCard />
     <WordBreakCard />
     <TextColorsCard />

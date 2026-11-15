@@ -4771,6 +4771,121 @@ select.input:hover {
   color: var(--hljs-emphasis);
 }
 
+.hljs {
+  color: var(--hljs-text-l);
+  border: 3px solid var(--hljs-bg);
+  background-color: var(--hljs-bg);
+}
+
+.hljs::selection {
+  background-color: var(--hljs-selection);
+}
+
+.hljs-comment {
+  color: var(--hljs-comment);
+  font-style: italic;
+}
+
+.hljs-formula {
+  color: var(--hljs-formula);
+}
+
+.hljs-params {
+  color: var(--hljs-params);
+}
+
+.hljs-property {
+  color: inherit;
+}
+
+.hljs-tag {
+  color: var(--hljs-tag);
+}
+
+.hljs-bullet {
+  color: var(--hljs-bullet);
+}
+
+.hljs-variable {
+  color: var(--hljs-variable);
+}
+
+.hljs-template-variable {
+  color: var(--hljs-template-variable);
+}
+
+.hljs-selector-tag {
+  color: var(--hljs-selector-tag);
+}
+
+.hljs-deletion {
+  color: var(--hljs-deletion);
+}
+
+.hljs-name {
+  color: var(--hljs-name);
+}
+
+.hljs-title {
+  color: var(--hljs-title);
+}
+
+.hljs-attribute {
+  color: var(--hljs-attribute);
+}
+
+.hljs-attr {
+  color: var(--hljs-attr);
+}
+
+.hljs-symbol {
+  color: var(--hljs-symbol);
+}
+
+.hljs-number {
+  color: var(--hljs-number);
+}
+
+.hljs-link {
+  color: var(--hljs-link);
+}
+
+.hljs-literal {
+  color: var(--hljs-literal);
+}
+
+.hljs-keyword {
+  color: var(--hljs-keyword);
+}
+
+.hljs-keyword {
+  color: var(--hljs-keyword);
+}
+
+.hljs-punctuation {
+  color: var(--hljs-punctuation);
+}
+
+.hljs-subst {
+  color: var(--hljs-subst);
+}
+
+.hljs-built_in {
+  color: var(--hljs-built_in);
+}
+
+.hljs-string {
+  color: var(--hljs-string);
+}
+
+.hljs-strong {
+  color: var(--hljs-strong);
+}
+
+.hljs-emphasis {
+  color: var(--hljs-emphasis);
+}
+
 
 }
 
@@ -7530,6 +7645,22 @@ select.input:hover {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.ov-visible {
+  overflow: visible;
+}
+
+.ov-scroll {
+  overflow: scroll;
+}
+
+.ov-auto {
+  overflow: auto;
+}
+
+.ov-x-scroll {
+  overflow-x: scroll;
 }
 
 :is([data-color-scheme="dark"] *) {
