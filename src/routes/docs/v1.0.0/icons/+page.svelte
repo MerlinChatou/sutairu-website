@@ -1,5 +1,4 @@
 <script>
-  import "@fortawesome/fontawesome-free/css/all.min.css";
   import "../lib/generated/sutairu-v1-0-0.min.css";
   import { Modal } from "@merlin-chatou/sutairu";
   import { onMount } from "svelte";

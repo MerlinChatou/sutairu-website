@@ -8,8 +8,8 @@
    <div class="header text-center flex-1 bb-0">
       <i class="icon dynamic-icon h-48px w-48px group-hover:sc-120 tr-all-250" style:--icon-path={iconUri(icon.name)}></i>
   </div>
-  <div class="footer bg-subtle fs-0.75rem text-center align-cc p-3 grow-1">
-    <span>{icon.name}</span>
+  <div class="footer bg-subtle text-center align-cc p-0 px-2 grow-1">
+    <span class="fs-0.75rem ">{icon.name}</span>
   </div>
 </div>
 

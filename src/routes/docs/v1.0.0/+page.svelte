@@ -1,5 +1,4 @@
-<script>
-  import "@fortawesome/fontawesome-free/css/all.min.css";
+<script>  
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
   import "./lib/generated/sutairu-v1-0-0.min.css";

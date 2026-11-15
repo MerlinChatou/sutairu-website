@@ -38,8 +38,8 @@
   });
 </script>
 
-<button class="btn btn-secondary r-pill p-1px gap-1 fs-xs" on:click={() => change()}>
-  <i class="fa-solid fa-palette d-block fs-sm d-none md:d-block"></i>
+<button class="btn btn-secondary r-pill p-1px gap-1 fs-xs" on:click={() => change()}>  
+  <i class="icon i-palette-solid fs-lg d-none md:d-inline-flex text-accent/80"></i>
 
   <span class="d-none md:d-block mr-1">{theme}</span>
   <span class="bg-container r-pill w-fit d-flex p-1px gap-1">

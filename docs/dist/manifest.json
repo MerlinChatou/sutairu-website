@@ -1,6 +1,5 @@
 {
   "v1.0.0": [
-    "__to_process/border-radius",
     "__to_process/cursor",
     "__to_process/extras/button",
     "__to_process/extras/code-highlight",
@@ -58,24 +57,6 @@
     "typography/text-color",
     "typography/typography",
     "typography/white-space",
-    "typography/word-break",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/input-group",
-    "components/icons",
-    "components/icons",
-    "components/icons"
+    "typography/word-break"
   ]
 }
