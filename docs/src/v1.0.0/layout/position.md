@@ -60,7 +60,7 @@ Position elements vertically or horizontally via `top`, `right`, `bottom`, `left
 
 ```html
 <div class="pos-rel">
-  <div class="pos-abs²"></div>
+  <div class="pos-abs"></div>
   <div class="pos-abs right-0"></div>
   <div class="pos-abs bottom-0 right-0"></div>
   <div class="pos-abs bottom-0"></div>

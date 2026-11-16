@@ -50,6 +50,7 @@
   import TableCard from "./components/Cards/TableCard.svelte";
   import TextColorsCard from "./components/Cards/TextColorCard.svelte";
   import ThemesCard from "./components/Cards/ThemesCard.svelte";
+  import TooltipCard from "./components/Cards/TooltipCard.svelte";
   import TransitionCard from "./components/Cards/TransitionCard.svelte";
   import TranslateCard from "./components/Cards/TranslateCard.svelte";
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
@@ -75,6 +76,7 @@
   // Initialize documentation version from URL
   import BrowserInit from "#lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
+
 
   let masonry = $state();
 
@@ -154,6 +156,7 @@
     <FlexCard />
     <GridCard />
     <GapCard />
+    <TooltipCard />
     <CursorCard />
     <PositionCard />
     <AspectRatioCard />
