@@ -1,0 +1,171 @@
+<h1 class="h1">Tooltips</h1>
+<p>Lightweight, CSS-driven tooltips that display contextual information when hovering over elements. Tooltips support automatic collision placement, directional modifiers (including left and end alignments), rich HTML content, and custom utility styling.</p>
+<h2 class="h2">Basic Structure</h2>
+<p>Wrap your trigger element with the <code>tip</code> class and include a <code>.tip-body</code> child element to define the tooltip content.</p>
+<button class="btn btn-secondary tip">
+  Hover me
+  <span class="tip-body">Tooltip message</span>
+</button>
+<pre><code class="language-html">&#x3C;button class="btn btn-secondary tip">
+  Hover me
+  &#x3C;span class="tip-body">Tooltip message&#x3C;/span>
+&#x3C;/button>
+</code></pre>
+<h2 class="h2">Placement Modifiers</h2>
+<p>By default, tooltips use automatic placement. You can explicitly position tooltips using modifier classes on the trigger element:</p>
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Description</th>
+<th>Example Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Default</strong></td>
+<td>Automatically positions the tooltip based on available viewport space.</td>
+<td><code>tip</code></td>
+</tr>
+<tr>
+<td><strong>Top</strong></td>
+<td>Positions the tooltip above the element.</td>
+<td><code>tip tip-top</code></td>
+</tr>
+<tr>
+<td><strong>Bottom</strong></td>
+<td>Positions the tooltip below the element.</td>
+<td><code>tip tip-bottom</code></td>
+</tr>
+<tr>
+<td><strong>Start</strong></td>
+<td>Positions the tooltip at the start alignment.</td>
+<td><code>tip tip-start</code></td>
+</tr>
+<tr>
+<td><strong>End</strong></td>
+<td>Positions the tooltip at the end alignment.</td>
+<td><code>tip tip-end</code></td>
+</tr>
+<tr>
+<td><strong>Left</strong></td>
+<td>Forces the tooltip to the left of the element.</td>
+<td><code>tip tip-left</code></td>
+</tr>
+<tr>
+<td><strong>Right</strong></td>
+<td>Forces the tooltip to the right of the element.</td>
+<td><code>tip tip-right</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="h2">Automatic Placement &#x26; Fallback Mechanics</h2>
+<p>The framework leverages modern CSS Anchor Positioning (<code>position-area</code>, <code>@position-try</code>, and <code>position-try-fallbacks</code>) to handle collision detection and automatic repositioning.</p>
+<p>When a tooltip overflows the viewport, the browser automatically cycles through the defined fallback sequence until it finds a position that fits.</p>
+<h3 class="h3">Fallback Behavior Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Original Placement</th>
+<th>1st Fallback (The Flip)</th>
+<th>2nd &#x26; 3rd Fallbacks (Edge/Corner Adjustments)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tip-top</code></td>
+<td>Flips to the bottom</td>
+<td>Slides into top-right or top-left corner alignments if crowded horizontally.</td>
+</tr>
+<tr>
+<td><code>tip-bottom</code></td>
+<td>Flips to the top</td>
+<td>Slides into bottom-right or bottom-left corner alignments if crowded horizontally.</td>
+</tr>
+<tr>
+<td><code>tip-left</code> / <code>tip-start</code></td>
+<td>Flips to the right / end side</td>
+<td>Shifts downward or upward along the vertical side edge if crowded vertically.</td>
+</tr>
+<tr>
+<td><code>tip-right</code> / <code>tip-end</code></td>
+<td>Flips to the left / start side</td>
+<td>Shifts downward or upward along the vertical side edge if crowded vertically.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="h3">Examples</h3>
+<div class="card flex-x gap-3 p-3 w-fit mt-3">
+  <button class="btn btn-secondary tip tip-top">
+    Tooltip top
+    <span class="tip-body">Tooltip on top</span>
+  </button>
+  <button class="btn btn-secondary tip tip-right">
+    Tooltip right
+    <span class="tip-body">Tooltip on right</span>
+  </button>
+  <button class="btn btn-secondary tip tip-bottom">
+    Tooltip bottom
+    <span class="tip-body">Tooltip on bottom</span>
+  </button>
+  <button class="btn btn-secondary tip tip-left">
+    Tooltip left
+    <span class="tip-body">Tooltip on left</span>
+  </button>
+</div>
+<pre><code class="language-html">&#x3C;!-- Top placement -->
+&#x3C;button class="btn btn-secondary tip tip-top">
+  Tooltip top
+  &#x3C;span class="tip-body">Tooltip on top&#x3C;/span>
+&#x3C;/button>
+
+&#x3C;!-- Right placement -->
+&#x3C;button class="btn btn-secondary tip tip-right">
+  Tooltip right
+  &#x3C;span class="tip-body">Tooltip on right&#x3C;/span>
+&#x3C;/button>
+
+&#x3C;!-- Bottom placement -->
+&#x3C;button class="btn btn-secondary tip tip-bottom">
+  Tooltip bottom
+  &#x3C;span class="tip-body">Tooltip on bottom&#x3C;/span>
+&#x3C;/button>
+
+&#x3C;!-- Left placement -->
+&#x3C;button class="btn btn-secondary tip tip-left">
+  Tooltip left
+  &#x3C;span class="tip-body">Tooltip on left&#x3C;/span>
+&#x3C;/button>
+</code></pre>
+<h2 class="h2">Rich HTML Content</h2>
+<p>Tooltips fully support embedded HTML:</p>
+<button class="btn btn-secondary tip">
+  Hover me
+  <span class="tip-body">
+    <i class="icon i-comment-square-wide fs-2xl"></i> 
+    <strong>Rich HTML</strong> tooltip with a <kbd>Ctrl+K</kbd> shortcut
+  </span>
+</button>
+<pre><code class="language-html">&#x3C;button class="btn btn-secondary tip">
+  Hover me
+  &#x3C;span class="tip-body">
+    &#x3C;i class="icon i-comment-square-wide fs-2xl">&#x3C;/i> 
+    &#x3C;strong>Rich HTML&#x3C;/strong> tooltip with a &#x3C;kbd>Ctrl+K&#x3C;/kbd> shortcut
+  &#x3C;/span>
+&#x3C;/button>
+</code></pre>
+<h2 class="h2">Custom Styled Tooltips</h2>
+<p>You can apply framework utility classes directly to the <code>.tip-body</code> element to customize the tooltip:</p>
+<button class="btn btn-secondary tip">
+  Hover me
+  <span class="tip-body bg-accent text-white border b-5px b-orange r-pill tr-opacity-1s">
+    Custom styled tooltip
+  </span>
+</button>
+<pre><code class="language-html">&#x3C;button class="btn btn-secondary tip">
+  Hover me
+  &#x3C;span class="tip-body bg-accent text-white border b-5px b-orange r-pill tr-opacity-1s">
+    Custom styled tooltip
+  &#x3C;/span>
+&#x3C;/button>
+</code></pre>
