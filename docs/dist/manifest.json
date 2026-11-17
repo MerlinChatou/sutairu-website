@@ -89,6 +89,22 @@
     "components/tooltip",
     "components/tooltip",
     "components/tooltip",
-    "components/tooltip"
+    "components/tooltip",
+    "layout/alignment",
+    "layout/alignment",
+    "layout/alignment",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close",
+    "components/btn-close"
   ]
 }

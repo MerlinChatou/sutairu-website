@@ -15,7 +15,7 @@ Sutairu provides a straightforward set of utilities to control the horizontal al
 
 ### Example
 
-<div class="card">
+<div class="card mt-5 p-3">
 <p class="text-center">This text will be centered.</p>
 <p class="text-right">This text will be right-aligned.</p>
 </div>
