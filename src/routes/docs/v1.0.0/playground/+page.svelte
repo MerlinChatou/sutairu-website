@@ -1,47 +1,60 @@
 <script>
   import "../lib/generated/sutairu-v1-0-0.min.css";
-  import { Modal } from "@merlin-chatou/sutairu";
+  import { compileCSS } from "@merlin-chatou/sutairu/compiler";
   import Navbar from "../components/Navbar.svelte";
-  import iconsMeta from "@merlin-chatou/sutairu/icons-meta";
-  import iconsData from "@merlin-chatou/sutairu/icons-data";
-  import MiniSearch from "minisearch";
-
+  import hljs from "highlight.js";
+  import beautify from "js-beautify";
   import { onMount } from "svelte";
+
+  let outputEl; 
+  let inputEl;
+
+  // Shared compilation & formatting function
+  async function updateCSS(text) {
+    const classes = (text || "").split(/\s+/).filter(Boolean);
+    const rawCss = await compileCSS(classes);
+
+    const formattedCss = /** @type {any} */ (beautify).css(rawCss, {
+      indent_size: 2,
+      space_around_combinator: true,
+    });
+
+    if (outputEl) {
+      outputEl.textContent = formattedCss;
+      delete outputEl.dataset.highlighted;
+      outputEl.classList.remove("hljs");
+      hljs.highlightElement(outputEl);
+    }
+  }
+
+  function handleInput(event) {
+    updateCSS(event.target.value);
+  }
+
+  // Run immediately when the component mounts
   onMount(() => {
-    Modal.init();
+    if (inputEl) {
+      updateCSS(inputEl.value);
+    }
   });
 </script>
 
-<!-- Wrapper takes up the full viewport height -->
-<div class="d-flex fd-col min-h-100vh">
+<div class="d-flex fd-col h-100vh ov-hidden">
   <Navbar />
-
-  <!-- Container automatically stretches to fill the remaining space -->
-  <div class="w-full grow-1 border b-red pos-rel">
-    <button class="pos-abs tip tip- mt-5">
-      Save
-      <span class="tip-body">Saves to the <b>cloud</b> <kbd>⌘S</kbd></span>
-    </button>
-
-    <div class="pos-abs right-0 tip tip-bottom">
-      top-right
-      <span class="tip-body">Tooltip</span>
+  <div class="w-full grow-1 min-h-0 d-grid grid-rows-[minmax(0,1fr)minmax(0,2fr)]">
+    <div class="pos-rel ov-hidden flex-y bb-0">
+      <div class="label pos-abs top-0 left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">INPUT (SPACE SEPARATED)</div>
+      <textarea
+        bind:this={inputEl}
+        on:input={handleInput}
+        class="grow-1 resize-none input ff-mono m-0 b-0 p-4 pt-8 lh-1.5"
+        placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
     </div>
-
-    <p class="pos-abs bottom-0 tip tip-right" tabindex="-1">
-      Non-interactive text
-      <span class="tip-body"
-        ><strong>Hello</strong><img
-          src="https://yt3.googleusercontent.com/cZr7W7xAZOa1A6M3ow_NVjCwIBxJMYCPCr0maqCkr4nANmzNzJzagUXPMx9nxZ2b2RWW6tzu0lk=s160-c-k-c0x00ffffff-no-rj"
-          alt=""
-        />
-      </span>
-    </p>
-
-    <div class="pos-abs right-0 bottom-0 tip m-3">
-      top-right
-      <span class="tip-body">Tooltip</span>
+    <div class="pos-rel ov-hidden flex-y">
+      <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">GENERATED CSS</div>
+      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto">
+        <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block"></code>
+      </pre>
     </div>
   </div>
 </div>
-
