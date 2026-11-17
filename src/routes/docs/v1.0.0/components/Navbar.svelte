@@ -1,6 +1,6 @@
 <script>
   import ColorSchemeSelector from "./ColorSchemeSelector.svelte";
-  import ThemeSelector from "./ThemeSelector.svelte";
+  import ThemeSelector from "./Themes/ThemeSelector.svelte";
   import SearchBar from "./Search/SearchBar.svelte";
   
   export let searchBarVisible = true;   

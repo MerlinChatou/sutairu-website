@@ -1,9 +1,9 @@
 <script>
-  import colorScheme from "@merlin-chatou/color-scheme";
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
   import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
   import ThemeButtons from "./ThemeButtons/ThemeButtons.svelte";
+
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -31,9 +31,9 @@
     <div class="header" bind:this={header}><h4 class="h4">Themes</h4></div>
 
     <div class="body flex-y gap-2" bind:this={body}>
-      <ThemeButtons theme="sutairu" />
-      <ThemeButtons theme="swiss" />
-      <ThemeButtons theme="adjuvio" />
+      <ThemeButtons buttonTheme="sutairu" />
+      <ThemeButtons buttonTheme="swiss" />
+      <ThemeButtons buttonTheme="adjuvio" />
     </div>
 
     <div class="footer text-right">

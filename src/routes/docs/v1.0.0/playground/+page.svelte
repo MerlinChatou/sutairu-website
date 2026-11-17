@@ -71,7 +71,7 @@
     </div>
     <div class="pos-rel ov-hidden flex-y">
       <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">GENERATED CSS</div>
-      <pre class="w-full grow-1 bt-2 b-accent flex-y m-0 ov-auto">
+      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto">
         <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block"></code>
       </pre>
     </div>
