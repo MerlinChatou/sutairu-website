@@ -6,10 +6,9 @@
   import beautify from "js-beautify";
   import { onMount } from "svelte";
 
-  let outputEl; 
+  let outputEl;
   let inputEl;
 
-  // Shared compilation & formatting function
   async function updateCSS(text) {
     const classes = (text || "").split(/\s+/).filter(Boolean);
     const rawCss = await compileCSS(classes);
@@ -28,20 +27,40 @@
   }
 
   function handleInput(event) {
-    updateCSS(event.target.value);
+    const value = event.target.value;
+    updateCSS(value);
+
+    // Update the URL query parameter (?classes=...) without reloading the page
+    const url = new URL(window.location.href);
+    if (value.trim()) {
+      url.searchParams.set("classes", value);
+    } else {
+      url.searchParams.delete("classes");
+    }
+    history.replaceState({}, "", url);
   }
 
-  // Run immediately when the component mounts
   onMount(() => {
+    // Read query parameters from URL on load (e.g., ?classes=m-3+p-4)
+    const params = new URLSearchParams(window.location.search);
+    const queryClasses = params.get("classes");
+
     if (inputEl) {
-      updateCSS(inputEl.value);
+      if (queryClasses !== null) {
+        inputEl.value = queryClasses;
+        updateCSS(queryClasses);
+      } else {
+        // Fallback default if no query param is present
+        inputEl.value = "";
+        updateCSS(inputEl.value);
+      }
     }
   });
 </script>
 
 <div class="d-flex fd-col h-100vh ov-hidden">
   <Navbar />
-  <div class="w-full grow-1 min-h-0 d-grid grid-rows-[minmax(0,1fr)minmax(0,2fr)]">
+  <div class="w-full grow-1 min-h-0 d-grid grid-rows-[minmax(0,1fr)minmax(0,1fr)]">
     <div class="pos-rel ov-hidden flex-y bb-0">
       <div class="label pos-abs top-0 left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">INPUT (SPACE SEPARATED)</div>
       <textarea
@@ -52,7 +71,7 @@
     </div>
     <div class="pos-rel ov-hidden flex-y">
       <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">GENERATED CSS</div>
-      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto">
+      <pre class="w-full grow-1 bt-2 b-accent flex-y m-0 ov-auto">
         <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block"></code>
       </pre>
     </div>

@@ -5381,8 +5381,8 @@ select.input:hover {
   display: grid;
 }
 
-.grid-rows-\[minmax\(0\,1fr\)minmax\(0\,2fr\)\] {
-  grid-template-rows: minmax(0,1fr)minmax(0,2fr);
+.grid-rows-\[minmax\(0\,1fr\)minmax\(0\,1fr\)\] {
+  grid-template-rows: minmax(0,1fr)minmax(0,1fr);
 }
 
 .pos-rel {
@@ -5461,6 +5461,10 @@ select.input:hover {
 
 .bt-2 {
   border-top-width: 2px;
+}
+
+.b-accent {
+  border-color: var(--su-accent);
 }
 
 .ov-auto {
@@ -5705,10 +5709,6 @@ select.input:hover {
 
 .r-0 {
   border-radius: 0;
-}
-
-.b-accent {
-  border-color: var(--su-accent);
 }
 
 .r-1 {
