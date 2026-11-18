@@ -27,7 +27,7 @@
 
 <div class="md:pos-abs md:left-middle d-none md:d-block">
   <div class="input-group b-1 r-pill flex-x fs-sm md:w-md">
-    <span><i class="icon i-search border fs-lg mx-1"></i></span>
+    <span><i class="icon i-search fs-lg mx-1"></i></span>
     <input
       id="search-text"
       type="text"
