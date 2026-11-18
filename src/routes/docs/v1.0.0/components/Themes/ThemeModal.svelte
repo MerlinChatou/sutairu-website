@@ -6,7 +6,7 @@
 <div class="modal no-blur" id="themes-picker-modal">
   <div class="modal-content w-screen max-w-600px">
     <div class="header">
-      <h2>Themes</h2>
+      <h2 class="h2 my-0">Themes</h2>
       <button type="button" class="btn-close" data-close-modal aria-label="Close"></button>
     </div>
     <div class="body flex-y gap-2">
