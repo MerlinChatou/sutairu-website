@@ -2,7 +2,7 @@
 
 export default {
   watch: "./src, ./static",
-  themes: "sutairu,swiss,adjuvio",
+  themes: "sutairu,adjuvio,amelie,swiss",
   output: "./src/routes/docs/v1.0.0/lib/generated/sutairu-v1-0-0.css",
   ext: "html,svelte",
   verbose: false,

@@ -29,11 +29,11 @@
   <div class="header" bind:this={header}><h4 class="h4">Variant Modifier</h4></div>
 
   <div class="body d-flex fd-col gap-2 p-4 text-center ff-mono" bind:this={body}>
-    <div class="p-2 r-2 bg-gray sm:bg-red text-white">sm:bg-red</div>
-    <div class="p-2 r-2 bg-gray md:bg-red text-white">md:bg-red</div>
-    <div class="p-2 r-2 bg-gray lg:bg-red text-white">lg:bg-red</div>
-    <div class="p-2 r-2 bg-gray xl:bg-red text-white">xl:bg-red</div>
-    <div class="p-2 r-2 bg-gray xxl:bg-red text-white">xxl:bg-red</div>
+    <div class="p-2 r-2 bg-gray sm:bg-accent text-white">sm:bg-accent</div>
+    <div class="p-2 r-2 bg-gray md:bg-accent text-white">md:bg-accent</div>
+    <div class="p-2 r-2 bg-gray lg:bg-accent text-white">lg:bg-accent</div>
+    <div class="p-2 r-2 bg-gray xl:bg-accent text-white">xl:bg-accent</div>
+    <div class="p-2 r-2 bg-gray xxl:bg-accent text-white">xxl:bg-accent</div>
     <div class="p-2 r-2 bg-gray is-odd:bg-green is-even:bg-blue text-white">is-even:bg-blue</div>
     <div class="p-2 r-2 bg-gray is-odd:bg-green is-even:bg-blue text-white">is-odd:bg-green</div>
     <div class="p-2 r-2 bg-gray hover:bg-pink text-white">hover:bg-pink</div>
