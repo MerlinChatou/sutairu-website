@@ -1,7 +1,7 @@
 <script>
   import { browser } from "$app/env";
   import colorScheme from "@merlin-chatou/color-scheme";  
-  import { theme, previewTheme } from '../../../lib/theme';
+  import { theme, previewTheme } from '../../lib/theme';
   let currentColorScheme = $state("light");
 
   let { buttonTheme } = $props();
@@ -30,7 +30,7 @@
     }
   }
 >
-  <i class="icon i-check text-accent" class:opacity-0={buttonTheme !== $theme}></i>
+  <i class="icon i-check text-accent" class:v-hidden={buttonTheme !== $theme}></i>
   <div class="grow-1 text-left ml-2">{buttonTheme}</div>
   <div class="bg-page-600 dark:bg-page-400 as-center p-1 d-flex gap-2 ml-2 r-pill">
     <span class="d-inline-block bg-accent r-pill h-2 w-2"></span>

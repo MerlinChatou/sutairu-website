@@ -2,7 +2,9 @@
   import { onMount } from "svelte";
   import { searchState } from "../../state/search.svelte.js";
   import { containsAllSubstrings } from "#lib/utils/containAllSubstring.js";
-  import ThemeButtons from "./ThemeButtons/ThemeButtons.svelte";
+  import ThemeButtons from "../Themes/ThemeButtons.svelte";
+  import { THEMES } from "../../lib/theme.js";
+
 
   let header = $state();
   let body = $state();
@@ -14,6 +16,7 @@
   onMount(() => {
     rawText = (header.textContent + " " + body.textContent).toLocaleLowerCase();
     cardId = cardEl.id;
+    console.log (THEMES)
   });
 
   // On query change
@@ -31,9 +34,9 @@
     <div class="header" bind:this={header}><h4 class="h4">Themes</h4></div>
 
     <div class="body flex-y gap-2" bind:this={body}>
-      <ThemeButtons buttonTheme="sutairu" />
-      <ThemeButtons buttonTheme="swiss" />
-      <ThemeButtons buttonTheme="adjuvio" />
+      {#each THEMES as theme}
+        <ThemeButtons buttonTheme={theme} />
+      {/each}
     </div>
 
     <div class="footer text-right">

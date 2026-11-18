@@ -8,4 +8,5 @@ export default {
   verbose: false,
   //label: '',
   //safelist: [...allPossibleBgClasses],
+  themesJson: "./src/routes/docs/v1.0.0/lib/generated/themes-v1-0-0.json",
 };
