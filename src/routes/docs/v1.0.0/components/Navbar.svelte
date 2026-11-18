@@ -1,6 +1,6 @@
 <script>
   import ColorSchemeSelector from "./ColorSchemeSelector.svelte";
-  import ThemeSelector from "./Themes/ThemeSelector.svelte";
+  import ThemeBadge from "./Themes/ThemeBadge.svelte";
   import SearchBar from "./Search/SearchBar.svelte";
   
   export let searchBarVisible = true;   
@@ -22,7 +22,7 @@
   {/if}
 
   <div class="d-flex ai-center gap-2">
-    <ThemeSelector />
+    <ThemeBadge />
     <ColorSchemeSelector />
   </div>
 </nav>

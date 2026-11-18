@@ -32,9 +32,9 @@
 >
   <i class="icon i-check text-accent" class:v-hidden={buttonTheme !== $theme}></i>
   <div class="grow-1 text-left ml-2">{buttonTheme}</div>
-  <div class="bg-page-600 dark:bg-page-400 as-center p-1 d-flex gap-2 ml-2 r-pill">
-    <span class="d-inline-block bg-accent r-pill h-2 w-2"></span>
-    <span class="d-inline-block bg-body r-pill h-2 w-2"></span>
-    <span class="d-inline-block bg-subtle r-pill h-2 w-2"></span>
+  <div class="bg-page-600 dark:bg-page-400 as-center p-1.5 d-flex gap-1 ml-2 r-pill">
+    <span class="d-inline-block bg-accent r-pill h-3.5 ar-1"></span>
+    <span class="d-inline-block bg-body r-pill h-3.5 ar-1"></span>
+    <span class="d-inline-block bg-subtle r-pill h-3.5 ar-1"></span>
   </div>
 </button>

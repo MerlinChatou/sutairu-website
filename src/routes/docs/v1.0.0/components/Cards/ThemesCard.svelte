@@ -15,7 +15,6 @@
   onMount(() => {
     rawText = (header.textContent + " " + body.textContent).toLocaleLowerCase();
     cardId = cardEl.id;
-    console.log(THEMES);
   });
 
   // On query change

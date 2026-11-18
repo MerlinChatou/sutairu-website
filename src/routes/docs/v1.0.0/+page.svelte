@@ -73,7 +73,12 @@
   import ModalFixWidth from "./components/DemoModals/Modal-fix-width.svelte";
   import ModalFullWidth from "./components/DemoModals/ModalFullWidth.svelte";
 
-  // Initialize documentation version from URL
+  // Themes and modal
+  import ThemeModal from "./components/Themes/ThemeModal.svelte";
+  import { Modal } from "@merlin-chatou/sutairu";
+  
+
+  // Initialize documentation version from URL   
   import BrowserInit from "#lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
 
@@ -81,7 +86,7 @@
   let masonry = $state();
 
   onMount(() => {
-    //Modal.init();
+    Modal.init();
     Masonry.init(masonry, {
       targetWidth: 350,
       mode: "closest",
@@ -191,7 +196,10 @@
   <ModalToggle2 />
   <ModalFixWidth />
   <ModalFullWidth />
+  <ThemeModal />
 </div>
+
+
 
 <style>
   :global(.masonry > *) {

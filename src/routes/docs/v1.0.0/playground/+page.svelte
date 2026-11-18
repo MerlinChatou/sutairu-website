@@ -5,6 +5,8 @@
   import hljs from "highlight.js";
   import beautify from "js-beautify";
   import { onMount } from "svelte";
+  import ThemeModal from "../components/Themes/ThemeModal.svelte";
+  import { Modal } from "@merlin-chatou/sutairu";
 
   let outputEl;
   let inputEl;
@@ -40,7 +42,8 @@
     history.replaceState({}, "", url);
   }
 
-  onMount(() => {
+  onMount(() => { 
+    Modal.init();
     // Read query parameters from URL on load (e.g., ?classes=m-3+p-4)
     const params = new URLSearchParams(window.location.search);
     const queryClasses = params.get("classes");
@@ -77,3 +80,6 @@
     </div>
   </div>
 </div>
+
+
+<ThemeModal />

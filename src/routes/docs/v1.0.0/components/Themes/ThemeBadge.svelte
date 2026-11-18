@@ -1,9 +1,8 @@
 <script>   
-  import ThemeModal from "./ThemeModal.svelte";
   import { theme, previewTheme } from '../../lib/theme';
 </script>
 
-<button class="btn btn-secondary r-pill p-3px gap-1 fs-xs" data-open-modal="modal-id">  
+<button class="btn btn-secondary r-pill p-3px gap-1 fs-xs" data-open-modal="themes-picker-modal">  
   <i class="icon i-palette-solid fs-lg d-none md:d-inline-flex text-accent/80"></i>
 
   <span class="d-none md:d-block mr-1">{$previewTheme ?? $theme}</span>
@@ -15,6 +14,5 @@
 
 
 
-<ThemeModal />
 
 
