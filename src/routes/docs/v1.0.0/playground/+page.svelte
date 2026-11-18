@@ -62,7 +62,7 @@
 </script>
 
 <div class="d-flex fd-col h-100vh ov-hidden">
-  <Navbar />
+  <Navbar searchBarVisible={false} />
   <div class="w-full grow-1 min-h-0 d-grid grid-rows-[minmax(0,1fr)minmax(0,1fr)]">
     <div class="pos-rel ov-hidden flex-y bb-0">
       <div class="label pos-abs top-0 left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">INPUT (SPACE SEPARATED)</div>

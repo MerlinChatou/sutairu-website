@@ -15,8 +15,7 @@
   })
 </script>
 
-<!-- Keep your shared layout/navbar untouched -->
-<Navbar />
+<Navbar searchBarVisible={false} />
 
 <main class="max-w-xl mx-auto my-5 md:my-10 p-3">
 

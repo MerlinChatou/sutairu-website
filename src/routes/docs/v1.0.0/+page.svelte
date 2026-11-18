@@ -124,14 +124,16 @@
   </div>
 
   <div class="my-4 flex-x p-3 jc-center gap-4">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license" />
-    <a href="https://github.com/MerlinChatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-2">
+    <a href="https://github.com/MerlinChatou/sutairu/blob/main/LICENSE" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license"/>
+    </a>
+    <a href="https://github.com/MerlinChatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-2 hover:sc-105">
       <i class="icon i-github"></i> Github
     </a>
-    <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-1">
+    <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
       <i class="icon i-npm"></i> npm
     </a>
-    <a href="/docs/v1.0.0/install" target="_blank" class="td-none flex-x ai-center gap-0">
+    <a href="/docs/v1.0.0/install" target="_blank" class="btn btn-primary pl-3 pr-4 td-none flex-x ai-center gap-0 hover:sc-105">
       <i class="icon i-lightning-solid"></i> Install
     </a>
   </div>
