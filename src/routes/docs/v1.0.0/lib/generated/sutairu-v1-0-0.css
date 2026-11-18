@@ -122,7 +122,29 @@
     border-left: 4px solid var(--su-border);
     margin-block: 1.5rem;
   }
+  h1 {
+    margin-block: 0 1.5rem;
+  }
 
+  h2 {
+    margin-block: 2.5rem 1rem;
+  }
+
+  h3 {
+    margin-block: 2rem 0.75rem;
+  }
+
+  h4 {
+    margin-block: 1.5rem 0.5rem;
+  }
+
+  h5 {
+    margin-block: 1.25rem 0.5rem;
+  }
+
+  h6 {
+    margin-block: 1rem 0.25rem;
+  }
   blockquote footer {
     padding-top: 1rem;
     font-weight: bold;
@@ -2139,7 +2161,7 @@
   --su-modal-header-bg-color: oklch(from var(--su-purple) 98% 0.2 h);
   --su-modal-body-bg-color: var(--su-container);
   --su-modal-footer-bg-color: var(--su-container);
-  --su-modal-border-color: var(--su-border);
+  --su-modal-border-color: oklch(from var(--su-pink) 95% c h );
   --su-modal-border-radius: 0.75rem;
   --su-modal-backdrop-color: #0000008f;
 }
@@ -2147,6 +2169,7 @@
 [data-theme="amelie"][data-color-scheme="dark"]  {
   --su-modal-backdrop-color: #000000af;
   --su-modal-header-bg-color: oklch(from var(--su-purple) 30% 0.07 h);
+  --su-modal-border-color: oklch(from var(--su-purple) 35% 0.07 h);
 }
 
 
@@ -3031,6 +3054,18 @@
 
 .i-sutairu::before {
   mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22m4.55%208.11%204.47%202.63c-.15.32-.25.86.21%201.14l9.68%205.7c.27.18.33.48.07.66l-3.43%202.1c-.27.16-.58.2-.96-.03l-9.73-6.07c-.25-.18-.43-.29-.42-.7l-.01-5.07c0-.17.06-.26.12-.36m.48-.6%204.65%202.8%201.94-1.23c.44-.24.68-.21%201.01-.01l2.66%201.56%204.23-2.59c0-.1-.1-.3-.22-.39l-6.8-4.03a.8.8%200%200%200-.8.03Zm10.88%203.52%203.66-2.3v4.18c0%20.18-.15.34-.42.2Z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.i-github::before {
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M12%200c6.62%200%2012%205.38%2012%2012%200%205.28-3.43%209.8-8.18%2011.38-.6.12-.82-.27-.82-.58l.02-3.29c0-1.13-.38-1.85-.81-2.23%202.66-.29%205.47-1.32%205.47-5.93%200-1.32-.46-2.37-1.22-3.21.12-.3.52-1.54-.12-3.17%200%200-1.01-.34-3.32%201.22q-1.44-.4-3-.4c-1%200-2.04.14-3%20.4-2.28-1.53-3.28-1.22-3.28-1.22-.68%201.63-.24%202.88-.12%203.17-.77.84-1.23%201.92-1.23%203.21%200%204.61%202.79%205.64%205.45%205.93-.34.31-.65.84-.77%201.6-.7.32-2.4.82-3.48-.98-.24-.36-.91-1.24-1.85-1.22-1%200-.4.55%200%20.8.53.28%201.1%201.34%201.25%201.67.24.67%201.01%201.97%204.03%201.42v2.23c0%20.31-.21.67-.81.58C3.43%2021.79%200%2017.3%200%2012%200%205.38%205.38%200%2012%200%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.i-npm::before {
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M1%2023V1h22v22ZM5.12%205.12v13.76H12v-11h4.13v11h2.75V5.12Z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.i-lightning-solid::before {
+  mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M15.31%203.31c.63%200%201.06.63.84%201.2l-1.34%203.6h1.1c.7%200%201.13.77.77%201.37l-6.6%2010.8c-.24.36-.7.5-1.08.36-.4-.14-.65-.55-.6-.98l1.06-6.75H8.1c-.6%200-1-.55-.89-1.1L9.02%204c.1-.41.46-.7.9-.7z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .masonry {
@@ -5739,6 +5774,34 @@ body.modal-open {
   margin-block: 0;
 }
 
+.my-4 {
+  margin-block: 1rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.td-none {
+  text-decoration: none;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-0 {
+  gap: 0;
+}
+
 .max-w-lg {
   max-width: 48rem;
 }
@@ -5751,8 +5814,8 @@ body.modal-open {
   text-align: center;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .px-2 {
@@ -5769,10 +5832,6 @@ body.modal-open {
   font-size: var(--su-fs-h2);
   letter-spacing: var(--su-ls-h2);
   font-weight: var(--su-fw-h2);
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .gap-3 {
@@ -6127,10 +6186,6 @@ body.modal-open {
 
 .p-4 {
   padding: 1rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .bb-2 {
@@ -6596,10 +6651,6 @@ body.modal-open {
   color: color-mix(in oklch, var(--su-gray), #fff 20%);
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .max-w-max {
   max-width: max-content;
 }
@@ -6981,10 +7032,6 @@ body.modal-open {
   width: 6rem;
 }
 
-.ai-center {
-  align-items: center;
-}
-
 .h-24 {
   height: 6rem;
 }
@@ -7277,6 +7324,10 @@ body.modal-open {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .\-mt-12 {
@@ -7657,10 +7708,6 @@ body.modal-open {
   font-size: 64px;
 }
 
-.my-4 {
-  margin-block: 1rem;
-}
-
 .pos-sticky {
   position: sticky;
 }
@@ -7673,16 +7720,24 @@ body.modal-open {
   justify-content: space-between;
 }
 
-.td-none {
-  text-decoration: none;
-}
-
 .\-ls-md {
   letter-spacing: -0.05em;
 }
 
 .fs-0\.95em {
   font-size: 0.95em;
+}
+
+.max-w-xl {
+  max-width: 64rem;
+}
+
+.my-5 {
+  margin-block: 1.25rem;
+}
+
+.text-blue-600 {
+  color: color-mix(in oklch, var(--su-blue), #000 20%);
 }
 
 .h-100vh {
@@ -7803,10 +7858,6 @@ body.modal-open {
 
 .h-4px {
   height: 4px;
-}
-
-.my-5 {
-  margin-block: 1.25rem;
 }
 
 .tr-transform {
@@ -7981,10 +8032,6 @@ body.modal-open {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.gap-0 {
-  gap: 0;
-}
-
 .gap-5 {
   gap: 1.25rem;
 }
@@ -7995,6 +8042,10 @@ body.modal-open {
 
 .gr-span-2 {
   grid-row: span 2;
+}
+
+.my-1 {
+  margin-block: 0.25rem;
 }
 
 .h5 {
@@ -8194,10 +8245,6 @@ body.modal-open {
 .sc-1\/2 {
   --su-sc: 0.5;
   transform: translateX(var(--su-tr-x, 0)) translateY(var(--su-tr-y, 0)) rotate(var(--su-rot, 0)) scaleX(calc(var(--su-sc-x, 1) * var(--su-sc, 1))) scaleY(calc(var(--su-sc-y, 1) * var(--su-sc, 1)));
-}
-
-.my-1 {
-  margin-block: 0.25rem;
 }
 
 .sc-0\.75 {
@@ -8648,8 +8695,8 @@ body.modal-open {
 }
 
 @media (width >= 48rem) {
-  .md\:mb-5 {
-    margin-bottom: 1.25rem;
+  .md\:mb-8 {
+    margin-bottom: 2rem;
   }
   
   .md\:w-1\/2 {
@@ -8664,8 +8711,16 @@ body.modal-open {
     display: block;
   }
   
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+  
   .md\:fs-1em {
     font-size: 1em;
+  }
+  
+  .md\:my-10 {
+    margin-block: 2.5rem;
   }
   
   .md\:bg-accent {

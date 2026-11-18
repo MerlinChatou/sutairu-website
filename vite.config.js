@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import adapter from '@sveltejs/adapter-auto';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
+import rehypeAddClasses from 'rehype-add-classes';
 
 export default defineConfig({
   plugins: [
@@ -15,8 +16,22 @@ export default defineConfig({
       preprocess: [
         mdsvex({
           extensions: ['.md'],
-          // @ts-expect-error - mdsvex types mismatch with modern rehype plugins
-          rehypePlugins: [rehypeSlug],
+          // // @ts-expect-error - mdsvex types mismatch with modern rehype plugins
+          // rehypePlugins: [rehypeSlug],
+
+
+          rehypePlugins: [
+            // @ts-expect-error - rehype-slug and unified type mismatch
+            rehypeSlug,
+            [
+              rehypeAddClasses,
+                /** @type {any} */ ({
+                'h1': 'h1',
+                'h2': 'h2',
+                'h3': 'h3'
+              })
+            ]            
+          ],
         }),
       ],
     })

@@ -28,12 +28,12 @@
 <div class="card opacity-0" id="heading" bind:this={cardEl}>
   <div class="header" bind:this={header}><h4 class="h4">Heading</h4></div>
   <div class="body p-3 d-flex fd-col gap-2" bind:this={body}>
-    <h1 class="h1">Heading 1</h1>
-    <h2 class="h2">Heading 2</h2>
-    <h3 class="h3">Heading 3</h3>
-    <h4 class="h4">Heading 4</h4>
-    <h5 class="h5">Heading 5</h5>
-    <h6 class="h6">Heading 6</h6>
+    <h1 class="h1 my-1">Heading 1</h1>
+    <h2 class="h2 my-1">Heading 2</h2>
+    <h3 class="h3 my-1">Heading 3</h3>
+    <h4 class="h4 my-1">Heading 4</h4>
+    <h5 class="h5 my-1">Heading 5</h5>
+    <h6 class="h6 my-1">Heading 6</h6>
   </div>
   <div class="footer text-right">
     <button class="btn btn-primary ff-mono" data-open-modal="documentation-modal" data-documentation="typography/heading">&lt;code&gt;</button>

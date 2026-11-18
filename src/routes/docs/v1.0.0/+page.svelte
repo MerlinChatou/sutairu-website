@@ -1,4 +1,4 @@
-<script>  
+<script>
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
   import "./lib/generated/sutairu-v1-0-0.min.css";
@@ -77,12 +77,10 @@
   // Themes and modal
   import ThemeModal from "./components/Themes/ThemeModal.svelte";
   import { Modal } from "@merlin-chatou/sutairu";
-  
 
-  // Initialize documentation version from URL   
+  // Initialize documentation version from URL
   import BrowserInit from "#lib/components/BrowserInit.svelte";
   import { onMount } from "svelte";
-
 
   let masonry = $state();
 
@@ -124,7 +122,21 @@
     <i class="icon i-sutairu fs-5xl h-fit m-0 as-center text-white-0 bg-accent r-3"></i>
     <h1 class="h1 d-inline my-0">Sutairu</h1>
   </div>
-  <p class="max-w-lg mx-auto text-center mb-4 md:mb-5">
+
+  <div class="my-4 flex-x p-3 jc-center gap-4">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license" />
+    <a href="https://github.com/MerlinChatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-2">
+      <i class="icon i-github"></i> Github
+    </a>
+    <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-1">
+      <i class="icon i-npm"></i> npm
+    </a>
+    <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-0">
+      <i class="icon i-lightning-solid"></i> Install
+    </a>
+  </div>
+
+  <p class="max-w-lg mx-auto text-center mb-6 md:mb-8">
     Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time.
   </p>
 
@@ -200,8 +212,6 @@
   <ModalFullWidth />
   <ThemeModal />
 </div>
-
-
 
 <style>
   :global(.masonry > *) {
