@@ -1,0 +1,134 @@
+<h1 class="h1">Display</h1>
+<p>Control the display behavior and visibility of elements in your layout using atomic utility classes.</p>
+<h2 class="h2">Display</h2>
+<p>Set the <code>display</code> property of an element instantly using the <code>d-{value}</code> syntax.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS Property Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>d-block</code></strong></td>
+<td><code>display: block;</code></td>
+<td>Generates a block box, stacking elements vertically.</td>
+</tr>
+<tr>
+<td><strong><code>d-inline-block</code></strong></td>
+<td><code>display: inline-block;</code></td>
+<td>Generates an inline-level block container.</td>
+</tr>
+<tr>
+<td><strong><code>d-inline</code></strong></td>
+<td><code>display: inline;</code></td>
+<td>Forces inline flow behavior.</td>
+</tr>
+<tr>
+<td><strong><code>d-flex</code></strong></td>
+<td><code>display: flex;</code></td>
+<td>Establishes a flexbox container.</td>
+</tr>
+<tr>
+<td><strong><code>d-inline-flex</code></strong></td>
+<td><code>display: inline-flex;</code></td>
+<td>Establishes an inline-level flexbox container.</td>
+</tr>
+<tr>
+<td><strong><code>d-grid</code></strong></td>
+<td><code>display: grid;</code></td>
+<td>Establishes a CSS grid container.</td>
+</tr>
+<tr>
+<td><strong><code>d-inline-grid</code></strong></td>
+<td><code>display: inline-grid;</code></td>
+<td>Establishes an inline-level grid container.</td>
+</tr>
+<tr>
+<td><strong><code>d-contents</code></strong></td>
+<td><code>display: contents;</code></td>
+<td>Discards the element box itself, making its children act as direct children of its parent.</td>
+</tr>
+<tr>
+<td><strong><code>d-list-item</code></strong></td>
+<td><code>display: list-item;</code></td>
+<td>Turns the element into a list item (with bullet points).</td>
+</tr>
+<tr>
+<td><strong><code>d-none</code></strong> / <strong><code>d-hidden</code></strong></td>
+<td><code>display: none;</code></td>
+<td>Removes the element completely from the layout flow.</td>
+</tr>
+<tr>
+<td><strong><code>d-table</code></strong></td>
+<td><code>display: table;</code></td>
+<td>Behaves like an HTML table element.</td>
+</tr>
+<tr>
+<td><strong><code>d-flow-root</code></strong></td>
+<td><code>display: flow-root;</code></td>
+<td>Creates a block container with its own block formatting context (BFC).</td>
+</tr>
+</tbody>
+</table>
+<h3 class="h3">Examples</h3>
+<div class="card p-3 mt-3">
+<div class="d-block bg-subtle p-4 my-2">.d-block</div>
+<span class="d-none">.d-none</span>
+<div class="d-inline-block bg-subtle p-4 my-2">.d-inline block</div>
+<div class="d-inline-block bg-subtle p-4 my-2">.d-inline block</div>
+</div>
+<pre><code class="language-html">&#x3C;!-- Block element example -->
+&#x3C;div class="d-block">.d-block&#x3C;/div>
+
+&#x3C;!-- Completely hidden element -->
+&#x3C;span class="d-none">.d-none&#x3C;/span>
+
+&#x3C;!-- Inline block element example -->
+&#x3C;div class="d-inline-block">.d-inline block&#x3C;/div>
+&#x3C;div class="d-inline-block">.d-inline block&#x3C;/div>
+</code></pre>
+<h2 class="h2">Visibility</h2>
+<p>Control whether an element is rendered or hidden without altering the document layout flow using <code>v-{value}</code> classes or their standard aliases.</p>
+<table>
+<thead>
+<tr>
+<th>Class / Alias</th>
+<th>CSS Property Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>v-visible</code></strong></td>
+<td><code>visibility: visible;</code></td>
+<td>The element is fully visible and rendered.</td>
+</tr>
+<tr>
+<td><strong><code>v-hidden</code></strong></td>
+<td><code>visibility: hidden;</code></td>
+<td>The element is hidden from view but still takes up its original spatial footprint in the layout.</td>
+</tr>
+<tr>
+<td><strong><code>v-collapse</code></strong></td>
+<td><code>visibility: collapse;</code></td>
+<td>Used primarily for table rows/columns to remove them, but behaves like <code>hidden</code> on other elements.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="h3">Examples</h3>
+<div class="card p-3 mt-3">
+<!-- Hidden element that preserves its box dimensions -->
+<div class=" bg-subtle p-4 my-2 v-hidden">This content is invisible, but its space remains occupied.</div>
+<!-- Using the standard alias -->
+<div class=" bg-subtle p-4 my-2 v-visible">.v-visible</div>
+</div>
+<pre><code class="language-html">&#x3C;!-- Hidden element that preserves its box dimensions -->
+&#x3C;div class="v-hidden">.v-hidden&#x3C;/div>
+
+&#x3C;!-- Visible element -->
+&#x3C;div class="v-visible">.v-visible&#x3C;/div>
+
+</code></pre>

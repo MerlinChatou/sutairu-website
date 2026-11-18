@@ -21,6 +21,7 @@
   import CodeHighlightCard from "./components/Cards/CodeHighlightCard.svelte";
   import ColorSchemeCard from "./components/Cards/ColorSchemeCard.svelte";
   import CursorCard from "./components/Cards/CursorCard.svelte";
+  import DisplayCard from "./components/Cards/DisplayCard.svelte";
   import FilterCard from "./components/Cards/FilterCard.svelte";
   import FlexCard from "./components/Cards/FlexCard.svelte";
   import FontSizeCard from "./components/Cards/FontSizeCard.svelte";
@@ -132,15 +133,6 @@
     <ThemesCard />
     <VariantModifierCard />
     <HeadingCard />
-    <TypographyCard />
-    <FontSizeCard />
-    <FontWeightCard />
-    <BlockquoteCard />
-    <TableCard />
-    <AlignmentCard />
-    <OverflowCard />
-    <WhiteSpaceCard />
-    <WordBreakCard />
     <TextColorsCard />
     <BackgroundColorCard />
     <SemanticBackgroundCard />
@@ -152,6 +144,16 @@
     <OutlineColorCard />
     <OutlineWidthCard />
     <OutlineStyleCard />
+    <TypographyCard />
+    <FontSizeCard />
+    <FontWeightCard />
+    <BlockquoteCard />
+    <TableCard />
+    <AlignmentCard />
+    <OverflowCard />
+    <WhiteSpaceCard />
+    <WordBreakCard />
+    <DisplayCard />
     <MarginCard />
     <PaddingCard />
     <SizingCard />
