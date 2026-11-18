@@ -5,7 +5,6 @@
   import ThemeButtons from "../Themes/ThemeButtons.svelte";
   import { THEMES } from "../../lib/theme.js";
 
-
   let header = $state();
   let body = $state();
   let cardEl = $state();
@@ -16,7 +15,7 @@
   onMount(() => {
     rawText = (header.textContent + " " + body.textContent).toLocaleLowerCase();
     cardId = cardEl.id;
-    console.log (THEMES)
+    console.log(THEMES);
   });
 
   // On query change
