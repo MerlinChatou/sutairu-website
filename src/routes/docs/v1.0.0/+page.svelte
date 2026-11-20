@@ -127,7 +127,7 @@
     <a href="https://github.com/MerlinChatou/sutairu/blob/main/LICENSE" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
       <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license"/>
     </a>
-    <a href="https://github.com/MerlinChatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-2 hover:sc-105">
+    <a href="https://github.com/MerlinChatou/sutairu/blob/main/README.md" target="_blank" class="td-none flex-x ai-center gap-2 hover:sc-105">
       <i class="icon i-github"></i> Github
     </a>
     <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
