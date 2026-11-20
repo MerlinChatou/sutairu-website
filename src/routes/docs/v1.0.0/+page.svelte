@@ -125,7 +125,7 @@
 
   <div class="my-4 flex-x p-3 jc-center gap-4">
     <a href="https://github.com/MerlinChatou/sutairu/blob/main/LICENSE" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
-      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license"/>
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license" />
     </a>
     <a href="https://github.com/MerlinChatou/sutairu/blob/main/README.md" target="_blank" class="td-none flex-x ai-center gap-2 hover:sc-105">
       <i class="icon i-github"></i> Github
@@ -222,3 +222,24 @@
       opacity 300ms ease 300ms;
   }
 </style>
+
+
+
+<svelte:head>
+  <title>Sutairu</title>
+  <meta
+    name="description"
+    content="Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time."
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sutairu" />
+  <meta
+    property="og:description"
+    content="Lightweight, high-performance utility CSS framework designed to scan your project files and generate optimized, atomic styles in real-time."
+  />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary" />
+</svelte:head>

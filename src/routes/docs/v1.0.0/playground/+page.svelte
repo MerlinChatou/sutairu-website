@@ -83,3 +83,23 @@
 
 
 <ThemeModal />
+
+
+<svelte:head>
+	<title>Sutairu — Playground</title>
+	<meta
+		name="description"
+		content="Test and preview Sutairu utility classes, themes, and color schemes interactively in the live playground."
+	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Playground — Sutairu" />
+	<meta
+		property="og:description"
+		content="Test and preview Sutairu utility classes, themes, and color schemes interactively in the live playground."
+	/>
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary" />
+</svelte:head>

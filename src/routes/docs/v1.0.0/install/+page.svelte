@@ -6,7 +6,7 @@
   // Optional: If you have a navbar component
   import Navbar from '../components/Navbar.svelte'; 
   import { onMount } from "svelte";
-  import Modal from "../../../../../../sutairu/lib/Modal";
+  import { Modal } from "@merlin-chatou/sutairu";
   import ThemeModal from "../components/Themes/ThemeModal.svelte";
 
   onMount(() => {
@@ -14,6 +14,26 @@
     Modal.init();
   })
 </script>
+
+<svelte:head>
+	<title>Sutairu — Install</title>
+	<meta
+		name="description"
+		content="Install Sutairu via npm and configure the on-demand CLI scanner to generate lightweight, atomic utility CSS for your project."
+	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Install — Sutairu" />
+	<meta
+		property="og:description"
+		content="Install Sutairu via npm and configure the on-demand CLI scanner to generate lightweight, atomic utility CSS for your project."
+	/>
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary" />
+</svelte:head>
+
 
 <Navbar searchBarVisible={false} />
 

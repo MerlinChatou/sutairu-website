@@ -39,3 +39,25 @@
 <IconModal />
 <ThemeModal />
 
+
+
+
+
+<svelte:head>
+	<title>Sutairu — Icons</title>
+	<meta
+		name="description"
+		content="Browse and search Sutairu's vector icon library for lightweight, zero-overhead UI icons in your project."
+	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Icons — Sutairu" />
+	<meta
+		property="og:description"
+		content="Browse and search Sutairu's vector icon library for lightweight, zero-overhead UI icons in your project."
+	/>
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary" />
+</svelte:head>

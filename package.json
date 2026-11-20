@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": ">=26.13.0",
+    "node": "24.x",
     "npm": ">=11.20.0"
   },
   "imports": {
@@ -17,6 +17,7 @@
     "dev:site:host": "vite dev --host",
     "dev": "concurrently \"npm:dev:docs\" \"npm:dev:site\"",
     "build": "vite build",
+    "start": "node build/index.js",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "@merlin-chatou/sutairu": "^1.0.0",
-    "@sveltejs/adapter-auto": "^8.0.0",
+    "@sveltejs/adapter-node": "^6.0.5",
     "@sveltejs/kit": "^3.1.0",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "concurrently": "^10.0.6",
@@ -52,11 +53,10 @@
     "highlight.js": "^11.12.0",
     "i": "^0.3.7",
     "js-beautify": "^2.0.3",
-    "minisearch": "^7.2.0",
-    "npm": "^12.2.1"
+    "minisearch": "^7.2.0"
   },
   "volta": {
-    "node": "26.13.0",
+    "node": "24.22.3",
     "npm": "11.20.0"
   }
 }
