@@ -1,38 +1,67 @@
-# sv
+# Sutairu Website (`sutairu.dev`)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+The official website and documentation source for **Sutairu** (`sutairu.dev`), a lightweight, high-performance utility CSS framework with real-time file scanning, atomic CSS generation, themes, and on-demand compiled icons.
 
-## Creating a project
+This repository (`sutairu-website`) contains **only the website**—the core CSS compiler CLI and interactive local playground live in the main [`sutairu`](https://github.com/MerlinChatou/sutairu) repository (`@merlin-chatou/sutairu`).
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Related Repositories
 
-# create a new project in my-app
-npx sv create my-app
-```
+* **CSS Framework (`sutairu`):** [github.com/MerlinChatou/sutairu](https://github.com/MerlinChatou/sutairu) — Core CLI (`sutairu`), local playground (`sutairu-play`), themes, and icon sources.
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Local Development
 
-```sh
+Install dependencies and start the local development server:
+
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+*(If your project uses `pnpm`, `yarn`, or `bun`, substitute your preferred package manager.)*
 
-To create a production version of your app:
+### Building for Production
 
-```sh
+Generate the production build and preview it locally:
+
+```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Working with Sutairu in This Repo
+
+Because this repository is the website itself, it consumes `@merlin-chatou/sutairu` to style its own pages and components.
+
+```bash
+npm install -D @merlin-chatou/sutairu
+```
+
+Typical workflows when updating site styles or testing framework features:
+
+```bash
+# Run the Sutairu CSS compiler
+npx sutairu
+
+# Launch the interactive local playground
+npx sutairu-play
+```
+
+See the [`sutairu` README](https://www.google.com/search?q=https://github.com/MerlinChatou/sutairu%23readme) for full details on `sutairu.config.js`, CLI flags (`--watch`, `--output`, `--themes`, `--safelist`, `--theme-json`, `--ext`, `--verbose`, `--label`), and theme configuration.
+
+
+
+## Contributing
+
+Contributions to the `sutairu.dev` website—such as documentation improvements, examples, or UI refinements—are welcome via pull requests on [`MerlinChatou/sutairu-website`](https://github.com/MerlinChatou/sutairu-website).
+
+* **Framework issues & features:** Open an issue or PR in [`MerlinChatou/sutairu`](https://github.com/MerlinChatou/sutairu).
+* **Adding new icons:** Follow the [icon contribution guide](https://github.com/MerlinChatou/sutairu/blob/main/src/icons/README.md) in the framework repository.
+
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
