@@ -5,6 +5,7 @@
   
   // Optional: If you have a navbar component
   import Navbar from '../components/Navbar.svelte'; 
+  import Footer from "../components/Footer.svelte";
   import { onMount } from "svelte";
   import { Modal } from "@merlin-chatou/sutairu";
   import ThemeModal from "../components/Themes/ThemeModal.svelte";
@@ -37,12 +38,16 @@
 
 <Navbar searchBarVisible={false} />
 
-<main class="max-w-xl mx-auto my-5 md:my-10 p-3">
+<main class="max-w-xl mx-auto my-5 md:my-10 mb-5vh p-3">
 
   <article class="markdown-wrapper">
     <!-- Render the imported markdown file as a component -->
     <MarkdownContent />
   </article>
+
+
 </main>
+
+<Footer />
 <ThemeModal />
 

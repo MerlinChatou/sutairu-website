@@ -2,6 +2,7 @@
   import "../lib/generated/sutairu-v1-0-0.min.css";
   import { compileCSS } from "@merlin-chatou/sutairu/compiler";
   import Navbar from "../components/Navbar.svelte";
+  import Footer from "../components/Footer.svelte";
   import hljs from "highlight.js";
   import beautify from "js-beautify";
   import { onMount } from "svelte";
@@ -74,11 +75,12 @@
     </div>
     <div class="pos-rel ov-hidden flex-y">
       <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">GENERATED CSS</div>
-      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto">
-        <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block"></code>
+      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto r-0">
+        <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block r-0"></code>
       </pre>
     </div>
   </div>
+    <Footer />
 </div>
 
 

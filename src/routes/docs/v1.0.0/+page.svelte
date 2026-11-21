@@ -4,6 +4,7 @@
   import "./lib/generated/sutairu-v1-0-0.min.css";
 
   import Navbar from "./components/Navbar.svelte";
+  import Footer from "./components/Footer.svelte";
 
   import AlignmentCard from "./components/Cards/AlignmentCard.svelte";
   import AspectRatioCard from "./components/Cards/AspectRatioCard.svelte";
@@ -57,7 +58,6 @@
   import TypographyCard from "./components/Cards/TypographyCard.svelte";
   import VariantModifierCard from "./components/Cards/VariantModifierCard.svelte";
   import WordBreakCard from "./components/Cards/WordBreakCard.svelte";
-
   import WhiteSpaceCard from "./components/Cards/WhiteSpaceCard.svelte";
 
   import DocumentationModal from "./components/DocumentationModal.svelte";
@@ -117,7 +117,7 @@
 <BrowserInit />
 <Navbar />
 
-<div class="px-1 tg-glow dotted-black-30 dark:dotted-white-875 min-h-100vh">
+<div class="px-1 pb-5vh tg-glow dotted-black-30 dark:dotted-white-875 min-h-100vh">
   <div class="flex-x fd-row gap-2 as-center jc-center mt-0 mb-2 pt-3">
     <i class="icon i-sutairu fs-5xl h-fit m-0 as-center text-white-0 bg-accent r-3"></i>
     <h1 class="h1 d-inline my-0">Sutairu</h1>
@@ -243,3 +243,6 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary" />
 </svelte:head>
+
+
+<Footer />

@@ -5,6 +5,7 @@
   
   // Optional: If you have a navbar component
   import Navbar from '../docs/v1.0.0/components/Navbar.svelte'; 
+  import Footer from "../docs/v1.0.0/components/Footer.svelte";
   import { onMount } from "svelte";
   import { Modal } from "@merlin-chatou/sutairu";
   import ThemeModal from "../docs/v1.0.0/components/Themes/ThemeModal.svelte";
@@ -44,5 +45,9 @@
     <MarkdownContent />
   </article>
 </main>
+
+<Footer />
+
+
 <ThemeModal />
 

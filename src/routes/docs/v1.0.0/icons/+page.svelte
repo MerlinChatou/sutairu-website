@@ -3,6 +3,7 @@
   import { Modal } from "@merlin-chatou/sutairu";
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
+  import Footer from "../components/Footer.svelte";
   import SearchBarIcons from "../components/Icons/SearchBarIcons.svelte";
   import IconResults from "../components/Icons/IconResults.svelte";
   import IconModal from "../components/Icons/IconModal.svelte";
@@ -35,6 +36,9 @@
   <SearchBarIcons bind:value={query} />  
   <IconResults {results} />
 </div>
+
+
+<Footer />
 
 <IconModal />
 <ThemeModal />
