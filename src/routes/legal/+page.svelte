@@ -1,14 +1,14 @@
 <script>
-  import "../docs/v1.0.0/lib/generated/sutairu-v1-0-0.min.css";
+  import "../docs/v1/lib/generated/sutairu-v1.min.css";
   import hljs from "highlight.js";
   import MarkdownContent from './content.md';
   
   // Optional: If you have a navbar component
-  import Navbar from '../docs/v1.0.0/components/Navbar.svelte'; 
-  import Footer from "../docs/v1.0.0/components/Footer.svelte";
+  import Navbar from '../docs/v1/components/Navbar.svelte'; 
+  import Footer from "../docs/v1/components/Footer.svelte";
   import { onMount } from "svelte";
   import { Modal } from "@merlin-chatou/sutairu";
-  import ThemeModal from "../docs/v1.0.0/components/Themes/ThemeModal.svelte";
+  import ThemeModal from "../docs/v1/components/Themes/ThemeModal.svelte";
 
   onMount(() => {
     hljs.highlightAll();

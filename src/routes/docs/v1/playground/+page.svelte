@@ -1,0 +1,117 @@
+<script>
+  import "../lib/generated/sutairu-v1.min.css";
+  import { compileCSS } from "@merlin-chatou/sutairu/compiler";
+  import Navbar from "../components/Navbar.svelte";
+  import Footer from "../components/Footer.svelte";
+  import hljs from "highlight.js";
+  import beautify from "js-beautify";
+  import { onMount } from "svelte";
+  import ThemeModal from "../components/Themes/ThemeModal.svelte";
+  import { Modal } from "@merlin-chatou/sutairu";
+
+  let outputEl;
+  let inputEl;
+
+  async function updateCSS(text) {
+    const classes = (text || "").split(/\s+/).filter(Boolean);
+    const rawCss = await compileCSS(classes);
+
+    const formattedCss = /** @type {any} */ (beautify).css(rawCss, {
+      indent_size: 2,
+      space_around_combinator: true,
+    });
+
+    if (outputEl) {
+      outputEl.textContent = formattedCss;
+      delete outputEl.dataset.highlighted;
+      outputEl.classList.remove("hljs");
+      hljs.highlightElement(outputEl);
+    }
+  }
+
+  function handleInput(event) {
+    const value = event.target.value;
+    updateCSS(value);
+
+    // Update the URL query parameter (?classes=...) without reloading the page
+    const url = new URL(window.location.href);
+    if (value.trim()) {
+      url.searchParams.set("classes", value);
+    } else {
+      url.searchParams.delete("classes");
+    }
+    history.replaceState({}, "", url);
+  }
+
+  onMount(() => { 
+    Modal.init();
+    // Read query parameters from URL on load (e.g., ?classes=m-3+p-4)
+    const params = new URLSearchParams(window.location.search);
+    const queryClasses = params.get("classes");
+
+    if (inputEl) {
+      if (queryClasses !== null) {
+        inputEl.value = queryClasses;
+        updateCSS(queryClasses);
+      } else {
+        // Fallback default if no query param is present
+        inputEl.value = "";
+        updateCSS(inputEl.value);
+      }
+    }
+  });
+</script>
+
+
+
+
+<!-- <div class="d-flex fd-col min-h-100vh ov-hidden p-6">
+  <h1 class="h1">Playground</h1>
+</div> -->
+
+
+
+
+<div class="d-flex fd-col h-100vh ov-hidden">
+  <Navbar searchBarVisible={false} />
+  <div class="w-full grow-1 min-h-0 d-grid grid-rows-[minmax(0,1fr)minmax(0,1fr)]">
+    <div class="pos-rel ov-hidden flex-y bb-0">
+      <div class="label pos-abs top-0 left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">INPUT (SPACE SEPARATED)</div>
+      <textarea
+        bind:this={inputEl}
+        on:input={handleInput}
+        class="grow-1 resize-none input ff-mono m-0 b-0 p-4 pt-8 lh-1.5"
+        placeholder="m-3 !bg-blue-123/83 m-5"></textarea>
+    </div>
+    <div class="pos-rel ov-hidden flex-y">
+      <div class="label pos-abs top-2px left-0 pe-none px-4 py-1.5 fw-bold fs-xs ls-1px text-white bg-accent z-10">GENERATED CSS</div>
+      <pre class="w-full grow-1 bt-2 flex-y m-0 ov-auto r-0">
+        <code bind:this={outputEl} class="language-css w-full grow-1 ov-auto ff-mono m-0 lh-1.5 !p-4 !pt-8 b-0 d-block r-0"></code>
+      </pre>
+    </div>
+  </div>
+    <Footer />
+</div>
+
+
+<ThemeModal />
+
+
+<svelte:head>
+	<title>Sutairu — Playground</title>
+	<meta
+		name="description"
+		content="Test and preview Sutairu utility classes, themes, and color schemes interactively in the live playground."
+	/>
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Playground — Sutairu" />
+	<meta
+		property="og:description"
+		content="Test and preview Sutairu utility classes, themes, and color schemes interactively in the live playground."
+	/>
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary" />
+</svelte:head>

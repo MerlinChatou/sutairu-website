@@ -27,7 +27,7 @@
    *     import Page from "../v1.1.0/+page.svelte";
    *
    ********************************************************************************************/
-  import Page from "../../v1.0.0/icons/+page.svelte";
+  import Page from "../../v1/icons/+page.svelte";
 </script>
 
 <Page />
