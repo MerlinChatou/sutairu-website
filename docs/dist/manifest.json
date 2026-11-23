@@ -49,6 +49,14 @@
     "typography/text-color",
     "typography/typography",
     "typography/white-space",
-    "typography/word-break"
+    "typography/word-break",
+    "components/icons",
+    "components/icons",
+    "components/icons",
+    "components/icons",
+    "components/icons",
+    "components/icons",
+    "components/icons",
+    "components/icons"
   ]
 }

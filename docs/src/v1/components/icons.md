@@ -50,6 +50,49 @@ Because icons inherit text formatting properties, you can color them instantly u
 ```
 
 
+## Sizing Modes: Fit & Fill
+
+By default, an icon is drawn on a square 24-unit grid, so most glyphs have some empty space around them. Two optional modifiers change how the glyph sits in its box. Both are added next to `.icon`.
+
+| Class | Box | Glyph | Typical use |
+| --- | --- | --- | --- |
+| `.icon` *(default)* | 1em × 1em square | Natural size, centered in the grid | Lists, menus, aligned columns |
+| `.icon-fit` | Cropped to the glyph | Natural size | Inline text, tight layouts |
+| `.icon-fill` | 1em × 1em square | Scaled up until it touches the borders | Buttons, avatars, badges |
+
+<div class="card w-fit flex-x gap-6 p-4 fs-6rem">
+  <i class="r-1 icon i-return-sign-solid bg-subtle border"></i>
+  <i class="r-1 icon icon-fit i-return-sign-solid bg-subtle border"></i>
+  <i class="r-1 icon icon-fill i-return-sign-solid bg-subtle border"></i>
+</div>
+
+```html
+<i class="icon i-return-sign-solid bg-subtle border"></i>
+<i class="icon icon-fit i-return-sign-solid bg-subtle border"></i>
+<i class="icon icon-fill i-return-sign-solid bg-subtle border"></i>
+```
+
+
+### Fit
+
+`.icon-fit` crops the box to the visible part of the glyph. The scale does not change, so every icon keeps its size relative to the others: a small dot stays small. Only the empty space around the glyph is removed, so the icon sits exactly on its ink.
+
+Since the box has no built-in margin, add spacing yourself with the usual utilities (`m-*`, `p-*`, `gap-*`).
+
+### Fill
+
+`.icon-fill` keeps the 1em square and scales the glyph so that its **largest side touches the borders**. The other axis is centered. Unlike `.icon-fit`, each icon is rescaled individually, so small glyphs grow to the same size as large ones.
+
+Borders and padding stay inside the box: an `.icon-fill` element has the same outer size as a plain `.icon`.
+
+
+**Notes**
+- Always combine `.icon-fit` and `.icon-fill` with `.icon`, and use only one of them per element.
+- Size icons with `font-size` (`fs-*`) as usual. Both modes follow it.
+- `.icon-fill` relies on container query units, available in Chrome 105+, Safari 16+ and Firefox 110+. On older browsers it falls back to the regular `.icon` rendering.
+- Non-square glyphs keep their proportions with `.icon-fill`: a wide icon touches the left and right borders and leaves space above and below.
+
+
 ## Rotation
 
 You can rotate icons using fractional step modifiers or explicit angle specifications.

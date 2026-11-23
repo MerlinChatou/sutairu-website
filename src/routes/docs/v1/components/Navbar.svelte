@@ -14,7 +14,7 @@
       <i class="icon i-sutairu fs-3xl m-0 as-center text-white-0 bg-accent r-2"></i>
       <span class="d-none md:d-block -ls-md fs-2rem text-title fw-black">Sutairu</span>      
     </a>
-    <span class="badge bg-accent text-white r-pill d-none md:d-block fs-xs as-center">v1.0</span>
+    <span class="badge bg-accent text-white r-pill d-none md:d-block fs-xs as-center">v1.1</span>
   </div>
   {#if searchBarVisible}
   <SearchBar />

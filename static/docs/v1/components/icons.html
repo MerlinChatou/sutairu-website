@@ -30,6 +30,60 @@
 &#x3C;i class="icon i-plus-solid text-red bg-white r-2">&#x3C;/i>  
 &#x3C;i class="icon i-check-alt text-white bg-green r-pill">&#x3C;/i>
 </code></pre>
+<h2 class="h2">Sizing Modes: Fit &#x26; Fill</h2>
+<p>By default, an icon is drawn on a square 24-unit grid, so most glyphs have some empty space around them. Two optional modifiers change how the glyph sits in its box. Both are added next to <code>.icon</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Box</th>
+<th>Glyph</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.icon</code> <em>(default)</em></td>
+<td>1em × 1em square</td>
+<td>Natural size, centered in the grid</td>
+<td>Lists, menus, aligned columns</td>
+</tr>
+<tr>
+<td><code>.icon-fit</code></td>
+<td>Cropped to the glyph</td>
+<td>Natural size</td>
+<td>Inline text, tight layouts</td>
+</tr>
+<tr>
+<td><code>.icon-fill</code></td>
+<td>1em × 1em square</td>
+<td>Scaled up until it touches the borders</td>
+<td>Buttons, avatars, badges</td>
+</tr>
+</tbody>
+</table>
+<div class="card w-fit flex-x gap-6 p-4 fs-6rem">
+  <i class="r-1 icon i-return-sign-solid bg-subtle border"></i>
+  <i class="r-1 icon icon-fit i-return-sign-solid bg-subtle border"></i>
+  <i class="r-1 icon icon-fill i-return-sign-solid bg-subtle border"></i>
+</div>
+<pre><code class="language-html">&#x3C;i class="icon i-return-sign-solid bg-subtle border">&#x3C;/i>
+&#x3C;i class="icon icon-fit i-return-sign-solid bg-subtle border">&#x3C;/i>
+&#x3C;i class="icon icon-fill i-return-sign-solid bg-subtle border">&#x3C;/i>
+</code></pre>
+<h3 class="h3">Fit</h3>
+<p><code>.icon-fit</code> crops the box to the visible part of the glyph. The scale does not change, so every icon keeps its size relative to the others: a small dot stays small. Only the empty space around the glyph is removed, so the icon sits exactly on its ink.</p>
+<p>Since the box has no built-in margin, add spacing yourself with the usual utilities (<code>m-*</code>, <code>p-*</code>, <code>gap-*</code>).</p>
+<h3 class="h3">Fill</h3>
+<p><code>.icon-fill</code> keeps the 1em square and scales the glyph so that its <strong>largest side touches the borders</strong>. The other axis is centered. Unlike <code>.icon-fit</code>, each icon is rescaled individually, so small glyphs grow to the same size as large ones.</p>
+<p>Borders and padding stay inside the box: an <code>.icon-fill</code> element has the same outer size as a plain <code>.icon</code>.</p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Always combine <code>.icon-fit</code> and <code>.icon-fill</code> with <code>.icon</code>, and use only one of them per element.</li>
+<li>Size icons with <code>font-size</code> (<code>fs-*</code>) as usual. Both modes follow it.</li>
+<li><code>.icon-fill</code> relies on container query units, available in Chrome 105+, Safari 16+ and Firefox 110+. On older browsers it falls back to the regular <code>.icon</code> rendering.</li>
+<li>Non-square glyphs keep their proportions with <code>.icon-fill</code>: a wide icon touches the left and right borders and leaves space above and below.</li>
+</ul>
 <h2 class="h2">Rotation</h2>
 <p>You can rotate icons using fractional step modifiers or explicit angle specifications.</p>
 <table>
