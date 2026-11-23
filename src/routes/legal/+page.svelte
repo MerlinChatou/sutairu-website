@@ -1,5 +1,5 @@
 <script>
-  import "../docs/v1/lib/generated/sutairu-v1-0-0.min.css";
+  import "../docs/v1/lib/generated/sutairu-v1.min.css";
   import hljs from "highlight.js";
   import MarkdownContent from './content.md';
   

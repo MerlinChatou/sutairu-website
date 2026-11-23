@@ -1,17 +1,5 @@
 {
-  "v1.0.0": [
-    "__to_process/cursor",
-    "__to_process/extras/button",
-    "__to_process/extras/code-highlight",
-    "__to_process/extras/dotted",
-    "__to_process/extras/filter",
-    "__to_process/extras/hatching",
-    "__to_process/extras/loader",
-    "__to_process/extras/modal",
-    "__to_process/extras/rotate",
-    "__to_process/extras/scale",
-    "__to_process/extras/stripes",
-    "__to_process/table",
+  "v1": [
     "background/background-color",
     "background/patterns",
     "border/border-color",

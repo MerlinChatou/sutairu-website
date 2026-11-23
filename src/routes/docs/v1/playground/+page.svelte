@@ -1,5 +1,5 @@
 <script>
-  import "../lib/generated/sutairu-v1-0-0.min.css";
+  import "../lib/generated/sutairu-v1.min.css";
   import { compileCSS } from "@merlin-chatou/sutairu/compiler";
   import Navbar from "../components/Navbar.svelte";
   import Footer from "../components/Footer.svelte";
@@ -61,6 +61,16 @@
     }
   });
 </script>
+
+
+
+
+<!-- <div class="d-flex fd-col min-h-100vh ov-hidden p-6">
+  <h1 class="h1">Playground</h1>
+</div> -->
+
+
+
 
 <div class="d-flex fd-col h-100vh ov-hidden">
   <Navbar searchBarVisible={false} />

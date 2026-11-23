@@ -1,6 +1,6 @@
 import { writable, derived } from 'svelte/store';
 import { browser } from '$app/env';
-import themes from './generated/themes-v1-0-0.json';
+import themes from './generated/themes-v1.json';
 
 export const THEMES = themes;
 const DEFAULT_THEME = 'sutairu';

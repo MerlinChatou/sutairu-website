@@ -7,17 +7,17 @@
       </a>
 
       <a href="/legal" rel="noopener noreferrer" class="flex-x as-center gap-1">
-        <i class="icon i-gavel-solid"></i>
+        <i class="icon icon-fill i-gavel-solid"></i>
         Legal Notice
       </a>
 
       <a href="https://github.com/MerlinChatou/sutairu" target="_blank" rel="noopener noreferrer" class="flex-x as-center gap-1">
-        <i class="icon i-github"></i>
+        <i class="icon icon-fill i-github"></i>
         <span class="d-none md:d-block">GitHub</span>
       </a>
 
       <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" rel="noopener noreferrer" class="flex-x as-center gap-1">
-        <i class="icon i-npm"></i>
+        <i class="icon icon-fill i-npm"></i>
         <span class="d-none md:d-block">npm</span>
       </a>
     </nav>

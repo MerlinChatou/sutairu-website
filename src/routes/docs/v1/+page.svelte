@@ -1,7 +1,7 @@
 <script>
   import { Masonry } from "@merlin-chatou/sutairu";
   import { searchState } from "./state/search.svelte.js";
-  import "./lib/generated/sutairu-v1-0-0.min.css";
+  import "./lib/generated/sutairu-v1.min.css";
 
   import Navbar from "./components/Navbar.svelte";
   import Footer from "./components/Footer.svelte";

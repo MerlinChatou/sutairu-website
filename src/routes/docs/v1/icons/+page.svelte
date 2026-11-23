@@ -1,5 +1,5 @@
 <script>
-  import "../lib/generated/sutairu-v1-0-0.min.css";
+  import "../lib/generated/sutairu-v1.min.css";
   import { Modal } from "@merlin-chatou/sutairu";
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
