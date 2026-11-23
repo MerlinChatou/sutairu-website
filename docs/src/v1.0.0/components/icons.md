@@ -6,7 +6,7 @@ Sutairu includes a robust, utility-friendly icon system designed for crisp rende
 
 
 <div class="flex-x jc-center">
-<a href="/docs/v1.0.0/icons" target="_blank" class="btn btn-primary">Browse Icon Library</a>
+<a href="/docs/v1/icons" target="_blank" class="btn btn-primary">Browse Icon Library</a>
 </div>
 
 

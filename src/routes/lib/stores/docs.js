@@ -20,7 +20,7 @@ import { writable } from "svelte/store";
  *   → update /src/routes/docs/latest/ to point to v1.1.0
  *
  ********************************************************************************************/
-export const latestVersion = "v1.0.0";
+export const latestVersion = "v1";
 
 // initialize current with latest; we’ll update it in the browser
 export const docsVersion = writable({

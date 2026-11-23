@@ -133,7 +133,7 @@
     <a href="https://www.npmjs.com/package/@merlin-chatou/sutairu" target="_blank" class="td-none flex-x ai-center gap-1 hover:sc-105">
       <i class="icon i-npm"></i> npm
     </a>
-    <a href="/docs/v1.0.0/install" target="_blank" class="btn btn-primary pl-3 pr-4 td-none flex-x ai-center gap-0 hover:sc-105">
+    <a href="/docs/v1/install" target="_blank" class="btn btn-primary pl-3 pr-4 td-none flex-x ai-center gap-0 hover:sc-105">
       <i class="icon i-lightning-solid"></i> Install
     </a>
   </div>

@@ -58,6 +58,6 @@ npx sutairu
 ## Explore More Options & Resources
 
 - **CLI Options & Configuration:** A complete list of command-line flags and configuration options is available on the [Sutairu GitHub Repository](https://github.com/MerlinChatou/sutairu).
-- **Classes, Demos & Docs:** Explore the full documentation and demos on the [Sutairu Home Page](/docs/v1.0.0/).
-- **Interactive Playground:** Experiment with utilities live in your browser in the [Live Playground](/docs/v1.0.0/playground).
-- **Icon Registry:** Browse all available embedded icons in the [Icons Registry](/docs/v1.0.0/icons).
+- **Classes, Demos & Docs:** Explore the full documentation and demos on the [Sutairu Home Page](/docs/v1/).
+- **Interactive Playground:** Experiment with utilities live in your browser in the [Live Playground](/docs/v1/playground).
+- **Icon Registry:** Browse all available embedded icons in the [Icons Registry](/docs/v1/icons).
